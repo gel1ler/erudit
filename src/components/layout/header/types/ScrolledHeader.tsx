@@ -26,9 +26,23 @@ const ScrolledHeader = () => {
     })
 
     return (
-            <AppBar className='p-2' position={isActive ? 'fixed' : 'static'}>
+        <>
+            <AppBar
+                position={'absolute'}
+                sx={{ bgcolor: 'transparent', }}
+            >
+                <Bar noBg />
+            </AppBar>
+            <AppBar
+                position={'fixed'}
+                sx={{
+                    transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    opacity: isActive ? 1 : 0
+                }}
+            >
                 <Bar />
             </AppBar>
+        </>
     )
 }
 

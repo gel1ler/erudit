@@ -3,14 +3,20 @@ import { IColors, IFooterProps, IHeaderProps } from "./types";
 export const colors: IColors = {
     primary: '#fff',
     secondary: '#e3e3e3',
-    bg: '#efefef'
+    bg: '#efefef',
+    // additional: '#678650'
 }
 
 export const headerProps: IHeaderProps = {
-    type: 'static',
-    scrollHeight: 0.4,
-    // fullwidth: true
+    type: 'scrolled',
+    scrollHeight: 0.7,
+    remHeight: 7,
+    topHeader: true,
+    withShadow: false
 }
+
+
+
 
 export const footerProps: IFooterProps = {
     type: 'simple',

@@ -1,7 +1,7 @@
 export interface IMainInfo {
     name: string,
     description: string,
-    phone: number,
+    phone: string,
     email: string,
     logoSmall: string
     logoText: string

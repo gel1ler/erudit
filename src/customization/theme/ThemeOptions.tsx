@@ -1,6 +1,6 @@
 import { ThemeOptions } from '@mui/material/styles'
 import { roboto } from './ThemeRegistry'
-import { colors } from '../customization'
+import { colors, headerProps } from '../customization'
 
 export const themeOptions: ThemeOptions = {
   palette: {
@@ -17,5 +17,15 @@ export const themeOptions: ThemeOptions = {
   typography: {
     fontFamily: roboto.style.fontFamily,
     fontSize: 14
-  }, 
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          height: '112px',
+          boxShadow: headerProps.withShadow ? '0px 1px 10px rgba(0,0,0,.3)' : 'none',
+        }
+      }
+    }
+  }
 }

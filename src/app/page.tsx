@@ -6,13 +6,9 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <Box>
-      <Box className='h-screen flex flex-col'>
-        <Header />
-        <Start />
-      </Box>
+    <>
+      <Start />
       <Box className='h-screen w-full' />
-      <Footer />
-    </Box>
+    </>
   )
 }

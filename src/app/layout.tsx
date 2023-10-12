@@ -2,6 +2,8 @@ import ThemeRegistry from '@/customization/theme/ThemeRegistry'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Header from '@/components/layout/header/Header'
+import Footer from '@/components/layout/footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +20,13 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <ThemeRegistry>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className + ' min-h-screen flex flex-col'}>
+          <Header />
+          <section className='flex-grow'>
+            {children}
+          </section>
+          <Footer />
+        </body>
       </ThemeRegistry>
     </html>
   )

@@ -7,23 +7,25 @@ import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '@/components/ico
 import { MenuIcon } from '@/components/icons/UI'
 import MyDrawer from '../UI/MyDrawer'
 import TopHeader from './topHeader/TopHeader'
+import Link from 'next/link'
 
-const Bar = () => {
-  const isFullwidth: string = headerProps.fullwidth ? '' : ' max-w-6xl mx-auto'
+const Bar = ({ noBg }: { noBg?: boolean }) => {
+  const isFullwidth: string = headerProps.fullwidth ? '' : ' max-w-7xl mx-auto'
 
   return (
     <>
-      <TopHeader />
-      <Toolbar className={'flex w-full' + isFullwidth} sx={{ justifyContent: ['center', 'space-between'] }}>
-        <Image
-          alt='Logo'
-          src='/logo/logo-gorizontal.svg'
-          width={200}
-          height={80}
-        />
-        {/* <Box className='gap-3 items-center' sx={{ display: ['none', 'flex'] }}> */}
+      {headerProps.topHeader ? <TopHeader noBg={noBg} /> : null}
+      <Toolbar className={'flex w-full' + isFullwidth} sx={{ justifyContent: ['center', 'space-between'], my: 'auto' }}>
+        <Link href='/'>
+          <Image
+            alt='Logo'
+            src='/logo/logo-gorizontal.svg'
+            width={200}
+            height={40}
+          />
+        </Link>
         <Box className='flex gap-6'>
-          <Box className='flex gap-3 items-center'>
+          <Box className='gap-3 items-center' sx={{ display: ['none', 'flex'] }}>
             <VkIcon />
             <TelegramIcon />
             <PhoneCall icon />

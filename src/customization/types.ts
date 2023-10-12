@@ -2,11 +2,14 @@ export interface IColors {
     primary: string,
     secondary: string,
     bg?: string,
-    additional?: string
+    // additional?: string
 }
 
 export interface IHeaderProps {
     type: 'static' | 'fixed' | 'scrolled' | 'animated',
+    remHeight: number,
+    withShadow?: boolean,
+    topHeader?: boolean,
     fullwidth?: boolean,
     scrollHeight?: number,
     contacts?: boolean,
@@ -14,6 +17,8 @@ export interface IHeaderProps {
     menu?: boolean,
     login?: boolean
 }
+
+
 
 export interface IFooterProps {
     type: 'simple' | 'complex',
