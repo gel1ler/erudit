@@ -12,7 +12,9 @@ export const headerProps: IHeaderProps = {
     scrollHeight: 0.7,
     remHeight: 7,
     topHeader: true,
-    withShadow: false
+    withShadow: true,
+    menu: true,
+    links: true,
 }
 
 

@@ -1,21 +1,83 @@
 import { navigation } from '@/content/content'
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
-import React from 'react'
+import React, { CSSProperties } from 'react'
 
-const NavLinks = () => {
+type THoverType = 'opacity' | 'color' | 'underline' | 'animUnderline';
+
+interface IText {
+    children: string;
+    hoverType: THoverType;
+}
+
+const Text = ({ children, hoverType }: IText) => {
+    let styles: CSSProperties = {
+        fontSize: 18,
+    }
+
+    switch (hoverType) {
+        case 'opacity':
+            styles = { ...styles, ':hover': { opacity: '.3' } }
+            break
+        case 'color':
+            styles = { ...styles, ':hover': { color: 'red' } }
+            break
+        case 'underline':
+            styles = { ...styles, ':hover': { textDecoration: 'underline' } }
+            break
+        case 'animUnderline':
+            styles = {
+                ...styles,
+                position: 'relative',
+                ':after': {
+                    content: '""',
+                    position: 'absolute',
+                    width: '100%',
+                    transform: 'scaleX(0)',
+                    height: '1px',
+                    bottom: 0,
+                    left: 0,
+                    backgroundColor: '#000000',
+                    transformOrigin: 'bottom right',
+                    transition: 'transform 0.2s ease-out',
+                },
+                ':hover:after': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'bottom left',
+                },
+            }
+            break
+    }
+
+
     return (
-        navigation.map(i =>
-            <Box className='flex items-center' key={i.id}>
-                {i.anchorLink ?
-                    <a href={i.href}>{i.name}</a>
+        <Typography
+            className='transition-all duration-200'
+            sx={styles}
+        >
+            {children}
+        </Typography>
+    )
+}
+
+const NavLinks = ({ hoverType }: { hoverType: THoverType }) => {
+    return (
+        <Box className='flex gap-12 items-center'>
+            {navigation.map(i =>
+                i.anchorLink ?
+                    <a key={i.id} href={i.href}>
+                        <Text hoverType={hoverType}>
+                            {i.name}
+                        </Text>
+                    </a>
                     :
-                    <Link href={i.href}>
-                        {i.name}
+                    <Link key={i.id} href={i.href}>
+                        <Text hoverType={hoverType}>
+                            {i.name}
+                        </Text>
                     </Link>
-                }
-            </Box>
-        )
+            )}
+        </Box >
     )
 }
 

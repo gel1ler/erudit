@@ -9,11 +9,11 @@ const Thumbnails = ({
     images: string[], current: number, setCurrent: TSetNumber
 }) => {
     return (
-        <Box className='mt-2 grid grid-cols-3 grid-rows-1 h-1/5 gap-1'>
+        <Box className='mt-2 grid grid-cols-3 grid-rows-1 gap-1'>
             {images.map((i, key) =>
                 <Box
                     className='relative transition-opacity duration-300'
-                    sx={{ opacity: current == key ? '1' : '0.5' }}
+                    sx={{ opacity: current == key ? '1' : '0.5', minHeight: '100px' }}
                     key={key}
                 >
                     <Image

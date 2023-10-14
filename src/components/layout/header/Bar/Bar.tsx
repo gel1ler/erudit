@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Box } from '@mui/material'
 import { PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
-import MyDrawer from '../../UI/MyDrawer'
+import MyDrawer from '../drawer/MyDrawer'
 import TopHeader from '../topHeader/TopHeader'
 import Link from 'next/link'
 import NavLinks from './NavLinks'
@@ -24,19 +24,29 @@ const Bar = ({ noBg }: { noBg?: boolean }) => {
             height={40}
           />
         </Link>
-        <Box className='flex gap-6'>
+        <Box className='flex gap-10'>
 
           {/* Navigation */}
-          <NavLinks />
+          {headerProps.links ?
+            <NavLinks hoverType='animUnderline' />
+            : null
+          }
 
           {/* Social networks */}
-          <Box className='flex gap-3 items-center'>
-            <VkIcon />
-            <TelegramIcon />
-            <PhoneCall icon />
-          </Box>
+          {headerProps.contacts ?
+            <Box className='flex gap-3 items-center'>
+              <VkIcon />
+              <TelegramIcon />
+              <PhoneCall icon />
+            </Box>
+            : null
+          }
 
-          <MyDrawer />
+          {/* Menu */}
+          {headerProps.menu ?
+            <MyDrawer />
+            : null
+          }
         </Box>
       </Toolbar>
     </>

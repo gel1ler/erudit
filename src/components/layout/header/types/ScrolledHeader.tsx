@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { AppBar } from '@mui/material'
-import Bar from '../Bar/Bar'
+import Bar from '../bar/Bar'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { headerProps } from '@/customization/customization'
 
@@ -29,7 +29,7 @@ const ScrolledHeader = () => {
         <>
             <AppBar
                 position={'absolute'}
-                sx={{ bgcolor: 'transparent', }}
+                sx={{ bgcolor: 'transparent', boxShadow: 'none' }}
             >
                 <Bar noBg />
             </AppBar>
@@ -37,7 +37,8 @@ const ScrolledHeader = () => {
                 position={'fixed'}
                 sx={{
                     transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
-                    opacity: isActive ? 1 : 0
+                    opacity: isActive ? 1 : 0,
+                    pointerEvents: isActive ? 'all' : 'none'
                 }}
             >
                 <Bar />

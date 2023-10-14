@@ -28,5 +28,11 @@ export const navigation: INavLink[] = [
         name: "О нас",
         href: "#about",
         anchorLink: true,
+    },
+    {
+        id: 2,
+        name: "Контакты",
+        href: "/contacts",
+        anchorLink: true,
     }
 ]

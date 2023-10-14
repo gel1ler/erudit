@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppBar } from '@mui/material'
-import Bar from '../Bar/Bar'
+import Bar from '../bar/Bar'
 
 const StaticHeader = () => {
     return (

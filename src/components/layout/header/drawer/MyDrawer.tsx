@@ -5,6 +5,8 @@ import { Drawer, Box, useMediaQuery } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import IB from '@/components/icons/IB'
 import { MenuIcon } from '@/components/icons/UI'
+import NavLinks from './NavLinks'
+
 
 const MyDrawer = () => {
     const [open, setOpen] = useState(false)
@@ -32,7 +34,7 @@ const MyDrawer = () => {
                         >
                             <Close sx={{ fontSize: '35px' }} />
                         </IB>
-                        sadfk
+                        <NavLinks />
                     </Box>
                 </Box>
             </Drawer >
