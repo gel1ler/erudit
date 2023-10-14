@@ -1,4 +1,4 @@
-import { IMainInfo, ISocialMedia } from "./types";
+import { IMainInfo, INavLink, ISocialMedia } from "./types";
 
 export const mainInfo: IMainInfo = {
     name: 'Название',
@@ -16,3 +16,17 @@ export const socialMedia: ISocialMedia = {
     telegram: 'https://web.telegram.org/',
     instagram: 'https://google.com/'
 }
+
+export const navigation: INavLink[] = [
+    {
+        id: 0,
+        name: "Главная",
+        href: "/",
+    },
+    {
+        id: 1,
+        name: "О нас",
+        href: "#about",
+        anchorLink: true,
+    }
+]

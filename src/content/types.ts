@@ -14,3 +14,10 @@ export interface ISocialMedia {
     telegram?: string,
     instagram?: string,
 }
+
+export interface INavLink {
+    id: number,
+    name: string,
+    anchorLink?: boolean,
+    href: string
+}
