@@ -5,6 +5,10 @@ export const mainInfo: IMainInfo = {
     description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione officia a iure dolore impedit velit, blanditiis repellat ipsa alias nobis illo iusto, cupiditate perferendis natus omnis iste, libero asperiores! Quis.',
     phone: '+7(968)434-05-20',
     email: 'info@example.ru',
+    location:{
+        point: 'Moscow, Svobody 6A',
+        href: 'https://www.example.ru'
+    },
     logoSmall: '/logo/logo-small.svg',
     logoText: '/logo/logo-gorizontal.svg',
     logoVertical: '/logo/logo-vertical.svg',

@@ -3,6 +3,7 @@ export interface IMainInfo {
     description: string,
     phone: string,
     email: string,
+    location: { point: string, href: string },
     logoSmall: string
     logoText: string
     logoHorizontal: string,

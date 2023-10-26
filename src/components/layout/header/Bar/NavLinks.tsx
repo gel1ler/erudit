@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
 import React, { CSSProperties } from 'react'
 
-type THoverType = 'opacity' | 'color' | 'underline' | 'animUnderline';
+type THoverType = 'opacity' | 'color' | 'underline' | 'animUnderline' | 'bold'
 
 interface IText {
     children: string;
@@ -11,7 +11,7 @@ interface IText {
 }
 
 const Text = ({ children, hoverType }: IText) => {
-    let styles: CSSProperties = {
+    let styles: any = {
         fontSize: 18,
     }
 
@@ -19,12 +19,15 @@ const Text = ({ children, hoverType }: IText) => {
         case 'opacity':
             styles = { ...styles, ':hover': { opacity: '.3' } }
             break
+
         case 'color':
             styles = { ...styles, ':hover': { color: 'red' } }
             break
+
         case 'underline':
             styles = { ...styles, ':hover': { textDecoration: 'underline' } }
             break
+
         case 'animUnderline':
             styles = {
                 ...styles,
@@ -34,7 +37,7 @@ const Text = ({ children, hoverType }: IText) => {
                     position: 'absolute',
                     width: '100%',
                     transform: 'scaleX(0)',
-                    height: '1px',
+                    height: '1.5px',
                     bottom: 0,
                     left: 0,
                     backgroundColor: '#000000',
@@ -47,6 +50,10 @@ const Text = ({ children, hoverType }: IText) => {
                 },
             }
             break
+        case 'bold':
+            styles = { ...styles, ':hover': { textShadow: '0 0 .65px #333, 0 0 .65px #333' } }
+
+
     }
 
 

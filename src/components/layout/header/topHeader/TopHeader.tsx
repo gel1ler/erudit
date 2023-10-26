@@ -29,13 +29,13 @@ const TopHeader = ({ noBg }: { noBg?: boolean }) => {
                 {isMd ?
                     null
                     :
-                    <DoLink />
+                    <DoLink type='email' />
                 }
-                <DoLink />
+                <DoLink type='phone' />
                 {isMd ?
                     null
                     :
-                    <DoLink />
+                    <DoLink type='location' />
                 }
             </Box>
         </StyledSnackbarProvider>
