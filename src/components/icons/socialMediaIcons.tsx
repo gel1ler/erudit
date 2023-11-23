@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { Instagram, WhatsApp, Telegram, Phone, Menu } from '@mui/icons-material'
+import { Instagram, WhatsApp, Telegram, Phone } from '@mui/icons-material'
 import IB from './IB'
 import { SvgIcon, Dialog, Typography, Box, Button } from '@mui/material/'
 import Link from 'next/link'
@@ -93,14 +93,10 @@ export const PhoneCall = (
                     :
                     <Typography
                         onClick={() => setOpen(true)}
-                        variant={text ? 'body1' : 'h6'}
-                        color='black'
-                        sx={{
-                            fontWeight: 'bold',
-                            textDecoration: 'underline',
-                            cursor: 'pointer'
-                        }}
+                        color='secondary.light'
+                        className='flex items-center cursor-pointer'
                     >
+                        < Phone fontSize='small' />
                         {mainInfo.phone}
                     </Typography>
 

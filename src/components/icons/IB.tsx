@@ -1,8 +1,5 @@
 import React from 'react'
 import { IconButton } from '@mui/material'
-import Link from 'next/link'
-import { TSetBool } from '@/globalTypes'
-
 const IB = (
     {
         children, f, sx, href
@@ -11,6 +8,7 @@ const IB = (
     }) => {
     const defaultStyle = {
         color: 'black',
+        aspectRatio: '1/1'
     }
     const style = sx ? Object.assign(defaultStyle, sx) : defaultStyle
     return (

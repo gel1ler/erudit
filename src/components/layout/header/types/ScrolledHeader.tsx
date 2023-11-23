@@ -4,6 +4,7 @@ import { AppBar } from '@mui/material'
 import Bar from '../bar/Bar'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { headerProps } from '@/customization/customization'
+import NavLinks from '../bar/NavLinks'
 
 const scrollHeight: number | undefined = headerProps.scrollHeight
 
@@ -26,24 +27,17 @@ const ScrolledHeader = () => {
     })
 
     return (
-        <>
-            <AppBar
-                position={'absolute'}
-                sx={{ bgcolor: 'transparent', boxShadow: 'none' }}
-            >
-                <Bar noBg />
-            </AppBar>
-            <AppBar
-                position={'fixed'}
-                sx={{
-                    transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
-                    opacity: isActive ? 1 : 0,
-                    pointerEvents: isActive ? 'all' : 'none'
-                }}
-            >
-                <Bar />
-            </AppBar>
-        </>
+        <AppBar
+            position={'fixed'}
+            sx={{
+                height: '4rem',
+                transition: 'opacity .3s cubic-bezier(0.4, 0, 0.2, 1)',
+                opacity: isActive ? 1 : 0,
+                pointerEvents: isActive ? 'all' : 'none'
+            }}
+        >
+            <Bar />
+        </AppBar>
     )
 }
 

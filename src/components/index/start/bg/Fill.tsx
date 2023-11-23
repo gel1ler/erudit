@@ -20,7 +20,7 @@ const Fill = () => {
         <Box
             className='w-full h-full absolute left-0 top-0 -z-40'
             sx={{
-                background: `linear-gradient(to bottom,${theme.palette.background.default}, rgba(${rgb?.r},${rgb?.g},${rgb?.b},.4), ${theme.palette.background.default})`,
+                background: `linear-gradient(to bottom, transparent 90%, white)`,
             }}
         />
     )

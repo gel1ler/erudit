@@ -4,8 +4,7 @@ import { useTheme } from '@mui/material/styles'
 import { Drawer, Box, useMediaQuery } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import IB from '@/components/icons/IB'
-import { MenuIcon } from '@/components/icons/UI'
-import NavLinks from './NavLinks'
+import Image from 'next/image'
 
 
 const MyDrawer = () => {
@@ -15,7 +14,14 @@ const MyDrawer = () => {
 
     return (
         <>
-            <MenuIcon setOpen={() => setOpen(true)} />
+            <IB f={() => setOpen(true)} sx={{ p: '10px' }}>
+                <Image
+                    width={35}
+                    height={35}
+                    src={`/icons/menu.svg`}
+                    alt='menu icon'
+                />
+            </IB>
             <Drawer open={open} onClose={() => setOpen(false)} anchor={isSmallScreen ? 'top' : 'right'}>
                 <Box
                     className='h-screen'
@@ -34,7 +40,6 @@ const MyDrawer = () => {
                         >
                             <Close sx={{ fontSize: '35px' }} />
                         </IB>
-                        <NavLinks />
                     </Box>
                 </Box>
             </Drawer >

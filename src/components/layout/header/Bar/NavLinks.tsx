@@ -21,7 +21,7 @@ const Text = ({ children, hoverType }: IText) => {
             break
 
         case 'color':
-            styles = { ...styles, ':hover': { color: 'red' } }
+            styles = { ...styles, ':hover': { color: 'secondary.main' } }
             break
 
         case 'underline':
@@ -69,7 +69,7 @@ const Text = ({ children, hoverType }: IText) => {
 
 const NavLinks = ({ hoverType }: { hoverType: THoverType }) => {
     return (
-        <Box className='flex gap-12 items-center'>
+        <Box className='flex w-full justify-between items-center justify-self-center'>
             {navigation.map(i =>
                 i.anchorLink ?
                     <a key={i.id} href={i.href}>

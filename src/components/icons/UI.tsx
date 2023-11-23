@@ -1,14 +1,19 @@
-import IB from "./IB"
-import { Menu } from '@mui/icons-material'
 import React from 'react'
 import arrowLeft from '@/../public/icons/arrow-left.svg'
 import arrowRight from '@/../public/icons/arrow-right.svg'
 import Image from 'next/image'
 import { Box } from "@mui/material"
 
-const style = { fontSize: 30 }
-
-export const MenuIcon = ({ setOpen }: { setOpen: () => void }) => { return (<IB f={setOpen}><Menu sx={style} /></IB>) }
+export const PhoneIcon = () => {
+    return (
+        <Image
+            src='/icons/phone.svg'
+            height={35}
+            width={35}
+            alt='Phone icon'
+        />
+    )
+}
 
 export const Arrow = ({ anchor, f }: { anchor: 'left' | 'right', f: () => void }) => {
     return (
