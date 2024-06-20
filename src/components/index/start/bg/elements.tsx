@@ -1,0 +1,262 @@
+import { Box } from "@mui/material";
+import { config } from "process";
+import { useEffect, useRef } from "react";
+import { useSpring, animated, easings } from "react-spring";
+
+export const Planet = () => {
+
+    const duration = 5500
+
+    const springs = useSpring({
+        from: { x: -30, rotateZ: 10 },
+        to: [{ x: 30, rotateZ: -10 }, { x: -30, rotateZ: 10 }],
+        loop: true,
+        reset: true,
+        config: {
+            duration,
+            easing: easings.easeInOutSine,
+        }
+    });
+
+    return (
+        <animated.div
+            className='absolute bottom-20 left-[15%]'
+            style={{
+                ...springs,
+                filter: 'drop-shadow(0 0 10px rgba(144, 57, 255, 0.5))'
+            }}
+        >
+            <svg width="171" height="114" viewBox="0 0 171 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path d="M76.7884 47.8742C33.4848 68.8255 2.19246 93.4393 6.89191 102.861C11.5914 112.277 50.5007 102.933 93.8024 81.9816C137.106 61.0303 168.4 36.4127 163.701 26.991C159.003 17.5751 120.09 26.9229 76.7884 47.8742ZM90.1398 74.6357C55.2058 91.5378 24.7172 100.889 22.0405 95.5284C19.3656 90.1654 45.5188 72.1183 80.4509 55.2162C115.385 38.3141 145.875 28.9607 148.55 34.3237C151.227 39.6866 125.076 57.7355 90.1398 74.6357Z" fill="white" />
+                    <path d="M89.5672 46.3973C42.5177 35.8781 2.46907 35.643 0.108915 45.8779C-2.24934 56.109 33.9738 72.9353 81.0232 83.4546C128.073 93.9738 168.125 94.207 170.485 83.9721C172.844 73.741 136.617 56.9166 89.5672 46.3973ZM82.8639 75.4756C44.9063 66.9885 15.2291 55.3849 16.5693 49.5556C17.9134 43.7301 49.7725 45.8874 87.7264 54.3744C125.684 62.8615 155.365 74.4671 154.021 80.2945C152.679 86.1219 120.82 83.9665 82.8639 75.4756Z" fill="white" />
+                    <path d="M85.029 114C116.995 114 142.909 88.4802 142.909 57C142.909 25.5198 116.995 0 85.029 0C53.063 0 27.1494 25.5198 27.1494 57C27.1494 88.4802 53.063 114 85.029 114Z" fill="url(#paint0_radial_25_190)" />
+                    <path d="M151.786 66.8463C150.984 69.4529 149.907 72.1467 148.389 74.2566C152.353 76.5884 154.395 78.6641 154.021 80.2925C152.679 86.1199 120.82 83.9645 82.8639 75.4736C44.9063 66.9866 15.2291 55.383 16.5693 49.5537C16.8328 48.4125 18.2755 47.5803 20.702 47.0362C20.4839 44.3311 21.3844 41.2922 22.5123 38.4297C9.48695 38.8941 1.14776 41.37 0.108915 45.8761C-2.24934 56.1072 33.9738 72.9334 81.0232 83.4526C128.073 93.9719 168.125 94.2051 170.485 83.9702C171.572 79.2461 164.427 73.1116 151.788 66.8444L151.786 66.8463Z" fill="white" />
+                    <path d="M138.228 25.2508C139.269 27.774 140.15 30.536 140.317 33.1161C144.888 32.4753 147.801 32.8242 148.55 34.3237C151.227 39.6866 125.076 57.7355 90.1397 74.6357C55.2057 91.5378 24.7171 100.889 22.0404 95.5284C21.5172 94.4782 22.1067 92.9369 23.6479 91.0128C21.7522 89.0431 20.5125 86.1237 19.5608 83.1987C9.72781 91.6251 4.8236 98.7131 6.89182 102.861C11.5913 112.277 50.5006 102.933 93.8023 81.9816C137.106 61.0303 168.4 36.4127 163.701 26.991C161.528 22.6442 152.057 22.2992 138.226 25.2508H138.228Z" fill="white" />
+                    <path opacity="0.3" d="M69.435 41.313C60.9138 49.984 49.187 52.4218 43.2478 46.7575C37.3123 41.0931 39.407 29.4725 47.932 20.8034C56.457 12.1344 68.1839 9.70032 74.1193 15.3628C80.0585 21.0271 77.9638 32.6458 69.435 41.313Z" fill="white" />
+                </g>
+                <defs>
+                    <radialGradient id="paint0_radial_25_190" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(143.441 160.657) scale(169.851 167.29)">
+                        <stop stopColor="#CE02CF" />
+                        <stop offset="0.12" stopColor="#BD14D2" />
+                        <stop offset="0.362" stopColor="#9142DB" />
+                        <stop offset="0.613" stopColor="#5E7AE7" />
+                        <stop offset="0.905" stopColor="#10CDF7" />
+                        <stop offset="0.914" stopColor="#0ED0F8" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </animated.div >
+    )
+}
+
+export const Circle = () =>
+    <Box className='absolute top-1/5 right-0 opacity-70'>
+        <svg width="210" height="505" viewBox="0 0 210 505" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.18" d="M357.477 23.1704C483.686 81.4457 539.036 231.721 480.875 358.178C422.717 484.637 272.741 540.108 146.527 481.83C20.327 423.553 -35.0362 273.278 23.1198 146.819C81.2868 20.3597 231.272 -35.1071 357.477 23.1704ZM302.663 141.747C241.577 113.539 168.99 140.397 140.844 201.605C112.689 262.811 139.473 335.541 200.564 363.745C261.655 391.957 334.244 365.107 362.392 303.901C390.545 242.7 363.756 169.952 302.661 141.745L302.663 141.747Z" fill="url(#paint0_linear_25_183)" />
+            <defs>
+                <linearGradient id="paint0_linear_25_183" x1="73.4667" y1="430.875" x2="430.132" y2="73.9912" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.525" stopColor="#6DDECC" />
+                    <stop offset="0.664" stopColor="#5190A8" stopOpacity="0.632" />
+                    <stop offset="0.795" stopColor="#394D89" stopOpacity="0.313" />
+                    <stop offset="0.889" stopColor="#2A2376" stopOpacity="0.115" />
+                    <stop offset="0.936" stopColor="#25146F" stopOpacity="0.039" />
+                    <stop offset="0.999" stopColor="#270061" stopOpacity="0" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+    </Box>
+
+export const Dots = ({ top, bottom, left, right, vertical }: { top?: string, bottom?: string, left?: string, right?: string, vertical?: boolean }) => {
+    const generateRandomDelay = () => {
+        return Math.round(Math.random() * 5); // Генерируем случайное число от 0 до 2 секунд
+    };
+
+    const dots = [
+        "M196.84 94.1363C200.264 94.1363 203.04 91.4028 203.04 88.0308C203.04 84.6589 200.264 81.9254 196.84 81.9254C193.416 81.9254 190.641 84.6589 190.641 88.0308C190.641 91.4028 193.416 94.1363 196.84 94.1363Z",
+        "M158.713 94.1363C162.137 94.1363 164.912 91.4028 164.912 88.0308C164.912 84.6589 162.137 81.9254 158.713 81.9254C155.289 81.9254 152.513 84.6589 152.513 88.0308C152.513 91.4028 155.289 94.1363 158.713 94.1363Z",
+        "M120.585 94.1363C117.162 94.1363 114.388 91.4023 114.388 88.0308C114.388 84.6593 117.164 81.9254 120.585 81.9254C124.006 81.9254 126.785 84.6593 126.785 88.0308C126.785 91.4023 124.008 94.1363 120.585 94.1363Z",
+        "M82.4573 94.1363C85.8814 94.1363 88.6571 91.4028 88.6571 88.0308C88.6571 84.6589 85.8814 81.9254 82.4573 81.9254C79.0333 81.9254 76.2576 84.6589 76.2576 88.0308C76.2576 91.4028 79.0333 94.1363 82.4573 94.1363Z",
+        "M44.3275 94.1363C47.7515 94.1363 50.5272 91.4028 50.5272 88.0308C50.5272 84.6589 47.7515 81.9254 44.3275 81.9254C40.9035 81.9254 38.1277 84.6589 38.1277 88.0308C38.1277 91.4028 40.9035 94.1363 44.3275 94.1363Z",
+        "M6.19973 94.1363C2.77664 94.1363 0 91.4023 0 88.0308C0 84.6593 2.77664 81.9254 6.19973 81.9254C9.62283 81.9254 12.3972 84.6593 12.3972 88.0308C12.3972 91.4023 9.62059 94.1363 6.19973 94.1363Z",
+        "M196.84 53.1736C200.264 53.1736 203.04 50.4401 203.04 47.0681C203.04 43.6962 200.264 40.9627 196.84 40.9627C193.416 40.9627 190.641 43.6962 190.641 47.0681C190.641 50.4401 193.416 53.1736 196.84 53.1736Z",
+        "M158.713 53.1736C162.137 53.1736 164.912 50.4401 164.912 47.0681C164.912 43.6962 162.137 40.9627 158.713 40.9627C155.289 40.9627 152.513 43.6962 152.513 47.0681C152.513 50.4401 155.289 53.1736 158.713 53.1736Z",
+        "M120.585 53.1736C117.162 53.1736 114.388 50.4396 114.388 47.0681C114.388 43.6967 117.164 40.9627 120.585 40.9627C124.006 40.9627 126.785 43.6967 126.785 47.0681C126.785 50.4396 124.008 53.1736 120.585 53.1736Z",
+        "M82.4573 53.1736C85.8814 53.1736 88.6571 50.4401 88.6571 47.0681C88.6571 43.6962 85.8814 40.9627 82.4573 40.9627C79.0333 40.9627 76.2576 43.6962 76.2576 47.0681C76.2576 50.4401 79.0333 53.1736 82.4573 53.1736Z",
+        "M44.3275 53.1736C47.7515 53.1736 50.5272 50.4401 50.5272 47.0681C50.5272 43.6962 47.7515 40.9627 44.3275 40.9627C40.9035 40.9627 38.1277 43.6962 38.1277 47.0681C38.1277 50.4401 40.9035 53.1736 44.3275 53.1736Z",
+        "M6.19973 53.1736C2.77664 53.1736 0 50.4396 0 47.0681C0 43.6967 2.77664 40.9627 6.19973 40.9627C9.62283 40.9627 12.3972 43.6967 12.3972 47.0681C12.3972 50.4396 9.62059 53.1736 6.19973 53.1736Z",
+        "M196.84 12.2109C200.264 12.2109 203.04 9.47741 203.04 6.10546C203.04 2.73351 200.264 0 196.84 0C193.416 0 190.641 2.73351 190.641 6.10546C190.641 9.47741 193.416 12.2109 196.84 12.2109Z",
+        "M158.713 12.2109C162.137 12.2109 164.912 9.47741 164.912 6.10546C164.912 2.73351 162.137 0 158.713 0C155.289 0 152.513 2.73351 152.513 6.10546C152.513 9.47741 155.289 12.2109 158.713 12.2109Z",
+        "M120.585 12.2109C117.162 12.2109 114.388 9.47693 114.388 6.10546C114.388 2.73399 117.164 0 120.585 0C124.006 0 126.785 2.73399 126.785 6.10546C126.785 9.47693 124.008 12.2109 120.585 12.2109Z",
+        "M82.4573 12.2109C85.8814 12.2109 88.6571 9.47741 88.6571 6.10546C88.6571 2.73351 85.8814 0 82.4573 0C79.0333 0 76.2576 2.73351 76.2576 6.10546C76.2576 9.47741 79.0333 12.2109 82.4573 12.2109Z",
+        "M44.3275 12.2109C47.7515 12.2109 50.5272 9.47741 50.5272 6.10546C50.5272 2.73351 47.7515 0 44.3275 0C40.9035 0 38.1277 2.73351 38.1277 6.10546C38.1277 9.47741 40.9035 12.2109 44.3275 12.2109Z",
+        "M6.19973 12.2109C2.77664 12.2109 0 9.47693 0 6.10546C0 2.73399 2.77664 0 6.19973 0C9.62283 0 12.3972 2.73399 12.3972 6.10546C12.3972 9.47693 9.62059 12.2109 6.19973 12.2109Z"
+    ]
+
+    return (
+        <Box
+            className='absolute'
+            sx={{
+                top,
+                bottom,
+                left,
+                right,
+                transform: vertical ? 'rotateZ(90deg) scale(0.8)' : ''
+            }}
+        >
+            <svg width="204" height="95" viewBox="0 0 204 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.67">
+                    {dots.map((d, index) =>
+                        <path
+                            d={d}
+                            key={index}
+                            className="flashing-dot"
+                            fill="white"
+                            style={{ animationDelay: `${generateRandomDelay()}s` }}
+                        />
+                    )}
+                </g>
+            </svg>
+        </Box>
+    )
+}
+
+export const Stars = ({ top, bottom, left, right, reversed }: { top?: string, bottom?: string, left?: string, right?: string, reversed?: boolean }) =>
+    <Box
+        className='absolute'
+        sx={{
+            top,
+            bottom,
+            left,
+            right,
+            transform: reversed ? 'rotateY(180deg)' : ''
+        }}
+    >
+        <svg width="127" height="310" viewBox="0 0 127 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M126.18 175.188C126.18 180.036 122.187 183.967 117.265 183.967C112.344 183.967 108.351 180.036 108.351 175.188C108.351 170.34 112.342 166.41 117.265 166.41C122.189 166.41 126.18 170.343 126.18 175.188Z" fill="white" />
+            <path d="M86.4127 81.1981C86.4127 83.4155 84.5853 85.2147 82.3351 85.2147C80.0849 85.2147 78.2575 83.417 78.2575 81.1981C78.2575 78.9793 80.0834 77.1816 82.3351 77.1816C84.5869 77.1816 86.4127 78.9808 86.4127 81.1981Z" fill="white" />
+            <path d="M86.4127 267.947C88.6647 267.947 90.4902 266.149 90.4902 263.931C90.4902 261.712 88.6647 259.914 86.4127 259.914C84.1607 259.914 82.3351 261.712 82.3351 263.931C82.3351 266.149 84.1607 267.947 86.4127 267.947Z" fill="white" />
+            <path d="M78.2575 15.9346C64.2834 17.1325 63.2969 18.1065 62.0771 31.8692C60.8603 18.1065 59.8582 17.1325 45.8966 15.9346C59.8582 14.7335 60.8603 13.7627 62.0771 0C63.2969 13.7627 64.2834 14.7335 78.2575 15.9346Z" fill="white" />
+            <path d="M32.3609 293.891C18.3852 295.089 17.4003 296.063 16.1804 309.826C14.9637 296.063 13.9616 295.089 0 293.891C13.9616 292.69 14.9637 291.719 16.1804 277.957C17.4003 291.719 18.3868 292.69 32.3609 293.891Z" fill="white" />
+        </svg>
+
+    </Box>
+
+export const Planes = () => {
+    const ref1 = useRef<HTMLDivElement>(null);
+    const ref2 = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const radius = 300
+
+        let f1 = 0;
+        let f2 = 1
+        const s = 0.2 * Math.PI / 180; //Вычислим угол
+
+        const animate = () => {
+            f1 += s; // приращение аргумента для первого объекта
+            f2 += s; // приращение аргумента для второго объекта
+
+            if (ref1.current) {
+                ref1.current.style.left = 30 + radius * Math.sin(f1) + 'px'; // меняем координаты первого элемента
+                ref1.current.style.top = 135 + radius * Math.cos(f1) + 'px';
+                ref1.current.style.rotate = -180 - f1 + 'rad';
+            }
+
+            if (ref2.current) {
+                ref2.current.style.right = 30 + radius * Math.sin(-f2) + 'px'; // меняем координаты второго элемента
+                ref2.current.style.top = 435 + radius * Math.cos(-f2) + 'px';
+                ref2.current.style.rotate = - f2 + 'rad';
+            }
+
+            requestAnimationFrame(animate);
+        };
+
+        const animationId = requestAnimationFrame(animate);
+
+        return () => {
+            cancelAnimationFrame(animationId)
+        }
+    }, [])
+
+    return (
+        <>
+            <Box
+                ref={ref1}
+                sx={{
+                    position: 'absolute',
+                }}
+            >
+                <svg width="133" height="96" viewBox="0 0 133 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M83.0781 64.9904L108.954 69.477L98.8817 47.1453L83.0781 64.9904Z" fill="url(#paint0_linear_25_155)" />
+                    <path d="M0 2.99323L132.283 9.81716L112.187 32.8738L0 2.99323Z" fill="url(#paint1_radial_25_155)" />
+                    <path d="M112.187 32.8738L108.954 69.477L98.5555 47.7225L0 2.99323L112.187 32.8738Z" fill="url(#paint2_linear_25_155)" />
+                    <path d="M1.95166 0L97.8675 49.981L70.186 95.2134L1.95166 0Z" fill="url(#paint3_radial_25_155)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_25_155" x1="85.2923" y1="54.8191" x2="110.921" y2="60.4333" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.053" stopColor="#DD2F44" />
+                            <stop offset="0.186" stopColor="#DE3543" />
+                            <stop offset="0.375" stopColor="#E24843" />
+                            <stop offset="0.599" stopColor="#EA6742" />
+                            <stop offset="0.847" stopColor="#F49240" />
+                            <stop offset="1" stopColor="#FBB040" />
+                        </linearGradient>
+                        <radialGradient id="paint1_radial_25_155" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(74.8722 11.1918) rotate(12.174) scale(47.1783 46.5145)">
+                            <stop stopColor="#FBB040" />
+                            <stop offset="1" stopColor="#F7941E" />
+                        </radialGradient>
+                        <linearGradient id="paint2_linear_25_155" x1="58.7609" y1="23.225" x2="44.4976" y2="66.4005" gradientUnits="userSpaceOnUse">
+                            <stop stopColor="#FBB040" />
+                            <stop offset="0.112" stopColor="#F39040" />
+                            <stop offset="0.373" stopColor="#E34A43" />
+                            <stop offset="0.494" stopColor="#DD2F44" />
+                        </linearGradient>
+                        <radialGradient id="paint3_radial_25_155" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(54.0989 51.9834) rotate(15.273) scale(45.8286 45.2293)">
+                            <stop stopColor="#FBB040" />
+                            <stop offset="1" stopColor="#F7941E" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </Box>
+            <Box
+                ref={ref2}
+                sx={{
+                    position: 'absolute',
+                }}
+            >
+                <svg width="122" height="89" viewBox="0 0 122 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.5083 59.9333L8.42065 58.9258L22.4932 41.3515L27.5083 59.9333Z" fill="url(#paint0_radial_25_198)" />
+                    <path d="M121.406 21.1935L0 0L13.301 25.0663L121.406 21.1935Z" fill="url(#paint1_radial_25_198)" />
+                    <path d="M13.301 25.0663L8.42065 58.9258L22.4932 41.3515L121.406 21.1935L13.301 25.0663Z" fill="url(#paint2_radial_25_198)" />
+                    <path d="M121.406 21.1935L22.4932 41.3515L35.3148 88.8601L121.406 21.1935Z" fill="url(#paint3_radial_25_198)" />
+                    <defs>
+                        <radialGradient id="paint0_radial_25_198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(42.7522 62.6296) rotate(22.9058) scale(9.99982 9.89904)">
+                            <stop stopColor="#6A014C" />
+                            <stop offset="0.442" stopColor="#6C004F" />
+                            <stop offset="0.806" stopColor="#750059" />
+                            <stop offset="0.974" stopColor="#7C0061" />
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_25_198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(78.4293 28.7475) rotate(22.906) scale(45.3749 44.918)">
+                            <stop stopColor="#A10151" />
+                            <stop offset="0.398" stopColor="#930056" />
+                            <stop offset="1" stopColor="#770061" />
+                        </radialGradient>
+                        <radialGradient id="paint2_radial_25_198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(100.991 64.0946) rotate(-144.921) scale(45.4664 45.2368)">
+                            <stop stopColor="#6A014C" />
+                            <stop offset="0.442" stopColor="#6C004F" />
+                            <stop offset="0.806" stopColor="#750059" />
+                            <stop offset="0.974" stopColor="#7C0061" />
+                        </radialGradient>
+                        <radialGradient id="paint3_radial_25_198" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(85.7625 59.1032) rotate(22.906) scale(45.0101 44.5569)">
+                            <stop stopColor="#A10151" />
+                            <stop offset="0.398" stopColor="#930056" />
+                            <stop offset="1" stopColor="#770061" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+
+            </Box>
+        </>
+    )
+}

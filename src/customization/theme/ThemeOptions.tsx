@@ -15,9 +15,13 @@ export const themeOptions: ThemeOptions = {
       main: colors.primary,
     },
     secondary: {
-      main: '#588157',
+      main: '#303030',
       light: '#a3b18a',
     },
+    text: {
+      primary: '#303030',
+      secondary: '#fff'
+    }
   },
   typography: {
     fontFamily: montserrat.style.fontFamily,

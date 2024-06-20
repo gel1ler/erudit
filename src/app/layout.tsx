@@ -24,7 +24,7 @@ export default function RootLayout({
           <body className='loading'>
             <Header />
             <section className='flex-grow'>
-              {/* {children} */}
+              {children}
             </section>
             {/* <Footer /> */}
           </body> 

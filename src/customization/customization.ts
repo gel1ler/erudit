@@ -9,7 +9,7 @@ export const colors: IColors = {
 
 export const headerProps: IHeaderProps = {
     type: 'static',
-    scrollHeight: 0.7,
+    scrollHeight: 0.4,
     remHeight: 3,
     topHeader: true,
     withShadow: true,

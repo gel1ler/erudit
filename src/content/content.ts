@@ -24,25 +24,26 @@ export const socialMedia: ISocialMedia = {
 export const navigation: INavLink[] = [
     {
         id: 0,
-        name: "Обо мне",
-        href: "#about_anchor",
+        name: "Новости",
+        href: "#news_anchor",
+        anchorLink: true,
     },
     {
         id: 1,
-        name: "Услуги",
-        href: "#services_anchor",
+        name: "Группы",
+        href: "#groups_anchor",
         anchorLink: true,
     },
     {
         id: 2,
-        name: "Отзывы",
-        href: "#ratings_anchor",
+        name: "Галерея",
+        href: "#gallery_anchor",
         anchorLink: true,
     },
     {
         id: 3,
-        name: "Контакты",
-        href: "#contacts_anchor",
+        name: "Отзывы",
+        href: "#ratings_anchor",
         anchorLink: true,
     }
 ]

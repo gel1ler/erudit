@@ -164,8 +164,8 @@
       <path class="cls-6" d="m714.491,1107.144c221.67-51.401,340.716-160.14,389.043-309.531-67.998,9.299-98.744,24.593-128.519,30.062-55.834,136.866-169.181,229.059-260.524,279.469"/>
     </clipPath>
     <linearGradient id="linear-gradient" x1="968.599" y1="907.45" x2="580.385" y2="1200.166" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00478f"/>
-      <stop offset="1" stop-color="#29c4ff"/>
+      <stop offset="0" stopColor="#00478f"/>
+      <stop offset="1" stopColor="#29c4ff"/>
     </linearGradient>
     <clipPath id="clippath-1">
       <path class="cls-6" d="m805.653,1198.821c202.291-104.201,291.03-238.816,301.24-395.498-63.64,25.693-89.696,48.061-117.22,60.666-20.56,146.379-107.832,263.558-184.02,334.832"/>
@@ -179,12 +179,12 @@
       <path class="cls-6" d="m445.209,445.164c76.832-357.909,553.222,96.028,622.987,230.577,0,0,154.67,306.478-40.101,547.078,129.123-266.07-84.479-380.536-274.188-448.205-211.686-75.51-179.622-232.111-254.063-269.728-36.813-18.601-75.927.026-96.88,37.664-5.567-32.931-2.597-58.358,42.245-97.386"/>
     </clipPath>
     <linearGradient id="linear-gradient-4" x1="764.538" y1="155.784" x2="821.824" y2="783.061" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffce4b"/>
-      <stop offset="1" stop-color="#d3226f"/>
+      <stop offset="0" stopColor="#ffce4b"/>
+      <stop offset="1" stopColor="#d3226f"/>
     </linearGradient>
     <linearGradient id="linear-gradient-5" x1="-1381.312" y1="1245.793" x2="-1911.201" y2="555.498" gradientTransform="translate(2282.223 -226.232)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff"/>
-      <stop offset="1" stop-color="#000"/>
+      <stop offset="0" stopColor="#fff"/>
+      <stop offset="1" stopColor="#000"/>
     </linearGradient>
     <mask id="mask" x="402.965" y="443.186" width="680.916" height="742.425" maskUnits="userSpaceOnUse">
       <rect class="cls-20" x="402.965" y="443.186" width="680.916" height="742.425"/>
@@ -193,8 +193,8 @@
       <path class="cls-6" d="m852.972,805.821c45.93-113.438,34.893-199.449-15.9-266.912-16.936,32.797-30.097,60.765-36.899,75.559,30.374,77.841,51.051,156.657,52.799,191.353"/>
     </clipPath>
     <linearGradient id="linear-gradient-6" x1="846.549" y1="644.457" x2="870.964" y2="872.449" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00478f"/>
-      <stop offset="1" stop-color="#51f4e9"/>
+      <stop offset="0" stopColor="#00478f"/>
+      <stop offset="1" stopColor="#51f4e9"/>
     </linearGradient>
     <clipPath id="clippath-5">
       <path class="cls-6" d="m940.348,822.811c46.693-165.578,18.018-284.055-63.349-370.489-18.608,48.436-32.688,89.541-39.911,111.26,54.435,104.081,95.473,211.019,103.26,259.229"/>
@@ -204,15 +204,15 @@
       <path class="cls-6" d="m1066.719,818.6c24.802-188.656-25.409-313.781-128.204-395.462-12.672,55.973-26.834,93.192-31.29,118.113,76.119,105.276,143.31,225.818,159.494,277.349"/>
     </clipPath>
     <linearGradient id="linear-gradient-8" x1="914.533" y1="451.982" x2="1097.206" y2="815.622" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#003780"/>
-      <stop offset="1" stop-color="#b222d3"/>
+      <stop offset="0" stopColor="#003780"/>
+      <stop offset="1" stopColor="#b222d3"/>
     </linearGradient>
     <clipPath id="clippath-7">
       <path class="cls-6" d="m1165.406,812.872c34.041-214.602-41.482-341.301-185.579-414.902-11.125,20.496-21.499,40.367-30.854,58.772,101.283,118.637,197.674,290.325,216.434,356.131"/>
     </clipPath>
     <linearGradient id="linear-gradient-9" x1="1082.428" y1="610.908" x2="1312.789" y2="764.723" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#4e046d"/>
-      <stop offset="1" stop-color="#ff8bc7"/>
+      <stop offset="0" stopColor="#4e046d"/>
+      <stop offset="1" stopColor="#ff8bc7"/>
     </linearGradient>
     <clipPath id="clippath-8">
       <path class="cls-6" d="m1355.623,745.957c-41.161-247.12-177.234-346.913-370.615-361.479-8.303,15.022-16.214,29.797-23.62,43.971,154.799,77.85,347.639,249.412,394.235,317.508"/>
@@ -222,15 +222,15 @@
       <path class="cls-6" d="m1524.492,627.158c-126.246-253.451-304.045-324.346-514.964-285.659-12.697,21.507-24.825,43.247-36.062,64.157,201.278,35.255,475.366,161.113,551.026,221.502"/>
     </clipPath>
     <linearGradient id="linear-gradient-11" x1="1199.73" y1="439.899" x2="1551.046" y2="618.852" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#b91c58"/>
-      <stop offset="1" stop-color="#f95c97"/>
+      <stop offset="0" stopColor="#b91c58"/>
+      <stop offset="1" stopColor="#f95c97"/>
     </linearGradient>
     <clipPath id="clippath-10">
       <path class="cls-6" d="m1603.818,483.215c-165.463-232.326-353.678-273.538-557.681-200.213-14.355,21.481-28.424,44.371-41.806,67.376,204.858-2.144,512.45,83.36,599.487,132.837"/>
     </clipPath>
     <linearGradient id="linear-gradient-12" x1="1107.473" y1="309.769" x2="1683.196" y2="417.173" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#b91c58"/>
-      <stop offset="1" stop-color="#ff8bc7"/>
+      <stop offset="0" stopColor="#b91c58"/>
+      <stop offset="1" stopColor="#ff8bc7"/>
     </linearGradient>
     <clipPath id="clippath-11">
       <path class="cls-6" d="m1570.214,319.99c-167.318-169.87-328.067-177.573-486.716-88.377-15.058,18.724-30.193,40.17-44.95,62.904,165.048-36.098,450.177-5.008,531.665,25.473"/>
@@ -240,8 +240,8 @@
       <path class="cls-6" d="m926.967,508.168c109.783-186.34,236.092-427.8,569.448-461.136C1156.505,0,956.979,244.535,808.205,416.216c-106.356,122.733-186.776,208.233-274.005,123.361,28.93,48.288,43.124,127.964,129.557,189.347,120.698,8.459,188.085-93.244,263.21-220.757"/>
     </clipPath>
     <linearGradient id="linear-gradient-14" x1="853.744" y1="780.727" x2="1095.778" y2="163.467" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#00478f"/>
-      <stop offset="1" stop-color="#c11fda"/>
+      <stop offset="0" stopColor="#00478f"/>
+      <stop offset="1" stopColor="#c11fda"/>
     </linearGradient>
     <clipPath id="clippath-13">
       <path class="cls-6" d="m1605.254,178.786c-177.585-126.028-332.763-66.842-332.763-66.842-85.357,44.847-150.448,107.623-204.123,176.099,76.026-95.827,443.515-126.458,536.886-109.258"/>
