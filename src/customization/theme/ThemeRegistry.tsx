@@ -4,8 +4,6 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { NextAppDirEmotionCacheProvider } from './EmotionCache'
 import { Roboto } from 'next/font/google'
 import { themeOptions } from './ThemeOptions'
-import { useEffect, useState } from 'react'
-import Loading from '@/components/layout/loader'
 
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],

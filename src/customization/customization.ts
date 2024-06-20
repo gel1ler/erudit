@@ -8,7 +8,7 @@ export const colors: IColors = {
 }
 
 export const headerProps: IHeaderProps = {
-    type: 'scrolled',
+    type: 'static',
     scrollHeight: 0.7,
     remHeight: 3,
     topHeader: true,
