@@ -15,22 +15,19 @@ export const PhoneIcon = () => {
     )
 }
 
-export const Arrow = ({ anchor, f }: { anchor: 'left' | 'right', f: () => void }) => {
+export const Arrow = ({ anchor, onClick }: { anchor: 'left' | 'right', onClick?: () => void }) => {
     return (
         <Box
-            className='absolute top-0 cursor-pointer w-1/2 h-full'
+            className='absolute top-0 cursor-pointer w-80 h-full bg-transparent transition-transform duration-300 z-10'
             sx={{
-                transition: 'all .3s ease-out',
-                [anchor]: 0,
-                background: 'transparent',
+                [anchor]: 30,
                 ':hover': {
-                    background: `linear-gradient(to ${anchor}, rgba(0,0,0,0), rgba(0,0,0,.3))`
+                    transform: `translateX(${anchor === 'left' ? '-' : ''}10px)`
                 }
             }}
-            onClick={f}
         >
             <Image
-                className="absolute top-1/2 -translate-y-1/2 h-1/4 w-1/4"
+                className="absolute top-1/2 -translate-y-1/2 h-1/4 w-1/4 "
                 id='arrow'
                 style={{
                     [anchor]: 15,
@@ -38,6 +35,7 @@ export const Arrow = ({ anchor, f }: { anchor: 'left' | 'right', f: () => void }
                 }}
                 alt='Стрелка'
                 src={anchor === 'left' ? arrowLeft : arrowRight}
+                onClick={onClick}
             />
         </Box>
     )

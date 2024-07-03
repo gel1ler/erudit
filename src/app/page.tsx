@@ -1,14 +1,16 @@
 import Start from '@/components/index/start/Start'
 import type { Metadata } from 'next'
-import { Box, Container, Typography } from '@mui/material'
-import wait from '@/services/wait'
+import { Box } from '@mui/material'
 import Loader from '../components/layout/loader'
-import Image from 'next/image'
-import Why from '@/components/index/about/Why'
 import Bg from '@/components/layout/Bg'
-import List from '@/components/index/сonsultations/List'
-import Title from '@/components/UI/text/Title'
-import Link from 'next/link'
+import { Book1, Book2, Book3, Book4, Book5, Book6 } from '../../public/bg/books'
+import News from '@/components/index/News'
+import Groups from '@/components/index/groups/Groups'
+import Gallery from '@/components/index/Gallery'
+import Ratings from '@/components/index/Ratings'
+import FAQ from '@/components/index/FAQ'
+import Bg2 from '@/components/layout/Bg2'
+import Contacts from '@/components/index/Contacts'
 
 export const metadata: Metadata = {
   title: 'Детский центр Маленький Эрудит',
@@ -21,28 +23,26 @@ export default function Home() {
     <>
       <Loader />
       <Start />
-      <Container sx={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-        <Box className='w-full anchor' id='about_anchor'>
-          <Title>Новости</Title>
-          <Image
-            alt='vk'
-            src='/vk.png'
-            width={800}
-            height={600}
-          />
-          <a href='https://vk.com'>
-            <Typography>
-              Перейти в группу ВК
-            </Typography>
-          </a>
-        </Box>
-        <Box className='w-full anchor mb-20' id='services_anchor'>
-          <Typography variant='h3' color='secondary' textAlign='center' data-aos='fade-up'>
-            Что я предлагаю
-          </Typography>
-          <List /> 
-        </Box>
-      </Container>
+      <Box className='relative flex flex-col gap-40 pb-40'>
+        <Bg>
+          <Book1 />
+          <Book2 />
+        </Bg>
+        <News />
+        <Groups />
+      </Box>
+      <Box className='relative flex flex-col gap-40 pb-40'>
+        <Bg2>
+          <Book3 />
+          <Book4 />
+          <Book5 />
+          <Book6 />
+        </Bg2>
+        <Gallery />
+        <Ratings />
+        <FAQ />
+        <Contacts />
+      </Box>
     </>
   )
 }

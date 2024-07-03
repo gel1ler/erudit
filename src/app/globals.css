@@ -24,3 +24,22 @@ li {
   padding-top: 100px;
   margin-top: -100px;
 }
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.grad-text1 {
+  background: linear-gradient(90deg, #3FD0FB 0%, #BD14D2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-text2 {
+  background: linear-gradient(90deg, #BD14D2 0%, #3FD0FB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
