@@ -26,7 +26,7 @@ export default function RootLayout({
             <section className='flex-grow'>
               {children}
             </section>
-            {/* <Footer /> */}
+            <Footer />
           </body> 
         </AOSProvider>
       </ThemeRegistry>

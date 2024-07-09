@@ -6,6 +6,7 @@ import { PhoneCall } from '@/components/icons/socialMediaIcons'
 import MyDrawer from '../drawer/MyDrawer'
 import Link from 'next/link'
 import NavLinks from './NavLinks'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Bar = ({ }) => {
 
   return (
@@ -20,18 +21,20 @@ const Bar = ({ }) => {
           />
         </Link>
         <NavLinks hoverType='color' />
-        <Button
-          sx={{
-            borderRadius: 100,
-            py: 1.5,
-            px: 3,
-            color: 'white',
-            background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
-            transition: 'background .3s ease-out',
-          }}
-        >
-          Контакты
-        </Button>
+        <AnchorLink href='#contacts_anchor'>
+          <Button
+            sx={{
+              borderRadius: 100,
+              py: 1.5,
+              px: 3,
+              color: 'white',
+              background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
+              transition: 'background .3s ease-out',
+            }}
+          >
+            Контакты
+          </Button>
+        </AnchorLink>
       </Box>
     </Toolbar >
   )

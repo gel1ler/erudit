@@ -18,23 +18,23 @@ const CollapsedComponent = ({ title, text }: { title: string, text: string }) =>
                 <Typography variant='h6'>
                     {title}
                 </Typography>
-                <animated.div
+                <Box
                     className='transition-transform'
-                    style={{
+                    sx={{
                         transform: `rotate(${isExpanded ? '0' : '-180'}deg)`,
                     }}
                 >
                     <KeyboardArrowDownIcon />
-                </animated.div>
+                </Box>
             </Box>
-            <animated.div
+            <Box
                 className='transition-all overflow-hidden duration-300'
-                style={{
+                sx={{
                     maxHeight: isExpanded ? '500px' : 0,
                     transformOrigin: 'top'
                 }}>
                 <p>{text}</p>
-            </animated.div>
+            </Box>
         </Box>
     );
 };

@@ -21,7 +21,7 @@ export const themeOptions: ThemeOptions = {
     text: {
       primary: '#303030',
       secondary: '#fff'
-    }
+    },
   },
   typography: {
     fontFamily: montserrat.style.fontFamily,

@@ -23,6 +23,8 @@ const Block = ({ title, text, className, color }: { title: string, text: string,
 const Ratings = () => {
     return (
         <Container
+            id='ratings_anchor'
+            className='anchor'
             sx={{
                 display: 'flex',
                 flexDirection: 'column',

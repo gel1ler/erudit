@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const News = () => {
     return (
-        <Container sx={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+        <Container sx={{ display: 'flex', flexDirection: 'column', gap: 20 }} id='news_anchor' className='anchor'>
             <Box className='w-full anchor flex flex-col items-center gap-4' id='about_anchor'>
                 <Title>Новости</Title>
                 <Image

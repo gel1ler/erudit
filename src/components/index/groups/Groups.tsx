@@ -34,7 +34,7 @@ const arr = [
 
 const Groups = () => {
     return (
-        <Box>
+        <Box id='groups_anchor'>
             <StartWave />
             <Title sx={{ mt: -8 }}>Группы</Title>
             <Box className='bg-[#C0C7DD] -mt-2 pt-10'>

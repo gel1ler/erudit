@@ -31,7 +31,7 @@ export default function Home() {
         <News />
         <Groups />
       </Box>
-      <Box className='relative flex flex-col gap-40 pb-40'>
+      <Box className='relative flex flex-col gap-40'>
         <Bg2>
           <Book3 />
           <Book4 />
