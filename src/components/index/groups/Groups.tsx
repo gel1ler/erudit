@@ -34,10 +34,10 @@ const arr = [
 
 const Groups = () => {
     return (
-        <Box id='groups_anchor'>
+        <Box id='groups_anchor' className='relative overflow-hidden'>
             <StartWave />
-            <Title sx={{ mt: -8 }}>Группы</Title>
-            <Box className='bg-[#C0C7DD] -mt-2 pt-10'>
+            <Title sx={{ mt: -8, position: 'absolute', top: '200px', left: 0, right: 0, mx: 'auto' }}>Группы</Title>
+            <Box className='bg-[#C0C7DD] pt-10 w-screen'>
                 <Carousel cards={arr} />
             </Box>
             <EndWave />

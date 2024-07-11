@@ -69,7 +69,7 @@ const Text = ({ children, hoverType }: IText) => {
 
 const NavLinks = ({ hoverType }: { hoverType: THoverType }) => {
     return (
-        <Box className='flex gap-10 items-center'>
+        <Box className='gap-10 items-center hidden xl:flex'>
             {navigation.map(i =>
                 i.anchorLink ?
                     <a key={i.id} href={i.href}>

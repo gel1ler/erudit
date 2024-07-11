@@ -34,9 +34,8 @@ const Gallery = () => {
     return (
         <Grid
             container
-            spacing={2}
             maxWidth='lg'
-            sx={{ mx: 'auto' }}
+            sx={{ mx: 'auto', p: 2 }}
             id='gallery_anchor'
             className='anchor'
         >
@@ -46,7 +45,7 @@ const Gallery = () => {
                 open={open}
                 setOpen={setOpen}
             />
-            <Grid item xs={4} className='flex items-center justify-center gap-2' sx={{ flexDirection: 'column' }}>
+            <Grid item xs={6} md={4} className='flex items-center justify-center gap-2' sx={{ flexDirection: 'column' }}>
                 <Typography variant='h2' fontWeight='bold'>
                     Галерея
                 </Typography>
@@ -56,7 +55,7 @@ const Gallery = () => {
                 </Typography>
             </Grid>
             {arr.map((img, index) =>
-                <Grid key={index} item xs={4}>
+                <Grid key={index} item xs={6} md={4} sx={{ p: 1 }}>
                     <Box className='relative rounded-lg overflow-hidden cursor-pointer'>
                         <Box
                             className='transition-opacity absolute top-0 left-0 w-full h-full flex items-center justify-center z-10 bg-[#515151] opacity-0 bg-opacity-80 hover:opacity-100'

@@ -26,11 +26,18 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
         ),
         responsive: [
             {
-                breakpoint: 900,
+                breakpoint: 1400,
                 settings: {
-                    centerPadding: '10px',
+                    slidesToShow: 3,
+                    centerPadding: 0,
                 }
             },
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
         ]
     }
 

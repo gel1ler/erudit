@@ -11,8 +11,8 @@ const Bar = ({ }) => {
 
   return (
     <Toolbar sx={{ height: '5rem' }}>
-      <Box className='flex gap-20 w-full justify-between items-center'>
-        <Link href='/' className=''>
+      <Box className='flex gap-10 w-full justify-between items-center'>
+        <Link href='/' className='w-[163px]'>
           <Image
             alt='Logo'
             src='/logo/logo-horizontal.svg'
@@ -25,8 +25,8 @@ const Bar = ({ }) => {
           <Button
             sx={{
               borderRadius: 100,
-              py: 1.5,
-              px: 3,
+              py: [1, 1.5],
+              px: [2, 3],
               color: 'white',
               background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
               transition: 'background .3s ease-out',

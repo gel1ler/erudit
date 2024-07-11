@@ -23,8 +23,8 @@ const opData = [{
     ]
 },
 {
-    start: '10vh',
-    end: '300vh',
+    start: 'self',
+    end: '#groups_anchor',
     properties: [
         {
             startValue: 0,
@@ -37,7 +37,7 @@ const opData = [{
 const Bg = ({ children }: { children: ReactNode }) => {
     return (
         <Plx className='absolute h-[90vh]' parallaxData={opData}>
-            <Box className='-z-50 pointer-events-none top-0 left-0 w-screen h-[90vh] blur-sm absolute  opacity-60'>
+            <Box className='-z-50 pointer-events-none top-0 left-0 w-screen overflow-hidden h-[90vh] blur-sm absolute opacity-60'>
                 {children}
             </Box>
         </Plx >

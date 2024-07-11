@@ -6,9 +6,9 @@ import Plx from 'react-plx'
 
 
 
-const opData = [{
-    start: '250vh',
-    end: '600vh',
+const data = [{
+    start: 'self',
+    end: '#contacts_anchor',
     properties: [
         {
             startValue: 0,
@@ -20,7 +20,7 @@ const opData = [{
 
 const Bg2 = ({ children }: { children: ReactNode }) => {
     return (
-        <Plx className='absolute h-[300vh] w-screen -z-50' parallaxData={opData}>
+        <Plx className='absolute h-[300vh] w-screen overflow-hidden -z-50' parallaxData={data}>
             <Box className='-z-50 pointer-events-none top-0 left-0 w-screen h-[300vh] blur-sm relative opacity-60'>
                 {children}
             </Box>

@@ -15,7 +15,7 @@ const Block = ({ title, text, className, color }: { title: string, text: string,
         >
             {title}
         </Typography>
-        <Typography variant='h6'>
+        <Typography variant='h6' textAlign='center'>
             {text}
         </Typography>
     </Box>
@@ -41,7 +41,7 @@ const Ratings = () => {
                 alt='Отзывы'
                 className='w-full'
             />
-            <Box data-aos='fade-up' className='flex w-full justify-around mx-auto'>
+            <Box data-aos='fade-up' className='flex w-full justify-around mx-auto' sx={{ flexDirection: ['column', 'row'], gap: [4, 0] }}>
                 <Block
                     title='200+'
                     text='Счастливых детей в год'

@@ -40,7 +40,7 @@ const ScrolledHeader = () => {
                     transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
                     top: 20,
                     height: isActive ? '5rem' : 0,
-                    width: isActive ? '66%' : 0,
+                    width: isActive ? ['90%', '90%', '66%'] : 0,
                     backgroundColor: 'rgba(255, 255, 255, 0.9)',
                     borderRadius: 100,
                     mx: 'auto',
