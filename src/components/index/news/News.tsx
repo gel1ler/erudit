@@ -26,7 +26,7 @@ const News = () => {
     fetchPosts();
   }, []);
 
-  if (loading || !posts.length) {
+  if (loading || !posts?.length) {
     return <div>Loading...</div>;
   }
 
