@@ -5,7 +5,6 @@ export async function GET() {
     const group_id = process.env.GROUP_ID
 
     try {
-        console.log(`https://api.vk.com/method/wall.get?owner_id=-${group_id}&count=3&access_token=${access_token}&v=5.199`)
         const response = await fetch(`https://api.vk.com/method/wall.get?owner_id=-${group_id}&count=3&access_token=${access_token}&v=5.199`);
         const data = await response.json();
 

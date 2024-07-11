@@ -12,9 +12,11 @@ const News = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
+      console.log('started')
       try {
         const response = await fetch(`/api/getPosts`);
         const data = await response.json();
+        console.log(data);
         setPosts(data.items);
       } catch (error) {
         console.error('Failed to fetch posts', error);
