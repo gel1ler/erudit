@@ -22,4 +22,5 @@ export type TPost = {
     views: { count: number },
     date: number,
     likes: { count: number },
+    id: number,
 }

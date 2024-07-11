@@ -25,7 +25,6 @@ const Attachment = ({ attachment }: { attachment: VKAttachmentExp }) => {
                 src={videoUrl}
                 width='100%'
                 height={attachment.video.first_frame[0].height + 'px'}
-                allowFullScreen={true}
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
             />
         default:
@@ -68,7 +67,7 @@ const Post = ({ post }: { post: TPost }) => {
                                     textDecoration: "underline"
                                 }
                             }}
-                        >Детский центр "Маленький Эрудит" г. Жуковский</Typography>
+                        >Детский центр &quot;Маленький Эрудит&quot; г. Жуковский</Typography>
                     </a>
                     <Typography variant='caption'>{formattedDate}</Typography>
                 </Box>
