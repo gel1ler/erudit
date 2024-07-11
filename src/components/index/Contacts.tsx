@@ -10,7 +10,7 @@ const Contacts = () => {
     return (
         <Box id='contacts_anchor' className='bg-slate-100 w-screen p-20'>
             <Title>Присоединяйтесь к нам</Title>
-            <Box data-aos='fade-up' className='flex flex-col max-w-lg mx-auto mt-6'>
+            <Box data-aos='fade-up' className='flex flex-col max-w-lg mx-auto mt-8'>
                 <Grid container rowSpacing={1} columnSpacing={2}>
                     <Grid item xs={12}>
                         <MuiPhone value={phone} onChange={setPhone} />

@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    images: {
-        domains: ["imgholder.ru"],
-      },
-    // modularizeImports: {
-    //     '@mui/icons-material': {
-    //         transform: '@mui/icons-material/{{member}}'
-    //     }
-    // }
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ["imgholder.ru", 'sun9-1.userapi.com'],
+  },
 }
 
 module.exports = nextConfig

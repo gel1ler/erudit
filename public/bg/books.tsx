@@ -15,8 +15,8 @@ export const Book1 = () => {
                 <path d="M29.1891 86.1796L18.2929 218.694L193.946 262.405L202.888 131.533L29.1891 86.1796Z" fill="url(#paint1_radial_25_218)" />
             </g>
             <defs>
-                <filter id="filter0_d_25_218" x="14.293" y="70.2684" width="242.034" height="200.136" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_25_218" x="14.293" y="70.2684" width="242.034" height="200.136" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
@@ -26,18 +26,18 @@ export const Book1 = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_25_218" result="shape" />
                 </filter>
                 <radialGradient id="paint0_radial_25_218" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(153.787 208.366) rotate(-120.435) scale(114.133 108.347)">
-                    <stop stop-color="#CE02CF" />
-                    <stop offset="0.113" stop-color="#BD14D2" />
-                    <stop offset="0.34" stop-color="#9143DB" />
-                    <stop offset="0.656" stop-color="#4B8EEA" />
-                    <stop offset="0.914" stop-color="#0ED0F8" />
+                    <stop stopColor="#CE02CF" />
+                    <stop offset="0.113" stopColor="#BD14D2" />
+                    <stop offset="0.34" stopColor="#9143DB" />
+                    <stop offset="0.656" stopColor="#4B8EEA" />
+                    <stop offset="0.914" stopColor="#0ED0F8" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_25_218" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-3.58397 208.81) rotate(-120.435) scale(218.934 207.835)">
-                    <stop stop-color="#CE02CF" />
-                    <stop offset="0.113" stop-color="#BD14D2" />
-                    <stop offset="0.34" stop-color="#9143DB" />
-                    <stop offset="0.656" stop-color="#4B8EEA" />
-                    <stop offset="0.914" stop-color="#0ED0F8" />
+                    <stop stopColor="#CE02CF" />
+                    <stop offset="0.113" stopColor="#BD14D2" />
+                    <stop offset="0.34" stopColor="#9143DB" />
+                    <stop offset="0.656" stopColor="#4B8EEA" />
+                    <stop offset="0.914" stopColor="#0ED0F8" />
                 </radialGradient>
             </defs>
         </svg>
@@ -60,8 +60,8 @@ export const Book2 = () => {
                 <path d="M265.101 316.459L336.405 170.645L149.403 62.0305L81.1232 206.65L265.101 316.459Z" fill="url(#paint1_radial_25_240)" />
             </g>
             <defs>
-                <filter id="filter0_d_25_240" x="28.8053" y="59.3712" width="311.6" height="276.724" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_25_240" x="28.8053" y="59.3712" width="311.6" height="276.724" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
@@ -71,12 +71,12 @@ export const Book2 = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_25_240" result="shape" />
                 </filter>
                 <radialGradient id="paint0_radial_25_240" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(165.486 90.518) rotate(79.3894) scale(132.792 137.27)">
-                    <stop stop-color="#FBB040" />
-                    <stop offset="1" stop-color="#F7631E" />
+                    <stop stopColor="#FBB040" />
+                    <stop offset="1" stopColor="#F7631E" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_25_240" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(351.73 149.541) rotate(79.3894) scale(254.733 263.322)">
-                    <stop stop-color="#FBB040" />
-                    <stop offset="1" stop-color="#F7631E" />
+                    <stop stopColor="#FBB040" />
+                    <stop offset="1" stopColor="#F7631E" />
                 </radialGradient>
             </defs>
         </svg>
@@ -99,8 +99,8 @@ export const Book3 = () => {
                 <path d="M153.058 287.837L283.36 191.052L167.119 8.69263L40.0525 105.806L153.058 287.837Z" fill="url(#paint1_radial_25_94)" />
             </g>
             <defs>
-                <filter id="filter0_d_25_94" x="0" y="0" width="287.36" height="295.837" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_25_94" x="0" y="0" width="287.36" height="295.837" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
@@ -110,12 +110,12 @@ export const Book3 = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_25_94" result="shape" />
                 </filter>
                 <radialGradient id="paint0_radial_25_94" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(168.324 41.3843) rotate(106.726) scale(132.792 137.27)">
-                    <stop stop-color="#FBB040" />
-                    <stop offset="1" stop-color="#F7631E" />
+                    <stop stopColor="#FBB040" />
+                    <stop offset="1" stopColor="#F7631E" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_25_94" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(306.665 179.342) rotate(106.726) scale(254.733 263.322)">
-                    <stop stop-color="#FBB040" />
-                    <stop offset="1" stop-color="#F7631E" />
+                    <stop stopColor="#FBB040" />
+                    <stop offset="1" stopColor="#F7631E" />
                 </radialGradient>
             </defs>
         </svg>
@@ -137,8 +137,8 @@ export const Book4 = () => {
                 <path d="M4 131.189L97.068 228.607L248.375 124.934L155.236 30.1018L4 131.189Z" fill="url(#paint1_radial_25_71)" />
             </g>
             <defs>
-                <filter id="filter0_d_25_71" x="0" y="0" width="259.225" height="236.607" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_25_71" x="0" y="0" width="259.225" height="236.607" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
@@ -148,18 +148,18 @@ export const Book4 = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_25_71" result="shape" />
                 </filter>
                 <radialGradient id="paint0_radial_25_71" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180.411 119.001) rotate(-168.827) scale(115.651 109.788)">
-                    <stop stop-color="#CE02CF" />
-                    <stop offset="0.113" stop-color="#BD14D2" />
-                    <stop offset="0.34" stop-color="#9143DB" />
-                    <stop offset="0.656" stop-color="#4B8EEA" />
-                    <stop offset="0.914" stop-color="#0ED0F8" />
+                    <stop stopColor="#CE02CF" />
+                    <stop offset="0.113" stopColor="#BD14D2" />
+                    <stop offset="0.34" stopColor="#9143DB" />
+                    <stop offset="0.656" stopColor="#4B8EEA" />
+                    <stop offset="0.914" stopColor="#0ED0F8" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_25_71" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(74.8597 238.532) rotate(-168.827) scale(221.846 210.599)">
-                    <stop stop-color="#CE02CF" />
-                    <stop offset="0.113" stop-color="#BD14D2" />
-                    <stop offset="0.34" stop-color="#9143DB" />
-                    <stop offset="0.656" stop-color="#4B8EEA" />
-                    <stop offset="0.914" stop-color="#0ED0F8" />
+                    <stop stopColor="#CE02CF" />
+                    <stop offset="0.113" stopColor="#BD14D2" />
+                    <stop offset="0.34" stopColor="#9143DB" />
+                    <stop offset="0.656" stopColor="#4B8EEA" />
+                    <stop offset="0.914" stopColor="#0ED0F8" />
                 </radialGradient>
             </defs>
         </svg>
@@ -182,8 +182,8 @@ export const Book5 = () => {
                 <path d="M95.5261 256.369L4 136.256L156.294 2.19067L244.832 121.772L95.5261 256.369Z" fill="url(#paint1_radial_25_82)" />
             </g>
             <defs>
-                <filter id="filter0_d_25_82" x="0" y="0" width="287" height="268.991" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_25_82" x="0" y="0" width="287" height="268.991" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
@@ -193,16 +193,16 @@ export const Book5 = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_25_82" result="shape" />
                 </filter>
                 <radialGradient id="paint0_radial_25_82" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(150.045 188.3) rotate(89.599) scale(123.949 128.371)">
-                    <stop stop-color="#0080AA" />
-                    <stop offset="0.245" stop-color="#0076AD" />
-                    <stop offset="0.65" stop-color="#005DB5" />
-                    <stop offset="1" stop-color="#0042BF" />
+                    <stop stopColor="#0080AA" />
+                    <stop offset="0.245" stopColor="#0076AD" />
+                    <stop offset="0.65" stopColor="#005DB5" />
+                    <stop offset="1" stopColor="#0042BF" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_25_82" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(147.064 134.142) rotate(15.856) scale(123.226 121.615)">
-                    <stop stop-color="#0080AA" />
-                    <stop offset="0.245" stop-color="#0076AD" />
-                    <stop offset="0.65" stop-color="#005DB5" />
-                    <stop offset="1" stop-color="#0042BF" />
+                    <stop stopColor="#0080AA" />
+                    <stop offset="0.245" stopColor="#0076AD" />
+                    <stop offset="0.65" stopColor="#005DB5" />
+                    <stop offset="1" stopColor="#0042BF" />
                 </radialGradient>
             </defs>
         </svg>
@@ -224,8 +224,8 @@ export const Book6 = () => {
                 <path d="M122.939 262.74L4 174.394L110.101 7.93652L226.091 96.5807L122.939 262.74Z" fill="url(#paint1_radial_25_105)" />
             </g>
             <defs>
-                <filter id="filter0_d_25_105" x="0" y="0" width="263" height="270.74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_25_105" x="0" y="0" width="263" height="270.74" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
@@ -235,16 +235,16 @@ export const Book6 = () => {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_25_105" result="shape" />
                 </filter>
                 <radialGradient id="paint0_radial_25_105" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(157.424 193.943) rotate(73.274) scale(121.213 125.301)">
-                    <stop stop-color="#A10151" />
-                    <stop offset="0.278" stop-color="#930054" />
-                    <stop offset="0.798" stop-color="#6F005D" />
-                    <stop offset="1" stop-color="#600061" />
+                    <stop stopColor="#A10151" />
+                    <stop offset="0.278" stopColor="#930054" />
+                    <stop offset="0.798" stopColor="#6F005D" />
+                    <stop offset="1" stopColor="#600061" />
                 </radialGradient>
                 <radialGradient id="paint1_radial_25_105" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(31.1452 319.872) rotate(73.274) scale(232.52 240.36)">
-                    <stop stop-color="#A10151" />
-                    <stop offset="0.278" stop-color="#930054" />
-                    <stop offset="0.798" stop-color="#6F005D" />
-                    <stop offset="1" stop-color="#600061" />
+                    <stop stopColor="#A10151" />
+                    <stop offset="0.278" stopColor="#930054" />
+                    <stop offset="0.798" stopColor="#6F005D" />
+                    <stop offset="1" stopColor="#600061" />
                 </radialGradient>
             </defs>
         </svg>

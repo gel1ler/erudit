@@ -10,26 +10,24 @@ const scrollHeight: number | undefined = headerProps.scrollHeight
 const ScrolledHeader = () => {
     const [height, setHeight] = useState<number>(0)
     const [isActive, setIsActive] = useState(true)
+    const [isOnTop, setIsOnTop] = useState(true)
 
     useEffect(() => setHeight(window.innerHeight), [])
 
-    let isOnTop: boolean
 
     useScrollPosition(({ prevPos, currPos }) => {
         if (typeof scrollHeight === 'number') {
             let y: number = -currPos.y
             if (y >= height * scrollHeight) {
                 setIsActive(false)
-                isOnTop = false
+                setIsOnTop(false)
             }
             if (y < height * scrollHeight) {
                 setIsActive(true)
-                isOnTop = true
+                setIsOnTop(true)
             }
         }
     })
-
-
 
     return (
         <>

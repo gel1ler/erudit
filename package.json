@@ -15,6 +15,7 @@
     "@mui/material": "^5.14.13",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@types/react-slick": "^0.23.13",
+    "@vkid/sdk": "^2.0.0",
     "aos": "^2.3.4",
     "next": "^14.2.4",
     "notistack": "^3.0.1",
@@ -25,7 +26,8 @@
     "react-plx": "^2.1.2",
     "react-slick": "^0.30.2",
     "react-spring": "^9.7.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vk-types": "^0.1.3"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
