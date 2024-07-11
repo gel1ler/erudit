@@ -12,7 +12,11 @@ export async function GET() {
         if (data.response) {
             return NextResponse.json(data.response)
         } else {
-            return NextResponse.json({ msg: 'error' })
+            return NextResponse.json({ 
+                msg: 'error',
+                url: `https://api.vk.com/method/wall.get?owner_id=-${group_id}&count=3&access_token=${access_token}&v=5.199`,
+                data
+             })
         }
     } catch (error) {
         return NextResponse.json({ error })
