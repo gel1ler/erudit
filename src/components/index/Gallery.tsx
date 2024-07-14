@@ -73,7 +73,7 @@ const Gallery = () => {
                             alt={img.text}
                             width={400}
                             height={400}
-                            className='w-full h-full -z-10 aspect-square '
+                            className='w-full h-full -z-10 aspect-square object-cover'
 
                         />
                     </Box>
