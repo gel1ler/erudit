@@ -30,6 +30,8 @@ const News = () => {
     return <div>Loading...</div>;
   }
 
+  console.log(posts)
+
   return (
     <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column', gap: 20 }} id='news_anchor' className='anchor'>
       <Box className='w-full anchor flex flex-col items-center gap-4' id='about_anchor'>

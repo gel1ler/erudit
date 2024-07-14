@@ -18,9 +18,6 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const accessToken = 'vk1.a.S70by1yRvrmVO7c_IdyxPoXJhlUHiejG23j4VrNujE6adFgqamQ9JLGLRMrwUEI10Vt_E322de6Ur57MgeO7r018hRVmqtXZHBGPoiopvVGYAYUOLxg9UGxG1c_aNtTId8-i9frjqED_EBKd3PRljFQcnwTvRBTU5vlFdDCs2Tkg9UaKGaHdYDJ_s5HqMn7P-z_y63Mp_MItl8tiF3t7ZQ';
-  const groupId = '96338049';
-
   return (
     <>
       <Loader />

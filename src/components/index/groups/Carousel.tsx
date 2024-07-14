@@ -29,13 +29,14 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
                 breakpoint: 1400,
                 settings: {
                     slidesToShow: 3,
-                    centerPadding: 0,
+                    centerPadding: '50px',
                 }
             },
             {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 1,
+                    centerPadding: '25px',
                 }
             }
         ]

@@ -3,7 +3,18 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["imgholder.ru", 'sun9-1.userapi.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.userapi.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.vkuserphoto.ru',
+        port: '',
+      },
+    ]
   },
 }
 
