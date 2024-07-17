@@ -7,10 +7,17 @@ import MyDrawer from '../drawer/MyDrawer'
 import Link from 'next/link'
 import NavLinks from './NavLinks'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-const Bar = ({ }) => {
 
+const Bar = ({ isActive }: { isActive?: boolean }) => {
   return (
-    <Toolbar sx={{ height: '5rem' }}>
+    <Toolbar
+      sx={{
+        height: '5rem',
+        opacity: isActive ? 1 : 0,
+        transition: 'opacity .15s ease-out',
+
+      }}
+    >
       <Box className='flex gap-10 w-full justify-between items-center'>
         <Link href='/' className='w-[163px]'>
           <Image

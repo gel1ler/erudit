@@ -3,7 +3,7 @@ import React from 'react'
 import { Box, Button, Typography } from '@mui/material'
 import Image from 'next/image'
 import Plx from 'react-plx'
-import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../../icons/socialMediaIcons'
+import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../../../icons/socialMediaIcons'
 import StartBg from './bg/startBg'
 
 const startParallax = [

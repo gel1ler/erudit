@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../UI/text/Title'
+import Title from '../../UI/text/Title'
 import { Box, Container, Typography } from '@mui/material'
 import Image from 'next/image'
 

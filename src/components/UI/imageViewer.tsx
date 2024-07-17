@@ -34,7 +34,8 @@ const ImageViewer = ({
     return (
         <Modal open={open} onClose={() => setOpen(false)}>
             <Box
-                className='outline-none w-screen h-screen absolute grid gap-4 bg-white'
+                className='outline-none w-screen absolute grid gap-4 bg-white'
+                sx={{ height: '100dvh' }}
             >
                 <IconButton
                     onClick={() => setOpen(false)}
@@ -56,6 +57,7 @@ const ImageViewer = ({
                                     alt='Фото в слайдере'
                                     src={image}
                                     fill
+                                    sizes="90vw"
                                     className='object-contain p-10'
                                 />
                             </Box>

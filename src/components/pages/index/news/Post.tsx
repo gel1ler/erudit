@@ -46,7 +46,7 @@ const Post = ({ post }: { post: TPost }) => {
 
     return (
         <Box
-            className='rounded-lg bg-slate-100 p-4 w-full flex flex-col gap-2 z-10 h-fit max-h-[80vh] max-w-md'
+            className='rounded-lg bg-slate-100 p-4 w-full flex flex-col gap-2 z-10 h-fit max-w-md'
             sx={{ boxShadow: '0 0 5px 2px rgba(0,0,0, .15)' }}
         >
             <Box className='flex gap-2'>

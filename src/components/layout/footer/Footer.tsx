@@ -14,7 +14,7 @@ const Text = ({ href, children }: { href: string, children: ReactNode }) =>
 const Footer = () => {
     return (
         <Box
-            className='column-centered'
+            className='column-centered border-t'
             sx={{
                 justifyContent: 'space-between',
                 gap: 1,

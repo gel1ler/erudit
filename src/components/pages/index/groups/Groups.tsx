@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import { EndWave, StartWave } from '../../../../public/bg/waves'
+import { EndWave, StartWave } from '../../../../../public/bg/waves'
 import Title from '@/components/UI/text/Title'
 import Carousel from './Carousel'
 

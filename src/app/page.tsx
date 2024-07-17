@@ -1,16 +1,16 @@
-import Start from '@/components/index/start/Start'
+import Start from '@/components/pages/index/start/Start'
 import type { Metadata } from 'next'
 import { Box } from '@mui/material'
 import Loader from '../components/layout/loader'
 import Bg from '@/components/layout/Bg'
 import { Book1, Book2, Book3, Book4, Book5, Book6 } from '../../public/bg/books'
-import Groups from '@/components/index/groups/Groups'
-import Gallery from '@/components/index/Gallery'
-import Ratings from '@/components/index/Ratings'
-import FAQ from '@/components/index/FAQ'
+import Groups from '@/components/pages/index/groups/Groups'
+import Gallery from '@/components/pages/index/Gallery'
+import Ratings from '@/components/pages/index/Ratings'
+import FAQ from '@/components/pages/index/FAQ'
 import Bg2 from '@/components/layout/Bg2'
-import Contacts from '@/components/index/Contacts'
-import News from '@/components/index/news/News'
+import Contacts from '@/components/pages/Contacts'
+import News from '@/components/pages/index/news/News'
 
 export const metadata: Metadata = {
   title: 'Детский центр Маленький Эрудит',

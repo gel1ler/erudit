@@ -2,28 +2,30 @@
 import { Box, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
 import React, { useState } from 'react'
-import ImageViewer from '../UI/imageViewer'
+import ImageViewer from '../../UI/imageViewer'
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import Link from 'next/link'
 
 const arr = [
     {
-        src: '/gallery/1.png',
+        src: '/gallery/Выпускной 2021 (1).jpg',
         text: 'Выпускной 2021'
     },
     {
-        src: '/gallery/2.png',
+        src: '/gallery/Выпускной 2021 (2).jpg',
         text: 'Выпускной 2021'
     },
     {
-        src: '/gallery/3.png',
-        text: 'Выпускной 2021'
+        src: '/gallery/8 марта (1).jpg',
+        text: '8 марта'
     },
     {
-        src: '/gallery/4.png',
-        text: 'Выпускной 2021'
+        src: '/gallery/На занятии (1).jpg',
+        text: 'На занятии'
     },
     {
-        src: '/gallery/5.png',
-        text: 'Выпускной 2021'
+        src: '/gallery/Новый год (1).jpg',
+        text: 'Новый год'
     },
 ]
 
@@ -45,14 +47,19 @@ const Gallery = () => {
                 open={open}
                 setOpen={setOpen}
             />
-            <Grid item xs={6} md={4} className='flex items-center justify-center gap-2' sx={{ flexDirection: 'column' }}>
-                <Typography variant='h2' fontWeight='bold'>
-                    Галерея
-                </Typography>
-                <Typography variant='h6'>
-                    Полная версия
-                    {'->'}
-                </Typography>
+            <Grid item xs={6} md={4} className='flex items-center justify-center'>
+                <Link
+                    href='/gallery'
+                    className='flex items-center justify-center gap-2 flex-col cursor-pointer hover:translate-x-2 duration-150'
+                >
+                    <Typography variant='h2' fontWeight='bold'>
+                        Галерея
+                    </Typography>
+                    <Typography variant='h6' className='duration-150' id='full-gallery'>
+                        Полная версия
+                        <ArrowRightAltIcon />
+                    </Typography>
+                </Link>
             </Grid>
             {arr.map((img, index) =>
                 <Grid key={index} item xs={6} md={4} sx={{ p: 1 }}>

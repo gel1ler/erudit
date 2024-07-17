@@ -4,6 +4,7 @@ import { AppBar, Typography } from '@mui/material'
 import Bar from '../Bar/Bar'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { headerProps } from '@/customization/customization'
+import MenuIcon from '@mui/icons-material/Menu';
 
 const scrollHeight: number | undefined = headerProps.scrollHeight
 
@@ -39,8 +40,8 @@ const ScrolledHeader = () => {
                 sx={{
                     transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
                     top: 20,
-                    height: isActive ? '5rem' : 0,
-                    width: isActive ? ['90%', '90%', '66%'] : 0,
+                    height: isActive ? '5rem' : 30,
+                    width: isActive ? ['90%', '90%', '66%'] : 90,
                     backgroundColor: 'rgba(255, 255, 255, 0.9)',
                     borderRadius: 100,
                     mx: 'auto',
@@ -48,18 +49,15 @@ const ScrolledHeader = () => {
                     right: 0,
                 }}
             >
-                <Bar />
+                <Bar isActive={isActive} />
+                <MenuIcon
+                    sx={{
+                        opacity: isActive ? 0 : 1,
+                        transition: 'opacity .15s ease-out',
+                    }}
+                    className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2'
+                />
             </AppBar>
-            <Typography
-                position='fixed'
-                variant='h4'
-                sx={{
-                    opacity: isActive ? 0 : 1
-                }}
-                className='absolute top-10 right-10 transition-opacity duration-300'
-            >
-                &equiv;
-            </Typography>
         </>
     )
 }

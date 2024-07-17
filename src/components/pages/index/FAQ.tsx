@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import Title from '../UI/text/Title'
+import Title from '../../UI/text/Title'
 import { animated, useSpring } from 'react-spring'
 import { Box, Container, Typography } from '@mui/material'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
