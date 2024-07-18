@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Book1 = () => {
     return (
-        <svg className='absolute left-10' style={{ bottom: '40px' }} width="291" height="336" viewBox="0 0 291 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg style={{ bottom: '40px', left: '2.5rem', position: 'absolute' }} width="291" height="336" viewBox="0 0 291 336" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_25_218)">
                 <path d="M72.6687 97.5503L28.6582 221.091L205.294 261.368L252.327 153.611L248.714 146.8L72.6687 97.5503Z" fill="white" />
                 <path d="M66.2976 84.5855L25.0453 214.28L200.699 257.992L248.714 146.8L66.2976 84.5855Z" fill="url(#paint0_radial_25_218)" />
@@ -47,7 +47,7 @@ export const Book1 = () => {
 
 export const Book2 = () => {
     return (
-        <svg className='absolute top-10 right-10' width="330" height="385" viewBox="0 0 330 385" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg style={{ top: '2.5rem', right: '2.5rem', position: 'absolute' }} width="330" height="385" viewBox="0 0 330 385" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_25_240)">
                 <path d="M219.053 288.953L325.289 164.443L135.618 59.3712L32.8053 165.053L34.0421 173.957L219.053 288.953Z" fill="white" />
                 <path d="M220.814 305.728L326.524 173.345L139.525 64.7289L34.0421 173.957L220.814 305.728Z" fill="url(#paint0_radial_25_240)" />
@@ -169,7 +169,7 @@ export const Book4 = () => {
 }
 export const Book5 = () => {
     return (
-        <svg className='absolute'  style={{ right: '-50px', top: '160vh' }} width="287" height="269" viewBox="0 0 287 269" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className='absolute' style={{ right: '-50px', top: '160vh' }} width="287" height="269" viewBox="0 0 287 269" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_25_82)">
                 <path d="M131.214 225.463L11.424 131.321L166.802 0L280.09 77.5573L280.546 85.9303L131.214 225.463Z" fill="white" />
                 <path d="M132.597 241.132L11.8777 139.692L164.174 5.6272L280.546 85.9304L132.597 241.132Z" fill="url(#paint0_radial_25_82)" />
@@ -211,7 +211,7 @@ export const Book5 = () => {
 }
 export const Book6 = () => {
     return (
-        <svg className='absolute'  style={{ left: '100px', top: '220vh' }} width="263" height="271" viewBox="0 0 263 271" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className='absolute' style={{ left: '100px', top: '220vh' }} width="263" height="271" viewBox="0 0 263 271" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_25_105)">
                 <path d="M148.744 221.134L10.4124 164.703L120.165 0L247.833 42.5972L250.563 50.3354L148.744 221.134Z" fill="white" />
                 <path d="M154.35 235.474L13.1416 172.441L119.245 5.9834L250.563 50.3354L154.35 235.474Z" fill="url(#paint0_radial_25_105)" />

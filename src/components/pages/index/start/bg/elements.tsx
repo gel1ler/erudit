@@ -147,44 +147,24 @@ export const Planes = () => {
     const ref1 = useRef<HTMLDivElement>(null);
     const ref2 = useRef<HTMLDivElement>(null);
 
-    // useEffect(() => {
-    //     const radius = 300
+    const duration = 5000
 
-    //     let f1 = 0;
-    //     let f2 = 1
-    //     const s = 0.2 * Math.PI / 180; //Вычислим угол
-
-    //     const animate = () => {
-    //         f1 += s; // приращение аргумента для первого объекта
-    //         f2 += s; // приращение аргумента для второго объекта
-
-    //         if (ref1.current) {
-    //             ref1.current.style.left = 30 + radius * Math.sin(f1) + 'px'; // меняем координаты первого элемента
-    //             ref1.current.style.top = 135 + radius * Math.cos(f1) + 'px';
-    //             ref1.current.style.rotate = -180 - f1 + 'rad';
-    //         }
-
-    //         if (ref2.current) {
-    //             ref2.current.style.right = 30 + radius * Math.sin(-f2) + 'px'; // меняем координаты второго элемента
-    //             ref2.current.style.top = 435 + radius * Math.cos(-f2) + 'px';
-    //             ref2.current.style.rotate = - f2 + 'rad';
-    //         }
-
-    //         requestAnimationFrame(animate);
-    //     };
-
-    //     const animationId = requestAnimationFrame(animate);
-
-    //     return () => {
-    //         cancelAnimationFrame(animationId)
-    //     }
-    // }, [])
+    const springs = useSpring({
+        from: { rotateX: 20, rotateY: 20, },
+        to: [{ rotateX: -40, rotateY: -40 }, { rotateX: 20, rotateY: 20 }],
+        loop: true,
+        reset: true,
+        config: {
+            duration,
+            easing: easings.easeInOutSine,
+        }
+    });
 
     return (
         <>
-            <Box
-                ref={ref1}
-                sx={{
+            <animated.div
+                style={{
+                    ...springs,
                     position: 'absolute',
                     top: '10vh',
                     left: '10vh',
@@ -224,10 +204,10 @@ export const Planes = () => {
                     </defs>
                 </svg>
 
-            </Box>
-            <Box
-                ref={ref2}
-                sx={{
+            </animated.div>
+            <animated.div
+                style={{
+                    ...springs,
                     position: 'absolute',
                     bottom: '10vh',
                     right: '10vh',
@@ -267,7 +247,7 @@ export const Planes = () => {
                     </defs>
                 </svg>
 
-            </Box>
+            </animated.div>
         </>
     )
 }

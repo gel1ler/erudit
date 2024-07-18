@@ -71,9 +71,9 @@ const Gallery = () => {
                 exclusive
                 onChange={(e, newTarget) => setTarget(newTarget)}
                 aria-label="text alignment"
-                className='mx-auto'
+                className='mx-auto max-w-[95vw] overflow-scroll'
             >
-                <ToggleButton value='all'>
+                <ToggleButton value='all'> 
                     Все фото
                 </ToggleButton>
                 <ToggleButton value='graduation'>
