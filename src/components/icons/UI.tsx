@@ -18,7 +18,7 @@ export const PhoneIcon = () => {
 export const Arrow = ({ anchor, onClick }: { anchor: 'left' | 'right', onClick?: () => void }) => {
     return (
         <Box
-            className='absolute top-0 cursor-pointer w-20 h-full bg-transparent transition-transform duration-300 z-10'
+            className='absolute top-0 cursor-pointer w-24 h-full bg-transparent transition-transform duration-300 z-10'
             sx={{
                 [anchor]: 30,
                 ':hover': {

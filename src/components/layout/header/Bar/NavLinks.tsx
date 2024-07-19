@@ -88,4 +88,25 @@ const NavLinks = ({ hoverType }: { hoverType: THoverType }) => {
     )
 }
 
+export const DrawerNavLinks = ({ hoverType }: { hoverType: THoverType }) => {
+    return (
+        <>
+            {navigation.map(i =>
+                i.anchorLink ?
+                    <a key={i.id} href={i.href}>
+                        <Text hoverType={hoverType}>
+                            {i.name}
+                        </Text>
+                    </a>
+                    :
+                    <Link key={i.id} href={i.href}>
+                        <Text hoverType={hoverType}>
+                            {i.name}
+                        </Text>
+                    </Link>
+            )}
+        </>
+    )
+}
+
 export default NavLinks

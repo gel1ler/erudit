@@ -32,31 +32,55 @@ const Ratings = () => {
                 justifyContent: 'center'
             }}
         >
-            <Title>Отзывы на Яндексе 4,8</Title>
-            <Image
-                data-aos='fade-up'
-                width={1180}
-                height={259}
-                src='/ratings.png'
-                alt='Отзывы'
-                className='w-full'
-            />
-            <Box data-aos='fade-up' className='flex w-full justify-around mx-auto' sx={{ flexDirection: ['column', 'row'], gap: [4, 0] }}>
-                <Block
-                    title='200+'
-                    text='Счастливых детей в год'
-                    className='grad-text1'
-                />
-                <Block
-                    title='50+'
-                    text='Увлекательных занятий'
-                    color='#BD14D2'
-                />
-                <Block
-                    title='100%'
-                    text='Довольных родителей'
-                    className='grad-text2'
-                />
+            <Title>Отзывы на Яндексе</Title>
+            <Box className='w-full flex flex-col-reverse lg:flex-row gap-16 lg:gap-0 items-center'>
+                <Box data-aos='fade-up' className='flex flex-col justify-center mx-auto gap-16'>
+                    <Block
+                        title='200+'
+                        text='Счастливых детей в год'
+                        className='grad-text1'
+                    />
+                    <Block
+                        title='50+'
+                        text='Увлекательных занятий'
+                        color='#BD14D2'
+                    />
+                    <Block
+                        title='100%'
+                        text='Довольных родителей'
+                        className='grad-text2'
+                    />
+                </Box>
+                <div style={{ width: 560, height: 660, overflow: 'hidden', position: 'relative', padding: '0 20px' }}>
+                    <iframe
+                        style={{ width: '100%', height: '100%', border: '1px solid #e6e6e6', borderRadius: 8, boxSizing: 'border-box' }}
+                        src="https://yandex.ru/maps-reviews-widget/1108324675?comments"
+                    />
+                    <a
+                        href="https://yandex.ru/maps/org/malenkiy_erudit/1108324675/"
+                        target="_blank"
+                        style={{
+                            boxSizing: 'border-box',
+                            textDecoration: 'none',
+                            color: '#b3b3b3',
+                            fontSize: 10,
+                            fontFamily: 'YS Text,sans-serif',
+                            padding: '0 20px',
+                            position: 'absolute',
+                            bottom: 8,
+                            width: '100%',
+                            textAlign: 'center',
+                            left: 0,
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            display: 'block',
+                            maxHeight: 14,
+                            whiteSpace: 'nowrap',
+                        }}
+                    >
+                        Маленький Эрудит на карте Жуковского — Яндекс Карты
+                    </a>
+                </div>
             </Box>
         </Container>
     )

@@ -1,10 +1,10 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { AppBar, Typography } from '@mui/material'
+import { AppBar, useMediaQuery, useTheme } from '@mui/material'
 import Bar from '../Bar/Bar'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { headerProps } from '@/customization/customization'
-import MenuIcon from '@mui/icons-material/Menu';
+import MyDrawer from '../drawer/MyDrawer'
 
 const scrollHeight: number | undefined = headerProps.scrollHeight
 
@@ -12,6 +12,9 @@ const ScrolledHeader = () => {
     const [height, setHeight] = useState<number>(0)
     const [isActive, setIsActive] = useState(true)
     const [isOnTop, setIsOnTop] = useState(true)
+
+    const theme = useTheme()
+    const isLgScreen = useMediaQuery(theme.breakpoints.up('lg'))
 
     useEffect(() => setHeight(window.innerHeight), [])
 
@@ -35,12 +38,12 @@ const ScrolledHeader = () => {
             <AppBar
                 position='fixed'
                 className=' overflow-hidden'
-                onMouseEnter={() => isOnTop ? null : setIsActive(true)}
-                onMouseLeave={() => isOnTop ? null : setIsActive(false)}
+                onMouseEnter={() => isLgScreen && !isOnTop && setIsActive(true)}
+                onMouseLeave={() => isLgScreen && !isOnTop && setIsActive(false)}
                 sx={{
                     transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
                     top: 20,
-                    height: isActive ? '5rem' : 30,
+                    height: isActive ? '5rem' : 40,
                     width: isActive ? ['90%', '90%', '66%'] : 90,
                     backgroundColor: 'rgba(255, 255, 255, 0.9)',
                     borderRadius: 100,
@@ -50,13 +53,7 @@ const ScrolledHeader = () => {
                 }}
             >
                 <Bar isActive={isActive} />
-                <MenuIcon
-                    sx={{
-                        opacity: isActive ? 0 : 1,
-                        transition: 'opacity .15s ease-out',
-                    }}
-                    className='absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2'
-                />
+                <MyDrawer isActive={isActive} />
             </AppBar>
         </>
     )

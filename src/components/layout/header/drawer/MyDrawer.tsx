@@ -4,42 +4,44 @@ import { useTheme } from '@mui/material/styles'
 import { Drawer, Box, useMediaQuery } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import IB from '@/components/icons/IB'
-import Image from 'next/image'
+import MenuIcon from '@mui/icons-material/Menu'
+import NavLinks, { DrawerNavLinks } from '../Bar/NavLinks'
 
 
-const MyDrawer = () => {
+const MyDrawer = ({ isActive }: { isActive?: boolean }) => {
     const [open, setOpen] = useState(false)
-    const theme = useTheme()
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
         <>
-            <IB f={() => setOpen(true)} sx={{ p: '10px' }}>
-                <Image
-                    width={35}
-                    height={35}
-                    src={`/icons/menu.svg`}
-                    alt='menu icon'
-                />
+            <IB
+                f={() => setOpen(true)}
+                sx={{
+                    opacity: isActive ? 0 : 1,
+                    transition: 'opacity .15s ease-out',
+                    position: 'absolute',
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)',
+                }}
+            >
+                <MenuIcon fontSize='large' />
             </IB>
-            <Drawer open={open} onClose={() => setOpen(false)} anchor={isSmallScreen ? 'top' : 'right'}>
+            <Drawer open={open} onClose={() => setOpen(false)} anchor='top'>
                 <Box
-                    className='h-screen'
-                    sx={{
-                        width: ['100vw', '60vw', '40vw', '30vw'],
-                    }}
+                    className='h-[100dvh] w-screen'
                 >
-                    <Box className='relative h-screen'>
+                    <Box className='relative h-screen flex flex-col items-center justify-center gap-4'>
                         <IB
                             f={() => setOpen(false)}
                             sx={{
                                 position: 'absolute',
-                                right: 10,
-                                top: 10,
+                                right: 20,
+                                top: 20,
                             }}
                         >
                             <Close sx={{ fontSize: '35px' }} />
                         </IB>
+                        <DrawerNavLinks hoverType='color' />
                     </Box>
                 </Box>
             </Drawer >
