@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import NavLinks, { DrawerNavLinks } from '../Bar/NavLinks'
 
 
-const MyDrawer = ({ isActive }: { isActive?: boolean }) => {
+const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) => {
     const [open, setOpen] = useState(false)
 
     return (
@@ -18,10 +18,10 @@ const MyDrawer = ({ isActive }: { isActive?: boolean }) => {
                 sx={{
                     opacity: isActive ? 0 : 1,
                     transition: 'opacity .15s ease-out',
-                    position: 'absolute',
+                    position: noAbs ? 'static' : 'absolute',
                     left: '50%',
                     top: '50%',
-                    transform: 'translate(-50%, -50%)',
+                    transform: noAbs ? null : 'translate(-50%, -50%)',
                 }}
             >
                 <MenuIcon fontSize='large' />
@@ -41,7 +41,7 @@ const MyDrawer = ({ isActive }: { isActive?: boolean }) => {
                         >
                             <Close sx={{ fontSize: '35px' }} />
                         </IB>
-                        <DrawerNavLinks hoverType='color' />
+                        <DrawerNavLinks setOpen={setOpen} hoverType='color' />
                     </Box>
                 </Box>
             </Drawer >

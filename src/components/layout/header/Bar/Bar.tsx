@@ -5,6 +5,7 @@ import { Box } from '@mui/material'
 import Link from 'next/link'
 import NavLinks from './NavLinks'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import MyDrawer from '../drawer/MyDrawer'
 
 const Bar = ({ isActive }: { isActive?: boolean }) => {
   return (
@@ -26,20 +27,23 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
           />
         </Link>
         <NavLinks hoverType='color' />
-        <AnchorLink href='#contacts_anchor'>
-          <Button
-            sx={{
-              borderRadius: 100,
-              py: [1, 1.5],
-              px: [2, 3],
-              color: 'white',
-              background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
-              transition: 'background .3s ease-out',
-            }}
-          >
-            Контакты
-          </Button>
-        </AnchorLink>
+        <Box className='flex items-center gap-2'>
+          <AnchorLink href='#contacts_anchor'>
+            <Button
+              sx={{
+                borderRadius: 100,
+                py: [1, 1.5],
+                px: [2, 3],
+                color: 'white',
+                background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
+                transition: 'background .3s ease-out',
+              }}
+            >
+              Контакты
+            </Button>
+          </AnchorLink>
+          <MyDrawer noAbs />
+        </Box>
       </Box>
     </Toolbar >
   )

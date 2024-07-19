@@ -88,18 +88,18 @@ const NavLinks = ({ hoverType }: { hoverType: THoverType }) => {
     )
 }
 
-export const DrawerNavLinks = ({ hoverType }: { hoverType: THoverType }) => {
+export const DrawerNavLinks = ({ hoverType, setOpen }: { hoverType: THoverType, setOpen: (value: boolean) => void }) => {
     return (
         <>
             {navigation.map(i =>
                 i.anchorLink ?
-                    <a key={i.id} href={i.href}>
+                    <a key={i.id} href={i.href} onClick={() => setOpen(false)}>
                         <Text hoverType={hoverType}>
                             {i.name}
                         </Text>
                     </a>
                     :
-                    <Link key={i.id} href={i.href}>
+                    <Link key={i.id} href={i.href} onClick={() => setOpen(false)}>
                         <Text hoverType={hoverType}>
                             {i.name}
                         </Text>

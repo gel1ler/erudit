@@ -51,7 +51,7 @@ const Ratings = () => {
                         className='grad-text2'
                     />
                 </Box>
-                <div style={{ width: 560, height: 660, overflow: 'hidden', position: 'relative', padding: '0 20px' }}>
+                <div className='w-full max-w-xl h-[660px] overflow-hidden relative px-5'>
                     <iframe
                         style={{ width: '100%', height: '100%', border: '1px solid #e6e6e6', borderRadius: 8, boxSizing: 'border-box' }}
                         src="https://yandex.ru/maps-reviews-widget/1108324675?comments"
