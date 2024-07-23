@@ -1,8 +1,9 @@
 import { Box, Button, Typography } from '@mui/material'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
-const Card = ({ title, text, img }: { title: string, text: string, img: string }) => {
+const Card = ({ title, text, img, id }: { title: string, text: string, img: string, id:number }) => {
   return (
     <Box data-aos='fade-up' className='max-w-xs flex flex-col items-center gap-2'>
       <Image
@@ -18,20 +19,22 @@ const Card = ({ title, text, img }: { title: string, text: string, img: string }
       <Typography variant='body1' textAlign='center'>
         {text}
       </Typography>
-      <Button
-        sx={{
-          background: '#F7631E',
-          borderRadius: 60,
-          px: 3,
-          py: 1,
-          mt: 1,
-          ":hover": {
-            background: '#f34723',
-          }
-        }}
-      >
-        Подробнее
-      </Button>
+      <Link href={`/groups/${id}`}>
+        <Button
+          sx={{
+            background: '#F7631E',
+            borderRadius: 60,
+            px: 3,
+            py: 1,
+            mt: 1,
+            ":hover": {
+              background: '#f34723',
+            }
+          }}
+        >
+          Подробнее
+        </Button>
+      </Link>
     </Box >
   )
 }

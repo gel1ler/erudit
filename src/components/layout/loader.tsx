@@ -33,16 +33,16 @@ export default function Loader() {
 
     useEffect(() => {
         setLogoOpen(true)
-        setTimeout(() => setTextOpen(true), 1000)
+        setTimeout(() => setTextOpen(true), 600)
         setTimeout(() => {
             setLoading(false)
             document.body.classList.remove('loading')
-        }, 2000)
+        }, 1500)
     }, [])
 
     return (
         <Box
-            className='w-screen h-screen fixed left-0 top-0 flex items-center justify-center bg-white transition-all duration-500 z-[2000]'
+            className='w-screen h-screen fixed left-0 top-0 flex items-center justify-center bg-white transition-all duration-500 z-[2000] pointer-events-none'
             sx={{
                 opacity: loading ? 1 : 0,
             }}

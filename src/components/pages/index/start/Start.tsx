@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Plx from 'react-plx'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../../../icons/socialMediaIcons'
 import StartBg from './bg/startBg'
+import EnrollButton from '@/components/UI/form/EnrollButton'
 
 const startParallax = [
     {
@@ -44,7 +45,7 @@ const Start = () => {
                     alt='Background'
                     className='object-cover -z-50'
                 />
-                <Box className='flex flex-col items-center w-1/2 gap-4'>
+                <Box className='flex flex-col items-center md:w-1/2 w-full px-2 gap-4'>
                     <Typography color='text.secondary' variant='h3' textAlign='center'>
                         Детский центр &quot;Маленький эрудит&quot; объявляет набор на 2024-2025 учебный год
                     </Typography>
@@ -54,24 +55,7 @@ const Start = () => {
                         <TelegramIcon />
                         <InstagramIcon />
                     </Box>
-                    <Button
-                        variant='outlined'
-                        className='w-fit'
-                        sx={{
-                            borderRadius: '50px',
-                            py: '10px',
-                            border: '3px solid #fff',
-                            px: 4,
-                            fontSize: '15px',
-                            '&:hover': {
-                                border: '3px solid #fff',
-                                backgroundColor: '#fff',
-                                color: 'text.primary',
-                            }
-                        }}
-                    >
-                        Записаться
-                    </Button>
+                    <EnrollButton />
                 </Box>
             </Box>
         </Plx >

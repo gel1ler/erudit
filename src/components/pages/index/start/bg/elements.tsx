@@ -3,7 +3,7 @@ import { config } from "process";
 import { useEffect, useRef } from "react";
 import { useSpring, animated, easings } from "react-spring";
 
-export const Planet = () => {
+export const Planet = ({ isLg }: { isLg?: boolean }) => {
 
     const duration = 5500
 
@@ -23,7 +23,10 @@ export const Planet = () => {
             className='absolute bottom-20 left-[15%]'
             style={{
                 ...springs,
-                filter: 'drop-shadow(0 0 10px rgba(144, 57, 255, 0.5))'
+                filter: 'drop-shadow(0 0 10px rgba(144, 57, 255, 0.5))',
+                bottom: isLg ? '80px' : '40px',
+                left: isLg? '15%' : '60px',
+                
             }}
         >
             <svg width="171" height="114" viewBox="0 0 171 114" fill="none" xmlns="http://www.w3.org/2000/svg">

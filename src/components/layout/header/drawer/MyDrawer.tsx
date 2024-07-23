@@ -10,23 +10,29 @@ import NavLinks, { DrawerNavLinks } from '../Bar/NavLinks'
 
 const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) => {
     const [open, setOpen] = useState(false)
+    const theme = useTheme()
+    const isLg = useMediaQuery(theme.breakpoints.up('lg'))
 
-    if (noAbs && true) return null
+    if (noAbs && isLg) return null
     return (
         <>
             <IB
                 f={() => setOpen(true)}
                 sx={{
-                    opacity: isActive ? 0 : 1,
+                    opacity: isActive ? !noAbs && 0 : 1,
                     transition: 'opacity .15s ease-out',
                     position: noAbs ? 'static' : 'absolute',
                     left: '50%',
                     top: '50%',
                     transform: noAbs ? null : 'translate(-50%, -50%)',
-                    pointerEvents: isActive ? 'none' : 'auto',
+                    pointerEvents: isActive && !noAbs ? 'none' : 'auto',
                 }}
             >
-                <MenuIcon />
+                <MenuIcon
+                    sx={{
+                        fontSize: noAbs ? '30px' : 'inherit'
+                    }}
+                />
             </IB>
             <Drawer open={open} onClose={() => setOpen(false)} anchor='top'>
                 <Box

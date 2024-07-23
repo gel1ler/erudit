@@ -17,7 +17,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
 
       }}
     >
-      <Box className='flex gap-10 w-full justify-between items-center'>
+      <Box className='flex w-full justify-between items-center'>
         <Link href='/' className='w-[163px]'>
           <Image
             alt='Logo'
@@ -28,7 +28,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
         </Link>
         <NavLinks hoverType='color' />
         <Box className='flex items-center gap-2'>
-          <AnchorLink href='#contacts_anchor'>
+          <AnchorLink href='#contacts_anchor' className='hidden sm:block'>
             <Button
               sx={{
                 borderRadius: 100,
