@@ -48,25 +48,24 @@ export default function Loader() {
             }}
         >
             <Box
-                className='flex items-end gap-4'
+                className='flex flex-col items-center justify-center gap-4'
             >
-                <Box
-                    className='relative'
-                    sx={{
-                        width: ['150px', '200px',],
-                        height: ['150px', '200px',]
-                    }}
-                >
+                <Image
+                    id='loader-logo'
+                    src='/logo/logo.svg'
+                    width={150}
+                    height={150}
+                    alt='Logo'
+                />
+
+                <Trail open={open}>
                     <Image
                         id='loader-logo'
-                        src='/logo/logo-small.svg'
-                        fill
+                        src='/logo/logo-horizontal.svg'
+                        width={150}
+                        height={150}
                         alt='Logo'
                     />
-                </Box>
-                <Trail open={open}>
-                    <Typography variant='h2'>Анна</Typography>
-                    <Typography variant='h2'>Бехтольд</Typography>
                 </Trail>
             </Box>
         </Box >

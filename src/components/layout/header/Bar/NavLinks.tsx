@@ -21,7 +21,7 @@ const Text = ({ children, hoverType }: IText) => {
             break
 
         case 'color':
-            styles = { ...styles, ':hover': { color: 'secondary.main' } }
+            styles = { ...styles, ':hover': { color: '#0060b3' } }
             break
 
         case 'underline':

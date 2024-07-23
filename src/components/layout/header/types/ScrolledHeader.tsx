@@ -43,8 +43,8 @@ const ScrolledHeader = () => {
                 sx={{
                     transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
                     top: 20,
-                    height: isActive ? '5rem' : 40,
-                    width: isActive ? ['90%', '90%', '66%'] : 90,
+                    height: isActive ? '5rem' : 35,
+                    width: isActive ? ['90%', '90%', '66%'] : 80,
                     backgroundColor: 'rgba(255, 255, 255, 0.9)',
                     borderRadius: 100,
                     mx: 'auto',

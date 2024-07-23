@@ -42,7 +42,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
               Контакты
             </Button>
           </AnchorLink>
-          <MyDrawer noAbs />
+          <MyDrawer noAbs isActive={isActive} />
         </Box>
       </Box>
     </Toolbar >
