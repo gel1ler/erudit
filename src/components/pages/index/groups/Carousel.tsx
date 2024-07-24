@@ -28,7 +28,7 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
             {
                 breakpoint: 1400,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     centerPadding: '50px',
                 }
             },
@@ -37,6 +37,12 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
                 settings: {
                     slidesToShow: 1,
                     centerPadding: '25px',
+                    nextArrow: (
+                        <Arrow anchor='right' sm />
+                    ),
+                    prevArrow: (
+                        <Arrow anchor='left' sm />
+                    ),
                 }
             }
         ]

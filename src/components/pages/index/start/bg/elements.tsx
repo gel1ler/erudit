@@ -25,8 +25,8 @@ export const Planet = ({ isLg }: { isLg?: boolean }) => {
                 ...springs,
                 filter: 'drop-shadow(0 0 10px rgba(144, 57, 255, 0.5))',
                 bottom: isLg ? '80px' : '40px',
-                left: isLg? '15%' : '60px',
-                
+                left: isLg ? '15%' : '60px',
+
             }}
         >
             <svg width="171" height="114" viewBox="0 0 171 114" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,8 +53,8 @@ export const Planet = ({ isLg }: { isLg?: boolean }) => {
     )
 }
 
-export const Circle = () =>
-    <Box className='absolute top-1/5 right-0 opacity-70'>
+export const Circle = ({ isLg }: { isLg?: boolean }) =>
+    <Box className='absolute right-0 opacity-70' sx={{top: isLg ? '20%' : '-33%'}}>
         <svg width="210" height="505" viewBox="0 0 210 505" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.18" d="M357.477 23.1704C483.686 81.4457 539.036 231.721 480.875 358.178C422.717 484.637 272.741 540.108 146.527 481.83C20.327 423.553 -35.0362 273.278 23.1198 146.819C81.2868 20.3597 231.272 -35.1071 357.477 23.1704ZM302.663 141.747C241.577 113.539 168.99 140.397 140.844 201.605C112.689 262.811 139.473 335.541 200.564 363.745C261.655 391.957 334.244 365.107 362.392 303.901C390.545 242.7 363.756 169.952 302.661 141.745L302.663 141.747Z" fill="url(#paint0_linear_25_183)" />
             <defs>

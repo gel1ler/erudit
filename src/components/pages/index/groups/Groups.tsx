@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { EndWave, StartWave } from '../../../../../public/bg/waves'
 import Title from '@/components/UI/text/Title'
@@ -9,8 +9,11 @@ const Groups = () => {
     return (
         <Box id='groups_anchor' className='relative overflow-hidden'>
             <StartWave />
-            <Title sx={{ mt: -8, position: 'absolute', top: '200px', left: 0, right: 0, mx: 'auto' }}>Группы</Title>
             <Box className='bg-[#C0C7DD] pt-10 w-screen'>
+                <Title sx={{ mt: -10 }} >Группы</Title>
+                <Typography data-aos='fade-up' variant='body2' color='GrayText' textAlign='center' sx={{ my: 1 }}>
+                    Листайте свайпами или нажимайте на стрелки
+                </Typography>
                 <Carousel cards={groupsData} />
             </Box>
             <EndWave />

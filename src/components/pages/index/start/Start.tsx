@@ -36,24 +36,25 @@ const Start = () => {
     return (
         <Plx parallaxData={startParallax}>
             <Box
-                className='h-screen relative flex justify-center'
+                className='h-screen relative flex justify-center overflow-hidden'
             >
                 <StartBg />
                 <Image
                     src='/1.png'
                     fill
                     alt='Background'
-                    className='object-cover -z-50'
+                    className='object-cover -z-50 brightness-75'
                 />
-                <Box className='flex flex-col items-center md:w-1/2 w-full px-2 gap-4'>
-                <Image 
-                    src='/logo/small-logo.svg'
-                    width={400}
+                <Box className='flex flex-col items-center justify-center md:w-1/2 w-full px-2 gap-4'>
+                {/* <Image 
+                    src='/logo/logo-horizontal2.svg'
+                    width={500}
                     height={100}
                     alt='logo'
-                />
+                    className='md:hidden block max-w-[90vw]'
+                /> */}
                     <Typography color='text.secondary' variant='h3' textAlign='center'>
-                        Детский центр &quot;Маленький эрудит&quot; объявляет набор на 2024-2025 учебный год
+                        Детский центр &quot;Маленький эрудит&quot; объявлет набор на 2024-2025 учебный год
                     </Typography>
                     <Box className='flex justify-between'>
                         <PhoneCall icon />

@@ -53,10 +53,12 @@ const Ratings = () => {
                 </Box>
                 <div className='w-full max-w-xl h-[660px] overflow-hidden relative px-5'>
                     <iframe
+                        data-aos='fade-up'
                         style={{ width: '100%', height: '100%', border: '1px solid #e6e6e6', borderRadius: 8, boxSizing: 'border-box' }}
                         src="https://yandex.ru/maps-reviews-widget/1108324675?comments"
                     />
                     <a
+                        data-aos='fade-up'
                         href="https://yandex.ru/maps/org/malenkiy_erudit/1108324675/"
                         target="_blank"
                         style={{

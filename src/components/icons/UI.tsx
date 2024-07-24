@@ -15,11 +15,12 @@ export const PhoneIcon = () => {
     )
 }
 
-export const Arrow = ({ anchor, onClick }: { anchor: 'left' | 'right', onClick?: () => void }) => {
+export const Arrow = ({ anchor, onClick, sm }: { anchor: 'left' | 'right', onClick?: () => void, sm?:boolean }) => {
     return (
         <Box
-            className='absolute top-0 cursor-pointer w-24 h-full bg-transparent transition-transform duration-300 z-10'
+            className='absolute top-0 cursor-pointer h-full bg-transparent transition-transform duration-300 z-10'
             sx={{
+                width: sm ? '3rem' : '5rem',
                 [anchor]: 30,
                 ':hover': {
                     transform: `translateX(${anchor === 'left' ? '-' : ''}10px)`

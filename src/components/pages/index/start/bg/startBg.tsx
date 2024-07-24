@@ -9,7 +9,7 @@ const StartBg = () => {
     return (
         <Box position='absolute' className='w-screen h-screen -z-10'>
             <Planet isLg={isLg} />
-            <Circle />
+            <Circle isLg={isLg} />
             <Dots bottom='40px' right={isLg ? '20%' : '-10%'} />
             <Dots bottom={isLg ? '50%' : '70%'} vertical />
             {isLg ? <Planes /> : null}
