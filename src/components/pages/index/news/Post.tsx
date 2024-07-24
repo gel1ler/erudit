@@ -51,7 +51,7 @@ const Post = ({ post }: { post: TPost }) => {
         >
             <Box className='flex gap-2'>
                 <Image
-                    src='/logo/small-logo.jpg'
+                    src='/logo/small-logo-vk.jpg'
                     className='rounded-full object-contain w-10 h-10'
                     width={40}
                     height={40}

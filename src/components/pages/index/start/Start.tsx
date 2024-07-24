@@ -36,7 +36,7 @@ const Start = () => {
     return (
         <Plx parallaxData={startParallax}>
             <Box
-                className='h-screen relative flex justify-center items-center'
+                className='h-screen relative flex justify-center'
             >
                 <StartBg />
                 <Image
@@ -46,6 +46,12 @@ const Start = () => {
                     className='object-cover -z-50'
                 />
                 <Box className='flex flex-col items-center md:w-1/2 w-full px-2 gap-4'>
+                <Image 
+                    src='/logo/small-logo.svg'
+                    width={400}
+                    height={100}
+                    alt='logo'
+                />
                     <Typography color='text.secondary' variant='h3' textAlign='center'>
                         Детский центр &quot;Маленький эрудит&quot; объявляет набор на 2024-2025 учебный год
                     </Typography>
