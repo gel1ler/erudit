@@ -1,5 +1,5 @@
 import { navigation } from '@/content/content'
-import { Box, Typography } from '@mui/material'
+import { Box, SxProps, Typography } from '@mui/material'
 import Link from 'next/link'
 import React, { CSSProperties } from 'react'
 
@@ -8,11 +8,12 @@ type THoverType = 'opacity' | 'color' | 'underline' | 'animUnderline' | 'bold'
 interface IText {
     children: string;
     hoverType: THoverType;
+    lg?:  boolean;
 }
 
-const Text = ({ children, hoverType }: IText) => {
-    let styles: any = {
-        fontSize: 18,
+const Text = ({ children, hoverType, lg }: IText) => {
+    let styles: SxProps = {
+        fontSize: lg ? 22 : 18,
     }
 
     switch (hoverType) {
@@ -94,13 +95,13 @@ export const DrawerNavLinks = ({ hoverType, setOpen }: { hoverType: THoverType, 
             {navigation.map(i =>
                 i.anchorLink ?
                     <a key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                        <Text hoverType={hoverType}>
+                        <Text lg hoverType={hoverType}>
                             {i.name}
                         </Text>
                     </a>
                     :
                     <Link key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                        <Text hoverType={hoverType}>
+                        <Text lg hoverType={hoverType}>
                             {i.name}
                         </Text>
                     </Link>

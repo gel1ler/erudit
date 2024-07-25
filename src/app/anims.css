@@ -41,3 +41,33 @@
 .prod-slider .slick-active {
   opacity: 1; 
 }
+
+.animated-opacity {
+  animation: opacityPulse 2s infinite !important;
+}
+
+/* Классы с разными задержками */
+.animated-opacity-1 {
+  animation-delay: 0s !important;
+}
+
+.animated-opacity-2 {
+  animation-delay: 0.5s !important;
+}
+
+.animated-opacity-3 {
+  animation-delay: 1s !important;
+}
+
+/* Определение ключевых кадров для пульсации */
+@keyframes opacityPulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

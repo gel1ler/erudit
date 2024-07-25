@@ -9,7 +9,7 @@ import Gallery from '@/components/pages/index/Gallery'
 import Ratings from '@/components/pages/index/Ratings'
 import FAQ from '@/components/pages/index/FAQ'
 import Bg2 from '@/components/layout/Bg2'
-import Contacts from '@/components/pages/Contacts'
+import Contacts from '@/components/pages/Contacts/Contacts'
 import News from '@/components/pages/index/news/News'
 
 export const metadata: Metadata = {

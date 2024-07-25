@@ -6,6 +6,7 @@ import Footer from '@/components/layout/footer/Footer'
 import AOSProvider from '@/services/AOSProvider'
 import { Suspense } from 'react'
 import Loader from '../components/layout/loader'
+import Loading from '@/components/layout/Loading'
 
 export default function RootLayout({
   children,
@@ -24,10 +25,11 @@ export default function RootLayout({
           <body>
             <Header />
             <section className='flex-grow'>
+              <Loading />
               {children}
             </section>
             <Footer />
-          </body> 
+          </body>
         </AOSProvider>
       </ThemeRegistry>
     </html>

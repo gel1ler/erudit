@@ -1,5 +1,5 @@
 import Loader from '@/components/layout/loader'
-import Contacts from '@/components/pages/Contacts'
+import Contacts from '@/components/pages/Contacts/Contacts'
 import { EnrollButton } from '@/components/UI/form/Buttons'
 import Title from '@/components/UI/text/Title'
 import { groupsData } from '@/content/content'

@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '@mui/material'
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
@@ -28,7 +29,7 @@ export const EnrollButton = () => {
 }
 
 export const ContactsButton = ({ drawer, onClick }: { drawer?: boolean, onClick?: () => void }) =>
-    <AnchorLink href='#contacts_anchor' style={{ display: drawer ? 'block' : 'none' }} className='hidden sm:block'>
+    <AnchorLink href='#contacts_anchor'>
         <Button
             onClick={onClick}
             sx={{
@@ -38,6 +39,7 @@ export const ContactsButton = ({ drawer, onClick }: { drawer?: boolean, onClick?
                 color: 'white',
                 background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
                 transition: 'background .3s ease-out',
+                display: drawer ? "block" : ['none', 'block'],
             }}
         >
             Контакты
