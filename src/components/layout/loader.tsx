@@ -28,23 +28,21 @@ const Trail: FC<{ open: boolean, children: ReactNode }> = ({ open, children }) =
 
 export default function Loader() {
     const [loading, setLoading] = useState(true)
-    const [logoOpen, setLogoOpen] = useState(false)
     const [textOpen, setTextOpen] = useState(false)
 
     useEffect(() => {
-        setLogoOpen(true)
         setTimeout(() => setTextOpen(true), 600)
         setTimeout(() => {
             setLoading(false)
-            document.body.classList.remove('loading')
         }, 1500)
     }, [])
 
     return (
         <Box
-            className='w-screen h-screen fixed left-0 top-0 flex items-center justify-center bg-white transition-all duration-500 z-[2000] pointer-events-none'
+            className='w-screen fixed left-0 top-0 flex items-center justify-center bg-white transition-opacity duration-500 z-[2000] pointer-events-none'
             sx={{
                 opacity: loading ? 1 : 0,
+                height: '100vh',
             }}
         >
             <Box

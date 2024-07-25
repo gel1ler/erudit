@@ -6,6 +6,7 @@ import Link from 'next/link'
 import NavLinks from './NavLinks'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import MyDrawer from '../drawer/MyDrawer'
+import { ContactsButton } from '@/components/UI/form/Buttons'
 
 const Bar = ({ isActive }: { isActive?: boolean }) => {
   return (
@@ -28,20 +29,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
         </Link>
         <NavLinks hoverType='color' />
         <Box className='flex items-center gap-2'>
-          <AnchorLink href='#contacts_anchor' className='hidden sm:block'>
-            <Button
-              sx={{
-                borderRadius: 100,
-                py: [1, 1.5],
-                px: [2, 3],
-                color: 'white',
-                background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
-                transition: 'background .3s ease-out',
-              }}
-            >
-              Контакты
-            </Button>
-          </AnchorLink>
+          <ContactsButton />
           <MyDrawer noAbs isActive={isActive} />
         </Box>
       </Box>

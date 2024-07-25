@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, Grid } from '@mui/material'
+import { Box, Button, Grid, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import Title from '../UI/text/Title'
 import MuiPhone from '../UI/form/PhoneNumber'
@@ -36,6 +36,9 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
             <Box className='flex xl:flex-row flex-col w-fit mx-auto mt-20 gap-8'>
                 <Box>
                     <Title left noAos={noAos}>Контакты</Title>
+                    <Typography variant='body2' color='GrayText' className='text-center xl:text-left'>
+                        Нажмите на данные ниже, чтобы взаимодействовать с ними
+                    </Typography>
                     <ul data-aos={noAos ? '' : 'fade-up'} className='text-lg space-y-3 mt-2 w-fit'>
                         <li style={{ textAlign: 'center' }}>
                             <a target="_blank" href='https://yandex.ru/maps/org/malenkiy_erudit/1108324675/?utm_medium=mapframe&utm_source=maps'><b>Адрес:</b> Жуковский, улица Амет-Хан-Султана дом 7а, 2 этаж</a>

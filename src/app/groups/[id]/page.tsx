@@ -1,6 +1,6 @@
 import Loader from '@/components/layout/loader'
 import Contacts from '@/components/pages/Contacts'
-import EnrollButton from '@/components/UI/form/EnrollButton'
+import { EnrollButton } from '@/components/UI/form/Buttons'
 import Title from '@/components/UI/text/Title'
 import { groupsData } from '@/content/content'
 import { Box, Typography } from '@mui/material'

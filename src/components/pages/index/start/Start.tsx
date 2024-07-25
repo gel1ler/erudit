@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Plx from 'react-plx'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../../../icons/socialMediaIcons'
 import StartBg from './bg/startBg'
-import EnrollButton from '@/components/UI/form/EnrollButton'
+import { EnrollButton } from '@/components/UI/form/Buttons'
 
 const startParallax = [
     {
@@ -46,13 +46,6 @@ const Start = () => {
                     className='object-cover -z-50 brightness-75'
                 />
                 <Box className='flex flex-col items-center justify-center md:w-1/2 w-full px-2 gap-4'>
-                {/* <Image 
-                    src='/logo/logo-horizontal2.svg'
-                    width={500}
-                    height={100}
-                    alt='logo'
-                    className='md:hidden block max-w-[90vw]'
-                /> */}
                     <Typography color='text.secondary' variant='h3' textAlign='center'>
                         Детский центр &quot;Маленький эрудит&quot; объявлет набор на 2024-2025 учебный год
                     </Typography>

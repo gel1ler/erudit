@@ -25,13 +25,13 @@ export const navigation: INavLink[] = [
     {
         id: 0,
         name: "Новости",
-        href: "#news_anchor",
+        href: "/#news_anchor",
         anchorLink: true,
     },
     {
         id: 1,
         name: "Группы",
-        href: "#groups_anchor",
+        href: "/#groups_anchor",
         anchorLink: true,
     },
     {
@@ -42,7 +42,7 @@ export const navigation: INavLink[] = [
     {
         id: 3,
         name: "Отзывы",
-        href: "#ratings_anchor",
+        href: "/#ratings_anchor",
         anchorLink: false,
     }
 ]

@@ -6,6 +6,10 @@ import { Close } from '@mui/icons-material'
 import IB from '@/components/icons/IB'
 import MenuIcon from '@mui/icons-material/Menu'
 import NavLinks, { DrawerNavLinks } from '../Bar/NavLinks'
+import Link from 'next/link'
+import Image from 'next/image'
+import { ContactsButton } from '@/components/UI/form/Buttons'
+import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
 
 
 const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) => {
@@ -38,7 +42,7 @@ const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) 
                 <Box
                     className='h-[100dvh] w-screen'
                 >
-                    <Box className='relative h-screen flex flex-col items-center justify-center gap-4'>
+                    <Box className='relative h-screen w-full flex flex-col items-center justify-around gap-4'>
                         <IB
                             f={() => setOpen(false)}
                             sx={{
@@ -49,7 +53,27 @@ const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) 
                         >
                             <Close sx={{ fontSize: '35px' }} />
                         </IB>
-                        <DrawerNavLinks setOpen={setOpen} hoverType='color' />
+                        <Link href='/' className='w-1/2 max-w-xs min-w-60 mx-auto'>
+                            <Image
+                                alt='Logo'
+                                src='/logo/logo-horizontal.svg'
+                                width={163}
+                                height={56}
+                                className='w-full max-w-xs'
+                                />
+                        </Link>
+                        <Box className='flex flex-col gap-4 items-center justify-center'>
+                            <DrawerNavLinks setOpen={setOpen} hoverType='color' />
+                        </Box>
+                        <Box className='flex flex-col gap-4 items-center justify-center'>
+                            <ContactsButton onClick={() => setOpen(false)} drawer />
+                            <Box className='flex justify-between'>
+                                <PhoneCall icon dark />
+                                <VkIcon dark />
+                                <TelegramIcon dark />
+                                <InstagramIcon dark />
+                            </Box>
+                        </Box>
                     </Box>
                 </Box>
             </Drawer >
