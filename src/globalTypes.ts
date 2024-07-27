@@ -5,6 +5,7 @@ export type TCard = {
     title: string,
     text: string,
     img: string,
+    description?: string,
     link?: string,
 }
 

@@ -3,7 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const Card = ({ title, text, img, id }: { title: string, text: string, img: string, id:number }) => {
+const Card = ({ title, text, img, id }: { title: string, text: string, img: string, id: number }) => {
+  const slicedText = text.length > 249 ? text.slice(0, 250) + '...' : text
+
   return (
     <Box data-aos='fade-up' className='max-w-xs flex flex-col items-center gap-2'>
       <Image
@@ -16,8 +18,8 @@ const Card = ({ title, text, img, id }: { title: string, text: string, img: stri
       <Typography variant='h4' textAlign='center' fontWeight='bold'>
         {title}
       </Typography>
-      <Typography variant='body1' textAlign='center'>
-        {text}
+      <Typography variant='body1' textAlign='center' sx={{ px: 1 }}>
+        {slicedText}
       </Typography>
       <Link href={`/groups/${id}`}>
         <Button

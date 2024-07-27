@@ -3,7 +3,7 @@ import { Box } from '@mui/material'
 import Loader from '../../components/layout/loader'
 import Gallery from '@/components/pages/Gallery'
 import Title from '@/components/UI/text/Title'
-import Contacts from '@/components/pages/Contacts'
+import Contacts from '@/components/pages/Contacts/Contacts'
 
 export const metadata: Metadata = {
     title: 'Детский центр Маленький Эрудит',

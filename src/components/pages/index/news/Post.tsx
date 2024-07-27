@@ -21,7 +21,7 @@ const Attachment = ({ attachment }: { attachment: VKAttachmentExp }) => {
             const videoUrl = `https://vk.com/video_ext.php?oid=${attachment.video.owner_id}&id=${attachment.video.id}&access_key=${attachment.video.access_key}`
 
             return <iframe
-                className='mx-auto min-h-96'
+                className='mx-auto min-h-96 rounded-lg'
                 src={videoUrl}
                 width='100%'
                 height={attachment.video.first_frame[0].height + 'px'}

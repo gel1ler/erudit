@@ -39,15 +39,71 @@ li {
 }
 
 .grad-text1 {
-  background: linear-gradient(90deg, #3FD0FB 0%, #BD14D2 100%);
+  background: linear-gradient(180deg, #3FD0FB 0%, #BD14D2 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .grad-text2 {
-  background: linear-gradient(90deg, #BD14D2 0%, #3FD0FB 100%);
+  background: linear-gradient(180deg, #BD14D2 0%, #3FD0FB 110%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.business-awards-view__award {
+  padding: 8px 0;
+  min-height: 72px;
+  display: flex;
+  cursor: pointer;
+}
+
+.business-awards-view__badge {
+  position: relative;
+  min-width: 56px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.business-awards-view__bg-yandex {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 56px;
+  height: 72px;
+  color: #f6f6f6;
+}
+
+.business-awards-view__badge-icon {
+  margin: 12px 0 6px;
+}
+
+.business-awards-view__badge-year {
+  font-size: 12px;
+  line-height: 14px;
+  color: #898989;
+}
+
+.business-awards-view__content {
+  flex-grow: 1;
+  margin: 0 16px;
+}
+
+.business-awards-view__title {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 10px 0 4px;
+}
+
+.business-awards-view__text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #898989;
 }
