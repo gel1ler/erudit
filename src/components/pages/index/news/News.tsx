@@ -13,7 +13,7 @@ const News = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(`/api/getPosts`);
+        const response = await fetch(`/api/getPosts?coount=9`);
         const data = await response.json();
         setPosts(data.items);
       } catch (error) {
@@ -35,9 +35,11 @@ const News = () => {
       <Box className='w-full anchor flex flex-col items-center gap-4' id='about_anchor'>
         <Title>Новости</Title>
         <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start' data-aos='fade-up'>
-          {posts.map(post => (
-            <Post key={post.id} post={post} />
-          ))}
+          {Array(3).fill(0).map((_, index1) => 
+            Array(3).fill(0).map((_, index2) => (
+              <Post key={posts[index1*index2].id} post={posts[index1*index2]} />
+            ))
+          )}
         </Box>
         <a href='https://vk.com/smalleruditevkk'>
           <Typography>

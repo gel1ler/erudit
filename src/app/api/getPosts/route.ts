@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET() {
+export async function GET(req: NextRequest) {
     const access_token = process.env.ACCESS_TOKEN2
     const group_id = process.env.GROUP_ID
 
