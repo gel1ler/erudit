@@ -32,8 +32,8 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
         <>
             <AlertDialog open={open} setOpen={setOpen} />
             <Box id='contacts_anchor' className='bg-slate-100 w-screen py-20 px-2'>
-                <Title noAos={noAos}>Присоединяйтесь к нам</Title>
-                <Box data-aos={noAos ? '' : 'fade-up'} className='flex flex-col max-w-lg mx-auto mt-8'>
+                <Title noAos={noAos}>Запишитесь на пробное занятие</Title>
+                <Box data-aos={noAos ? '' : 'fade-up'} className='flex flex-col items-center gap-4 max-w-lg mx-auto mt-8'>
                     <Grid container rowSpacing={1} columnSpacing={2} justifyContent='center'>
                         <Grid item xs={10}>
                             <MuiPhone value={phone} onChange={setPhone} />
@@ -42,16 +42,13 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
                     <Button
                         onClick={onSubmit}
                         sx={{
-                            background: '#F7631E',
-                            borderRadius: 60,
-                            width: 'fit-content',
-                            mx: 'auto',
-                            px: 3,
+                            borderRadius: 100,
                             py: 1,
-                            mt: 2,
-                            ":hover": {
-                                background: '#f34723',
-                            }
+                            px: 3,
+                            color: 'white',
+                            background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
+                            transition: 'background .3s ease-out',
+                            width: 'fit-content',
                         }}
                     >
                         Оставить заявку

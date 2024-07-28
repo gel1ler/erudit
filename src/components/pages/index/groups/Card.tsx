@@ -23,14 +23,19 @@ const Card = ({ title, text, img, id }: { title: string, text: string, img: stri
       </Typography>
       <Link href={`/groups/${id}`}>
         <Button
+          variant='outlined'
+          className='w-fit'
           sx={{
-            background: '#F7631E',
-            borderRadius: 60,
-            px: 3,
-            py: 1,
+            borderRadius: '50px',
+            border: '3px solid #fff',
             mt: 1,
-            ":hover": {
-              background: '#f34723',
+            px: 2,
+            py: '6px',
+            fontSize: '15px',
+            '&:hover': {
+              border: '3px solid #fff',
+              backgroundColor: '#fff',
+              color: 'text.primary',
             }
           }}
         >

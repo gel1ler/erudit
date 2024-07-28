@@ -28,9 +28,9 @@ const CollapsedComponent = ({ title, text }: { title: string, text: string }) =>
                 </Box>
             </Box>
             <Box
-                className='transition-all overflow-hidden duration-300 pt-1'
+                className='transition-all overflow-hidden duration-500 pt-1'
                 sx={{
-                    maxHeight: isExpanded ? '500px' : 0,
+                    maxHeight: isExpanded ? ['400px', '300px', '200px','100px'] : 0,
                     transformOrigin: 'top'
                 }}>
                 <p>{text}</p>

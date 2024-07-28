@@ -22,7 +22,7 @@ export const EnrollButton = () => {
                     }
                 }}
             >
-                Записаться
+                Пробное занятие
             </Button>
         </AnchorLink>
     )
