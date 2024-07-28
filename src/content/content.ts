@@ -25,8 +25,7 @@ export const navigation: INavLink[] = [
     {
         id: 0,
         name: "Новости",
-        href: "/#news_anchor",
-        anchorLink: true,
+        href: "/news",
     },
     {
         id: 1,

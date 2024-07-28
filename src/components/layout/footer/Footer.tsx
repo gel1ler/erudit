@@ -39,6 +39,9 @@ const Footer = () => {
                         height={70}
                         alt='logo'
                     />
+                    <Typography color='text'>
+                        Основан в 2001 году
+                    </Typography>
                     {/* <Box sx={{ mx: 'auto' }}>
                         <Box
                             sx={{

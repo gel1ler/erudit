@@ -1,7 +1,7 @@
 import { TPost, VKAttachmentExp } from '@/globalTypes'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
+import React, { memo } from 'react'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 
@@ -32,7 +32,8 @@ const Attachment = ({ attachment }: { attachment: VKAttachmentExp }) => {
     }
 }
 
-const Post = ({ post }: { post: TPost }) => {
+const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
+    if (!post) return null
     let date = new Date(post.date * 1000);
 
     let day = date.getDate().toString().padStart(2, '0');
@@ -46,8 +47,8 @@ const Post = ({ post }: { post: TPost }) => {
 
     return (
         <Box
-            className='rounded-lg bg-slate-100 p-4 w-full flex flex-col gap-2 z-10 h-fit max-w-md'
-            sx={{ boxShadow: '0 0 5px 2px rgba(0,0,0, .15)' }}
+            className='rounded-lg bg-slate-100 p-4 w-full flex flex-col gap-2 z-10 h-fit'
+            sx={{ boxShadow: '0 0 5px 2px rgba(0,0,0, .15)', maxWidth: fw ? ['28rem', '28rem', '28rem', '100%'] : '28rem' }}
         >
             <Box className='flex gap-2'>
                 <Image
@@ -73,7 +74,7 @@ const Post = ({ post }: { post: TPost }) => {
                 </Box>
             </Box>
             <Typography>{post.text}</Typography>
-            <Attachment attachment={post.attachments[0]} />
+            {post.attachments[0] ? <Attachment attachment={post.attachments[0]} /> : null}
             <Box className='flex justify-between items-center px-1 mt-1'>
                 <Typography color='gray' variant='caption'><FavoriteBorderIcon /> {post.likes.count}</Typography>
                 <Typography color='gray' variant='caption'><VisibilityOutlinedIcon /> {post.views.count}</Typography>

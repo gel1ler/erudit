@@ -1,10 +1,11 @@
 // components/NewsBlock.js
 'use client'
 import Title from '@/components/UI/text/Title';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
-import Post from './Post';
 import { TPost } from '@/globalTypes';
+import Post from '../../news/Post';
+import Link from 'next/link';
 
 const News = () => {
   const [posts, setPosts] = useState<[TPost] | []>([]);
@@ -13,7 +14,7 @@ const News = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(`/api/getPosts?coount=9`);
+        const response = await fetch(`/api/getPosts`);
         const data = await response.json();
         setPosts(data.items);
       } catch (error) {
@@ -35,18 +36,22 @@ const News = () => {
       <Box className='w-full anchor flex flex-col items-center gap-4' id='about_anchor'>
         <Title>Новости</Title>
         <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start' data-aos='fade-up'>
-          {Array(3).fill(0).map((_, index1) => 
-            Array(3).fill(0).map((_, index2) => (
-              <Post key={posts[index1*index2].id} post={posts[index1*index2]} />
-            ))
+          {posts.map(post =>
+            <Post key={post.id} post={post} />
           )}
         </Box>
-        <a href='https://vk.com/smalleruditevkk'>
-          <Typography>
-            Перейти в группу ВК
-          </Typography>
-        </a>
-
+        <Box className='flex gap-4 items-center'>
+          <Link href='/news'>
+            <Button variant='outlined' color='secondary'>
+              Все новости
+            </Button>
+          </Link>
+          <a href='https://vk.com/smalleruditevkk'>
+            <Typography>
+              Перейти в группу ВК
+            </Typography>
+          </a>
+        </Box>
       </Box>
     </Container>
   );
