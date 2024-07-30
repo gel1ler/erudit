@@ -39,10 +39,11 @@ export default function Loader() {
 
     return (
         <Box
-            className='w-screen fixed left-0 top-0 flex items-center justify-center bg-white transition-opacity duration-500 z-[2000] pointer-events-none'
+            className='w-screen fixed left-0 top-0 flex items-center justify-center bg-white transition-opacity duration-500 pointer-events-none'
             sx={{
                 opacity: loading ? 1 : 0,
                 height: '100vh',
+                zIndex: 10000000
             }}
         >
             <Box

@@ -7,6 +7,7 @@ import AOSProvider from '@/services/AOSProvider'
 import { Suspense } from 'react'
 import Loader from '../components/layout/loader'
 import Loading from '@/components/layout/Loading'
+import Script from 'next/script'
 
 export default function RootLayout({
   children,

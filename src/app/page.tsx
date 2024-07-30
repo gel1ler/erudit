@@ -11,6 +11,7 @@ import FAQ from '@/components/pages/index/FAQ'
 import Bg2 from '@/components/layout/Bg2'
 import Contacts from '@/components/pages/Contacts/Contacts'
 import News from '@/components/pages/index/news/News'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Детский центр Маленький Эрудит',
@@ -42,6 +43,7 @@ export default function Home() {
         <FAQ />
         <Contacts />
       </Box>
+      <Script src="https://app.getreview.io/tags/i3Wn3no9PQjCp1N0/sdk.js" async />
     </>
   )
 }

@@ -3,6 +3,7 @@ import { Box, Container, Typography } from '@mui/material'
 import Image from 'next/image'
 // import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from './icons'
 import Link from 'next/link'
+import { PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
 
 const Text = ({ href, children }: { href: string, children: ReactNode }) =>
     <Link href={href}>
@@ -32,7 +33,7 @@ const Footer = () => {
                     alignItems: 'center',
                 }}
             >
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2, width: '250px', mx: 'auto' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, width: '250px', mx: 'auto' }}>
                     <Image
                         src='/logo/logo-horizontal.svg'
                         width={250}
@@ -42,22 +43,21 @@ const Footer = () => {
                     <Typography color='text'>
                         Основан в 2001 году
                     </Typography>
-                    {/* <Box sx={{ mx: 'auto' }}>
+                    <Box sx={{ mx: 'auto' }}>
                         <Box
                             sx={{
                                 display: 'flex',
                                 alignItems: 'center',
-                                justifyContent: 'space-between',
+                                justifyContent: 'center',
                                 gap: 1,
 
                             }}
                         >
-                            <InstagramIcon />
-                            <VkIcon />
-                            <TelegramIcon />
+                            <VkIcon dark />
+                            <TelegramIcon dark />
                         </Box>
                         <PhoneCall />
-                    </Box> */}
+                    </Box>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, alignItems: 'center', }}>
                     <Typography variant='h5' fontWeight='bold'>
@@ -77,7 +77,7 @@ const Footer = () => {
                 </Box>
             </Container >
             <Typography variant='body2' textAlign='center' sx={{ px: 1, }}>
-                ©Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.plastilin-deti.ru
+                ©Любое использование либо копирование материалов или подборки материалов сайта, элементов дизайна и оформления допускается лишь с разрешения правообладателя и только со ссылкой на источник: www.small-erudite.ru
             </Typography>
         </Box >
     )

@@ -3,29 +3,29 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import Title from '../../UI/text/Title'
 import MuiPhone from '../../UI/form/PhoneNumber'
-import { usePathname, useRouter } from 'next/navigation'
 import AlertDialog from './Alert'
 
 const Contacts = ({ noAos }: { noAos?: boolean }) => {
     const [phone, setPhone] = useState('')
     const [open, setOpen] = useState(false)
-    const router = useRouter()
-    const path = usePathname()
 
     const onSubmit = async () => {
-        // router.push('?loading=true', { scroll: false })    
+        const message = `Заказан обратный звонок на номер ${phone}.`
+        try {
+            const form = document.createElement('form');
+            form.innerHTML = `<input type="hidden" name="message" value="${message}">`;
+            // ((await (import('emailjs-com'))).sendForm('service_nyq1tvx', 'template_0nsn2fp', form, 'orI8OxXQKj9YCadsc'))
+            setOpen(true)
+            setPhone('')
+        } catch (error) {
+            console.error("Error:", error)
+        }
+    }
 
-        // const message = `Заказан обратный звонок на номер ${phone}.`
-        // try {
-        //     console.log(message)
-        //     const form = document.createElement('form');
-        //     form.innerHTML = `<input type="hidden" name="message" value="${message}">`;
-        //     ((await (import('emailjs-com'))).sendForm('service_87l4lm9', 'template_5lt5tfc', form, 'orI8OxXQKj9YCadsc'))
-        //     setOpen(true)
-        // } catch (error) {
-        //     console.error("Error:", error)
-        // }
-        // router.replace(path)
+    const handleKeyDown = (event: React.KeyboardEvent) => {
+        if (event.key === 'Enter') {
+            onSubmit();
+        }
     }
 
     return (
@@ -36,7 +36,7 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
                 <Box data-aos={noAos ? '' : 'fade-up'} className='flex flex-col items-center gap-4 max-w-lg mx-auto mt-8'>
                     <Grid container rowSpacing={1} columnSpacing={2} justifyContent='center'>
                         <Grid item xs={10}>
-                            <MuiPhone value={phone} onChange={setPhone} />
+                            <MuiPhone onKeyDown={handleKeyDown} value={phone} onChange={setPhone} />
                         </Grid>
                     </Grid>
                     <Button

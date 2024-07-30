@@ -3,7 +3,7 @@ import React from 'react'
 import { Box, Button, styled, Tooltip, tooltipClasses, TooltipProps, Typography } from '@mui/material'
 import Image from 'next/image'
 import Plx from 'react-plx'
-import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../../../icons/socialMediaIcons'
+import { PhoneCall, TelegramIcon, VkIcon } from '../../../icons/socialMediaIcons'
 import StartBg from './bg/startBg'
 import { EnrollButton } from '@/components/UI/form/Buttons'
 
@@ -65,7 +65,6 @@ const Start = () => {
                         <PhoneCall icon />
                         <VkIcon />
                         <TelegramIcon />
-                        <InstagramIcon />
                     </Box>
                     <EnrollButton />
                 </Box>

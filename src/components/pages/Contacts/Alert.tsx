@@ -23,7 +23,7 @@ export default function AlertDialog({ open, setOpen }: { open: boolean, setOpen:
     }
 
     React.useEffect(() => {
-        setTimeout(() => setOpen(false), 3500)
+        setTimeout(() => setOpen(false), 5000)
     }, [open, setOpen])
 
     return (
@@ -41,8 +41,8 @@ export default function AlertDialog({ open, setOpen }: { open: boolean, setOpen:
         >
             <DialogTitle textAlign='center'>Вы успешно оставили заявку</DialogTitle>
             <DialogContent>
-                <DialogContentText textAlign='center'>
-                    Мы перезвоним Вам в течении <b>15 минут</b>
+                <DialogContentText color='InfoText' textAlign='center'>
+                    Мы перезвоним Вам в ближайшее время. Спасибо за обращение!
                 </DialogContentText>
             </DialogContent>
             <Button sx={{ mb: 2, mx: 'auto', width: 'fit-content' }} color='secondary' onClick={handleClose}>Закрыть окно</Button>
