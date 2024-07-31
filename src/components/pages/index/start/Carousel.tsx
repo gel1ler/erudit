@@ -24,6 +24,7 @@ const Carousel = () => {
         <Slider {...settings} className='absolute top-0 left-0 w-screen h-screen flex justify-center overflow-hidden'>
             {arr.map((img, index) => (
                 <Image
+                    key={index}
                     src={img}
                     fill
                     alt='Background'
