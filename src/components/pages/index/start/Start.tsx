@@ -3,9 +3,10 @@ import React from 'react'
 import { Box, Button, styled, Tooltip, tooltipClasses, TooltipProps, Typography } from '@mui/material'
 import Image from 'next/image'
 import Plx from 'react-plx'
-import { PhoneCall, TelegramIcon, VkIcon } from '../../../icons/socialMediaIcons'
+import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '../../../icons/socialMediaIcons'
 import StartBg from './bg/startBg'
 import { EnrollButton } from '@/components/UI/form/Buttons'
+import Carousel from './Carousel'
 
 const startParallax = [
     {
@@ -50,6 +51,7 @@ const Start = () => {
             <Box
                 className='h-screen relative flex justify-center overflow-hidden'
             >
+                {/* <Carousel /> */}
                 <StartBg />
                 <Image
                     src='/1.png'
@@ -65,6 +67,7 @@ const Start = () => {
                         <PhoneCall icon />
                         <VkIcon />
                         <TelegramIcon />
+                        <InstagramIcon />
                     </Box>
                     <EnrollButton />
                 </Box>

@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material'
 import Image from 'next/image'
 // import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from './icons'
 import Link from 'next/link'
-import { PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
+import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
 
 const Text = ({ href, children }: { href: string, children: ReactNode }) =>
     <Link href={href}>
@@ -55,6 +55,7 @@ const Footer = () => {
                         >
                             <VkIcon dark />
                             <TelegramIcon dark />
+                            <InstagramIcon dark />
                         </Box>
                         <PhoneCall />
                     </Box>
@@ -65,7 +66,6 @@ const Footer = () => {
                     </Typography>
                     <Text href='/agreement'>Пользовательское соглашение</Text>
                     <Text href='/privacy'>Персональные данные</Text>
-                    <Text href='#about_anchor'>Публичная оферта</Text>
                 </Box>
                 <Box sx={{ display: ['none', 'none', 'flex'], flexDirection: 'column', alignItems: 'center', gap: 2 }}>
                     <Typography variant='h5' fontWeight='bold'>

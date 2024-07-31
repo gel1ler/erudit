@@ -10,7 +10,7 @@ import { TSetBool } from '@/globalTypes'
 const style = { fontSize: 30, color: '#fff' }
 
 export const TelegramIcon = ({ dark }: { dark?: boolean }) =>
-    <IB href={socialMedia.telegram}>
+    <IB href='https://t.me/smallerudite'>
         <Telegram sx={{ ...style, color: dark ? '#303030' : '#fff' }} />
     </IB>
 
@@ -51,8 +51,8 @@ export const InstagramIcon = ({ dark }: { dark?: boolean }) => {
                 <Typography variant='h6' textAlign='center'>
                     Для перехода в инстаграм профиль необходимо VPN подключение.
                 </Typography>
-                <Button color='primary' variant='contained' onClick={() => setOpen(false)}>
-                    <Link href={socialMedia.instagram || '#'} target='_blank'>
+                <Button color='secondary' variant='contained' onClick={() => setOpen(false)}>
+                    <Link href='https://www.instagram.com/small_erudite?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' target='_blank'>
                         VPN включен
                     </Link>
                 </Button>
