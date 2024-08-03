@@ -95,13 +95,13 @@ export const DrawerNavLinks = ({ hoverType, setOpen }: { hoverType: THoverType, 
             {navigation.map(i =>
                 i.anchorLink ?
                     <a key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                        <Text lg hoverType={hoverType}>
+                        <Text hoverType={hoverType}>
                             {i.name}
                         </Text>
                     </a>
                     :
                     <Link key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                        <Text lg hoverType={hoverType}>
+                        <Text hoverType={hoverType}>
                             {i.name}
                         </Text>
                     </Link>

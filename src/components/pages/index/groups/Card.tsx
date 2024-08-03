@@ -27,15 +27,16 @@ const Card = ({ title, text, img, id }: { title: string, text: string, img: stri
           className='w-fit'
           sx={{
             borderRadius: '50px',
-            border: '3px solid #fff',
+            border: '3px solid #303030',
             mt: 1,
             px: 2,
             py: '6px',
             fontSize: '15px',
+            color: '#303030',
             '&:hover': {
-              border: '3px solid #fff',
-              backgroundColor: '#fff',
-              color: 'text.primary',
+              border: '3px solid #303030',
+              backgroundColor: '#303030',
+              color: 'white',
             }
           }}
         >

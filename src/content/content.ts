@@ -11,12 +11,6 @@ export const mainInfo: IMainInfo = {
     logoHorizontal: '/logo/logo-gorizontal.svg'
 }
 
-export const socialMedia: ISocialMedia = {
-    vk: 'https://vk.com/',
-    telegram: 'https://web.telegram.org/',
-    instagram: 'https://google.com/'
-}
-
 export const navigation: INavLink[] = [
     {
         id: 0,

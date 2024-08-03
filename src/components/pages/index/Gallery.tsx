@@ -37,7 +37,7 @@ const Gallery = () => {
         <Grid
             container
             maxWidth='lg'
-            sx={{ mx: 'auto', p: 2 }}
+            sx={{ mx: 'auto', p: 2, mt: 10 }}
             id='gallery_anchor'
             className='anchor'
         >

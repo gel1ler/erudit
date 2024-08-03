@@ -7,7 +7,7 @@ import Contacts from '@/components/pages/Contacts/Contacts'
 import News from '@/components/pages/news/News'
 
 export const metadata: Metadata = {
-    title: 'Детский центр Маленький Эрудит',
+    title: 'Маленький Эрудит - Новости',
     description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
 }
 

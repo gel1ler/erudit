@@ -6,7 +6,7 @@ import Title from '@/components/UI/text/Title'
 import Contacts from '@/components/pages/Contacts/Contacts'
 
 export const metadata: Metadata = {
-    title: 'Детский центр Маленький Эрудит',
+    title: 'Маленький Эрудит - Персональные данные',
     description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
 }
 

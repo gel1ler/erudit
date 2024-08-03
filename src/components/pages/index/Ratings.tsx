@@ -45,7 +45,7 @@ const Ratings = () => {
                         className='grad-text1'
                     />
                     <Block
-                        title='50+'
+                        title='450+'
                         text='Увлекательных занятий'
                         color='#af41da'
                     />

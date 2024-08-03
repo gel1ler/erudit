@@ -4,7 +4,7 @@ import { Instagram, WhatsApp, Telegram, Phone } from '@mui/icons-material'
 import IB from './IB'
 import { SvgIcon, Dialog, Typography, Box, Button } from '@mui/material/'
 import Link from 'next/link'
-import { mainInfo, socialMedia } from '@/content/content'
+import { mainInfo } from '@/content/content'
 import { TSetBool } from '@/globalTypes'
 
 const style = { fontSize: 30, color: '#fff' }
@@ -83,7 +83,7 @@ export const PhoneCall = (
                         Вызов на мобильный
                     </Typography>
                 </Link>
-                <Link href={"https://wa.me/" + mainInfo.phone} target="_blank">
+                <Link href={"https://wa.me/79167969809"} target="_blank">
                     <Typography variant='h6' sx={{ textDecoration: 'underline', display: 'flex', alignItems: 'center', gap: 1 }}>
                         <WhatsApp fontSize='large' />
                         WhatsApp чат
