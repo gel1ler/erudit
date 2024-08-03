@@ -4,8 +4,15 @@ import { EnrollButton } from '@/components/UI/form/Buttons'
 import Title from '@/components/UI/text/Title'
 import { groupsData } from '@/content/content'
 import { Box, Typography } from '@mui/material'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import React from 'react'
+
+export async function generateMetadata({ params }: { params: { id: number } }) {
+    return {
+        title: "Маленький эрудит - " + groupsData[params.id].title,
+    }
+}
 
 const Group = ({ params }: { params: { id: number } }) => {
     const group = groupsData[params.id]

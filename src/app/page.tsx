@@ -14,7 +14,7 @@ import News from '@/components/pages/index/news/News'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Детский центр Маленький Эрудит',
+  title: 'Маленький эрудит — Детский развивающий центр для детей от 1 до 6 лет. Жуковский.',
   description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
 }
 
