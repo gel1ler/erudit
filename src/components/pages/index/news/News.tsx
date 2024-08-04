@@ -32,7 +32,7 @@ const News = () => {
   }
 
   return (
-    <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column', gap: 20 }} id='news_anchor' className='anchor'>
+    <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column', gap: 20, mt: [10, 10, 10] }} id='news_anchor' className='anchor'>
       <Box className='w-full anchor flex flex-col items-center gap-4' id='about_anchor'>
         <Title>Новости</Title>
         <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start' data-aos='fade-up'>

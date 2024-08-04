@@ -44,6 +44,7 @@ export const MuiPhone: React.FC<MUIPhoneProps> = ({
             type="tel"
             error={!inputValue}
             inputRef={inputRef}
+            helperText={restProps.error ? 'Пожалуйста, введите номер телефона полностью' : ''}
             {...restProps}
         />
     );

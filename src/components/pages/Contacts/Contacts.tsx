@@ -8,8 +8,13 @@ import AlertDialog from './Alert'
 const Contacts = ({ noAos }: { noAos?: boolean }) => {
     const [phone, setPhone] = useState('')
     const [open, setOpen] = useState(false)
+    const [isError, setError] = useState(false)
 
     const onSubmit = async () => {
+        if (phone.length !== 12) {
+            setError(true)
+            return
+        }
         const message = `Заказан обратный звонок на номер ${phone}.`
         try {
             const form = document.createElement('form');
@@ -36,7 +41,7 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
                 <Box data-aos={noAos ? '' : 'fade-up'} className='flex flex-col items-center gap-4 max-w-lg mx-auto mt-8'>
                     <Grid container rowSpacing={1} columnSpacing={2} justifyContent='center'>
                         <Grid item xs={10}>
-                            <MuiPhone onKeyDown={handleKeyDown} value={phone} onChange={setPhone} />
+                            <MuiPhone error={isError} onKeyDown={handleKeyDown} value={phone} onChange={setPhone} />
                         </Grid>
                     </Grid>
                     <Button

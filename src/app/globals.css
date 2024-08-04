@@ -107,3 +107,18 @@ li {
   line-height: 16px;
   color: #898989;
 }
+
+.ratings-block {
+  height: 350px;
+}
+
+@media (max-width: 569px) {
+  .ratings-block {
+    height: 700px;
+  }
+}
+
+
+.absolute-carousel {
+  display: none;
+}
