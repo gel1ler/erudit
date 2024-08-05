@@ -24,14 +24,14 @@ const StartContent = () => {
             <Box
                 className='h-screen relative flex justify-center overflow-hidden'
             >
-                {/* <Carousel /> */}
+                <Carousel />
                 <StartBg />
-                <Image
+                {/* <Image
                     src='/1.png'
                     fill
                     alt='Background'
                     className='object-cover -z-50 brightness-75'
-                />
+                /> */}
                 <Box className='flex flex-col items-center justify-center md:w-1/2 w-full px-2 gap-4'>
                     <Typography color='text.secondary' variant='h3' textAlign='center'>
                         Детский центр &quot;Маленький эрудит&quot; объявлет набор на 2024-2025 учебный год

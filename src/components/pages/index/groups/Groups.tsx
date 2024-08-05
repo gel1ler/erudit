@@ -1,10 +1,8 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import { EndWave, StartWave } from '../../../../../public/bg/waves'
 import Title from '@/components/UI/text/Title'
 import Carousel from './Carousel'
 import { groupsData } from '@/content/content'
-import Image from 'next/image'
 
 const Groups = () => {
     return (

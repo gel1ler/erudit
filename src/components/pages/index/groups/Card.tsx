@@ -10,10 +10,10 @@ const Card = ({ title, text, img, id }: { title: string, text: string, img: stri
     <Box data-aos='fade-up' className='max-w-xs flex flex-col items-center gap-2'>
       <Image
         src={img}
-        width={350}
-        height={350}
+        width={450}
+        height={450}
         alt='Фото группы'
-        className='rounded-xl w-full aspect-square object-cover'
+        className='rounded-xl w-full aspect-square object-cover shadow'
       />
       <Typography variant='h4' textAlign='center' fontWeight='bold'>
         {title}
