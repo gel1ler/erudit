@@ -12,7 +12,7 @@ const Start = () => {
     if (isLg)
         return (
             <ParallaxWrapper>
-                <StartContent />
+                <StartContent isLg={isLg} />
             </ParallaxWrapper>
         )
 

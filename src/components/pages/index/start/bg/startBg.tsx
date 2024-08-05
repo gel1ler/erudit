@@ -10,8 +10,8 @@ const StartBg = () => {
         <Box position='absolute' className='w-screen h-screen -z-10'>
             <Planet isLg={isLg} />
             <Circle isLg={isLg} />
-            <Dots bottom='40px' right={isLg ? '20%' : '-10%'} />
-            <Dots bottom={isLg ? '50%' : '70%'} vertical />
+            <Dots bottom={isLg ? '40px' : '175px'} right={isLg ? '20%' : '-15%'} />
+            <Dots bottom={isLg ? '50%' : '80%'} left={isLg ? '' : '-10%'} vertical />
             {isLg ? <Planes /> : null}
         </Box>
     )
