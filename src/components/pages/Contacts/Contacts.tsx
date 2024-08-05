@@ -63,7 +63,7 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
                     <Box>
                         <Title left noAos={noAos}>Контакты</Title>
                         <Typography data-aos={noAos ? '' : 'fade-up'} variant='body2' color='GrayText' className='text-center xl:text-left'>
-                            Нажмайте на данные ниже для взаимодействовия с ними
+                            Нажмайте на данные ниже для взаимодействия с ними
                         </Typography>
                         <ul data-aos={noAos ? '' : 'fade-up'} className='text-lg space-y-3 mt-2 w-fit'>
                             <li style={{ textAlign: 'center' }}>
