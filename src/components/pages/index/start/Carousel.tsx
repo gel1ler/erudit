@@ -40,7 +40,7 @@ const Carousel = () => {
                         width={1920}
                         height={1080}
                         src={image}
-                        className="object-cover w-screen h-full -z-10 brightness-75"
+                        className="object-cover w-screen h-full -z-10 brightness-[0.7]"
                         style={{
                             transform: `translateX(${translate}%)`,
                             transition: 'transform 1.2s ease-in-out'

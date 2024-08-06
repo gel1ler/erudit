@@ -4,6 +4,7 @@ import Image from 'next/image'
 // import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from './icons'
 import Link from 'next/link'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
+import { groupsData } from '@/content/content'
 
 const Text = ({ href, children }: { href: string, children: ReactNode }) =>
     <Link href={href}>
@@ -71,9 +72,9 @@ const Footer = () => {
                     <Typography variant='h5' fontWeight='bold'>
                         Группы
                     </Typography>
-                    <Text href='/groups#main_groups'>Основные группы</Text>
-                    <Text href='/groups#additional_groups'>Дополнительные группы</Text>
-                    <Text href='/groups#other_groups'>Другое</Text>
+                    <Text href='/groups/0'>{groupsData[1].title}</Text>
+                    <Text href='/groups/1'>{groupsData[3].title}</Text>
+                    <Text href='/groups/2'>{groupsData[5].title}</Text>
                 </Box>
             </Container >
             <Typography variant='body2' textAlign='center' sx={{ px: 1, }}>
