@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
-import { config } from "process";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useSpring, animated, easings } from "react-spring";
 
 export const Planet = ({ isLg }: { isLg?: boolean }) => {
@@ -8,8 +7,8 @@ export const Planet = ({ isLg }: { isLg?: boolean }) => {
     const duration = 5500
 
     const springs = useSpring({
-        from: { x: -30, rotateZ: 10 },
-        to: [{ x: 30, rotateZ: -10 }, { x: -30, rotateZ: 10 }],
+        from: { x: -30, rotateZ: 10, scale: isLg ? 1 : 0.8 },
+        to: [{ x: 30, rotateZ: -10, scale: isLg ? 1 : 0.8  }, { x: -30, rotateZ: 10, scale: isLg ? 1 : 0.8 }],
         loop: true,
         reset: true,
         config: {
@@ -26,7 +25,6 @@ export const Planet = ({ isLg }: { isLg?: boolean }) => {
                 filter: 'drop-shadow(0 0 10px rgba(144, 57, 255, 0.5))',
                 bottom: isLg ? '80px' : '40px',
                 left: isLg ? '15%' : '60%',
-                scale: isLg ? '' : 0.8
             }}
         >
             <svg width="171" height="114" viewBox="0 0 171 114" fill="none" xmlns="http://www.w3.org/2000/svg">

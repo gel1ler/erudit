@@ -19,19 +19,13 @@ const Carousel = () => {
             else {
                 next()
             }
-        }, 5000)
+        }, 10000)
         return () => clearInterval(timer)
     })
 
     const next = () => {
         if (current < images.length - 1) {
             setCurrent(current + 1)
-        }
-    }
-
-    const prev = () => {
-        if (current > 0) {
-            setCurrent(current - 1)
         }
     }
 
@@ -46,9 +40,10 @@ const Carousel = () => {
                         width={1920}
                         height={1080}
                         src={image}
-                        className="object-cover w-full h-full transition-transform duration-500 -z-10 brightness-50"
+                        className="object-cover w-screen h-full -z-10 brightness-75"
                         style={{
                             transform: `translateX(${translate}%)`,
+                            transition: 'transform 1.2s ease-in-out'
                         }}
                     />
                 )}

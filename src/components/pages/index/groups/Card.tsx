@@ -13,7 +13,7 @@ const Card = ({ title, text, img, id }: { title: string, text: string, img: stri
         width={450}
         height={450}
         alt='Фото группы'
-        className='rounded-xl w-full aspect-square object-cover shadow'
+        className='rounded-xl w-full aspect-square object-cover shadow bg-center'
       />
       <Typography variant='h4' textAlign='center' fontWeight='bold'>
         {title}
