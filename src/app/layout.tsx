@@ -19,6 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" type="image/svg+xml" />
         <link rel='image/svg+xml' href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" sizes="any" />
+        <meta name="mailru-domain" content="ZppJXQWK50CUv5V5" />
       </head>
       <ThemeRegistry>
         <AOSProvider>
