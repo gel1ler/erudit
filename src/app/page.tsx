@@ -12,6 +12,7 @@ import Bg2 from '@/components/layout/Bg/Bg2'
 import Contacts from '@/components/pages/Contacts/Contacts'
 import News from '@/components/pages/index/news/News'
 import Script from 'next/script'
+import Activities from '@/components/pages/index/activities/activities'
 
 export const metadata: Metadata = {
   title: 'Маленький эрудит — Детский развивающий центр для детей от 1 до 6 лет. Жуковский.',
@@ -25,11 +26,12 @@ export default function Home() {
       <Start />
       <Box className='relative flex flex-col gap-40 pb-40'>
         <Bg>
-          <Book1 />
+          {/* <Book1 /> */}
           <Book2 />
         </Bg>
         <News />
         <Groups />
+        <Activities />
       </Box>
       <Box className='relative flex flex-col gap-40'>
         <Bg2>
