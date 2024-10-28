@@ -20,11 +20,11 @@ export default function Home() {
                     </ul>
                 </div>
                 <p className="text-lg">
-                    Присоединяйтесь к нам и проведите незабываемое лето в лагере "Эрудит"!
+                    Присоединяйтесь к нам и проведите незабываемое лето в лагере &quot;Эрудит&quot;!
                 </p>
             </div>
             <div className="p-8 rounded-2xl max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание лагеря "Эрудит" 📅</h2>
+                <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание лагеря &quot;Эрудит&quot; 📅</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white text-black p-4 rounded-lg shadow-lg">
                         <h3 className="text-xl font-semibold mb-2">12:00 – 13:00</h3>

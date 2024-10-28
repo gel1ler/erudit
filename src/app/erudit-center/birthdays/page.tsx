@@ -57,7 +57,7 @@ export default function Home() {
             <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-8 pt-12 rounded-2xl shadow-lg text-white text-center max-w-7xl mx-auto">
                 <h2 className="text-5xl font-bold mb-6 animate-bounce">🎉 Проведение дней рождений 🎉</h2>
                 <p className="text-xl mb-8">
-                    Отпразднуйте день рождения вашего ребенка в нашем детском центре "Маленький Эрудит"!
+                    Отпразднуйте день рождения вашего ребенка в нашем детском центре &quot;Маленький Эрудит&quot;!
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="bg-white text-black p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">

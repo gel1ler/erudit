@@ -29,7 +29,7 @@ const News = () => {
     };
 
     fetchPosts();
-  }, []);
+  });
 
   const addPosts = async () => {
     try {
