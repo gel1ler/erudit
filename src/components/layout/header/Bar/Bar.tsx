@@ -15,7 +15,6 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
         height: '5rem',
         opacity: isActive ? 1 : 0,
         transition: 'opacity .15s ease-out',
-
       }}
     >
       <Box className='flex w-full justify-between items-center'>

@@ -1,4 +1,4 @@
-import { IMainInfo, INavLink, ISocialMedia } from "./types";
+import { Activity, IMainInfo, INavLink, ISocialMedia } from "./types";
 
 export const mainInfo: IMainInfo = {
     name: 'Название',
@@ -25,11 +25,24 @@ export const navigation: INavLink[] = [
     },
     {
         id: 2,
+        name: "Эрудит-центр",
+        href: "/#ECenter_anchor",
+        anchorLink: true,
+        expanded: true,
+        links: [
+            { id: 0, name: 'Эрудит для взрослых', href: '/erudit-center/elders' },
+            { id: 1, name: 'Лагерь Эрудит', href: '/erudit-center/camp' },
+            { id: 2, name: 'Кружки', href: '/erudit-center/art' },
+            { id: 3, name: 'Проведение дней рождений', href: '/erudit-center/birthdays' },
+        ]
+    },
+    {
+        id: 3,
         name: "Галерея",
         href: "/gallery",
     },
     {
-        id: 3,
+        id: 4,
         name: "Отзывы",
         href: "/#ratings_anchor",
         anchorLink: false,
@@ -78,5 +91,131 @@ export const groupsData = [
         text: 'Занятия проходят в комплексе 3 раза в неделю( 2 раза 1час 30мин. и один раз 2часа) Проводят занятия разные педагоги по каждому предмету. Занятия проходят в игровой форме,весело и увлекательно. Наполняемость групп 10 человек. Можно выбрать утреннее или вечернее время. Пальчиковая гимнастика и разминка включены в размеры занятия.',
         description: 'Малыши занимаются с психологом, логопедом; с удовольствием приходят в зал на аэробику и музыку, любимыми предметами становятся английский язык, ИЗО и художественное слово. Чтение и математика включены в комплекс занятий. Дети учат буквы, цифры до 10, овладеваютэлементарными математическими действиями, учатся читать первые слова по слогам. Малыши не испытывают дискомфорт и с удовольствием идут на занятия.',
         img: '/gallery/8 марта (2).jpg'
+    },
+]
+
+export const activities: Activity[] = [
+    {
+        title: 'Эрудит для взрослых',
+        description: 'Иностранные языки, школьные репетиторы, подготовки к экзаменам',
+        href: '/erudit-center/elders',
+        icons: [
+            {
+                src: '/icons/center/elders/language.svg',
+                position: ['', '', 20, 30],
+                size: 100,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/graduation.svg',
+                position: [-10, 10, '', ''],
+                size: 120,
+                rotate: 30
+            },
+            {
+                src: '/icons/center/elders/education.svg',
+                position: ['', -5, -20, ''],
+                size: 150,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/exam.svg',
+                position: [40, '', '', '15%'],
+                size: 150,
+                rotate: -30
+            },
+        ]
+    },
+    {
+        title: 'Лагерь Эрудит',
+        description: 'Детский лагерь с увлекательной программой для детей',
+        href: '/erudit-center/camp',
+        icons: [
+            {
+                src: '/icons/center/camp/campfire.svg',
+                position: ['', -10, 40, ''],
+                size: 150,
+                rotate: -10
+            },
+            {
+                src: '/icons/center/camp/tent.svg',
+                position: ['', '', -15, 0],
+                size: 120,
+                rotate: -10
+            },
+            {
+                src: '/icons/center/camp/flashlight.svg',
+                position: [20, '', '', '15%'],
+                size: 100,
+                rotate: 75
+            },
+        ]
+    },
+    {
+        title: 'Кружки',
+        description: 'Рисование, лепка, вышивка и рукоделие, театральное искусство и много другое',
+        href: '/erudit-center/art',
+        icons: [
+            {
+                src: '/icons/center/art/theatre.svg',
+                position: ['', '', '25%', 10],
+                size: 100,
+                rotate: 0
+            },
+            {
+                src: '/icons/center/art/art.svg',
+                position: ['', 25, 25, ''],
+                size: 120,
+                rotate: -10
+            },
+            {
+                src: '/icons/center/art/sculpture.svg',
+                position: [5, -15, '', ''],
+                size: 150,
+                rotate: -25
+            },
+        ]
+    },
+    {
+        title: 'Проведение дней рождений',
+        description: 'Весёлое и незабываемое приключение с разнообразными программами, мастер-классами и вкусными угощениями!',
+        href: '/erudit-center/birthdays',
+        icons: [
+            {
+                src: '/icons/center/birthday/cake.svg',
+                position: ['', '', -50, -20],
+                size: 150,
+                rotate: 30
+            },
+            {
+                src: '/icons/center/birthday/confetti.svg',
+                position: ['', '50%', -35, ''],
+                size: 150,
+                rotate: -10,
+                noMd: true,
+                opacity: 0.6
+            },
+            {
+                src: '/icons/center/birthday/confetti.svg',
+                position: [-10, '', '', '50%'],
+                size: 150,
+                rotate: 10,
+                noMd: true,
+                opacity: 0.6
+            },
+            {
+                src: '/icons/center/birthday/gift.svg',
+                position: [5, '', '', '10%'],
+                size: 150,
+                rotate: 5,
+                opacity: 0.6
+            },
+            {
+                src: '/icons/center/birthday/hat.svg',
+                position: ['', 15, 20, ''],
+                size: 150,
+                rotate: -25
+            },
+        ]
     },
 ]

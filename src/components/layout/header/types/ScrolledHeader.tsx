@@ -37,7 +37,6 @@ const ScrolledHeader = () => {
         <>
             <AppBar
                 position='fixed'
-                className=' overflow-hidden'
                 onMouseEnter={() => isLgScreen && !isOnTop && setIsActive(true)}
                 onMouseLeave={() => isLgScreen && !isOnTop && setIsActive(false)}
                 sx={{

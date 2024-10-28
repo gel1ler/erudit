@@ -28,7 +28,7 @@ const StartContent = ({ isLg }: { isLg?: boolean }) => {
                 <Carousel />
                 :
                 <Image
-                    src='/start/1.png'
+                    src='/start/1.webp'
                     fill
                     alt='Background'
                     className='object-cover -z-50 brightness-50'

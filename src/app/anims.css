@@ -39,7 +39,7 @@
 }
 
 .prod-slider .slick-active {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .animated-opacity {
@@ -64,10 +64,16 @@
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.5;
   }
+
   100% {
     opacity: 1;
   }
+}
+
+.translateToTopTrigger:hover>.translateToTop {
+  transform: translateY(-10px);
 }
