@@ -41,12 +41,6 @@ export const navigation: INavLink[] = [
         name: "Галерея",
         href: "/gallery",
     },
-    {
-        id: 4,
-        name: "Отзывы",
-        href: "/#ratings_anchor",
-        anchorLink: false,
-    }
 ]
 
 export const groupsData = [
