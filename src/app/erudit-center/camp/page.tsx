@@ -9,6 +9,8 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <PageLayout id={1}>
+
+            {/* HERO */}
             <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl shadow-lg text-white text-center max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold mb-4">🏕️ Для детей от 7 до 12 лет 🏕️</h2>
                 <div className="mb-6">
@@ -23,8 +25,10 @@ export default function Home() {
                     Присоединяйтесь к нам и проведите незабываемое лето в лагере &quot;Эрудит&quot;!
                 </p>
             </div>
+
+            {/* SCHEDULE */}
             <div className="p-8 rounded-2xl max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание лагеря &quot;Эрудит&quot; 📅</h2>
+                <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание лагеря &quot;Эрудит&quot;</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white text-black p-4 rounded-lg shadow-lg">
                         <h3 className="text-xl font-semibold mb-2">12:00 – 13:00</h3>
@@ -71,6 +75,7 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* THEME */}
             <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl shadow-lg text-white">
                 <h2 className="text-4xl font-bold mb-4 text-center">📅 Тематика по дням 📅</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

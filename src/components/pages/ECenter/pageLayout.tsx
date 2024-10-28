@@ -11,7 +11,7 @@ export default function PageLayout({ id, children }: { id: number, children: Rea
     return (
         <>
             <Loader />
-            <Box className='relative flex flex-col gap-4 my-40 max-w-3xl mx-auto'>
+            <Box className='relative flex flex-col gap-4 my-40 max-w-3xl mx-auto overflow-hidden'>
                 <div className="absolute -z-10 opacity-35 w-full h-full top-0 left-0 transition-transform duration-500 translateToTop">
                     {item.icons.map((icon, key) =>
                         <Image
@@ -36,7 +36,7 @@ export default function PageLayout({ id, children }: { id: number, children: Rea
                     </Typography>
                 </Box>
             </Box>
-            <Box className='mb-20 flex flex-col items-center gap-16 mx-4'>
+            <Box className='mb-20 flex flex-col items-center gap-16 px-4'>
                 {children}
             </Box>
             <Contacts noAos />
