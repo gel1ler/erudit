@@ -1,12 +1,44 @@
-import { Button, Toolbar } from '@mui/material'
+import { Toolbar, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 import { Box } from '@mui/material'
 import Link from 'next/link'
-import NavLinks from './NavLinks'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import NavLinks, { Text } from './NavLinks'
 import MyDrawer from '../drawer/MyDrawer'
 import { ContactsButton } from '@/components/UI/form/Buttons'
+
+const links = [
+  { id: 0, name: 'Иностранные языки', href: '/ecenter/languages' },
+  { id: 1, name: 'Подгатовка к экзаменам', href: '/ecenter/exams' },
+  { id: 2, name: 'Летний лагерь', href: '/ecenter/camp' },
+  { id: 3, name: 'Кружки', href: '/ecenter/art' },
+]
+
+const ECenter = () =>
+  <Box className='relative hidden md:block'>
+    <Link href='/#ECenter_anchor' className="peer">
+      <Typography className='gradient-text' fontSize={17} fontWeight='bold'>
+        Эрудит центр
+      </Typography>
+    </Link>
+    <Box className={`
+      absolute top-1/2 -left-1/2 mt-2 transition-all duration-300 z-20 w-max opacity-0 pointer-events-none 
+      peer-hover:opacity-100 peer-hover:pointer-events-auto hover:opacity-100 hover:pointer-events-auto
+    `}>
+      <Box className="bg-white shadowed rounded-lg p-4 mt-4">
+        {links.map(link => (
+          <Link key={link.id} href={link.href} className='block py-2'>
+            <Text>
+              {link.name}
+            </Text>
+          </Link>
+        ))}
+      </Box>
+    </Box>
+  </Box>
+
+
+
 
 const Bar = ({ isActive }: { isActive?: boolean }) => {
   return (
@@ -14,7 +46,8 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
       sx={{
         height: '5rem',
         opacity: isActive ? 1 : 0,
-        transition: 'opacity .15s ease-out',
+        transform: isActive ? '' : 'scale(0.2)',
+        transition: 'opacity .15s ease-out, transform .3s ease-out',
       }}
     >
       <Box className='flex w-full justify-between items-center'>
@@ -26,8 +59,9 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
             height={56}
           />
         </Link>
-        <NavLinks hoverType='color' />
-        <Box className='flex items-center gap-2'>
+        <NavLinks />
+        <Box className='flex items-center gap-4'>
+          <ECenter />
           <ContactsButton />
           <MyDrawer noAbs isActive={isActive} />
         </Box>

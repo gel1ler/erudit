@@ -32,6 +32,7 @@ const StartContent = ({ isLg }: { isLg?: boolean }) => {
                     fill
                     alt='Background'
                     className='object-cover -z-50 brightness-50'
+                    sizes="(max-width: 640px) 100vh,"
                 />
             }
             <StartBg />

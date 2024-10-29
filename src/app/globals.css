@@ -126,3 +126,9 @@ li {
 .shadowed {
   box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.1);
 }
+
+.gradient-text {
+  background: linear-gradient(to right, #15803d, #1d4ed8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

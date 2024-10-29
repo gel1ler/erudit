@@ -26,6 +26,7 @@ export interface INavLink {
 
 export interface Activity {
     title: string;
+    subtitle?: string;
     description: string;
     href: string;
     icons: { src: string, position: (number | string)[], size: number, rotate: number, opacity?: number, noMd?:boolean }[];

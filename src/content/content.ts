@@ -25,16 +25,9 @@ export const navigation: INavLink[] = [
     },
     {
         id: 2,
-        name: "Эрудит-центр",
-        href: "/#ECenter_anchor",
+        name: "Дополнительно",
+        href: "/#groups_anchor",
         anchorLink: true,
-        expanded: true,
-        links: [
-            { id: 0, name: 'Эрудит для взрослых', href: '/erudit-center/elders' },
-            { id: 1, name: 'Лагерь Эрудит', href: '/erudit-center/camp' },
-            { id: 2, name: 'Кружки', href: '/erudit-center/art' },
-            { id: 3, name: 'Проведение дней рождений', href: '/erudit-center/birthdays' },
-        ]
     },
     {
         id: 3,
@@ -90,9 +83,9 @@ export const groupsData = [
 
 export const activities: Activity[] = [
     {
-        title: 'Эрудит для взрослых',
-        description: 'Иностранные языки, школьные репетиторы, подготовки к экзаменам',
-        href: '/erudit-center/elders',
+        title: 'Иностранные языки',
+        description: "Обучение иностранным языкам с акцентом на практическое использование и свободное общение",
+        href: '/ecenter/languages',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -123,7 +116,7 @@ export const activities: Activity[] = [
     {
         title: 'Лагерь Эрудит',
         description: 'Детский лагерь с увлекательной программой для детей',
-        href: '/erudit-center/camp',
+        href: '/ecenter/camp',
         icons: [
             {
                 src: '/icons/center/camp/campfire.svg',
@@ -148,7 +141,7 @@ export const activities: Activity[] = [
     {
         title: 'Кружки',
         description: 'Рисование, лепка, вышивка и рукоделие, театральное искусство и много другое',
-        href: '/erudit-center/art',
+        href: '/ecenter/art',
         icons: [
             {
                 src: '/icons/center/art/theatre.svg',
@@ -171,44 +164,35 @@ export const activities: Activity[] = [
         ]
     },
     {
-        title: 'Проведение дней рождений',
-        description: 'Весёлое и незабываемое приключение с разнообразными программами, мастер-классами и вкусными угощениями!',
-        href: '/erudit-center/birthdays',
+        title: 'Подготовка к экзаменам',
+        subtitle: 'И репетиторы по школьной программе',
+        description: "Эффективная подготовка к экзаменам по различным предметам с опытными преподавателями",
+        href: '/ecenter/exams',
         icons: [
             {
-                src: '/icons/center/birthday/cake.svg',
-                position: ['', '', -50, -20],
-                size: 150,
-                rotate: 30
+                src: '/icons/center/school/test.svg',
+                position: ['', '', '35%', 10],
+                size: 140,
+                rotate: 20
             },
             {
-                src: '/icons/center/birthday/confetti.svg',
-                position: ['', '50%', -35, ''],
+                src: '/icons/center/school/calculator.svg',
+                position: ['', 25, 25, ''],
+                size: 120,
+                rotate: -10
+            },
+            {
+                src: '/icons/center/school/target.svg',
+                position: [-15, '20%', '', ''],
                 size: 150,
-                rotate: -10,
+                rotate: 65
+            },
+            {
+                src: '/icons/center/school/studying.svg',
+                position: ['', '', -15, '25%'],
+                size: 120,
+                rotate: -16,
                 noMd: true,
-                opacity: 0.6
-            },
-            {
-                src: '/icons/center/birthday/confetti.svg',
-                position: [-10, '', '', '50%'],
-                size: 150,
-                rotate: 10,
-                noMd: true,
-                opacity: 0.6
-            },
-            {
-                src: '/icons/center/birthday/gift.svg',
-                position: [5, '', '', '10%'],
-                size: 150,
-                rotate: 5,
-                opacity: 0.6
-            },
-            {
-                src: '/icons/center/birthday/hat.svg',
-                position: ['', 15, 20, ''],
-                size: 150,
-                rotate: -25
             },
         ]
     },

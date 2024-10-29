@@ -1,7 +1,7 @@
-'use client'
 import { Button } from '@mui/material'
+import Link from 'next/link'
 import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from '@/components/UI/anchorLink'
 
 export const EnrollButton = () => {
     return (
@@ -45,3 +45,58 @@ export const ContactsButton = ({ drawer, onClick }: { drawer?: boolean, onClick?
             Контакты
         </Button>
     </AnchorLink>
+
+
+export const MoreBtn = ({ click, href, text }: { click?: () => void, href?: string, text?:string }) => {
+    text = text || 'подробнее';
+    if (href) {
+        return (
+            <Link href={href}>
+                <Button
+                    variant='outlined'
+                    className='w-fit z-10'
+                    sx={{
+                        borderRadius: '50px',
+                        border: '3px solid #303030',
+                        mt: 1,
+                        px: 2,
+                        py: '6px',
+                        fontSize: '15px',
+                        color: '#303030',
+                        '&:hover': {
+                            border: '3px solid #303030',
+                            backgroundColor: '#303030',
+                            color: 'white',
+                        }
+                    }}
+                >
+                    {text}
+                </Button>
+            </Link>
+        );
+    } else {
+        return (
+            <Button
+                onClick={click}
+                variant='outlined'
+                className='w-fit z-10'
+                sx={{
+                    borderRadius: '50px',
+                    border: '3px solid #303030',
+                    mt: 1,
+                    px: 2,
+                    py: '6px',
+                    fontSize: '15px',
+                    color: '#303030',
+                    '&:hover': {
+                        border: '3px solid #303030',
+                        backgroundColor: '#303030',
+                        color: 'white',
+                    }
+                }}
+            >
+                {text}
+            </Button>
+        );
+    }
+};

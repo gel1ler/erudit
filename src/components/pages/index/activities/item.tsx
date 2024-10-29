@@ -35,6 +35,7 @@ const Item = ({ index, activity }: { index: Number, activity: Activity }) => {
             </div>
             <div className='text-center flex flex-col items-center gap-4'>
                 <h2 className="text-4xl font-bold z-10">{activity.title}</h2>
+                {activity.subtitle ? <p className="tracking-widest text-gray-600 z-10 -mt-2">{activity.subtitle}</p> : null}
                 <p className='w-2/3 z-10'>{activity.description}</p>
                 <Link href={activity.href}>
                     <Button
