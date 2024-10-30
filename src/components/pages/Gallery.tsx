@@ -1,68 +1,31 @@
 'use client'
 import { Box, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ImageViewer from '../UI/imageViewer'
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-
-
-const arr = ['Выпускной 2021', '8 марта', 'На занятии', 'Новый год']
-
-const graduation = Array(8).fill(0).map((i, index) => (
-    {
-        src: `/gallery/${arr[0]} (${index + 1}).jpg`,
-        text: arr[0]
-    }
-))
-
-const march = Array(4).fill(0).map((i, index) => (
-    {
-        src: `/gallery/${arr[1]} (${index + 1}).jpg`,
-        text: arr[1]
-    }
-))
-
-const lesson = Array(8).fill(0).map((i, index) => (
-    {
-        src: `/gallery/${arr[2]} (${index + 1}).jpg`,
-        text: arr[2]
-    }
-))
-
-const newYear = Array(9).fill(0).map((i, index) => (
-    {
-        src: `/gallery/${arr[3]} (${index + 1}).jpg`,
-        text: arr[3]
-    }
-))
 
 const Gallery = () => {
     const [current, setCurrent] = useState(0)
     const [open, setOpen] = useState(false)
     const [target, setTarget] = useState('all')
 
+    const [photos, setPhotos] = useState<{ url: string; key: string }[]>([])
+
+    useEffect(() => {
+        fetch('/api/getPhotos')
+            .then(response => response.json())
+            .then(data => {
+                if (Array.isArray(data) && data.length > 0) {
+                    setPhotos(data.slice(1))
+                } else {
+                    setPhotos([])
+                }
+            })
+    }, [])
+
     let images: { src: string, text: string }[]
-    switch (target) {
-        case 'all':
-            images = [...graduation, ...march, ...lesson, ...newYear]
-            break
-        case 'graduation':
-            images = graduation
-            break
-        case 'march':
-            images = march
-            break
-        case 'lesson':
-            images = lesson
-            break
-        case 'newYear':
-            images = newYear
-            break
-        default:
-            images = [...graduation, ...march, ...lesson, ...newYear]
-            break;
-    }
 
     return (
         <>
@@ -73,7 +36,7 @@ const Gallery = () => {
                 aria-label="text alignment"
                 className='mx-auto max-w-[95vw] overflow-auto px-[1px]'
             >
-                <ToggleButton value='all'> 
+                <ToggleButton value='all'>
                     Все фото
                 </ToggleButton>
                 <ToggleButton value='graduation'>
@@ -95,12 +58,12 @@ const Gallery = () => {
                 sx={{ mx: 'auto' }}
             >
                 <ImageViewer
-                    images={images.map(image => image.src)}
+                    images={photos.map(image => image.url) }
                     current={current}
                     open={open}
                     setOpen={setOpen}
                 />
-                {images.map((img, index) =>
+                {photos.map((img, index) =>
                     <Grid key={index} item xs={6} md={4} lg={3} sx={{ p: 1 }}>
                         <Box className='relative rounded-lg overflow-hidden cursor-pointer'>
                             <Box
@@ -111,12 +74,12 @@ const Gallery = () => {
                                 }}
                             >
                                 <Typography variant='h5' fontWeight='bold' color='white'>
-                                    {img.text}
+                                    {img.key.split('/')[1].split('(')[0]}
                                 </Typography>
                             </Box>
                             <Image
-                                src={img.src}
-                                alt={img.text}
+                                src={img.url}
+                                alt={img.key}
                                 width={400}
                                 height={400}
                                 className='w-full h-full -z-10 aspect-square object-cover'

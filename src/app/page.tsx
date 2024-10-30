@@ -26,7 +26,6 @@ export default function Home() {
       <Start />
       <Box className='relative flex flex-col gap-40 pb-40'>
         <Bg>
-          {/* <Book1 /> */}
           <Book2 />
         </Bg>
         <News />

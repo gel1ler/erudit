@@ -14,6 +14,11 @@ const nextConfig = {
         hostname: '**.vkuserphoto.ru',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'erudit.hb.ru-msk.vkcloud-storage.ru',
+        port: '',
+      },
     ]
   },
 }
