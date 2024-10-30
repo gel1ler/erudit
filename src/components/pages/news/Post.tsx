@@ -45,6 +45,8 @@ const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
 
     let formattedDate = `${day}.${month} в ${hours}:${minutes}`;
 
+    console.log(post.attachments)
+
     return (
         <Box
             className='rounded-lg bg-slate-100 p-4 w-full flex flex-col gap-2 z-10 h-fit'

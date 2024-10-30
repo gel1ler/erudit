@@ -10,47 +10,39 @@ const Gallery = () => {
     const [current, setCurrent] = useState(0)
     const [open, setOpen] = useState(false)
     const [target, setTarget] = useState('all')
-
-    const [photos, setPhotos] = useState<{ url: string; key: string }[]>([])
+    const [foders, setFolders] = useState<string[]>([])
+    const [folderPhotos, setFolderPhotos] = useState<{ folder: string; photos: string[] }[]>([])
 
     useEffect(() => {
-        fetch('/api/getPhotos')
+        fetch('/api/getFolders')
             .then(response => response.json())
             .then(data => {
-                if (Array.isArray(data) && data.length > 0) {
-                    setPhotos(data.slice(1))
-                } else {
-                    setPhotos([])
-                }
+                setFolders(data.folders)
+                setFolderPhotos(data.folderPhotos)
             })
     }, [])
 
-    let images: { src: string, text: string }[]
+    const currentPhotos = target === 'all' ? folderPhotos : [folderPhotos.find(folder => folder.folder === target)]
+
+    let l = 0
 
     return (
         <>
             <ToggleButtonGroup
                 value={target}
                 exclusive
-                onChange={(e, newTarget) => setTarget(newTarget)}
+                onChange={(e, newTarget) => newTarget !== null && setTarget(newTarget)}
                 aria-label="text alignment"
-                className='mx-auto max-w-[95vw] overflow-auto px-[1px]'
+                className='mx-auto max-w-[95vw] overflow-auto px-[2px]'
             >
-                <ToggleButton value='all'>
+                <ToggleButton sx={{ fontSize: [12, 13, 14] }} value='all'>
                     Все фото
                 </ToggleButton>
-                <ToggleButton value='graduation'>
-                    Выпускной
-                </ToggleButton>
-                <ToggleButton value='march'>
-                    8 марта
-                </ToggleButton>
-                <ToggleButton value='lesson'>
-                    На занятии
-                </ToggleButton>
-                <ToggleButton value='newYear'>
-                    Новый год
-                </ToggleButton>
+                {foders.map((folder, index) =>
+                    <ToggleButton sx={{ fontSize: [12, 13, 14] }} key={index} value={folder}>
+                        {folder}
+                    </ToggleButton>
+                )}
             </ToggleButtonGroup>
             <Grid
                 container
@@ -58,35 +50,42 @@ const Gallery = () => {
                 sx={{ mx: 'auto' }}
             >
                 <ImageViewer
-                    images={photos.map(image => image.url) }
+                    images={currentPhotos.flatMap(folder => folder!.photos)}
                     current={current}
                     open={open}
                     setOpen={setOpen}
                 />
-                {photos.map((img, index) =>
-                    <Grid key={index} item xs={6} md={4} lg={3} sx={{ p: 1 }}>
-                        <Box className='relative rounded-lg overflow-hidden cursor-pointer'>
-                            <Box
-                                className='transition-opacity absolute top-0 left-0 w-full h-full flex items-center justify-center z-10 bg-[#515151] opacity-0 bg-opacity-80 hover:opacity-100'
-                                onClick={() => {
-                                    setOpen(true)
-                                    setCurrent(index)
-                                }}
-                            >
-                                <Typography variant='h5' fontWeight='bold' color='white'>
-                                    {img.key.split('/')[1].split('(')[0]}
-                                </Typography>
-                            </Box>
-                            <Image
-                                src={img.url}
-                                alt={img.key}
-                                width={400}
-                                height={400}
-                                className='w-full h-full -z-10 aspect-square object-cover'
-                            />
-                        </Box>
-                    </Grid>
-                )}
+                {currentPhotos.map(folder => {
+                    if (folder)
+                        return folder.photos.map(photo => {
+                            let index = l
+                            l++
+                            return (
+                                <Grid key={index} item xs={6} md={4} lg={3} sx={{ p: 1 }}>
+                                    <Box className='relative rounded-lg overflow-hidden cursor-pointer'>
+                                        <Box
+                                            className='transition-opacity absolute top-0 left-0 w-full h-full flex items-center justify-center z-10 bg-[#515151] opacity-0 bg-opacity-80 hover:opacity-100'
+                                            onClick={() => {
+                                                setOpen(true)
+                                                setCurrent(index)
+                                            }}
+                                        >
+                                            <Typography variant='h5' fontWeight='bold' color='white'>
+                                                {folder.folder}
+                                            </Typography>
+                                        </Box>
+                                        <Image
+                                            src={photo}
+                                            alt={folder.folder}
+                                            width={400}
+                                            height={400}
+                                            className='w-full h-full -z-10 aspect-square object-cover'
+                                        />
+                                    </Box>
+                                </Grid>
+                            )
+                        })
+                })}
             </Grid>
         </>
     )

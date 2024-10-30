@@ -28,6 +28,7 @@ export async function GET(request: NextRequest) {
             key: item.Key,
         })) || [];
 
+
         return NextResponse.json(photos);
     } catch (error) {
         console.log(error);
