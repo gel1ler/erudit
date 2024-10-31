@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Box } from '@mui/material'
 import Loader from '../components/layout/loader'
 import Bg from '@/components/layout/Bg/Bg'
-import { Book1, Book2, Book3, Book4, Book5, Book6 } from '../../public/bg/books'
+import { Book2, Book3, Book4, Book5, Book6 } from '../../public/bg/books'
 import Groups from '@/components/pages/index/groups/Groups'
 import Gallery from '@/components/pages/index/Gallery'
 import Ratings from '@/components/pages/index/Ratings'
@@ -12,7 +12,8 @@ import Bg2 from '@/components/layout/Bg/Bg2'
 import Contacts from '@/components/pages/Contacts/Contacts'
 import News from '@/components/pages/index/news/News'
 import Script from 'next/script'
-import Activities from '@/components/pages/index/activities/activities'
+import ECenterActivities from '@/components/pages/index/ECenterActivities/ECenterActivities'
+import AdditionalActivities from '@/components/pages/index/additionalActivities/AdditionalActivities'
 
 export const metadata: Metadata = {
   title: 'Маленький эрудит — Детский развивающий центр для детей от 1 до 6 лет. Жуковский.',
@@ -30,7 +31,8 @@ export default function Home() {
         </Bg>
         <News />
         <Groups />
-        <Activities />
+        <AdditionalActivities />
+        <ECenterActivities />
       </Box>
       <Box className='relative flex flex-col gap-40'>
         <Bg2>

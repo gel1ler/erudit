@@ -4,27 +4,32 @@ import Image from 'next/image'
 import React, { memo } from 'react'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import PostSlider from './PostSlider';
 
-const Attachment = ({ attachment }: { attachment: VKAttachmentExp }) => {
-    switch (attachment.type) {
+const Attachment = ({ attachments }: { attachments: VKAttachmentExp[] }) => {
+    switch (attachments[0].type) {
         case 'photo':
-            if (!attachment.photo) return
-            return <Image
-                className=' rounded-lg mx-auto'
-                src={attachment.photo.sizes[3].url}
-                width={attachment.photo.sizes[3].width}
-                height={attachment.photo.sizes[3].height}
-                alt='post'
-            />
+            if (!attachments[0].photo) return
+            return (
+                attachments.length > 1 ?
+                    <PostSlider attachments={attachments} />
+                    :
+                    <Image
+                        className='rounded-lg mx-auto'
+                        src={attachments[0].photo.sizes[3].url}
+                        width={attachments[0].photo.sizes[3].width}
+                        height={attachments[0].photo.sizes[3].height}
+                        alt='post'
+                    />
+            )
         case 'video':
-            if (!attachment.video) return
-            const videoUrl = `https://vk.com/video_ext.php?oid=${attachment.video.owner_id}&id=${attachment.video.id}&access_key=${attachment.video.access_key}`
-
+            if (!attachments[0].video) return
+            const videoUrl = `https://vk.com/video_ext.php?oid=${attachments[0].video.owner_id}&id=${attachments[0].video.id}&access_key=${attachments[0].video.access_key}`
             return <iframe
                 className='mx-auto min-h-96 rounded-lg'
                 src={videoUrl}
                 width='100%'
-                height={attachment.video.first_frame[0].height + 'px'}
+                height={attachments[0].video.first_frame[0].height + 'px'}
                 allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
             />
         default:
@@ -76,7 +81,7 @@ const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
                 </Box>
             </Box>
             <Typography>{post.text}</Typography>
-            {post.attachments[0] ? <Attachment attachment={post.attachments[0]} /> : null}
+            {post.attachments[0] ? <Attachment attachments={post.attachments} /> : null}
             <Box className='flex justify-between items-center px-1 mt-1'>
                 <Typography color='gray' variant='caption'><FavoriteBorderIcon /> {post.likes.count}</Typography>
                 <Typography color='gray' variant='caption'><VisibilityOutlinedIcon /> {post.views.count}</Typography>

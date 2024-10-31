@@ -1,4 +1,4 @@
-import { Activity, IMainInfo, INavLink, ISocialMedia } from "./types";
+import { ECenterType, IMainInfo, INavLink, ISocialMedia } from "./types";
 
 export const mainInfo: IMainInfo = {
     name: 'Название',
@@ -81,7 +81,26 @@ export const groupsData = [
     },
 ]
 
-export const activities: Activity[] = [
+export const additionalActivities = [
+    {
+      title: 'Подготовка к школе',
+      description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями.',
+    },
+    {
+      title: 'Детский лагерь',
+      description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере.',
+    },
+    {
+      title: 'Кружки',
+      description: 'Развивающие кружки для детей и взрослых по различным интересам.',
+    },
+    {
+      title: 'Проведение дней рождений',
+      description: 'Организуем незабываемый день рождения для вашего ребенка.',
+    },
+  ];
+
+export const ECenter: ECenterType[] = [
     {
         title: 'Иностранные языки',
         description: "Обучение иностранным языкам с акцентом на практическое использование и свободное общение",

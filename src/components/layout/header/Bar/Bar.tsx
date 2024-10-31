@@ -16,9 +16,12 @@ const links = [
 
 const ECenter = () =>
   <Box className='relative hidden md:block'>
-    <Link href='/#ECenter_anchor' className="peer">
-      <Typography className='gradient-text' fontSize={17} fontWeight='bold'>
+    <Link href='/#ECenter_anchor' className="peer flex flex-col items-center">
+      <Typography className='gradient-text' fontSize={17} fontWeight='bold' textAlign='center'>
         Эрудит центр
+      </Typography>
+      <Typography variant='body2' fontSize={11} mt='-4px' textAlign='center'>
+        Школьники и взрослые
       </Typography>
     </Link>
     <Box className={`

@@ -1,0 +1,41 @@
+.post-slider .slick-dots li {
+    margin: 0 2px;
+}
+
+
+.post-slider .slick-slide {
+    /* margin: 0 27px; */
+    padding: 0 10px;
+}
+
+.post-slider .slick-slide:first-child {
+    padding-left: 0;
+}
+
+.post-slider .slick-slide:last-child {
+    padding-right: 0;
+}
+
+.post-slider .slick-prev,
+.post-slider .slick-next {
+  border-radius: 50%; /* Скругление углов */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Чтобы стрелки были поверх слайдов */
+}
+
+.post-slider .slick-prev:before,
+.post-slider .slick-next:before {
+  color: black; /* Цвет иконок стрелок */
+  font-size: 20px; /* Размер иконок стрелок */
+}
+
+/* Смещение стрелок ближе к центру */
+.post-slider .slick-prev {
+  left: 10px; /* Смещение влево */
+}
+
+.post-slider .slick-next {
+  right: 10px; /* Смещение вправо */
+}

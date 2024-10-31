@@ -24,7 +24,7 @@ export interface INavLink {
     href: string
 }
 
-export interface Activity {
+export interface ECenterType {
     title: string;
     subtitle?: string;
     description: string;
