@@ -42,18 +42,32 @@ const Header = () => {
                 sx={{
                     transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
                     top: 20,
-                    height: isActive ? '5rem' : 35,
-                    width: isActive ? ['90%', '90%', '66%'] : 80,
-                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                    height: '5rem',
+                    width: ['90%', '90%', '66%'],
+                    boxShadow: 'none',
+                    backgroundColor: isActive ? 'rgba(255, 255, 255,) 0.9)' : 'transparent',
                     borderRadius: 100,
                     mx: 'auto',
                     left: 0,
                     right: 0,
+                    '&::after': {
+                        content: '""', // Добавляем содержимое псевдоэлемента
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        bottom: 0,
+                        borderRadius: 100,
+                        boxShadow: '0 0 5px 3px rgba(0,0,0,0.2)',
+                        opacity: isActive ? 1 : 0,
+                        transition: 'opacity 0.3s ease-in-out',
+                        pointerEvents: 'none',
+                    }
                 }}
             >
                 <Bar isActive={isActive} />
                 <MyDrawer isActive={isActive} />
-            </AppBar>
+            </AppBar >
         </>
     )
 }

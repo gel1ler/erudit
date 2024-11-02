@@ -2,10 +2,10 @@
 import { Box, Button } from '@mui/material'
 import React from 'react'
 import Image from 'next/image'
-import { Activity } from '@/content/types'
+import { ActivityType } from '@/content/types'
 import Link from 'next/link'
 
-const Item = ({ index, activity }: { index: Number, activity: Activity }) => {
+const Item = ({ index, activity }: { index: Number, activity: ActivityType }) => {
     return (
         <Box
             data-aos='fade-up'

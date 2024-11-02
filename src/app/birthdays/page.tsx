@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import PageLayout from '@/components/pages/ECenter/pageLayout'
+import PageLayout from '@/components/pages/pageLayout'
 import Image from 'next/image'
 import { PhoneCall } from '@/components/icons/socialMediaIcons'
 

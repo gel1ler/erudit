@@ -1,4 +1,4 @@
-import { ECenterType, IMainInfo, INavLink, ISocialMedia } from "./types";
+import { ActivityType, IMainInfo, INavLink } from "./types";
 
 export const mainInfo: IMainInfo = {
     name: 'Название',
@@ -81,26 +81,134 @@ export const groupsData = [
     },
 ]
 
-export const additionalActivities = [
+export const additionalActivities: ActivityType[] = [
     {
-      title: 'Подготовка к школе',
-      description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями.',
+        title: 'Подготовка к школе',
+        description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями.',
+        href: '/shcool',
+        icons: [
+            {
+                src: '/icons/center/elders/language.svg',
+                position: ['', '', 20, 30],
+                size: 100,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/graduation.svg',
+                position: [-10, 10, '', ''],
+                size: 120,
+                rotate: 30
+            },
+            {
+                src: '/icons/center/elders/education.svg',
+                position: ['', -5, -20, ''],
+                size: 150,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/exam.svg',
+                position: [40, '', '', '15%'],
+                size: 150,
+                rotate: -30
+            },
+        ]
     },
     {
-      title: 'Детский лагерь',
-      description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере.',
+        title: 'Детский лагерь',
+        description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере.',
+        href: '/camp',
+        icons: [
+            {
+                src: '/icons/center/elders/language.svg',
+                position: ['', '', 20, 30],
+                size: 100,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/graduation.svg',
+                position: [-10, 10, '', ''],
+                size: 120,
+                rotate: 30
+            },
+            {
+                src: '/icons/center/elders/education.svg',
+                position: ['', -5, -20, ''],
+                size: 150,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/exam.svg',
+                position: [40, '', '', '15%'],
+                size: 150,
+                rotate: -30
+            },
+        ]
     },
     {
-      title: 'Кружки',
-      description: 'Развивающие кружки для детей и взрослых по различным интересам.',
+        title: 'Кружки',
+        description: 'Развивающие кружки для детей и взрослых по различным интересам.',
+        href: '/art',
+        icons: [
+            {
+                src: '/icons/center/elders/language.svg',
+                position: ['', '', 20, 30],
+                size: 100,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/graduation.svg',
+                position: [-10, 10, '', ''],
+                size: 120,
+                rotate: 30
+            },
+            {
+                src: '/icons/center/elders/education.svg',
+                position: ['', -5, -20, ''],
+                size: 150,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/exam.svg',
+                position: [40, '', '', '15%'],
+                size: 150,
+                rotate: -30
+            },
+        ]
     },
     {
-      title: 'Проведение дней рождений',
-      description: 'Организуем незабываемый день рождения для вашего ребенка.',
+        title: 'Проведение дней рождений',
+        description: 'Организуем незабываемый день рождения для вашего ребенка.',
+        href: '/birthdays',
+        icons: [
+            {
+                src: '/icons/center/elders/language.svg',
+                position: ['', '', 20, 30],
+                size: 100,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/graduation.svg',
+                position: [-10, 10, '', ''],
+                size: 120,
+                rotate: 30
+            },
+            {
+                src: '/icons/center/elders/education.svg',
+                position: ['', -5, -20, ''],
+                size: 150,
+                rotate: -30
+            },
+            {
+                src: '/icons/center/elders/exam.svg',
+                position: [40, '', '', '15%'],
+                size: 150,
+                rotate: -30
+            },
+        ]
     },
-  ];
+];
 
-export const ECenter: ECenterType[] = [
+export const ECenter: ActivityType[] = [
     {
         title: 'Иностранные языки',
         description: "Обучение иностранным языкам с акцентом на практическое использование и свободное общение",
@@ -135,7 +243,7 @@ export const ECenter: ECenterType[] = [
     {
         title: 'Лагерь Эрудит',
         description: 'Детский лагерь с увлекательной программой для детей',
-        href: '/ecenter/camp',
+        href: '/camp',
         icons: [
             {
                 src: '/icons/center/camp/campfire.svg',
@@ -160,7 +268,7 @@ export const ECenter: ECenterType[] = [
     {
         title: 'Кружки',
         description: 'Рисование, лепка, вышивка и рукоделие, театральное искусство и много другое',
-        href: '/ecenter/art',
+        href: '/art',
         icons: [
             {
                 src: '/icons/center/art/theatre.svg',

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import PageLayout from '@/components/pages/ECenter/pageLayout'
+import PageLayout from '@/components/pages/pageLayout'
 
 export const metadata: Metadata = {
     title: 'Эрудит Центр - Лагерь Эрудит',

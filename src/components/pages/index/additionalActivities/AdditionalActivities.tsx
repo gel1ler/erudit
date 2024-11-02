@@ -13,7 +13,7 @@ const AdditionalActivities = () => {
                 className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 p-4 rounded-lg max-w-2xl lg:max-w-7xl mx-auto mt-10"
             >
                 {additionalActivities.map((activity, index) => (
-                    <ActivityCard key={index} title={activity.title} description={activity.description} />
+                    <ActivityCard key={index} href={activity.href} title={activity.title} description={activity.description} />
                 ))}
             </Box>
         </Box>

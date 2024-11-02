@@ -2,12 +2,12 @@ import { Box, Typography } from '@mui/material'
 import Loader from '@/components/layout/loader'
 import Title from '@/components/UI/text/Title'
 import Contacts from '@/components/pages/Contacts/Contacts'
-import { activities } from '@/content/content'
+import { additionalActivities, ECenter } from '@/content/content'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
-export default function PageLayout({ id, children }: { id: number, children: ReactNode }) {
-    const item = activities[id]
+export default function PageLayout({ id, children, isECenter }: { id: number, children: ReactNode, isECenter?: boolean }) {
+    const item = isECenter ? ECenter[id] : additionalActivities[id]
     return (
         <>
             <Loader />
