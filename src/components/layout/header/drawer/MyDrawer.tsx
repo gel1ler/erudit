@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTheme } from '@mui/material/styles'
-import { Drawer, Box, useMediaQuery } from '@mui/material'
+import { Drawer, Box, useMediaQuery, SxProps } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import IB from '@/components/icons/IB'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -9,35 +9,54 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ContactsButton } from '@/components/UI/form/Buttons'
 import { InstagramIcon, PhoneCall, TelegramIcon, VkIcon } from '@/components/icons/socialMediaIcons'
+import { CountrySelectorDropdown } from 'react-international-phone'
 
 
 const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) => {
     const [open, setOpen] = useState(false)
     const isLg = useMediaQuery('(min-width:1536px)')
 
+    let sx: SxProps
+    switch (noAbs) {
+        case true:
+            sx = {
+                transition: 'all .15s ease-out',
+                borderRadius: '30px',
+                p: 1,
+                cursor: 'pointer',
+                ":hover": {
+                    backgroundColor: 'rgba(0,0,0,.1)'
+                }
+            }
+            break
+        default:
+            sx = {
+                transition: 'all .15s ease-out',
+                position: 'absolute',
+                left: '50%',
+                top: ['20%', '20%', '20%', '33%'],
+                transform: 'translate(-50%, -50%)',
+                opacity: isActive ? 0 : 1,
+                pointerEvents: isActive ? 'none' : 'auto',
+                boxShadow: !isActive ? '0 0 5px 3px rgba(0,0,0,.2)' : 'none',
+                backgroundColor: 'white',
+                px: isActive ? 1 : 4,
+                py: 1,
+                borderRadius: '30px',
+                cursor: 'pointer',
+                ":hover": {
+                    backgroundColor: 'rgba(0,0,0,.1)'
+                }
+            }
+            break
+    }
+
     if (noAbs && isLg) return null
     return (
         <>
             <Box
                 onClick={() => setOpen(true)}
-                sx={{
-                    opacity: isActive ? (noAbs ? 0 : 1) : 1,
-                    transition: 'all .15s ease-out',
-                    position: noAbs ? 'static' : 'absolute',
-                    left: '50%',
-                    top: '50%',
-                    transform: noAbs ? null : 'translate(-50%, -50%)',
-                    pointerEvents: isActive && !noAbs ? 'none' : 'auto',
-                    boxShadow: !isActive ? '0 0 5px 3px rgba(0,0,0,.2)' : 'none',
-                    backgroundColor: 'white',
-                    px: isActive ? 1 : 4,
-                    py: 1,
-                    borderRadius: '30px',
-                    cursor: 'pointer',
-                    ":hover": {
-                        backgroundColor: 'rgba(0,0,0,.1)'
-                    }
-                }}
+                sx={sx}
             >
                 <MenuIcon
                     sx={{
