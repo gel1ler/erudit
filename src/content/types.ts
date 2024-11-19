@@ -28,6 +28,7 @@ export interface ActivityType {
     title: string;
     subtitle?: string;
     description: string;
+    img?: string;
     href: string;
     icons: { src: string, position: (number | string)[], size: number, rotate: number, opacity?: number, noMd?:boolean }[];
 }

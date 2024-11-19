@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 import Image from 'next/image'
 import Dots from './Dots'
 
-const images = ['/start/1.webp', '/gallery/8 марта (2).jpg', '/start/2.jpg']
+const images = ['/start/1.webp', '/groups/6.jpg', '/start/2.jpg']
 
 const Carousel = () => {
     const [current, setCurrent] = useState(0)

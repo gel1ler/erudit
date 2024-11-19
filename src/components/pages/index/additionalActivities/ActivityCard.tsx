@@ -1,106 +1,38 @@
-//-------
-// 111111
-//-------
-
-// import React from 'react';
-// import { Box, Typography } from '@mui/material';
-
-// const ActivityCard = ({ title }: { title: string }) => {
-//   return (
-//     <Box className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow duration-300">
-//       <Typography variant="h6" className="text-gray-800 font-semibold">
-//         {title}
-//       </Typography>
-//     </Box>
-//   );
-// };
-
-// export default ActivityCard;
-
-
-
-
-//-------
-//2222222
-//-------
-
-// import React from 'react';
-// import { Box, Typography } from '@mui/material';
-// import SchoolIcon from '@mui/icons-material/School';
-// import ChildCareIcon from '@mui/icons-material/ChildCare';
-// import GroupIcon from '@mui/icons-material/Group';
-// import CakeIcon from '@mui/icons-material/Cake';
-
-// const icons = {
-//   'Подготовка к школе': <SchoolIcon />,
-//   'Детский лагерь': <ChildCareIcon />,
-//   'Кружки': <GroupIcon />,
-//   'Проведение дней рождений': <CakeIcon />,
-// };
-
-// const ActivityCard = ({ title, description }) => {
-//   return (
-//     <Box className="bg-white shadowed rounded-lg p-6 flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow duration-300">
-//       <Box className="mb-4 text-4xl text-blue-500">
-// {icons[title]}
-//       </Box>
-//       <Typography variant="h6" className="text-gray-800 font-semibold mb-2">
-//         {title}
-//       </Typography>
-//       <Typography variant="body2" className="text-gray-600">
-//         {description}
-//       </Typography>
-//     </Box>
-//   );
-// };
-
-// export default ActivityCard;
-
-
-
-//-------
-//3333333
-//-------
-
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import SchoolIcon from '@mui/icons-material/School';
-import ChildCareIcon from '@mui/icons-material/ChildCare';
-import GroupIcon from '@mui/icons-material/Group';
-import CakeIcon from '@mui/icons-material/Cake';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, ArrowRightAlt, KeyboardArrowRight } from '@mui/icons-material';
 
-const icons = {
-  'Подготовка к школе': <SchoolIcon fontSize='large' />,
-  'Детский лагерь': <ChildCareIcon fontSize='large' />,
-  'Кружки': <GroupIcon fontSize='large' />,
-  'Проведение дней рождений': <CakeIcon fontSize='large' />,
-};
-
-const ActivityCard = ({ title, description, href }: { title: string, description: string, href:string }) => {
+const ActivityCard = ({ activity, last }: { activity: { title: string, description: string, href: string, img?: string }, last?: boolean }) => {
+  const { href, title, description, img } = activity
   return (
-    <Link href={href} className="relative group">
+    <Link
+      href={href}
+      className={`relative group mb-2 md:-mt-12 transition-all ${last ? '' : 'md:hover:mb-14 hover:mb-5'} duration-300`}
+    >
       <Box
-        className="h-full bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg rounded-lg cursor-pointer
-     p-6 flex flex-col items-center justify-center text-center duration-200
-     transition-all group-hover:blur-sm
-     ">
-        <Box className="mb-4 text-white">
-          {icons[title as keyof typeof icons]}
-        </Box>
-        <Typography variant="h5" className="text-white font-semibold">
+        className={`h-full w-full rounded-2xl md:rounded-full cursor-pointer ${last ? 'md:pb-16' : 'md:pb-24'} md:hover:pb-20 md:pt-16 md:hover:pt-20
+        px-4 md:pl-16 md:pr-10 py-10 relative
+        flex flex-col md:flex-row items-center justify-between text-center duration-[.4s] 
+        transition-all border border-gray-300 bg-white gap-1
+     `}>
+        <Image
+          alt='bg'
+          fill
+          src={img!}
+          className='blur-[3px] brightness-[0.7] rounded-2xl md:rounded-full object-cover shadow'
+        />
+        <Typography variant="h4" className="text-white z-10" fontWeight='semibold' sx={{ textAlign: ['center', 'center', 'left'] }}>
           {title}
         </Typography>
-        <Typography className="text-white">
-          {description}
-        </Typography>
-      </Box>
-      <Box className='cursor-pointer absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 transition-opacity hover:opacity-100'>
-        <Typography variant="h6" className="text-white">
-          Подробнее
-          <ArrowRightAltIcon />
-        </Typography>
+        <Box className='z-10 flex items-center md:w-2/3 lg:w-2/5 gap-2'>
+          <Typography className="text-white" sx={{ textAlign: ['center', 'center', 'right'] }}>
+            {description}
+          </Typography>
+          <Image className='hidden md:block' src='/icons/Back.svg' alt='arrow' width={50} height={50} />
+        </Box>
       </Box>
     </Link>
   );

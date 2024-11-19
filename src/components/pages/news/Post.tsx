@@ -11,7 +11,7 @@ const Attachment = ({ attachments }: { attachments: VKAttachmentExp[] }) => {
         case 'photo':
             if (!attachments[0].photo) return
             return (
-                attachments.length > 1 ?
+                attachments.filter(i => i.type === 'photo').length > 1 ?
                     <PostSlider attachments={attachments} />
                     :
                     <Image

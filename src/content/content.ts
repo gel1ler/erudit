@@ -77,15 +77,16 @@ export const groupsData = [
         title: 'Почемучки 2.8 - 3 года',
         text: 'Занятия проходят в комплексе 3 раза в неделю( 2 раза 1час 30мин. и один раз 2часа) Проводят занятия разные педагоги по каждому предмету. Занятия проходят в игровой форме,весело и увлекательно. Наполняемость групп 10 человек. Можно выбрать утреннее или вечернее время. Пальчиковая гимнастика и разминка включены в размеры занятия.',
         description: 'Малыши занимаются с психологом, логопедом; с удовольствием приходят в зал на аэробику и музыку, любимыми предметами становятся английский язык, ИЗО и художественное слово. Чтение и математика включены в комплекс занятий. Дети учат буквы, цифры до 10, овладеваютэлементарными математическими действиями, учатся читать первые слова по слогам. Малыши не испытывают дискомфорт и с удовольствием идут на занятия.',
-        img: '/gallery/8 марта (2).jpg'
+        img: '/groups/6.jpg'
     },
 ]
 
 export const additionalActivities: ActivityType[] = [
     {
-        title: 'Подготовка к школе',
-        description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями.',
+        title: 'Детский сад',
+        description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями',
         href: '/shcool',
+        img: '/additional/dc.webp',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -115,8 +116,9 @@ export const additionalActivities: ActivityType[] = [
     },
     {
         title: 'Детский лагерь',
-        description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере.',
+        description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере',
         href: '/camp',
+        img:'/additional/camp.jpg',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -146,8 +148,9 @@ export const additionalActivities: ActivityType[] = [
     },
     {
         title: 'Кружки',
-        description: 'Развивающие кружки для детей и взрослых по различным интересам.',
+        description: 'Развивающие кружки для детей и взрослых по различным интересам',
         href: '/art',
+        img: '/additional/art.jpg',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -177,35 +180,39 @@ export const additionalActivities: ActivityType[] = [
     },
     {
         title: 'Проведение дней рождений',
-        description: 'Организуем незабываемый день рождения для вашего ребенка.',
+        description: 'Организуем незабываемый день рождения для вашего ребенка',
         href: '/birthdays',
+        img: '/additional/birthday.jpg',
         icons: [
             {
-                src: '/icons/center/elders/language.svg',
-                position: ['', '', 20, 30],
-                size: 100,
-                rotate: -30
-            },
-            {
-                src: '/icons/center/elders/graduation.svg',
-                position: [-10, 10, '', ''],
-                size: 120,
+                src: '/icons/center/birthday/cake.svg',
+                position: ['', '', -50, -20],
+                size: 150,
                 rotate: 30
             },
             {
-                src: '/icons/center/elders/education.svg',
-                position: ['', -5, -20, ''],
+                src: '/icons/center/birthday/confetti.svg',
+                position: [-10, '', '', '50%'],
                 size: 150,
-                rotate: -30
+                rotate: 10,
+                noMd: true,
+                opacity: 0.6
             },
             {
-                src: '/icons/center/elders/exam.svg',
-                position: [40, '', '', '15%'],
+                src: '/icons/center/birthday/gift.svg',
+                position: [5, '', '', '10%'],
                 size: 150,
-                rotate: -30
+                rotate: 5,
+                opacity: 0.6
+            },
+            {
+                src: '/icons/center/birthday/hat.svg',
+                position: ['', 15, 20, ''],
+                size: 150,
+                rotate: -25
             },
         ]
-    },
+    }, 
 ];
 
 export const ECenter: ActivityType[] = [

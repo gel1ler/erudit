@@ -29,7 +29,7 @@ const News = () => {
     };
 
     fetchPosts();
-  });
+  }, []);
 
   const addPosts = async () => {
     try {
@@ -66,7 +66,7 @@ const News = () => {
             return (
               <Box key={index} className='w-full flex flex-col gap-4 items-center'>
                 {Array(rows).fill(0).map((_, postIndex) =>
-                  <Post key={postIndex} post={posts[index + postIndex * 3]} fw />
+                  <Post key={postIndex} post={posts[index + postIndex * 3]} />
                 )}
               </Box>
             )
