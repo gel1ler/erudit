@@ -1,28 +1,27 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ArrowRightAlt, KeyboardArrowRight } from '@mui/icons-material';
 
 const ActivityCard = ({ activity, last }: { activity: { title: string, description: string, href: string, img?: string }, last?: boolean }) => {
   const { href, title, description, img } = activity
   return (
     <Link
       href={href}
-      className={`relative group mb-2 md:-mt-12 transition-all ${last ? '' : 'md:hover:mb-14 hover:mb-5'} duration-300`}
+      className={`relative group mb-2 md:-mt-12 transition-all ${last? '' : 'md:hover:mb-14 hover:mb-5'} duration-300 overflow-hidden`}
+      
     >
       <Box
         className={`h-full w-full rounded-2xl md:rounded-full cursor-pointer ${last ? 'md:pb-16' : 'md:pb-24'} md:hover:pb-20 md:pt-16 md:hover:pt-20
         px-4 md:pl-16 md:pr-10 py-10 relative
         flex flex-col md:flex-row items-center justify-between text-center duration-[.4s] 
-        transition-all border border-gray-300 bg-white gap-1
+        transition-all border border-gray-300 gap-1
      `}>
         <Image
           alt='bg'
           fill
           src={img!}
-          className='blur-[3px] brightness-[0.7] rounded-2xl md:rounded-full object-cover shadow'
+          className='rounded-2xl md:rounded-full object-cover'
         />
         <Typography variant="h4" className="text-white z-10" fontWeight='semibold' sx={{ textAlign: ['center', 'center', 'left'] }}>
           {title}

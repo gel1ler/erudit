@@ -5,11 +5,12 @@ import { NextAppDirEmotionCacheProvider } from './EmotionCache'
 import { Roboto } from 'next/font/google'
 import { themeOptions } from './ThemeOptions'
 
-export const roboto = Roboto({
-  weight: ['300', '400', '500', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['cyrillic', 'latin']
-})
+// export const roboto = Roboto({
+//   weight: ['300', '400', '500', '700'],
+//   style: ['normal', 'italic'],
+//   subsets: ['cyrillic', 'latin'],
+//   display: 'swap'
+// })
 
 let theme = createTheme(themeOptions)
 theme = responsiveFontSizes(theme);

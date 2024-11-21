@@ -86,7 +86,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Детский сад',
         description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями',
         href: '/shcool',
-        img: '/additional/dc.webp',
+        img: '/additional/dc.png',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -118,7 +118,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Детский лагерь',
         description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере',
         href: '/camp',
-        img:'/additional/camp.jpg',
+        img:'/additional/camp.png',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -150,7 +150,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Кружки',
         description: 'Развивающие кружки для детей и взрослых по различным интересам',
         href: '/art',
-        img: '/additional/art.jpg',
+        img: '/additional/art.png',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -182,7 +182,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Проведение дней рождений',
         description: 'Организуем незабываемый день рождения для вашего ребенка',
         href: '/birthdays',
-        img: '/additional/birthday.jpg',
+        img: '/additional/birthday.png',
         icons: [
             {
                 src: '/icons/center/birthday/cake.svg',

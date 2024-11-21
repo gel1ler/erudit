@@ -46,7 +46,7 @@ export default function Home() {
         <FAQ />
         <Contacts />
       </Box>
-      {/* <Script src="https://app.getreview.io/tags/i3Wn3no9PQjCp1N0/sdk.js" async /> */}
+      <Script src="https://app.getreview.io/tags/i3Wn3no9PQjCp1N0/sdk.js" async />
     </>
   )
 }
