@@ -15,13 +15,13 @@ const ActivityCard = ({ activity, last }: { activity: { title: string, descripti
         className={`h-full w-full rounded-2xl md:rounded-full cursor-pointer ${last ? 'md:pb-16' : 'md:pb-24'} md:hover:pb-20 md:pt-16 md:hover:pt-20
         px-4 md:pl-16 md:pr-10 py-10 relative
         flex flex-col md:flex-row items-center justify-between text-center duration-[.4s] 
-        transition-all border border-gray-300 gap-1
+        transition-all border border-gray-300 gap-1 overflow-hidden
      `}>
         <Image
           alt='bg'
           fill
           src={img!}
-          className='rounded-2xl md:rounded-full object-cover'
+          className='rounded-2xl md:rounded-full object-cover scale-x-[1.02]'
         />
         <Typography variant="h4" className="text-white z-10" fontWeight='semibold' sx={{ textAlign: ['center', 'center', 'left'] }}>
           {title}
