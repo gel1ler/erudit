@@ -8,7 +8,10 @@ const AdditionalActivities = () => {
     return (
         <Box id='additioanl_anchor' className='-mt-[100px] pt-[100px] flex flex-col items-center'>
             <Title>Дополнительно</Title>
-            <Box className="flex flex-col p-4 rounded-lg mx-auto mt-6 md:mt-16">
+            <Typography data-aos='fade-up' textAlign='center' mt={1} color='gray'>
+                Нажмите на карточку для перехода на страницу
+            </Typography>
+            <Box data-aos='fade-up' className="flex flex-col p-4 rounded-lg mx-auto mt-6 md:mt-14">
                 {additionalActivities.map((activity, index) => (
                     <ActivityCard key={index} activity={activity} last={index === additionalActivities.length - 1} />
                 ))}

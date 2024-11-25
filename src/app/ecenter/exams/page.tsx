@@ -28,12 +28,12 @@ export default function Home() {
                         <p className="text-xl">От 1500 рублей за занятие</p>
                     </div>
                 </div>
-                <div>
+                {/* <div>
                     <video className="h-auto max-h-[70vh] rounded-lg shadow-lg" autoPlay controls muted>
                         <source src="/icons/center/exams/exams.MP4" type="video/mp4" />
                         Ваш браузер не поддерживает тег видео.
                     </video>
-                </div>
+                </div> */}
             </div>
 
             <div className="p-8 rounded-2xl max-w-7xl mx-auto mt-10">

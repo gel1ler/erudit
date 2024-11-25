@@ -26,7 +26,7 @@ export const navigation: INavLink[] = [
     {
         id: 2,
         name: "Дополнительно",
-        href: "/#groups_anchor",
+        href: "/#additioanl_anchor",
         anchorLink: true,
     },
     {
@@ -85,30 +85,30 @@ export const additionalActivities: ActivityType[] = [
     {
         title: 'Детский сад',
         description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями',
-        href: '/shcool',
-        img: '/additional/dc.png',
+        href: '/kindergarten',
+        img: '/additional/kindergarten.svg',
         icons: [
             {
-                src: '/icons/center/elders/language.svg',
-                position: ['', '', 20, 30],
-                size: 100,
+                src: '/icons/additional/kindergarten/balloon.svg',
+                position: ['', '', 20, 0],
+                size: 150,
                 rotate: -30
             },
             {
-                src: '/icons/center/elders/graduation.svg',
+                src: '/icons/additional/kindergarten/blocks.svg',
                 position: [-10, 10, '', ''],
                 size: 120,
                 rotate: 30
             },
             {
-                src: '/icons/center/elders/education.svg',
+                src: '/icons/additional/kindergarten/play.svg',
                 position: ['', -5, -20, ''],
                 size: 150,
-                rotate: -30
+                rotate: -160
             },
             {
-                src: '/icons/center/elders/exam.svg',
-                position: [40, '', '', '15%'],
+                src: '/icons/additional/kindergarten/boat.svg',
+                position: [10, '', '', '5%'],
                 size: 150,
                 rotate: -30
             },
@@ -118,7 +118,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Детский лагерь',
         description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере',
         href: '/camp',
-        img:'/additional/camp.png',
+        img:'/additional/camp.svg',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -150,7 +150,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Кружки',
         description: 'Развивающие кружки для детей и взрослых по различным интересам',
         href: '/art',
-        img: '/additional/art.png',
+        img: '/additional/art.svg',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -182,7 +182,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Проведение дней рождений',
         description: 'Организуем незабываемый день рождения для вашего ребенка',
         href: '/birthdays',
-        img: '/additional/birthday.png',
+        img: '/additional/birthday.svg',
         icons: [
             {
                 src: '/icons/center/birthday/cake.svg',

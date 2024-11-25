@@ -6,15 +6,9 @@ import Link from 'next/link'
 import NavLinks, { Text } from './NavLinks'
 import MyDrawer from '../drawer/MyDrawer'
 import { ContactsButton } from '@/components/UI/form/Buttons'
+import { ECenter } from '@/content/content'
 
-const links = [
-  { id: 0, name: 'Иностранные языки', href: '/ecenter/languages' },
-  { id: 1, name: 'Подгатовка к экзаменам', href: '/ecenter/exams' },
-  { id: 2, name: 'Летний лагерь', href: '/ecenter/camp' },
-  { id: 3, name: 'Кружки', href: '/ecenter/art' },
-]
-
-const ECenter = () =>
+const ECenterBlock = () =>
   <Box className='relative hidden md:block'>
     <Link href='/#ECenter_anchor' className="peer flex flex-col items-center">
       <Typography className='gradient-text' fontSize={17} fontWeight='bold' textAlign='center'>
@@ -29,10 +23,10 @@ const ECenter = () =>
       peer-hover:opacity-100 peer-hover:pointer-events-auto hover:opacity-100 hover:pointer-events-auto
     `}>
       <Box className="bg-white shadowed rounded-lg p-4 mt-4">
-        {links.map(link => (
-          <Link key={link.id} href={link.href} className='block py-2'>
+        {ECenter.map((link, index) => (
+          <Link key={index} href={link.href} className='block py-2'>
             <Text>
-              {link.name}
+              {link.title}
             </Text>
           </Link>
         ))}
@@ -50,6 +44,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
         height: '5rem',
         opacity: isActive ? 1 : 0,
         transition: 'opacity .3s ease-out',
+        // overflow: 'hidden'
       }}
     >
       <Box className='flex w-full justify-between items-center'>
@@ -63,7 +58,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
         </Link>
         <NavLinks />
         <Box className='flex items-center gap-4'>
-          <ECenter />
+          <ECenterBlock />
           <ContactsButton />
           <MyDrawer noAbs isActive={isActive} />
         </Box>

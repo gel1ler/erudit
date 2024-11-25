@@ -39,7 +39,7 @@ const Header = () => {
         transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
         top: 20,
         height: '5rem',
-        width: ['90%', '90%', '66%'],
+        width: isActive ? ['90%', '90%', '66%'] : 10,
         boxShadow: 'none',
         backgroundColor: isActive ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
         borderRadius: 100,
