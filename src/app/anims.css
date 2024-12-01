@@ -82,13 +82,13 @@
   animation: animate 360s linear infinite;
   top: 0;
   position: absolute;
-  top: -2%;
+  top: -80px;
 }
 
 @keyframes animate {
   0% {
     opacity: 0;
-    top: -5%;
+    top: -80px;
     transform: translateX(20px) rotate(0deg);
   }
 
