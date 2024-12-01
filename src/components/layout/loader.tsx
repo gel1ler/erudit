@@ -51,7 +51,7 @@ export default function Loader() {
             >
                 <Image
                     id='loader-logo'
-                    src='/logo/logo.svg'
+                    src='/logo/new-logo.svg'
                     width={200}
                     height={129}
                     alt='Logo'
