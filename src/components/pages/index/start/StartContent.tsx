@@ -19,34 +19,40 @@ const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
     },
 }));
 
-const StartContent = ({ isLg }: { isLg?: boolean }) => {
+const StartContent = () => {
     return (
         <Box
-            className='h-screen relative flex justify-center overflow-hidden'
+            className='h-screen relative flex justify-start overflow-hidden'
         >
-            {isLg ?
-                <Carousel />
-                :
-                <Image
-                    src='/start/1.webp'
-                    fill
-                    alt='Background'
-                    className='object-cover -z-50 brightness-50'
-                    sizes="(max-width: 640px) 100vh,"
-                />
-            }
+            <Image
+                src='/start/girl.jpg'
+                fill
+                alt='Background'
+                className='object-cover -z-50'
+                sizes="1920w 1080h"
+            />
+            <Box
+                className='-z-10 absolute left-0 top-0 w-screen h-screen'
+                sx={{
+                    background: `
+            linear-gradient(90deg, white 30%, transparent 100%),
+            linear-gradient(0deg, white, transparent 10%)
+        `
+                }}
+            />
             <StartBg />
-            <Box className='flex flex-col items-center justify-center md:w-1/2 w-full px-2 gap-4'>
-                <Typography color='text.secondary' variant='h3' textAlign='center'>
-                    Детский центр &quot;Маленький эрудит&quot; объявлет набор на 2024-2025 учебный год
+            <Box className='flex flex-col items-center md:items-start justify-center md:w-1/2 w-full px-2 gap-4 md:mx-[10vw]'>
+                <Image src='/logo/new-logo-horizontal-2.svg' width={800} height={116} alt='Логотип' className='z-10' />
+                <Typography variant='h3' className='text-center md:text-left'>
+                    Объявлен набор на <br /> 2024-2025 учебный год
                 </Typography>
                 <Box className='flex justify-between'>
-                    <PhoneCall icon />
-                    <VkIcon />
-                    <TelegramIcon />
-                    <InstagramIcon />
+                    <PhoneCall dark icon />
+                    <VkIcon dark />
+                    <TelegramIcon dark />
+                    <InstagramIcon dark />
                 </Box>
-                <EnrollButton />
+                <EnrollButton dark />
             </Box>
 
             <HtmlTooltip

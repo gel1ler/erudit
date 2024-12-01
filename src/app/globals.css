@@ -9,6 +9,7 @@
 body {
   overflow-x: hidden;
   min-width: 400px;
+  width: calc(100vw - (100vw - 100%));
 }
 
 body.loading {
@@ -76,7 +77,9 @@ li {
   z-index: -1;
   width: 56px;
   height: 72px;
-  color: #f6f6f6;
+  color: white;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, .2));
+  
 }
 
 .business-awards-view__badge-icon {

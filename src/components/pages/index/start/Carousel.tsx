@@ -30,7 +30,7 @@ const Carousel = () => {
     }
 
     return (
-        <Box className="absolute w-screen h-screen overflow-hidden top-0 left-0">
+        <Box className="absolute w-[90vw] h-[85vh] m-auto overflow-hidden top-[7vh] left-0 right-0 bottom-0 rounded-[50px]">
             <Box className="w-[300vw] h-full flex">
                 {images.map((image, key) =>
                     <Image
@@ -40,7 +40,7 @@ const Carousel = () => {
                         width={1920}
                         height={1080}
                         src={image}
-                        className="object-cover w-screen h-full -z-10 brightness-[0.7]"
+                        className="object-cover w-screen h-full -z-10"
                         style={{
                             transform: `translateX(${translate}%)`,
                             transition: 'transform 1.2s ease-in-out'

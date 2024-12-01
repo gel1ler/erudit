@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <PageLayout id={1} isECenter>
+        <PageLayout id={1} isECenter pageTitle='Детский лагерь'>
 
             {/* HERO */}
             <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl shadow-lg text-white text-center max-w-7xl mx-auto">

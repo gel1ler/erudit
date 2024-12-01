@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <PageLayout id={2} isECenter>
+        <PageLayout id={2} isECenter pageTitle='Кружки'>
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
                 <div className="mb-6 md:mb-0">
                     <h2 className="text-3xl font-bold mb-4">🧪 Приглашаем Вас в наш Экспериментариум! 🔬</h2>

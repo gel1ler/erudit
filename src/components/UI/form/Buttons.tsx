@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import AnchorLink from '@/components/UI/anchorLink'
 
-export const EnrollButton = () => {
+export const EnrollButton = ({ dark }: { dark?: boolean }) => {
     return (
         <AnchorLink href='#contacts_anchor'>
             <Button
@@ -12,19 +12,20 @@ export const EnrollButton = () => {
                 sx={{
                     borderRadius: '50px',
                     py: '10px',
-                    border: '3px solid #fff',
+                    border: `3px solid ${dark ? '#303030' : '#fff'}`,
                     px: 4,
                     fontSize: '15px',
+                    color: dark ? '#303030' : '#fff',
                     '&:hover': {
                         border: '3px solid #fff',
-                        backgroundColor: '#fff',
-                        color: 'text.primary',
+                        backgroundColor: dark ? '#303030' : '#fff',
+                        color: dark ? '#fff' : '#303030',
                     }
                 }}
             >
                 Пробное занятие
             </Button>
-        </AnchorLink>
+        </AnchorLink >
     )
 }
 
@@ -47,7 +48,7 @@ export const ContactsButton = ({ drawer, onClick }: { drawer?: boolean, onClick?
     </AnchorLink>
 
 
-export const MoreBtn = ({ click, href, text }: { click?: () => void, href?: string, text?:string }) => {
+export const MoreBtn = ({ click, href, text }: { click?: () => void, href?: string, text?: string }) => {
     text = text || 'подробнее';
     if (href) {
         return (

@@ -14,21 +14,10 @@ const ParallaxWrapper = ({ children }: { children: ReactNode }) => {
                 }
             ]
         },
-        {
-            start: 0,
-            end: '100vh',
-            properties: [
-                {
-                    startValue: 0,
-                    endValue: -400,
-                    property: "translateY",
-                },
-            ]
-        }
     ], []);
 
     return (
-        <Plx parallaxData={startParallax}>
+        <Plx parallaxData={startParallax} style={{zIndex: -1, position: 'relative'}}>
             {children}
         </Plx>
     );

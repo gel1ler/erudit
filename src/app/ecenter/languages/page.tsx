@@ -19,7 +19,7 @@ const languages = [
 
 export default function Home() {
     return (
-        <PageLayout isECenter id={0}>
+        <PageLayout isECenter id={0} pageTitle='Иностранные языки'>
             <Box className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col items-center justify-center max-w-7xl mx-auto">
                 <Typography variant="h2" className="text-4xl font-bold mb-4 text-center">🌍 Обучение иностранным языкам 🌍</Typography>
                 <Box className='flex flex-col lg:flex-row gap-10 mt-5'>

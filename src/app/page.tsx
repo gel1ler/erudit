@@ -14,6 +14,7 @@ import News from '@/components/pages/index/news/News'
 import Script from 'next/script'
 import ECenterActivities from '@/components/pages/index/ECenterActivities/ECenterActivities'
 import AdditionalActivities from '@/components/pages/index/additionalActivities/AdditionalActivities'
+import Kindergarten from '@/components/pages/index/Kindergarten'
 
 export const metadata: Metadata = {
   title: 'Маленький эрудит — Детский развивающий центр для детей от 1 до 6 лет. Жуковский.',
@@ -31,6 +32,7 @@ export default function Home() {
         </Bg>
         <News />
         <Groups />
+        <Kindergarten />
         <AdditionalActivities />
         <ECenterActivities />
       </Box>
@@ -44,7 +46,7 @@ export default function Home() {
         <Gallery />
         <Ratings />
         <FAQ />
-        <Contacts />
+        <Contacts pageTitle='Главная' />
       </Box>
       <Script src="https://app.getreview.io/tags/i3Wn3no9PQjCp1N0/sdk.js" async />
     </>

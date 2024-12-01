@@ -32,7 +32,7 @@ const Group = ({ params }: { params: { id: number } }) => {
                 <EnrollButton />
             </Box>
             <Typography textAlign='center' my={12} mx='auto' className='text-center max-w-4xl' variant='h6'>{group.description}</Typography>
-            <Contacts noAos />
+            <Contacts noAos pageTitle={group.title} />
         </>
     )
 }

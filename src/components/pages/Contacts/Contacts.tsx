@@ -5,7 +5,7 @@ import Title from '../../UI/text/Title'
 import MuiPhone from '../../UI/form/PhoneNumber'
 import AlertDialog from './Alert'
 
-const Contacts = ({ noAos }: { noAos?: boolean }) => {
+const Contacts = ({ noAos, pageTitle }: { noAos?: boolean, pageTitle: string }) => {
     const [phone, setPhone] = useState('')
     const [open, setOpen] = useState(false)
     const [isError, setError] = useState(false)
@@ -15,7 +15,7 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
             setError(true)
             return
         }
-        const message = `Заказан обратный звонок на номер ${phone}.`
+        const message = `Номер ${phone} оставил заявку со страницы: ${pageTitle}.`
         try {
             const form = document.createElement('form');
             form.innerHTML = `<input type="hidden" name="message" value="${message}">`;

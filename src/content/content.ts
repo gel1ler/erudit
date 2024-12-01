@@ -14,25 +14,21 @@ export const mainInfo: IMainInfo = {
 export const navigation: INavLink[] = [
     {
         id: 0,
-        name: "Новости",
-        href: "/news",
+        name: "Подготовка к школе",
+        href: "/#groups_anchor",
+        anchorLink: true,
     },
     {
         id: 1,
-        name: "Группы",
-        href: "/#groups_anchor",
+        name: "Детский сад",
+        href: "/#kindergarten_anchor",
         anchorLink: true,
     },
     {
         id: 2,
         name: "Дополнительно",
         href: "/#additioanl_anchor",
-        anchorLink: true,
-    },
-    {
-        id: 3,
-        name: "Галерея",
-        href: "/gallery",
+        expanded: true,
     },
 ]
 
@@ -83,42 +79,10 @@ export const groupsData = [
 
 export const additionalActivities: ActivityType[] = [
     {
-        title: 'Детский сад',
-        description: 'Поможем вашему ребенку подготовиться к школе с уверенностью и знаниями',
-        href: '/kindergarten',
-        img: '/additional/kindergarten.svg',
-        icons: [
-            {
-                src: '/icons/additional/kindergarten/balloon.svg',
-                position: ['', '', 20, 0],
-                size: 150,
-                rotate: -30
-            },
-            {
-                src: '/icons/additional/kindergarten/blocks.svg',
-                position: [-10, 10, '', ''],
-                size: 120,
-                rotate: 30
-            },
-            {
-                src: '/icons/additional/kindergarten/play.svg',
-                position: ['', -5, -20, ''],
-                size: 150,
-                rotate: -160
-            },
-            {
-                src: '/icons/additional/kindergarten/boat.svg',
-                position: [10, '', '', '5%'],
-                size: 150,
-                rotate: -30
-            },
-        ]
-    },
-    {
         title: 'Детский лагерь',
         description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере',
         href: '/camp',
-        img:'/additional/camp.svg',
+        img: '/icons/additional/camp.svg',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -150,7 +114,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Кружки',
         description: 'Развивающие кружки для детей и взрослых по различным интересам',
         href: '/art',
-        img: '/additional/art.svg',
+        img: '/icons/additional/art.svg',
         icons: [
             {
                 src: '/icons/center/elders/language.svg',
@@ -182,7 +146,7 @@ export const additionalActivities: ActivityType[] = [
         title: 'Проведение дней рождений',
         description: 'Организуем незабываемый день рождения для вашего ребенка',
         href: '/birthdays',
-        img: '/additional/birthday.svg',
+        img: '/icons/additional/birthday.svg',
         icons: [
             {
                 src: '/icons/center/birthday/cake.svg',
@@ -212,7 +176,71 @@ export const additionalActivities: ActivityType[] = [
                 rotate: -25
             },
         ]
-    }, 
+    },
+    {
+        title: 'Логопед',
+        description: 'Поможем вашему ребенку развить речевые навыки и улучшить коммуникацию',
+        href: '/speech-therapy',
+        img: '/icons/additional/speech.svg',
+        icons: [
+            {
+                src: '/icons/additional/speech-therapy/book.svg',
+                position: ['', '', 20, 0],
+                size: 150,
+                rotate: -30
+            },
+            {
+                src: '/icons/additional/speech-therapy/microphone.svg',
+                position: [-10, 10, '', ''],
+                size: 120,
+                rotate: 30
+            },
+            {
+                src: '/icons/additional/speech-therapy/puzzle.svg',
+                position: ['', -5, -20, ''],
+                size: 150,
+                rotate: -160
+            },
+            {
+                src: '/icons/additional/speech-therapy/speech-bubble.svg',
+                position: [10, '', '', '5%'],
+                size: 150,
+                rotate: -30
+            },
+        ]
+    },
+    {
+        title: 'Психолог',
+        description: 'Поможем вам и вашим детям справиться с психологическими трудностями',
+        href: '/psychology',
+        img: 'icons/additional/psychology.svg',
+        icons: [
+            {
+                src: '/icons/additional/psychology/brain.svg',
+                position: ['', '', 20, 30],
+                size: 100,
+                rotate: -30
+            },
+            {
+                src: '/icons/additional/psychology/heart.svg',
+                position: [-10, 10, '', ''],
+                size: 120,
+                rotate: 30
+            },
+            {
+                src: '/icons/additional/psychology/lightbulb.svg',
+                position: ['', -5, -20, ''],
+                size: 150,
+                rotate: -30
+            },
+            {
+                src: '/icons/additional/psychology/chat.svg',
+                position: [40, '', '', '15%'],
+                size: 150,
+                rotate: -30
+            },
+        ]
+    },
 ];
 
 export const ECenter: ActivityType[] = [

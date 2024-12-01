@@ -6,7 +6,7 @@ import { additionalActivities, ECenter } from '@/content/content'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 
-export default function PageLayout({ id, children, isECenter }: { id: number, children: ReactNode, isECenter?: boolean }) {
+export default function PageLayout({ id, children, isECenter, pageTitle }: { id: number, children: ReactNode, isECenter?: boolean, pageTitle: string }) {
     const item = isECenter ? ECenter[id] : additionalActivities[id]
     return (
         <>
@@ -41,7 +41,7 @@ export default function PageLayout({ id, children, isECenter }: { id: number, ch
             <Box className='mb-20 flex flex-col items-center gap-16 px-4'>
                 {children}
             </Box>
-            <Contacts noAos />
+            <Contacts noAos pageTitle={pageTitle} />
         </>
     )
 }

@@ -14,7 +14,7 @@ const Groups = () => {
                     boxShadow: '0 0 10px 3px rgba(0, 0, 0, 0.2) inset'
                   }}
             >
-                <Title>Группы</Title>
+                <Title>Подготовка к школе</Title>
                 <Typography data-aos='fade-up' variant='body2' textAlign='center' color='#505050' sx={{ my: 1 }}>
                     Листайте свайпами или нажимайте на стрелки
                 </Typography>
