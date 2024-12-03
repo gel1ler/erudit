@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <PageLayout id={3} pageTitle='Проведение дней рождений'>
+        <PageLayout id={1} pageTitle='Проведение дней рождений'>
             <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-8 pt-12 rounded-2xl shadow-lg text-white text-center max-w-7xl mx-auto">
                 <h2 className="text-5xl font-bold mb-6 animate-bounce">🎉 Проведение дней рождений 🎉</h2>
                 <p className="text-xl mb-8">

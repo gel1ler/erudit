@@ -2,6 +2,7 @@ import { Button } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import AnchorLink from '@/components/UI/anchorLink'
+import Image from 'next/image'
 
 export const EnrollButton = ({ dark }: { dark?: boolean }) => {
     return (
@@ -29,21 +30,29 @@ export const EnrollButton = ({ dark }: { dark?: boolean }) => {
     )
 }
 
-export const ContactsButton = ({ drawer, onClick }: { drawer?: boolean, onClick?: () => void }) =>
+export const ContactsButton = ({ drawer, onClick, text }: { drawer?: boolean, onClick?: () => void, text?: boolean }) =>
     <AnchorLink href='#contacts_anchor'>
         <Button
             onClick={onClick}
             sx={{
                 borderRadius: 100,
-                py: [1, 1.5],
-                px: [2, 3],
+                p: 1,
+                px: text ? [2, 3] : '',
                 color: 'white',
                 background: 'linear-gradient(to right, #CE02CF, #0ED0F8)',
                 transition: 'background .3s ease-out',
                 display: drawer ? "block" : ['none', 'block'],
             }}
         >
-            Контакты
+            {text ? 'Контакты' :
+                <Image
+                    src='/icons/phone-2.svg'
+                    alt='Телефон'
+                    width={30}
+                    height={30}
+                    className='mx-auto'
+                />
+            }
         </Button>
     </AnchorLink>
 

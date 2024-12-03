@@ -5,15 +5,17 @@ import Contacts from '@/components/pages/Contacts/Contacts'
 import { additionalActivities, ECenter } from '@/content/content'
 import Image from 'next/image'
 import { ReactNode } from 'react'
+import Falling from '../layout/Bg/falling'
 
 export default function PageLayout({ id, children, isECenter, pageTitle }: { id: number, children: ReactNode, isECenter?: boolean, pageTitle: string }) {
     const item = isECenter ? ECenter[id] : additionalActivities[id]
     return (
         <>
+            <Falling num={100} />
             <Loader />
             <Box className='w-screen overflow-hidden'>
                 <Box className='relative flex flex-col gap-4 my-40 max-w-3xl mx-auto'>
-                    <div className="absolute -z-10 opacity-35 w-full h-full top-0 left-0 transition-transform duration-500 translateToTop">
+                    <div className="absolute opacity-35 w-full h-full top-0 left-0 transition-transform duration-500 translateToTop">
                         {item.icons.map((icon, key) =>
                             <Image
                                 key={key}
@@ -38,7 +40,7 @@ export default function PageLayout({ id, children, isECenter, pageTitle }: { id:
                     </Box>
                 </Box>
             </Box>
-            <Box className='mb-20 flex flex-col items-center gap-16 px-4'>
+            <Box className='mb-20 flex flex-col items-center gap-16 px-4 z-10 relative'>
                 {children}
             </Box>
             <Contacts noAos pageTitle={pageTitle} />

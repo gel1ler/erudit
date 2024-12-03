@@ -32,7 +32,7 @@ const Header = () => {
             setIsOnTop(y < threshold)
         }
     }, [height, scrollHeight])
-    
+
     useScrollPosition(handleScroll)
 
     const appBarStyles: SxProps = useMemo(() => ({
@@ -40,6 +40,8 @@ const Header = () => {
         top: 20,
         height: '5rem',
         width: isActive ? ['90%', '90%', '66%'] : 10,
+        minWidth: ['auto', 'auto', '1000px'],
+        maxWidth: '99vw',
         boxShadow: 'none',
         backgroundColor: isActive ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
         borderRadius: 100,

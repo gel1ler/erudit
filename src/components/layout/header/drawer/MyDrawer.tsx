@@ -14,7 +14,7 @@ import { CountrySelectorDropdown } from 'react-international-phone'
 
 const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) => {
     const [open, setOpen] = useState(false)
-    const isLg = useMediaQuery('(min-width:1536px)')
+    const isLg = useMediaQuery('(min-width:1024px)')
 
     let sx: SxProps
     switch (noAbs) {
@@ -96,7 +96,7 @@ const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) 
                             <DrawerNavLinks setOpen={setOpen} />
                         </Box>
                         <Box className='flex flex-col gap-4 items-center justify-center'>
-                            <ContactsButton onClick={() => setOpen(false)} drawer />
+                            <ContactsButton text onClick={() => setOpen(false)} drawer />
                             <Box className='flex justify-between'>
                                 <PhoneCall icon dark />
                                 <VkIcon dark />

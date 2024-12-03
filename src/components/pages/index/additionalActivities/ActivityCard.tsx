@@ -33,7 +33,7 @@ const ActivityCard = ({ activity, last }: { activity: { title: string, descripti
             {title}
           </Typography>
         </Box>
-        <Box className='z-10 flex items-center md:w-2/3 lg:w-2/5 gap-2'>
+        <Box className='z-10 flex items-center md:w-2/3 2xl:w-2/5 gap-2'>
           <Typography className="text-white" variant='h6' sx={{ textAlign: ['center', 'center', 'right'] }}>
             {description}
           </Typography>

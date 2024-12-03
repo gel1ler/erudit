@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import PageLayout from '@/components/pages/pageLayout'
 
 export const metadata: Metadata = {
-    title: 'Эрудит Центр - Лагерь Эрудит',
+    title: 'Эрудит Центр - Летний клуб Эрудит',
     description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
 }
 

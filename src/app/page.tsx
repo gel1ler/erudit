@@ -15,6 +15,7 @@ import Script from 'next/script'
 import ECenterActivities from '@/components/pages/index/ECenterActivities/ECenterActivities'
 import AdditionalActivities from '@/components/pages/index/additionalActivities/AdditionalActivities'
 import Kindergarten from '@/components/pages/index/Kindergarten'
+import Falling from '@/components/layout/Bg/falling'
 
 export const metadata: Metadata = {
   title: 'Маленький эрудит — Детский развивающий центр для детей от 1 до 6 лет. Жуковский.',
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <Falling num={360} />
       <Loader />
       <Start />
       <Box className='relative flex flex-col gap-40 pb-40'>

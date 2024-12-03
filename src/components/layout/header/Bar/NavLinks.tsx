@@ -24,7 +24,7 @@ export const Text = ({ children, lg }: IText) => {
 
 const NavLinks = () => {
     return (
-        <Box className='gap-8 items-center hidden 2xl:flex'>
+        <Box className='gap-8 items-center hidden lg:flex'>
             {navigation.map(i => (
                 <div
                     key={i.id}

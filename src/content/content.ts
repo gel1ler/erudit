@@ -79,38 +79,6 @@ export const groupsData = [
 
 export const additionalActivities: ActivityType[] = [
     {
-        title: 'Детский лагерь',
-        description: 'Веселые и активные каникулы для ваших детей в нашем детском лагере',
-        href: '/camp',
-        img: '/icons/additional/camp.svg',
-        icons: [
-            {
-                src: '/icons/center/elders/language.svg',
-                position: ['', '', 20, 30],
-                size: 100,
-                rotate: -30
-            },
-            {
-                src: '/icons/center/elders/graduation.svg',
-                position: [-10, 10, '', ''],
-                size: 120,
-                rotate: 30
-            },
-            {
-                src: '/icons/center/elders/education.svg',
-                position: ['', -5, -20, ''],
-                size: 150,
-                rotate: -30
-            },
-            {
-                src: '/icons/center/elders/exam.svg',
-                position: [40, '', '', '15%'],
-                size: 150,
-                rotate: -30
-            },
-        ]
-    },
-    {
         title: 'Кружки',
         description: 'Развивающие кружки для детей и взрослых по различным интересам',
         href: '/art',
@@ -223,7 +191,7 @@ export const additionalActivities: ActivityType[] = [
             },
             {
                 src: '/icons/additional/psychology/heart.svg',
-                position: [-10, 10, '', ''],
+                position: [-10, '10%', '', ''],
                 size: 120,
                 rotate: 30
             },
@@ -237,7 +205,7 @@ export const additionalActivities: ActivityType[] = [
                 src: '/icons/additional/psychology/chat.svg',
                 position: [40, '', '', '15%'],
                 size: 150,
-                rotate: -30
+                rotate: 10
             },
         ]
     },
@@ -276,7 +244,7 @@ export const ECenter: ActivityType[] = [
         ]
     },
     {
-        title: 'Лагерь Эрудит',
+        title: 'Летний клуб',
         description: 'Детский лагерь с увлекательной программой для детей',
         href: '/camp',
         icons: [
