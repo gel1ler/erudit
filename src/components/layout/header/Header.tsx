@@ -4,7 +4,7 @@ import { AppBar, SxProps, useMediaQuery, useTheme } from '@mui/material'
 import Bar from './Bar/Bar'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import { headerProps } from '@/customization/customization'
-import MyDrawer from './drawer/MyDrawer'
+import MyDrawer from './MyDrawer'
 
 const scrollHeight: number | undefined = headerProps.scrollHeight
 
@@ -39,11 +39,14 @@ const Header = () => {
         transition: 'all .3s cubic-bezier(0.4, 0, 0.2, 1)',
         top: 20,
         height: '5rem',
-        width: isActive ? ['90%', '90%', '66%'] : 10,
+        width: ['90%', '90%', '66%'],
         minWidth: ['auto', 'auto', '1000px'],
         maxWidth: '99vw',
         boxShadow: 'none',
         backgroundColor: isActive ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
+        clipPath: isActive ?
+            'polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%)' :
+            'polygon(40% 0%, 60% 0%, 60% 100%, 40% 100%)',
         borderRadius: 100,
         mx: 'auto',
         left: 0,

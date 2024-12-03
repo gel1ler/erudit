@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Falling num={360} />
+      <Falling num={101} />
       <Loader />
       <Start />
       <Box className='relative flex flex-col gap-40 pb-40'>

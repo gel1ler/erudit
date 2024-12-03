@@ -4,17 +4,17 @@ import React from 'react'
 import { Box } from '@mui/material'
 import Link from 'next/link'
 import NavLinks, { Text } from './NavLinks'
-import MyDrawer from '../drawer/MyDrawer'
+import MyDrawer from '../MyDrawer'
 import { ContactsButton } from '@/components/UI/form/Buttons'
 import { ECenter } from '@/content/content'
 
 const ECenterBlock = () =>
   <Box className='relative hidden md:block'>
     <Link href='/#ECenter_anchor' className="peer flex flex-col items-center">
-      <Typography className='gradient-text' fontSize={17} fontWeight='bold' textAlign='center'>
+      <Typography className='gradient-text whitespace-nowrap' fontSize={17} fontWeight='bold' textAlign='center'>
         Эрудит центр
       </Typography>
-      <Typography variant='body2' fontSize={11} mt='-4px' textAlign='center'>
+      <Typography className='whitespace-nowrap' variant='body2' fontSize={11} mt='-4px' textAlign='center'>
         Школьники и взрослые
       </Typography>
     </Link>
@@ -44,7 +44,6 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
         height: '5rem',
         opacity: isActive ? 1 : 0,
         transition: 'opacity .3s ease-out',
-        // overflow: 'hidden'
       }}
     >
       <Box className='flex w-full justify-between items-center'>

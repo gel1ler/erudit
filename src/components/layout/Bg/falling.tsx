@@ -10,19 +10,17 @@ const Element = ({ num, sm }: { num: number, sm?: boolean }) => {
     return (
         <Image
             loading='lazy'
-            src={`/start/snowflakes/snowflake-${rand(8)}.svg`}
+            src={`/start/snowflakes/snowflake-${rand(3)}.svg`}
             alt='Cнежинка'
-            className={`falling ${sm ? 'falling-sm' : ''}`}
-            width={64}
-            height={64}
+            className={sm ? 'falling-sm' : 'falling'}
+            width={65}
+            height={65}
+            quality={1}
             style={{
                 left: `${left}%`,
-                animationDelay: `${num == 0 ? -3 :
-                    num == 1 ? -2 :
-                        num}s`,
+                animationDelay: `${num * 3 - 3}s`,
                 rotate: rotate + 'deg',
             }}
-            unoptimized
         />
     )
 }
@@ -30,10 +28,10 @@ const Element = ({ num, sm }: { num: number, sm?: boolean }) => {
 const Falling = ({ num }: { num: number }) => {
     return (
         <Box
-            className='absolute w-screen h-full left-0 top-0 bottom-0 overflow-hidden pointer-events-none opacity-60'
+            className='absolute w-screen h-full left-0 top-0 bottom-0 overflow-hidden pointer-events-none opacity-70'
         >
             {Array(num).fill(0).map((i, key) =>
-                <Element key={key} num={key} sm={num < 120} />
+                <Element key={key} num={key} sm={num < 101} />
             )}
         </Box>
     )

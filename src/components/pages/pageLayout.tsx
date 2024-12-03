@@ -11,7 +11,7 @@ export default function PageLayout({ id, children, isECenter, pageTitle }: { id:
     const item = isECenter ? ECenter[id] : additionalActivities[id]
     return (
         <>
-            <Falling num={100} />
+            <Falling num={33} />
             <Loader />
             <Box className='w-screen overflow-hidden'>
                 <Box className='relative flex flex-col gap-4 my-40 max-w-3xl mx-auto'>

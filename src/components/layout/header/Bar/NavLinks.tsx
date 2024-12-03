@@ -11,7 +11,7 @@ interface IText {
 export const Text = ({ children, lg }: IText) => {
     return (
         <Typography
-            className='transition-all duration-200'
+            className='transition-all duration-200 whitespace-nowrap'
             sx={{
                 fontSize: lg ? 21 : 17,
                 ':hover': { color: '#0060b3' }
