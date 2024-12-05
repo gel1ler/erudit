@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <PageLayout id={0} pageTitle='Детский сад'>
+        <PageLayout pageTitle='Детский сад'>
             <div className="bg-gradient-to-r from-pink-500 to-yellow-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
                 <div className="mb-6 md:mb-0">
                     <h2 className="text-4xl font-bold mb-4">👶 Маленький Эрудит - Детский сад</h2>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <PageLayout id={3} pageTitle='Психолог'>
+        <PageLayout pageTitle='Психолог'>
             <div className="container mx-auto p-8">
                 <div className="flex flex-col items-center gap-2 mb-20">
                     <Typography variant='h3' textAlign='center'>Занятия с психологом в дошкольном возрасте </Typography>

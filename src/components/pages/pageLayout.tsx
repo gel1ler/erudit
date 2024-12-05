@@ -6,9 +6,18 @@ import { additionalActivities, ECenter } from '@/content/content'
 import Image from 'next/image'
 import { ReactNode } from 'react'
 import Falling from '../layout/Bg/falling'
+import Link from 'next/link'
 
-export default function PageLayout({ id, children, isECenter, pageTitle }: { id: number, children: ReactNode, isECenter?: boolean, pageTitle: string }) {
-    const item = isECenter ? ECenter[id] : additionalActivities[id]
+export default function PageLayout({ children, isECenter, pageTitle }: { children: ReactNode, isECenter?: boolean, pageTitle: string }) {
+    const item = isECenter ? ECenter.find(i => i.title === pageTitle) : additionalActivities.find(i => i.title === pageTitle)
+
+    if (!item) {
+        return <div className='w-screen h-[70vh] flex flex-col justify-center items-center gap-4'>
+            <Typography variant='h2'>Ошибка 404</Typography>
+            <Link href='/' className='text-xl'>🠔На главную</Link>
+        </div>
+    }
+
     return (
         <>
             <Falling num={33} />

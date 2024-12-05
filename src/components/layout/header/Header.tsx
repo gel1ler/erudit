@@ -31,7 +31,7 @@ const Header = () => {
             setIsActive(y < threshold)
             setIsOnTop(y < threshold)
         }
-    }, [height, scrollHeight])
+    }, [height])
 
     useScrollPosition(handleScroll)
 

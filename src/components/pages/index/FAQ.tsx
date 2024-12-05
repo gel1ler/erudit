@@ -42,7 +42,7 @@ const CollapsedComponent = ({ title, text }: { title: string, text: string }) =>
 
 const FAQ = () => {
     return (
-        <Container>
+        <Container className='anchor' id='faq_anchor'>
             <Title sx={{ mb: 4 }}>Часто задаваемые вопросы</Title>
             <CollapsedComponent
                 title='Мой ребенок "домашний", трудно привыкает к новой  обстановке. Можно ли присутствовать с ним на занятии?'

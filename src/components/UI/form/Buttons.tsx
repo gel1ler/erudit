@@ -57,7 +57,7 @@ export const ContactsButton = ({ drawer, onClick, text }: { drawer?: boolean, on
     </AnchorLink>
 
 
-export const MoreBtn = ({ click, href, text }: { click?: () => void, href?: string, text?: string }) => {
+export const MoreBtn = ({ click, href, text, aos }: { click?: () => void, href?: string, text?: string, aos?: boolean }) => {
     text = text || 'подробнее';
     if (href) {
         return (
@@ -65,6 +65,7 @@ export const MoreBtn = ({ click, href, text }: { click?: () => void, href?: stri
                 <Button
                     variant='outlined'
                     className='w-fit z-10'
+                    data-aos={aos ? 'fade-up' : ''}
                     sx={{
                         borderRadius: '50px',
                         border: '3px solid #303030',

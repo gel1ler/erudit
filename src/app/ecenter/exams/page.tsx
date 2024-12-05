@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <PageLayout isECenter id={3} pageTitle='Подготовка к экзаменам'>
+        <PageLayout isECenter pageTitle='Школьные предметы'>
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
                 <div className="mb-6 md:mb-0">
                     <h2 className="text-4xl font-bold mb-4">📚 Подготовка к экзаменам 📚</h2>

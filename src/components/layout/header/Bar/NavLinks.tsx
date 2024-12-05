@@ -22,6 +22,37 @@ export const Text = ({ children, lg }: IText) => {
     )
 }
 
+const additionalArr = [
+    { name: 'Новости', href: '/news' },
+    { name: 'Дополнительно', href: '/#additioanl_anchor' },
+    { name: 'Галерея', href: '/gallery' },
+    { name: 'Отзывы', href: '/#ratings_anchor' },
+    { name: 'FAQ', href: '/#faq_anchor' },
+]
+
+const Additional = () =>
+    <Box className='relative hidden md:block'>
+        <div className='peer cursor-pointer'>
+            <Text>
+                Дополнительно
+            </Text>
+        </div>
+        <Box className={`
+        absolute top-1/2 left-0 mt-2 transition-all duration-300 z-20 w-max opacity-0 pointer-events-none 
+        peer-hover:opacity-100 peer-hover:pointer-events-auto hover:opacity-100 hover:pointer-events-auto
+      `}>
+            <Box className="bg-white shadowed rounded-lg py-4 pl-4 pr-8 mt-4">
+                {additionalArr.map((item, index) => (
+                    <Link key={index} href={item.href} className='block py-2'>
+                        <Text>
+                            {item.name}
+                        </Text>
+                    </Link>
+                ))}
+            </Box>
+        </Box>
+    </Box>
+
 const NavLinks = () => {
     return (
         <Box className='gap-8 items-center hidden lg:flex'>
@@ -45,6 +76,7 @@ const NavLinks = () => {
                     )}
                 </div>
             ))}
+            <Additional />
         </Box>
     );
 };

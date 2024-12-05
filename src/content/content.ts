@@ -24,12 +24,6 @@ export const navigation: INavLink[] = [
         href: "/#kindergarten_anchor",
         anchorLink: true,
     },
-    {
-        id: 2,
-        name: "Дополнительно",
-        href: "/#additioanl_anchor",
-        expanded: true,
-    },
 ]
 
 export const groupsData = [
@@ -294,8 +288,8 @@ export const ECenter: ActivityType[] = [
         ]
     },
     {
-        title: 'Подготовка к экзаменам',
-        subtitle: 'И репетиторы по школьной программе',
+        title: 'Школьные предметы',
+        subtitle: 'И подготовка к экзаменам (ОГЭ, ЕГЭ)',
         description: "Эффективная подготовка к экзаменам по различным предметам с опытными преподавателями",
         href: '/ecenter/exams',
         icons: [

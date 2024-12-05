@@ -24,11 +24,20 @@ export interface INavLink {
     href: string
 }
 
+export type IconsType = {
+    src: string,
+    position: (number | string)[],
+    size: number,
+    rotate: number,
+    opacity?: number,
+    noMd?: boolean
+}
+
 export interface ActivityType {
     title: string;
     subtitle?: string;
     description: string;
     img?: string;
     href: string;
-    icons: { src: string, position: (number | string)[], size: number, rotate: number, opacity?: number, noMd?:boolean }[];
+    icons: IconsType[];
 }

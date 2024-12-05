@@ -26,7 +26,7 @@ const Kindergarten = () => {
                 className="flex flex-col lg:flex-row mx-auto items-end mt-6 md:mt-10 gap-4"
             >
                 {/* 1 */}
-                <Link href='/kindergarten' className="flex flex-col gap-2 items-center overflow-hidden relative h-fit w-full rounded-xl 
+                <Link href='/kindergarten#nursery' className="flex flex-col gap-2 items-center overflow-hidden relative h-fit w-full rounded-xl 
                 py-16 bg-rose-300 hover:bg-rose-400 transition-colors group cursor-pointer">
                     {/* Icons */}
                     <Image
@@ -56,7 +56,7 @@ const Kindergarten = () => {
 
                 {/* 2 */}
                 <div className="overflow-hidden relative w-full h-[440px] rounded-xl">
-                    <Link href='/kindergarten' className="flex flex-col gap-2 items-center pt-8 w-full h-full z-0
+                    <Link href='/kindergarten#full' className="flex flex-col gap-2 items-center pt-8 w-full h-full z-0
                     bg-fuchsia-300 group hover:bg-fuchsia-400 transition-colors">
                         {/* Icons */}
                         <Image
@@ -83,29 +83,30 @@ const Kindergarten = () => {
                         </Typography>
                     </Link>
                     <Link
-                        href='/kindergarten'
-                        className="absolute top-[200px] flex flex-col items-end w-full pt-32 mt-4 overflow-hidden p-4 group"
+                        href='/kindergarten#mini'
+                        className="pt-32 mt-4 overflow-hidden p-4 group rounded-full bg-cyan-400 hover:bg-cyan-300 transition-colors w-[700px] h-[700px] absolute left-0 top-[200px]"
+                        style={{clipPath: 'circle(50%)'}}
                     >
                         <Image
                             src='/icons/kindergarten/path.svg'
-                            width={650}
-                            height={350}
+                            width={450}
+                            height={250}
                             alt='icon'
-                            className='absolute bottom-0 left-0 z-[1]'
+                            className='absolute top-4 left-0 z-[1] group-hover:-translate-y-1 transition-transform'
                         />
-
-                        <Typography variant='h5' zIndex={2} textAlign='end'>
-                            С 9:00 до 13:00
-                        </Typography>
-                        <Typography variant='h3' fontWeight='bold' zIndex={2} textAlign='end'>
-                            Мини-сад
-                        </Typography>
-                        <div className="rounded-full bg-cyan-400 group-hover:bg-cyan-300 transition-colors w-[700px] h-[700px] absolute left-0 top-0" />
+                        <div className=" w-80 sm:w-96 lg:w-[320px] xl:w-[350px] flex flex-col items-end">
+                            <Typography variant='h5' zIndex={2}>
+                                С 9:00 до 13:00
+                            </Typography>
+                            <Typography variant='h3' fontWeight='bold' zIndex={2}>
+                                Мини-сад
+                            </Typography>
+                        </div>
                     </Link>
                 </div>
 
                 {/* 3 */}
-                <Link href='/kindergarten' className="flex flex-col gap-2 items-center hover:bg-emerald-400 transition-colors group bg-emerald-300 rounded-xl overflow-hidden relative h-fit py-16 w-full">
+                <Link href='/kindergarten#weekend' className="flex flex-col gap-2 items-center hover:bg-emerald-400 transition-colors group bg-emerald-300 rounded-xl overflow-hidden relative h-fit py-16 w-full">
                     {/* Icons */}
                     <Image
                         src='/icons/kindergarten/calendar.svg'
