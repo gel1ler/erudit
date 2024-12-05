@@ -45,7 +45,7 @@ const Header = () => {
         boxShadow: 'none',
         backgroundColor: isActive ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
         clipPath: isActive ?
-            'polygon(-10% -10%, 110% -10%, 110% 110%, -10% 110%)' :
+            'polygon(-10% -10%, 110% -10%, 110% 1000%, -10% 1000%)' :
             'polygon(40% 0%, 60% 0%, 60% 100%, 40% 100%)',
         borderRadius: 100,
         mx: 'auto',
