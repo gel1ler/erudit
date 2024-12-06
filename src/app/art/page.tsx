@@ -36,9 +36,29 @@ export default function Home() {
                 </div>
                 <div>
                     <video className="h-auto max-h-[70vh] rounded-lg shadow-lg" autoPlay controls muted>
-                        <source src="/icons/center/art/art.MP4"  type="video/mp4" />
+                        <source src="/icons/center/art/art.MP4" type="video/mp4" />
                         Ваш браузер не поддерживает тег видео.
                     </video>
+                </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto mt-8">
+                <div className="mb-6 md:mb-0">
+                    <h2 className="text-3xl font-bold mb-4">🎨✨ Добро пожаловать в нашу ИЗО студию "Волшебная кисточка"! ✨🎨</h2>
+                    <p className="text-lg mb-6">
+                        🌟 Мы приглашаем маленьких художников в группы по субботам с 10:30 до 12:00! <br />
+                        👶 Для детей от 4 до 6 лет мы предлагаем: <br />
+                        - Живопись 🖌️ <br />
+                        - Графику ✏️ <br />
+                        - Акварель и т.д 🎨 <br />
+                        💖 Вы сможете раскрыть творческий потенциал вашего малыша и научить его выражать свои эмоции через искусство! <br />
+                        💰 Абонемент на месяц включает все занятия, а первая встреча абсолютно бесплатная! <br />
+                        <a href="tel:89167969809" className="text-xl underline">📲 8(916)796-98-09</a>
+                    </p>
+                </div>
+                <div>
+                    {/* Добавьте сюда изображение, если оно у вас есть */}
+                    <img src="additional/art.jpg" alt="Волшебная кисточка" className="h-auto max-h-[70vh] rounded-lg shadow-lg" />
                 </div>
             </div>
         </PageLayout>
