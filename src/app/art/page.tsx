@@ -44,7 +44,7 @@ export default function Home() {
 
             <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto mt-8">
                 <div className="mb-6 md:mb-0">
-                    <h2 className="text-3xl font-bold mb-4">🎨✨ Добро пожаловать в нашу ИЗО студию "Волшебная кисточка"! ✨🎨</h2>
+                    <h2 className="text-3xl font-bold mb-4">🎨✨ Добро пожаловать в нашу ИЗО студию &quot;Волшебная кисточка&quot;! ✨🎨</h2>
                     <p className="text-lg mb-6">
                         🌟 Мы приглашаем маленьких художников в группы по субботам с 10:30 до 12:00! <br />
                         👶 Для детей от 4 до 6 лет мы предлагаем: <br />
@@ -57,7 +57,6 @@ export default function Home() {
                     </p>
                 </div>
                 <div>
-                    {/* Добавьте сюда изображение, если оно у вас есть */}
                     <img src="additional/art.jpg" alt="Волшебная кисточка" className="h-auto max-h-[70vh] rounded-lg shadow-lg" />
                 </div>
             </div>
