@@ -239,7 +239,7 @@ export const ECenter: ActivityType[] = [
     },
     {
         title: 'Летний клуб',
-        description: 'Детский лагерь с увлекательной программой для детей',
+        description: 'Детский лагерь с увлекательной программой для детей от 7 до 13 лет',
         href: '/camp',
         icons: [
             {

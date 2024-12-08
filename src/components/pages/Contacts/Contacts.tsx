@@ -37,7 +37,7 @@ const Contacts = ({ noAos, pageTitle }: { noAos?: boolean, pageTitle: string }) 
         <>
             <AlertDialog open={open} setOpen={setOpen} />
             <Box id='contacts_anchor' className='bg-slate-100 w-screen py-20 px-2'>
-                <Title noAos={noAos}>Запишитесь на пробное занятие</Title>
+                <Title noAos={noAos}>Запишитесь на пробное посещение</Title>
                 <Box data-aos={noAos ? '' : 'fade-up'} className='flex flex-col items-center gap-4 max-w-lg mx-auto mt-8'>
                     <Grid container rowSpacing={1} columnSpacing={2} justifyContent='center'>
                         <Grid item xs={10}>

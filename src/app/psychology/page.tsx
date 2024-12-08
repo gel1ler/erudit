@@ -27,22 +27,22 @@ export default function Home() {
     return (
         <PageLayout pageTitle='Психолог'>
             <div className="container mx-auto p-8">
-                <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid md:grid-cols-2 md:gap-10">
                     <div className="flex flex-col gap-4 mb-20">
-                        <Typography variant='h3'>Занятия с психологом в дошкольном возрасте </Typography>
-                        <Typography variant='h6'>1. Помогают развить эмоциональный интеллект и навыки общения</Typography>
-                        <Typography variant='h6'>2. Обучают управлять чувствами и преодолевать трудности</Typography>
-                        <Typography variant='h6'>3. Способствуют гармоничному развитию личности ребенка 🌟</Typography>
+                        <Typography variant='h3' className='text-center md:text-left'>Занятия с психологом в дошкольном возрасте </Typography>
+                        <Typography variant='h6' className='text-center md:text-left'>1. Помогают развить эмоциональный интеллект и навыки общения</Typography>
+                        <Typography variant='h6' className='text-center md:text-left'>2. Обучают управлять чувствами и преодолевать трудности</Typography>
+                        <Typography variant='h6' className='text-center md:text-left'>3. Способствуют гармоничному развитию личности ребенка 🌟</Typography>
                     </div>
                     <Image
                         src='/additional/psycologist.jpeg'
                         alt='Занятие с психологом'
                         width={700}
-                        height={550}
+                        height={500}
                         className='rounded-xl'
                     />
                 </div>
-                <div className="grid grid-cols-3 gap-10 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 max-w-5xl mx-auto mt-20">
                     <Item title='Восприятие' icon='brain' className='bg-red-300'> </Item>
                     <Item title='Внимание' icon='eye' className='bg-orange-300'> </Item>
                     <Item title='Воображение' icon='lightbulb' className='bg-amber-300'> </Item>
@@ -50,7 +50,7 @@ export default function Home() {
                     <Item title='Мышление' icon='gears' className='bg-indigo-400'> </Item>
                     <Item title='Координация' icon='move' className='bg-emerald-300'> </Item>
                 </div>
-                <Typography variant='h6' mt={4} lineHeight={2} letterSpacing={1}>
+                <Typography variant='h6' mt={10} lineHeight={2} letterSpacing={1} textAlign='center'>
                     Занятия у детей развивают <b>высшие психические функции</b>, так необходимые при дальнейшем обучении в школе. Помимо этого повышается активность психомоторики детей, ребята совершенствуют графомоторные навыки, зрительно-моторную координацию (координацию в системе &quot;глаз-рука&quot;), развивают мелкую моторику рук, нейронные межполушарные связи. Также дети учатся ориентироваться в пространстве и на листе бумаги, чувствовать и понимать своё тело, выполняют дыхательные упражнения. 🪴
                 </Typography>
             </div>

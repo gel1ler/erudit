@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PageLayout from '@/components/pages/pageLayout'
+import { EnrollButton } from '@/components/UI/form/Buttons'
 
 export const metadata: Metadata = {
     title: 'Эрудит Центр - Летний клуб Эрудит',
@@ -8,27 +9,45 @@ export const metadata: Metadata = {
 
 export default function Home() {
     return (
-        <PageLayout isECenter pageTitle='Детский лагерь'>
+        <PageLayout isECenter pageTitle='Летний клуб'>
 
             {/* HERO */}
             <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl shadow-lg text-white text-center max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold mb-4">🏕️ Для детей от 7 до 12 лет 🏕️</h2>
+                <h2 className="text-4xl font-bold mb-4">🏕️ Для детей от 7 до 13 лет 🏕️</h2>
                 <div className="mb-6">
-                    <h3 className="text-2xl font-semibold mb-2">📅 Смены:</h3>
-                    <ul className="list-disc list-inside text-center mx-auto w-fit">
-                        <li>1 смена: 20 июня - 30 июня</li>
-                        <li>2 смена: 10 июля - 20 июля</li>
-                        <li>3 смена: 1 августа - 10 августа</li>
+                    <h3 className="text-2xl font-semibold mb-2 text-center">📅 Смены:</h3>
+                    <ul className="list-inside text-center mx-auto w-fit text-xl">
+                        <li>🍒 29 июля - 2 августа</li>
+                        <li>🍉 5 августа - 9 августа</li>
+                        <li>🍑 12 августа - 16 августа</li>
+                        <li>🍎 26 августа - 30 августа</li>
                     </ul>
                 </div>
                 <p className="text-lg">
-                    Присоединяйтесь к нам и проведите незабываемое лето в лагере &quot;Эрудит&quot;!
+                    Присоединяйтесь к нам и проведите незабываемое лето в летнем клубе &quot;Эрудит&quot;!
                 </p>
+            </div>
+            <div className="flex flex-col gap-20 lg:gap-0 lg:flex-row w-full max-w-5xl mt-20 text-center lg:text-left">
+                <div className=" lg:w-1/2">
+                    <h3 className="text-4xl mb-4 lg:">График:</h3>
+                    <h2 className="text-5xl font-semibold mb-6">с 10.00 до 14.00</h2>
+                    <EnrollButton dark />
+                </div>
+                <div className="lg:w-1/2">
+                    <h2 className="text-5xl font-semibold mb-6">В программе:</h2>
+                    <h5 className="text-2xl font-semibold mb-6">✅ английский язык;</h5>
+                    <h5 className="text-2xl font-semibold mb-6">✅ фитнес;</h5>
+                    <h5 className="text-2xl font-semibold mb-6">✅ творчество;</h5>
+                    <h5 className="text-2xl font-semibold mb-6">✅ литературный час;</h5>
+                    <h5 className="text-2xl font-semibold mb-6">✅ прогулки;</h5>
+                    <h5 className="text-2xl font-semibold mb-6">✅ актёрское мастерство;</h5>
+                    <h5 className="text-2xl font-semibold mb-6">✅ обед.</h5>
+                </div>
             </div>
 
             {/* SCHEDULE */}
-            <div className="p-8 rounded-2xl max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание лагеря &quot;Эрудит&quot;</h2>
+            {/* <div className="p-8 rounded-2xl max-w-7xl mx-auto">
+                <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание летнего клуба &quot;Эрудит&quot;</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white text-black p-4 rounded-lg shadow-lg">
                         <h3 className="text-xl font-semibold mb-2">12:00 – 13:00</h3>
@@ -73,10 +92,10 @@ export default function Home() {
                         <p>Фильмы, мультфильмы, развлекательные и познавательные видео на английском языке</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* THEME */}
-            <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl shadow-lg text-white">
+            {/* <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl shadow-lg text-white">
                 <h2 className="text-4xl font-bold mb-4 text-center">📅 Тематика по дням 📅</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-white text-black p-4 rounded-lg shadow-lg">
@@ -130,7 +149,7 @@ export default function Home() {
                         <p>“Лучшие развлечения мира”</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </PageLayout>
     )
 }

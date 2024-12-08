@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import PageLayout from '@/components/pages/pageLayout'
 
 export const metadata: Metadata = {
-    title: 'Эрудит Центр - Подготовка к экзаменам',
+    title: 'Эрудит Центр - Школьные предметы',
     description: 'Эффективная подготовка к экзаменам по различным предметам с опытными преподавателями',
 }
 

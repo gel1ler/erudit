@@ -24,7 +24,7 @@ export const EnrollButton = ({ dark }: { dark?: boolean }) => {
                     }
                 }}
             >
-                Пробное занятие
+                Пробное посещение
             </Button>
         </AnchorLink >
     )

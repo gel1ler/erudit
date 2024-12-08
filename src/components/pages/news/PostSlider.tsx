@@ -23,7 +23,7 @@ const PostSlider = ({ attachments }: { attachments: VKAttachmentExp[] }) => {
                 attachment.photo ?
                     <div key={index}>
                         <Image
-                            className='rounded-lg mx-auto'
+                            className='rounded-lg mx-auto max-h-[60vh] object-contain'
                             src={attachment.photo.sizes[3].url}
                             width={attachment.photo.sizes[3].width}
                             height={attachment.photo.sizes[3].height}
