@@ -24,10 +24,11 @@ export const Text = ({ children, lg }: IText) => {
 
 const additionalArr = [
     { name: 'Новости', href: '/news' },
-    { name: 'Дополнительно', href: '/#additioanl_anchor' },
     { name: 'Галерея', href: '/gallery' },
-    { name: 'Отзывы', href: '/#ratings_anchor' },
-    { name: 'FAQ', href: '/#faq_anchor' },
+    { name: 'Кружки', href: '/art' },
+    { name: 'Проведение дней рождений', href: '/birthdays' },
+    { name: 'Логопед', href: '/speech' },
+    { name: 'Психолог', href: '/psychology' },
 ]
 
 const Additional = () =>
@@ -40,6 +41,7 @@ const Additional = () =>
         <Box className={`
         absolute top-1/2 left-0 mt-2 transition-all duration-300 z-20 w-max opacity-0 pointer-events-none 
         peer-hover:opacity-100 peer-hover:pointer-events-auto hover:opacity-100 hover:pointer-events-auto
+        min-w-40
       `}>
             <Box className="bg-white shadowed rounded-lg py-4 pl-4 pr-8 mt-4">
                 {additionalArr.map((item, index) => (

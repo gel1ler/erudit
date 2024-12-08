@@ -21,7 +21,7 @@ export const navigation: INavLink[] = [
     {
         id: 1,
         name: "Детский сад",
-        href: "/#kindergarten_anchor",
+        href: "/kindergarten",
         anchorLink: true,
     },
 ]
@@ -142,7 +142,7 @@ export const additionalActivities: ActivityType[] = [
     {
         title: 'Логопед',
         description: 'Поможем вашему ребенку развить речевые навыки и улучшить коммуникацию',
-        href: '/speech-therapy',
+        href: '/speech',
         img: '/icons/additional/speech.svg',
         icons: [
             {
