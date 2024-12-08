@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <Falling num={101} />
-      {/* <Loader /> */}
+      <Loader />
       <Start />
       <Box className='relative flex flex-col gap-40 pb-40'>
         <Bg>
