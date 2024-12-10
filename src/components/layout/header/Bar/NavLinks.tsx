@@ -22,7 +22,7 @@ export const Text = ({ children, lg }: IText) => {
     )
 }
 
-const additionalArr = [
+export const additionalArr = [
     { name: 'Новости', href: '/news' },
     { name: 'Галерея', href: '/gallery' },
     { name: 'Кружки', href: '/art' },
@@ -94,11 +94,13 @@ export const DrawerNavLinks = ({ setOpen }: { setOpen: (value: boolean) => void 
                         </Text>
                     </a>
                     :
-                    <Link key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                        <Text>
-                            {i.name}
-                        </Text>
-                    </Link>
+                    <>
+                        <Link key={i.id} href={i.href} onClick={() => setOpen(false)}>
+                            <Text>
+                                {i.name}
+                            </Text>
+                        </Link>
+                    </>
             )}
         </>
     )

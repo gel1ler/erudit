@@ -30,16 +30,7 @@ const News = () => {
     <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column', gap: 20, mt: [10, 10, 10] }} id='news_anchor' className='anchor'>
       <Box className='w-full anchor flex flex-col items-center gap-4' id='about_anchor'>
         <Title>Новости</Title>
-        <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start xl:h-screen' data-aos='fade-up'>
-          {(loading || !posts?.length) ?
-            null
-            :
-            posts.map(post =>
-              <Post key={post.id} post={post} />
-            )
-          }
-        </Box>
-        <Box className='flex gap-4 items-center'>
+        <Box className='flex gap-4 items-center mb-4' data-aos='fade-up'>
           <Link href='/news'>
             <Button variant='outlined' color='secondary'>
               Все новости
@@ -51,6 +42,16 @@ const News = () => {
             </Typography>
           </a>
         </Box>
+        <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start xl:h-[1000px]' data-aos='fade-up'>
+          {(loading || !posts?.length) ?
+            null
+            :
+            posts.map(post =>
+              <Post key={post.id} post={post} />
+            )
+          }
+        </Box>
+
       </Box>
     </Container>
   );

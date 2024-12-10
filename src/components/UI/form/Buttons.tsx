@@ -1,12 +1,11 @@
-import { Button, ButtonPropsVariantOverrides } from '@mui/material'
+import { Button, ButtonGroupPropsVariantOverrides, ButtonPropsVariantOverrides } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
-import AnchorLink from '@/components/UI/anchorLink'
 import Image from 'next/image'
 
 export const EnrollButton = ({ dark }: { dark?: boolean }) => {
     return (
-        <AnchorLink href='#contacts_anchor'>
+        <Link href='#contacts_anchor'>
             <Button
                 variant='outlined'
                 className='w-fit'
@@ -26,12 +25,12 @@ export const EnrollButton = ({ dark }: { dark?: boolean }) => {
             >
                 Пробное посещение
             </Button>
-        </AnchorLink >
+        </Link >
     )
 }
 
 export const ContactsButton = ({ drawer, onClick, text }: { drawer?: boolean, onClick?: () => void, text?: boolean }) =>
-    <AnchorLink href='#contacts_anchor'>
+    <Link href='#contacts_anchor'>
         <Button
             onClick={onClick}
             sx={{
@@ -54,12 +53,12 @@ export const ContactsButton = ({ drawer, onClick, text }: { drawer?: boolean, on
                 />
             }
         </Button>
-    </AnchorLink>
+    </Link>
 
 
-const MyButton = ({ aos, text, click, dark }: { aos?: boolean, text?: string, click?: () => void, dark?: boolean }) =>
+const MyButton = ({ aos, text, click, dark, variant }: { aos?: boolean, text?: string, click?: () => void, dark?: boolean, variant?: "text" | "outlined" | "contained" }) =>
     <Button
-        variant='outlined'
+        variant={variant ? variant : 'outlined'}
         className='w-fit z-10'
         onClick={click}
         data-aos={aos ? 'fade-up' : ''}
@@ -69,12 +68,14 @@ const MyButton = ({ aos, text, click, dark }: { aos?: boolean, text?: string, cl
             px: 2,
             py: '6px',
             fontSize: '15px',
-            border: `3px solid ${dark ? '#303030' : '#fff'}`,
+            border: variant === 'outlined' ? `3px solid ${dark ? '#303030' : '#fff'}` : '',
             color: dark ? '#303030' : '#fff',
-            '&:hover': {
+            '&:hover': variant === 'outlined' ? {
                 border: '3px solid transparent',
                 backgroundColor: dark ? '#303030' : '#fff',
                 color: dark ? '#fff' : '#303030',
+            } : {
+                backgroundColor: 'rgba(0,0,0,.1)'
             }
         }}
     >
@@ -84,19 +85,19 @@ const MyButton = ({ aos, text, click, dark }: { aos?: boolean, text?: string, cl
 export function MoreBtn({
     click, href, text, aos, dark, variant
 }: {
-    click?: () => void; href?: string; text?: string; aos?: boolean; dark?: boolean; variant?: ButtonPropsVariantOverrides
+    click?: () => void; href?: string; text?: string; aos?: boolean; dark?: boolean; variant?: "text" | "outlined" | "contained"
 }) {
     text = text || 'подробнее'
 
     if (href) {
         return (
             <Link href={href}>
-                <MyButton aos={aos} text={text} dark={dark} />
+                <MyButton aos={aos} text={text} dark={dark} variant={variant || 'outlined'} />
             </Link>
         )
     } else {
         return (
-            <MyButton aos={aos} text={text} click={click} dark={dark} />
+            <MyButton aos={aos} text={text} click={click} dark={dark} variant={variant || 'outlined'} />
         )
     }
 }

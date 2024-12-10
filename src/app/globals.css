@@ -21,6 +21,19 @@ li {
   width: fit-content;
 }
 
+.disk {
+  list-style: none;
+}
+
+.disk :before {
+
+  content: "·";
+  font-size: 120px;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+
 @media (max-width: 1279px) {
   li {
     width: fit-content;
@@ -79,7 +92,7 @@ li {
   height: 72px;
   color: white;
   filter: drop-shadow(0 0 3px rgba(0, 0, 0, .2));
-  
+
 }
 
 .business-awards-view__badge-icon {

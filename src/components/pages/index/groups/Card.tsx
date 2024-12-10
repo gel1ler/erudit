@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
-const Card = ({ title, text, img, id }: { title: string, text: string, img: string, id: number }) => {
+const Card = ({ title, img, id, details }: { title: string, img: string, id: number, details: string[] }) => {
   // const slicedText = text.length > 249 ? text.slice(0, 250) + '...' : text
 
   return (
@@ -18,12 +18,11 @@ const Card = ({ title, text, img, id }: { title: string, text: string, img: stri
       <Typography variant='h4' textAlign='center' fontWeight='bold'>
         {title}
       </Typography>
-      <Typography variant='h5' textAlign='center' sx={{ px: 1 }}>
-        - 9 свободных мест<br />
-
-      </Typography>
+      <div className='text-center text-xl flex flex-col items-center gap-2 '>
+        {details.map((i, index) => <li key={index}>{i}</li>)}
+      </div>
       <div className="flex gap-2">
-        <MoreBtn dark href={`/groups/${id}`} text='Расписание' />
+        <MoreBtn dark href={`/groups/${id}`} text='Расписание' variant='text' />
         <MoreBtn dark href={`/groups/${id}`} />
       </div>
     </Box >

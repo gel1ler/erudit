@@ -24,22 +24,6 @@ const StartContent = () => {
         <Box
             className='h-screen relative flex justify-start overflow-hidden'
         >
-            <Image
-                src='/start/girl.jpg'
-                fill
-                alt='Background'
-                className='object-cover -z-50'
-                sizes="1920w 1080h"
-            />
-            <Box
-                className='-z-10 absolute left-0 top-0 w-screen h-screen'
-                sx={{
-                    background: `
-            linear-gradient(90deg, white 30%, transparent 100%),
-            linear-gradient(0deg, white, transparent 10%)
-        `
-                }}
-            />
             <StartBg />
             <Box className='flex flex-col items-center md:items-start justify-center md:w-1/2 w-full px-2 gap-4 md:mx-[10vw]'>
                 <Image src='/logo/new-logo-horizontal-2.svg' width={800} height={116} alt='Логотип' className='z-10' />

@@ -29,6 +29,7 @@ const Falling = ({ num }: { num: number }) => {
     return (
         <Box
             className='absolute w-screen h-full left-0 top-0 bottom-0 overflow-hidden pointer-events-none opacity-70'
+            sx={{ zIndex: 0 }}
         >
             {Array(num).fill(0).map((i, key) =>
                 <Element key={key} num={key} sm={num < 101} />

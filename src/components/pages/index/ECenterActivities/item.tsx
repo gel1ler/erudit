@@ -10,7 +10,9 @@ const Item = ({ index, activity }: { index: Number, activity: ActivityType }) =>
         <Box
             data-aos='fade-up'
             className={`bg-white py-20 rounded-2xl 
-                ${index === 0 || index === 3 ? 'lg:col-span-2' : ''} 
+                ${index === 1 ? ' row-start-2 col-start-3' : ''}
+                ${index === 3 ? ' row-start-2 col-start-1' : ''}
+                ${index === 0 || index === 1 ? 'lg:col-span-2' : ''} 
                 flex flex-col items-center justify-center gap-4 
                 shadowed relative overflow-hidden
                 translateToTopTrigger cursor-pointer

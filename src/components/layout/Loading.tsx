@@ -31,7 +31,7 @@ export default function Loading() {
 
     return (
         <Box
-            className='w-screen h-screen left-0 top-0 flex flex-col items-center justify-center bg-white bg-opacity-85 transition-opacity duration-700'
+            className='w-screen h-screen left-0 top-0 flex flex-col items-center justify-center bg-white bg-opacity-85 transition-opacity duration-700 pointer-events-none'
             sx={{
                 opacity: loading ? 1 : 0,
                 visibility: loading ? 'visible' : 'hidden',

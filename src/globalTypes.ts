@@ -7,6 +7,7 @@ export type TCard = {
     img: string,
     description?: string,
     link?: string,
+    details: string[]
 }
 
 export type VKAttachmentExp = {
@@ -33,8 +34,8 @@ interface VKImage {
     user_id: number
     text: string
     sizes: VKImageSize[]
-  }
-  
+}
+
 interface VKImageSize {
     /**
      * Описаны только типы, которые есть в документации.
@@ -73,5 +74,4 @@ interface VKImageSize {
      * Если фотография была загружена до 2012 года, то может вернуться значение 0
      */
     height: number
-  }
-  
+}
