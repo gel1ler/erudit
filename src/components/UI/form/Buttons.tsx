@@ -91,12 +91,12 @@ export function MoreBtn({
     if (href) {
         return (
             <Link href={href}>
-                <MyButton aos={aos} text={text} dark={dark} variant={variant} />
+                <MyButton aos={aos} text={text} dark={dark} />
             </Link>
         )
     } else {
         return (
-            <MyButton aos={aos} text={text} click={click} dark={dark} variant={variant} />
+            <MyButton aos={aos} text={text} click={click} dark={dark} />
         )
     }
 }
