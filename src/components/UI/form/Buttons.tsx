@@ -81,18 +81,22 @@ const MyButton = ({ aos, text, click, dark }: { aos?: boolean, text?: string, cl
         {text}
     </Button>
 
-export const MoreBtn = ({ click, href, text, aos, dark, var }: { click?: () => void, href?: string, text?: string, aos?: boolean, dark?: boolean, var?: ButtonPropsVariantOverrides }) => {
-    text = text || 'подробнее';
+export function MoreBtn({
+    click, href, text, aos, dark, variant
+}: {
+    click?: () => void; href?: string; text?: string; aos?: boolean; dark?: boolean; variant?: ButtonPropsVariantOverrides
+}) {
+    text = text || 'подробнее'
 
     if (href) {
         return (
             <Link href={href}>
-                <MyButton aos={aos} text={text} dark={dark} />
+                <MyButton aos={aos} text={text} dark={dark} variant={variant} />
             </Link>
-        );
+        )
     } else {
         return (
-            <MyButton aos={aos} text={text} click={click} dark={dark} />
-        );
+            <MyButton aos={aos} text={text} click={click} dark={dark} variant={variant} />
+        )
     }
-};
+}
