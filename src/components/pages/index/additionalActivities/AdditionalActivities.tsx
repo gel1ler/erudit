@@ -11,7 +11,7 @@ const AdditionalActivities = () => {
             <Typography data-aos='fade-up' textAlign='center' mt={1} color='gray'>
                 Нажмите на карточку для перехода на страницу
             </Typography>
-            <Box data-aos='fade-up' className="flex flex-col p-4 rounded-lg mx-auto mt-6 md:mt-14">
+            <Box data-aos='fade-up' className="grid grid-cols-1 max-w-md md:grid-cols-2 p-4 gap-5 rounded-lg mx-auto md:max-w-screen-xl">
                 {additionalActivities.map((activity, index) => (
                     <ActivityCard key={index} activity={activity} last={index === additionalActivities.length - 1} />
                 ))}

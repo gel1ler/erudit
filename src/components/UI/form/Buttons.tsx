@@ -1,4 +1,4 @@
-import { Button } from '@mui/material'
+import { Button, ButtonPropsVariantOverrides } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import AnchorLink from '@/components/UI/anchorLink'
@@ -57,7 +57,7 @@ export const ContactsButton = ({ drawer, onClick, text }: { drawer?: boolean, on
     </AnchorLink>
 
 
-const MyButton = ({ aos, text, click }: { aos?: boolean, text?: string, click?: () => void, }) =>
+const MyButton = ({ aos, text, click, dark }: { aos?: boolean, text?: string, click?: () => void, dark?: boolean }) =>
     <Button
         variant='outlined'
         className='w-fit z-10'
@@ -65,34 +65,38 @@ const MyButton = ({ aos, text, click }: { aos?: boolean, text?: string, click?: 
         data-aos={aos ? 'fade-up' : ''}
         sx={{
             borderRadius: '50px',
-            border: '3px solid #303030',
             mt: 1,
             px: 2,
             py: '6px',
             fontSize: '15px',
-            color: '#303030',
+            border: `3px solid ${dark ? '#303030' : '#fff'}`,
+            color: dark ? '#303030' : '#fff',
             '&:hover': {
-                border: '3px solid #303030',
-                backgroundColor: '#303030',
-                color: 'white',
+                border: '3px solid transparent',
+                backgroundColor: dark ? '#303030' : '#fff',
+                color: dark ? '#fff' : '#303030',
             }
         }}
     >
         {text}
     </Button>
 
-export const MoreBtn = ({ click, href, text, aos }: { click?: () => void, href?: string, text?: string, aos?: boolean }) => {
-    text = text || 'подробнее';
+export function MoreBtn({
+    click, href, text, aos, dark, variant
+}: {
+    click?: () => void; href?: string; text?: string; aos?: boolean; dark?: boolean; variant?: ButtonPropsVariantOverrides
+}) {
+    text = text || 'подробнее'
 
     if (href) {
         return (
             <Link href={href}>
-                <MyButton aos={aos} text={text} />
+                <MyButton aos={aos} text={text} dark={dark} />
             </Link>
-        );
+        )
     } else {
         return (
-            <MyButton aos={aos} text={text} click={click} />
-        );
+            <MyButton aos={aos} text={text} click={click} dark={dark} />
+        )
     }
-};
+}
