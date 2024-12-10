@@ -6,7 +6,7 @@ import { groupsData } from '@/content/content'
 
 const Groups = () => {
     return (
-        <Box id='groups_anchor' className='relative overflow-hidden'>
+        <Box id='groups_anchor' className='relative overflow-hidden text-[#303030]'>
             <Box
                 className='pt-10 pb-20 w-screen bg-slate-100'
                 sx={{
@@ -15,7 +15,7 @@ const Groups = () => {
                   }}
             >
                 <Title>Подготовка к школе</Title>
-                <Typography data-aos='fade-up' variant='body2' textAlign='center' color='#505050' sx={{ my: 1 }}>
+                <Typography data-aos='fade-up' variant='body2' textAlign='center' sx={{ my: 1 }}>
                     Листайте свайпами или нажимайте на стрелки
                 </Typography>
                 <Carousel cards={groupsData} />
