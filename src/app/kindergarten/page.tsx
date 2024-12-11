@@ -63,7 +63,7 @@ export default function Page() {
                             />
                         )}
                     </div>
-                    <div className='flex flex-col gap-6 items-center my-44'>
+                    <div className='flex flex-col gap-6 items-center my-44 px-2'>
                         <Title>Детский сад Эрудит</Title>
                         <Typography textAlign='center' variant='h6'>
                             Увлекательное и развивающее пространство для ваших детей, где они смогут раскрыть свой потенциал, обрести новых друзей и получить качественное дошкольное образование.

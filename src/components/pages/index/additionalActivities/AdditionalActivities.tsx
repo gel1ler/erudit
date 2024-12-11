@@ -6,7 +6,7 @@ import ActivityCard from './ActivityCard'
 
 const AdditionalActivities = () => {
     return (
-        <Box id='additioanl_anchor' className='-mt-[100px] pt-[100px] flex flex-col items-center'>
+        <Box id='additional_anchor' className='-mt-[100px] pt-[100px] flex flex-col items-center'>
             <Title>Дополнительно</Title>
             <Typography data-aos='fade-up' textAlign='center' mt={1} color='gray'>
                 Нажмите на карточку для перехода на страницу

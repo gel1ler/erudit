@@ -39,7 +39,7 @@ const DirectionCard = ({
                         <Typography textAlign={side} data-aos='fade-up' color={textColor} mt={2} fontWeight={800} variant='h5'>{formatMoney(priceAll)} ₽</Typography>
                         <Typography textAlign={side} data-aos='fade-up' mb={3}>Абонемент на месяц</Typography>
                     </div>
-                    <MoreBtn aos click={handleClick} text='Записаться' />
+                    <MoreBtn dark aos click={handleClick} text='Записаться' />
                 </div>
                 {children}
             </div>

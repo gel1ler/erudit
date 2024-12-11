@@ -15,10 +15,10 @@ const Card = ({ title, img, id, details }: { title: string, img: string, id: num
         alt='Фото группы'
         className='rounded-xl w-full aspect-square object-cover shadow bg-center'
       />
-      <Typography variant='h4' textAlign='center' fontWeight='bold'>
+      <Typography variant='h4' textAlign='center' fontWeight='bold' mt={1}>
         {title}
       </Typography>
-      <div className='text-center text-xl flex flex-col items-center gap-2 '>
+      <div className='text-center text-xl flex flex-col items-center gap-2 my-2'>
         {details.map((i, index) => <li key={index}>{i}</li>)}
       </div>
       <div className="flex gap-2">

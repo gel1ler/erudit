@@ -92,13 +92,23 @@ const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) 
                         </Box>
                         <Box className='flex flex-col gap-6 items-center justify-center'>
                             <DrawerNavLinks setOpen={setOpen} />
-                            {additionalArr.slice(0, 4).map((item, index) => (
+                            <Link href='/#additional_anchor' onClick={() => setOpen(false)}>
+                                <Text>
+                                    Дополнительно
+                                </Text>
+                            </Link>
+                            <Link href='/#ECenter_anchor' onClick={() => setOpen(false)}>
+                                <Text className='gradient-text'>
+                                    Эрудит центр
+                                </Text>
+                            </Link>
+                            {/* {additionalArr.slice(0, 4).map((item, index) => (
                                 <Link key={index} href={item.href} className='block'>
                                     <Text>
                                         {item.name}
                                     </Text>
                                 </Link>
-                            ))}
+                            ))} */}
                         </Box>
                         <Box className='flex flex-col gap-4 items-center justify-center'>
                             <ContactsButton text onClick={() => setOpen(false)} drawer />

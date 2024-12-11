@@ -6,12 +6,13 @@ import React from 'react'
 interface IText {
     children: string;
     lg?: boolean;
+    className?: string;
 }
 
-export const Text = ({ children, lg }: IText) => {
+export const Text = ({ children, lg, className }: IText) => {
     return (
         <Typography
-            className='transition-all duration-200 whitespace-nowrap'
+            className={'transition-all duration-200 whitespace-nowrap ' + className}
             sx={{
                 fontSize: lg ? 21 : 17,
                 ':hover': { color: '#0060b3' }
