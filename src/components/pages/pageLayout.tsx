@@ -22,8 +22,8 @@ export default function PageLayout({ children, isECenter, pageTitle }: { childre
         <>
             <Falling num={33} />
             <Loader />
-            <Box className='w-screen overflow-hidden'>
-                <Box className='relative flex flex-col gap-4 my-40 max-w-3xl mx-auto'>
+            <Box className='w-screen overflow-hidden flex h-[90vh]'>
+                <Box className='relative flex flex-col gap-4 my-auto max-w-3xl mx-auto'>
                     <div className="absolute opacity-35 w-full h-full top-0 left-0 transition-transform duration-500 translateToTop">
                         {item.icons.map((icon, key) =>
                             <Image

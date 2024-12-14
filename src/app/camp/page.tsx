@@ -12,7 +12,7 @@ export default function Home() {
         <PageLayout isECenter pageTitle='Летний клуб'>
 
             {/* HERO */}
-            <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl shadow-lg text-white text-center max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl text-white text-center max-w-7xl mx-auto">
                 <h2 className="text-4xl font-bold mb-4">🏕️ Для детей от 7 до 13 лет 🏕️</h2>
                 <div className="mb-6">
                     <h3 className="text-2xl font-semibold mb-2 text-center">📅 Смены:</h3>

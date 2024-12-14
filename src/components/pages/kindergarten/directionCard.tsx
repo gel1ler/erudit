@@ -33,13 +33,15 @@ const DirectionCard = ({
                     <Title sx={{ textAlign: side }}>{title}</Title>
 
                     <div className="ml-2 mt-4">
+                        <Typography textAlign={side} fontWeight='bold' variant='h6' data-aos='fade-up'>НАБОР С СЕНТЯБРЯ <br />СЛЕДУЮЩЕГО ГОДА</Typography>
+                        <Typography textAlign={side} color='red' variant='h6' data-aos='fade-up'>Запись сейчас со скидкой - 10%</Typography>
                         <Typography textAlign={side} color='gray' variant='h6' data-aos='fade-up'>Стоимость:</Typography>
                         <Typography textAlign={side} data-aos='fade-up' color={textColor} mt={1} fontWeight={800} variant='h5'>{formatMoney(price1)} ₽</Typography>
                         <Typography textAlign={side} data-aos='fade-up'>Разовое посещение</Typography>
                         <Typography textAlign={side} data-aos='fade-up' color={textColor} mt={2} fontWeight={800} variant='h5'>{formatMoney(priceAll)} ₽</Typography>
                         <Typography textAlign={side} data-aos='fade-up' mb={3}>Абонемент на месяц</Typography>
                     </div>
-                    <MoreBtn aos click={handleClick} text='Записаться' />
+                    <MoreBtn dark aos click={handleClick} text='Записаться' />
                 </div>
                 {children}
             </div>

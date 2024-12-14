@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <PageLayout isECenter pageTitle='Кружки'>
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
                 <div className="mb-6 md:mb-0">
                     <h2 className="text-3xl font-bold mb-4">🧪 Приглашаем Вас в наш Экспериментариум! 🔬</h2>
                     <p className="text-lg mb-6">
@@ -35,14 +35,14 @@ export default function Home() {
                     </div>
                 </div>
                 <div>
-                    <video className="h-auto max-h-[70vh] rounded-lg shadow-lg" autoPlay controls muted>
+                    <video className="h-auto max-h-[70vh] rounded-lg" autoPlay controls muted>
                         <source src="/icons/center/art/art.MP4" type="video/mp4" />
                         Ваш браузер не поддерживает тег видео.
                     </video>
                 </div>
             </div>
 
-            <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto mt-8">
+            <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-8 rounded-2xl  text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto mt-8">
                 <div className="mb-6 md:mb-0">
                     <h2 className="text-3xl font-bold mb-4">🎨✨ Добро пожаловать в нашу ИЗО студию &quot;Волшебная кисточка&quot;! ✨🎨</h2>
                     <p className="text-lg mb-6">
@@ -57,7 +57,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div>
-                    <img src="additional/art.jpg" alt="Волшебная кисточка" className="h-auto max-h-[70vh] rounded-lg shadow-lg" />
+                    <img src="additional/art.jpg" alt="Волшебная кисточка" className="h-auto max-h-[70vh] rounded-lg" />
                 </div>
             </div>
         </PageLayout>

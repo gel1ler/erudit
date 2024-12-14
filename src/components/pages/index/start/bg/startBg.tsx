@@ -7,6 +7,7 @@ import { Snowflake } from '../../../../../../public/start/snowflakes'
 const StartBg = () => {
     const theme = useTheme()
     const isLg = useMediaQuery(theme.breakpoints.up('lg'))
+    const isMd = useMediaQuery(theme.breakpoints.up('md'))
 
     return (
         <Box position='absolute' className='w-screen h-screen' sx={{ zIndex: -1 }}>
@@ -16,21 +17,23 @@ const StartBg = () => {
             <Dots bottom={isLg ? '40px' : '175px'} right={isLg ? '20%' : '-15%'} />
             <Dots bottom={isLg ? '50%' : '80%'} left={isLg ? '' : '-10%'} vertical />
             <Image
-                src='/start/girl.jpg'
+                src={isMd ? '/start/girl.jpg' : '/start/girl-vert.jpg'}
                 fill
                 alt='Background'
-                className='object-cover -z-50'
+                className={`object-cover -z-50 ${isMd ? '' : 'opacity-30'}`}
                 sizes="1920w 1080h"
             />
-            <Box
-                className='-z-10 absolute left-0 top-0 w-screen h-screen'
-                sx={{
-                    background: `
+            {isMd ?
+                <Box
+                    className='-z-10 absolute left-0 top-0 w-screen h-screen'
+                    sx={{
+                        background: `
             linear-gradient(90deg, white 30%, transparent 100%),
             linear-gradient(0deg, white, transparent 10%)
         `
-                }}
-            />
+                    }}
+                />
+                : null}
             {/* {isLg ? <Planes /> : null} */}
         </Box>
     )

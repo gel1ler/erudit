@@ -8,7 +8,7 @@ const LanguageCard = ({ language }: { language: { image: string, name: string } 
     const [slided, setSlided] = useState(false)
 
     return (
-        <div className="group aspect-video shadow-lg rounded-lg relative overflow-hidden cursor-pointer grid grid-cols-1">
+        <div className="group aspect-video rounded-lg relative overflow-hidden cursor-pointer grid grid-cols-1">
             <Image
                 fill
                 src={language.image}
@@ -20,7 +20,7 @@ const LanguageCard = ({ language }: { language: { image: string, name: string } 
                     <Typography gutterBottom variant="h4" textAlign='center' fontWeight={600}>
                         {language.name}
                     </Typography>
-                    <MoreBtn click={() => setSlided(!slided)} text='Расписание' />
+                    <MoreBtn dark click={() => setSlided(!slided)} text='Записаться' />
                 </div>
                 <div className="flex items-center justify-center flex-col w-full">
                     <Typography textAlign='center'>
@@ -29,7 +29,7 @@ const LanguageCard = ({ language }: { language: { image: string, name: string } 
                     <Typography gutterBottom variant="h5" textAlign='center'>
                         С 9:00 до 19:00
                     </Typography>
-                    <MoreBtn click={() => setSlided(!slided)} text='Назад' />
+                    <MoreBtn dark click={() => setSlided(!slided)} text='Назад' />
                 </div>
             </div>
         </div>

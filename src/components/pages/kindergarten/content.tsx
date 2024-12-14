@@ -16,8 +16,7 @@ const Content = () => {
                     color='#99f6e4'
                     textColor='#115e59'
                     title='Мини сад'
-                    dark
-                    age='От 3 до 5 лет'
+                    age='От 3 до 6 лет'
                     time='09:00 - 13:00'
                     price1={1000}
                     priceAll={15500}
@@ -38,67 +37,75 @@ const Content = () => {
                 </DirectionCard>
 
                 <DirectionCard
+                //Набор с сентября след года
+                //Запись сейчас - со скидкой
                     id='full'
                     title='Сад полного дня'
                     reversed
+                    dark
                     color='#f0abfc'
                     textColor='#86198f'
-                    age='От 3 до 5 лет'
-                    time='09:00 - 18:00'
-                    price1={1500}
-                    priceAll={25500}
+                    age='От 3 до 6 лет'
+                    time='08:00 - 19:00'
+                    price1={2000}
+                    priceAll={35000}
                     setProgram={setProgram}
                 >
                     <Image
                         src='/kindergarten/full.jpg'
                         width={1280}
                         height={960}
-                        className='rounded-[50px] shadowed'
-                        alt='Мини-детский сад'
+                        className='rounded-[50px]'
+                        alt='Сад полного дня'
                         data-aos='fade-up'
                     />
                 </DirectionCard>
 
-                <DirectionCard
+                {/* <DirectionCard
                     id='weekend'
-                    title='Сад выходного дня'
+                    title='Weekend party'
                     color='#99f6e4'
                     dark
                     textColor='#115e59'
-                    age='От 3 до 5 лет'
-                    time='Сб-Вс'
-                    price1={1500}
-                    priceAll={25500}
+                    age='От 4 до 9 лет'
+                    time='Сб 10:00 - 14:00'
+                    price1={2000}
+                    //Абонемент действует на протяжении 1,5 месяцев
+                    //Тематическая вечеринка
+
+                    priceAll={7000}
                     setProgram={setProgram}
                 >
                     <Image
                         src='/kindergarten/weekend.jpg'
                         width={1280}
                         height={960}
-                        className='rounded-[50px] shadowed'
+                        className='rounded-[50px]'
                         alt='Мини-детский сад'
                         data-aos='fade-up'
                     />
-                </DirectionCard>
+                </DirectionCard> */}
 
                 <DirectionCard
+                //Набор с сентября след года
+                //Запись сейчас - со скидкой
                     id='nursery'
                     title='Ясли'
                     color='#fda4af'
                     textColor='#9f1239'
                     reversed
                     age='От 1.5 до 3 лет'
-                    time='09:00 - 18:00'
-                    price1={1500}
-                    priceAll={25500}
+                    time='08:00 - 19:00'
+                    price1={2000}
+                    priceAll={35000}
                     setProgram={setProgram}
                 >
                     <Image
                         src='/kindergarten/nursery.jpg'
                         width={1280}
                         height={960}
-                        className='rounded-[50px] shadowed'
-                        alt='Мини-детский сад'
+                        className='rounded-[50px]'
+                        alt='Ясли'
                         data-aos='fade-up'
                     />
                 </DirectionCard>

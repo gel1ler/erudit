@@ -1,7 +1,7 @@
 import { TPost, VKAttachmentExp } from '@/globalTypes'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import PostSlider from './PostSlider';
@@ -50,10 +50,14 @@ const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
 
     let formattedDate = `${day}.${month} в ${hours}:${minutes}`;
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
     return (
         <Box
-            className='rounded-lg bg-slate-100 p-4 w-full flex flex-col gap-2 z-10 h-fit'
-            sx={{ boxShadow: '0 0 5px 2px rgba(0,0,0, .15)', maxWidth: fw ? ['28rem', '28rem', '28rem', '100%'] : '28rem' }}
+            className='rounded-lg bg-slate-100 p-4 w-full flex flex-col gap-2 z-10 h-fit border'
+            sx={{
+                maxWidth: fw ? ['28rem', '28rem', '28rem', '100%'] : '28rem'
+            }}
         >
             <Box className='flex gap-2'>
                 <Image
@@ -78,7 +82,20 @@ const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
                     <Typography variant='caption'>{formattedDate}</Typography>
                 </Box>
             </Box>
-            <Typography>{post.text}</Typography>
+            <Typography whiteSpace='pre-wrap'>
+                {isExpanded ? post.text : post.text.slice(0, 290)}
+                {post.text.length > 290 ?
+                    <span
+                        className='text-[#447bba] cursor-pointer -ml-4 pl-4'
+                        style={{
+                            background: isExpanded ? '' : 'linear-gradient(to right, transparent, #f1f5f9 10%)'
+                        }}
+                        onClick={() => setIsExpanded(!isExpanded)}
+                    >
+                        {isExpanded ? 'Скрыть' : 'Показать ещё'}
+                    </span> : null
+                }
+            </Typography>
             {post.attachments[0] ? <Attachment attachments={post.attachments} /> : null}
             <Box className='flex justify-between items-center px-1 mt-1'>
                 <Typography color='gray' variant='caption'><FavoriteBorderIcon /> {post.likes.count}</Typography>

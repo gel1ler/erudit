@@ -23,7 +23,7 @@ const languages = [
 export default function Home() {
     return (
         <PageLayout isECenter pageTitle='Иностранные языки'>
-            <Box className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col items-center justify-center max-w-7xl mx-auto">
+            <Box className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl text-white flex flex-col items-center justify-center max-w-7xl mx-auto">
                 <Typography variant="h2" className="text-4xl font-bold mb-4 text-center">🌍 Обучение иностранным языкам 🌍</Typography>
                 <Box className='flex flex-col lg:flex-row gap-10 mt-5'>
                     <Typography variant="h6" className="text-lg mb-6 w-full lg:w-1/2 text-center lg:text-left">
@@ -35,7 +35,7 @@ export default function Home() {
                         width={1000}
                         height={667}
                         alt='Урок английского'
-                        className="h-auto max-h-[70vh] rounded-lg shadow-lg w-full lg:w-1/2"
+                        className="h-auto max-h-[70vh] rounded-lg w-full lg:w-1/2"
                     />
 
                 </Box>

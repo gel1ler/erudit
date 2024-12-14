@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <PageLayout isECenter pageTitle='Школьные предметы'>
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl shadow-lg text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
                 <div className="mb-6 md:mb-0">
                     <h2 className="text-4xl font-bold mb-4">📚 Подготовка к экзаменам 📚</h2>
                     <p className="text-lg mb-6">
@@ -36,7 +36,7 @@ export default function Home() {
                 </div> */}
             </div>
 
-            <div className="p-8 rounded-2xl max-w-7xl mx-auto mt-10">
+            {/* <div className="p-8 rounded-2xl max-w-7xl mx-auto mt-10">
                 <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание занятий 📅</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="bg-white text-black p-4 rounded-lg shadow-lg">
@@ -82,7 +82,7 @@ export default function Home() {
                         <p>Сергей Иванович</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </PageLayout>
     )
 }
