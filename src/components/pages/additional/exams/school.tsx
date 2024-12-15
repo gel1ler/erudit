@@ -104,6 +104,7 @@ const School = () => {
             <div className="flex flex-col items-center lg:items-start gap-10">
                 {ages.map((age, i) =>
                     <Typography
+                        key={i}
                         onClick={() => setSelected(i)}
                         variant='h4'
                         fontWeight='bold'
@@ -112,7 +113,6 @@ const School = () => {
                         {age.title}
                     </Typography>
                 )}
-
             </div>
 
             <div className="h-full overflow-hidden lg:w-1/2">
@@ -126,7 +126,7 @@ const School = () => {
                         <div
                             key={agesI}
                             className='mt-4 space-y-4 w-full transition-all duration-300 h-[100vh] flex flex-col text-center lg:text-left items-center lg:items-start'
-                            
+
                         >
                             {age.lessons.map((lesson, i) =>
                                 <div className="flex items-start space-x-4" key={i}>
