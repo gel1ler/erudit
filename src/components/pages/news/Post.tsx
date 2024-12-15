@@ -38,6 +38,7 @@ const Attachment = ({ attachments }: { attachments: VKAttachmentExp[] }) => {
 }
 
 const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
     if (!post) return null
     let date = new Date(post.date * 1000);
 
@@ -49,8 +50,6 @@ const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
     minutes = minutes < 10 ? '0' + minutes : minutes;
 
     let formattedDate = `${day}.${month} в ${hours}:${minutes}`;
-
-    const [isExpanded, setIsExpanded] = useState(false);
 
     return (
         <Box

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Balmy'; /* Название шрифта */
+  src: url('/fonts/Balmy.ttf') format('truetype'); /* Путь к файлу шрифта */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Улучшает отображение шрифта */
+}
+
 * {
   scroll-behavior: smooth;
 }
