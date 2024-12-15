@@ -2,9 +2,10 @@
 import { MoreBtn } from "@/components/UI/form/Buttons"
 import { Typography } from "@mui/material"
 import Image from "next/image"
-import { useState } from "react"
+import Link from "next/link"
+import { SetStateAction, useState } from "react"
 
-const LanguageCard = ({ language }: { language: { image: string, name: string } }) => {
+const LanguageCard = ({ language, setSelected }: { language: { image: string, name: string }, setSelected: React.Dispatch<SetStateAction<string | undefined>> }) => {
     const [slided, setSlided] = useState(false)
 
     return (
@@ -20,9 +21,12 @@ const LanguageCard = ({ language }: { language: { image: string, name: string } 
                     <Typography gutterBottom variant="h4" textAlign='center' fontWeight={600}>
                         {language.name}
                     </Typography>
-                    <MoreBtn dark click={() => setSlided(!slided)} text='Записаться' />
+                    {/* <MoreBtn dark click={() => setSlided(!slided)} text='Расписание' /> */}
+                    <Link href='#contacts_anchor'>
+                        <MoreBtn dark click={() => setSelected(language.name)} text='Записаться' />
+                    </Link>
                 </div>
-                <div className="flex items-center justify-center flex-col w-full">
+                {/* <div className="flex items-center justify-center flex-col w-full">
                     <Typography textAlign='center'>
                         Понедельник-Четверг
                     </Typography>
@@ -30,7 +34,7 @@ const LanguageCard = ({ language }: { language: { image: string, name: string } 
                         С 9:00 до 19:00
                     </Typography>
                     <MoreBtn dark click={() => setSlided(!slided)} text='Назад' />
-                </div>
+                </div> */}
             </div>
         </div>
     )

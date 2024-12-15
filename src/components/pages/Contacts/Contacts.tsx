@@ -16,6 +16,7 @@ const Contacts = ({ noAos, pageTitle }: { noAos?: boolean, pageTitle: string }) 
             return
         }
         const message = `Номер ${phone} оставил заявку со страницы: ${pageTitle}.`
+        console.log(message)
         try {
             const form = document.createElement('form');
             form.innerHTML = `<input type="hidden" name="message" value="${message}">`;

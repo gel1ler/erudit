@@ -6,11 +6,23 @@ import { ReactNode } from 'react'
 import { formatMoney } from '@/services/services'
 import { useRouter } from 'next/navigation'
 
-const DirectionCard = ({
-    title, age, time, price1, priceAll, children, dark, color, textColor, reversed, id, setProgram
-}: {
-    title: string, age: string, time: string, price1: number, priceAll: number, children: ReactNode, dark?: boolean, color: string, textColor: string, reversed?: boolean, id: string, setProgram: React.Dispatch<React.SetStateAction<string | undefined>>
-}) => {
+type DirectionCardProps = {
+    title: string,
+    age: string,
+    time: string,
+    price1: number,
+    priceAll: number,
+    children: ReactNode,
+    dark?: boolean,
+    color: string,
+    textColor: string,
+    reversed?: boolean,
+    id: string,
+    setProgram: React.Dispatch<React.SetStateAction<string | undefined>>,
+    additional?: boolean,
+}
+
+const DirectionCard = ({ title, age, time, price1, priceAll, children, dark, color, textColor, reversed, id, setProgram, additional }: DirectionCardProps) => {
     // const isLg = useMediaQuery('(min-width:1024px)')
     // reversed = isLg ? reversed : false
     const side = reversed ? 'right' : 'left'
@@ -33,8 +45,10 @@ const DirectionCard = ({
                     <Title sx={{ textAlign: side }}>{title}</Title>
 
                     <div className="ml-2 mt-4">
-                        <Typography textAlign={side} fontWeight='bold' variant='h6' data-aos='fade-up'>НАБОР С СЕНТЯБРЯ <br />СЛЕДУЮЩЕГО ГОДА</Typography>
-                        <Typography textAlign={side} color='red' variant='h6' data-aos='fade-up'>Запись сейчас со скидкой - 10%</Typography>
+                        {additional ? <>
+                            <Typography textAlign={side} fontWeight='bold' variant='h6' data-aos='fade-up'>НАБОР НА СЕНТЯБРЬ 2025 года</Typography>
+                            <Typography textAlign={side} color={textColor} variant='h6' data-aos='fade-up'>Запись сейчас со скидкой - 10%</Typography>
+                        </> : null}
                         <Typography textAlign={side} color='gray' variant='h6' data-aos='fade-up'>Стоимость:</Typography>
                         <Typography textAlign={side} data-aos='fade-up' color={textColor} mt={1} fontWeight={800} variant='h5'>{formatMoney(price1)} ₽</Typography>
                         <Typography textAlign={side} data-aos='fade-up'>Разовое посещение</Typography>

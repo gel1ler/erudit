@@ -37,8 +37,7 @@ const Content = () => {
                 </DirectionCard>
 
                 <DirectionCard
-                //Набор с сентября след года
-                //Запись сейчас - со скидкой
+                    additional
                     id='full'
                     title='Сад полного дня'
                     reversed
@@ -87,8 +86,7 @@ const Content = () => {
                 </DirectionCard> */}
 
                 <DirectionCard
-                //Набор с сентября след года
-                //Запись сейчас - со скидкой
+                    additional
                     id='nursery'
                     title='Ясли'
                     color='#fda4af'

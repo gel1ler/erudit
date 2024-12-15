@@ -25,7 +25,7 @@ const StartContent = () => {
             className='h-screen relative flex justify-start overflow-hidden'
         >
             <StartBg />
-            <Box className='flex flex-col items-center md:items-start justify-center md:w-1/2 w-full px-10 md:px-0 gap-4 md:mx-[10vw]'>
+            <Box className='flex flex-col items-center md:items-start justify-center md:w-1/2 w-full px-4 md:px-0 gap-4 md:mx-[10vw]'>
                 <Image src='/logo/new-logo-horizontal-2.svg' width={800} height={116} alt='Логотип' className='z-10' />
                 <Typography variant='h3' className='text-center md:text-left'>
                     Объявлен набор на <br /> 2024-2025 учебный год

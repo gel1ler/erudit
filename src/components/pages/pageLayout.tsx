@@ -8,7 +8,7 @@ import { ReactNode } from 'react'
 import Falling from '../layout/Bg/falling'
 import Link from 'next/link'
 
-export default function PageLayout({ children, isECenter, pageTitle }: { children: ReactNode, isECenter?: boolean, pageTitle: string }) {
+export default function PageLayout({ children, isECenter, pageTitle, noContacts }: { children: ReactNode, isECenter?: boolean, pageTitle: string, noContacts?: boolean }) {
     const item = isECenter ? ECenter.find(i => i.title === pageTitle) : additionalActivities.find(i => i.title === pageTitle)
 
     if (!item) {
@@ -52,7 +52,7 @@ export default function PageLayout({ children, isECenter, pageTitle }: { childre
             <Box className='mb-20 flex flex-col items-center gap-16 px-4 z-10 relative'>
                 {children}
             </Box>
-            <Contacts noAos pageTitle={pageTitle} />
+            {noContacts ? null : <Contacts noAos pageTitle={pageTitle} />}
         </>
     )
 }

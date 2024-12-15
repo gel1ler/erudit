@@ -91,7 +91,7 @@ const Post = ({ post, fw }: { post: TPost, fw?: boolean }) => {
                         }}
                         onClick={() => setIsExpanded(!isExpanded)}
                     >
-                        {isExpanded ? 'Скрыть' : 'Показать ещё'}
+                        {isExpanded ? ' Скрыть' : 'Показать ещё'}
                     </span> : null
                 }
             </Typography>

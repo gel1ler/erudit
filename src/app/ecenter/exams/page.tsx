@@ -1,5 +1,12 @@
 import type { Metadata } from 'next'
 import PageLayout from '@/components/pages/pageLayout'
+import { Typography } from '@mui/material'
+import ScienceIcon from '@mui/icons-material/Science'; // Физика
+import TranslateIcon from '@mui/icons-material/Translate'; // Русский язык
+import CalculateIcon from '@mui/icons-material/Calculate'; // Математика
+import LaptopIcon from '@mui/icons-material/Laptop'; // Информатика
+import LanguageIcon from '@mui/icons-material/Language'; // Английский
+import School from '@/components/pages/additional/exams/school';
 
 export const metadata: Metadata = {
     title: 'Эрудит Центр - Школьные предметы',
@@ -7,9 +14,25 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+    const className = 'flex items-center space-x-1 text-center text-3xl justify-center'
+
     return (
         <PageLayout isECenter pageTitle='Школьные предметы'>
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto">
+            <div className="flex flex-col items-center mb-20">
+                <Typography variant='h2' fontWeight='bold' textAlign='center'>
+                    Репетиторы по школьной программе
+                </Typography>
+                <Typography color='gray' textAlign='center'>
+                    Нажимайте на кнопки для выбора нужного раздела
+                </Typography>
+
+                <School />
+            </div>
+
+            <div
+                id='#exams_anchor'
+                className="bg-gradient-to-r from-blue-500 to-purple-500 p-8 rounded-2xl text-white flex flex-col md:flex-row gap-4 items-center justify-between max-w-7xl mx-auto"
+            >
                 <div className="mb-6 md:mb-0">
                     <h2 className="text-4xl font-bold mb-4">📚 Подготовка к экзаменам 📚</h2>
                     <p className="text-lg mb-6">
@@ -28,61 +51,31 @@ export default function Home() {
                         <p className="text-xl">От 1500 рублей за занятие</p>
                     </div>
                 </div>
-                {/* <div>
-                    <video className="h-auto max-h-[70vh] rounded-lg shadow-lg" autoPlay controls muted>
-                        <source src="/icons/center/exams/exams.MP4" type="video/mp4" />
-                        Ваш браузер не поддерживает тег видео.
-                    </video>
-                </div> */}
             </div>
 
-            {/* <div className="p-8 rounded-2xl max-w-7xl mx-auto mt-10">
-                <h2 className="text-4xl font-bold mb-4 text-center">📅 Расписание занятий 📅</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-white text-black p-4 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">10:00 – 11:00</h3>
-                        <p className="font-bold">Предмет:</p>
-                        <p>Математика</p>
-                        <p className="font-bold">Преподаватель:</p>
-                        <p>Анна Петровна</p>
-                    </div>
-                    <div className="bg-white text-black p-4 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">11:00 – 12:00</h3>
-                        <p className="font-bold">Предмет:</p>
-                        <p>Русский язык</p>
-                        <p className="font-bold">Преподаватель:</p>
-                        <p>Иван Сергеевич</p>
-                    </div>
-                    <div className="bg-white text-black p-4 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">12:00 – 13:00</h3>
-                        <p className="font-bold">Предмет:</p>
-                        <p>Физика</p>
-                        <p className="font-bold">Преподаватель:</p>
-                        <p>Мария Ивановна</p>
-                    </div>
-                    <div className="bg-white text-black p-4 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">13:00 – 14:00</h3>
-                        <p className="font-bold">Предмет:</p>
-                        <p>Химия</p>
-                        <p className="font-bold">Преподаватель:</p>
-                        <p>Дмитрий Александрович</p>
-                    </div>
-                    <div className="bg-white text-black p-4 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">14:00 – 15:00</h3>
-                        <p className="font-bold">Предмет:</p>
-                        <p>Биология</p>
-                        <p className="font-bold">Преподаватель:</p>
-                        <p>Елена Викторовна</p>
-                    </div>
-                    <div className="bg-white text-black p-4 rounded-lg shadow-lg">
-                        <h3 className="text-xl font-semibold mb-2">15:00 – 16:00</h3>
-                        <p className="font-bold">Предмет:</p>
-                        <p>История</p>
-                        <p className="font-bold">Преподаватель:</p>
-                        <p>Сергей Иванович</p>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:gap-5 lg:gap-14">
+                <Typography variant='h2' className='gradient-text' fontWeight='bold' textAlign='center'>ОГЭ/ЕГЭ</Typography>
+                <div className={className}>
+                    <ScienceIcon fontSize='large' />
+                    <span>Физика</span>
                 </div>
-            </div> */}
+                <div className={className}>
+                    <TranslateIcon fontSize='large' />
+                    <span>Русский язык</span>
+                </div>
+                <div className={className}>
+                    <CalculateIcon fontSize='large' />
+                    <span>Математика <br /> (проф/база)</span>
+                </div>
+                <div className={className}>
+                    <LaptopIcon fontSize='large' />
+                    <span>Информатика</span>
+                </div>
+                <div className={className}>
+                    <LanguageIcon fontSize='large' />
+                    <span>Английский</span>
+                </div>
+            </div>
         </PageLayout>
     )
 }
