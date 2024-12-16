@@ -9,7 +9,7 @@ import { TCard } from '@/globalTypes';
 
 const Carousel = ({ cards }: { cards: TCard[] }) => {
     const settings = {
-        className: "center prod-slider",
+        className: "center groups-clider h-full",
         centerMode: true,
         infinite: true,
         speed: 500,
@@ -25,7 +25,7 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
         ),
         responsive: [
             {
-                breakpoint: 1400,
+                breakpoint: 1500,
                 settings: {
                     slidesToShow: 2,
                     centerPadding: '50px',
@@ -35,7 +35,7 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 1,
-                    centerPadding: '25px',
+                    centerPadding: '0px',
                     nextArrow: (
                         <Arrow anchor='right' sm />
                     ),
@@ -50,7 +50,7 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
     return (
         <Slider {...settings}>
             {cards.map((card, index) => (
-                <Card key={index} id={index} title={card.title} img={card.img} details={card.details} />
+                <Card key={index} id={index} card={card} />
             ))}
         </Slider>
     )

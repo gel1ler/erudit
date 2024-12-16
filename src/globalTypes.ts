@@ -3,11 +3,10 @@ export type TSetNumber = (value: number) => void
 
 export type TCard = {
     title: string,
-    text: string,
-    img: string,
-    description?: string,
+    schedule: { day: string, time: string, subjects: string[] }[],
+    age: string,
     link?: string,
-    details: string[]
+    description: string
 }
 
 export type VKAttachmentExp = {

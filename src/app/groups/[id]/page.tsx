@@ -19,7 +19,7 @@ const Group = ({ params }: { params: { id: number } }) => {
         <>
             <Loader />
             <Box className='relative flex flex-col gap-4 min-h-screen px-4 items-center justify-center'>
-                <Image
+                {/* <Image
                     src={group.img}
                     fill
                     alt='фото группы'
@@ -28,7 +28,7 @@ const Group = ({ params }: { params: { id: number } }) => {
                 <Title white>{group.title}</Title>
                 <Typography className=' max-w-screen-md' textAlign='center' variant='h6' color='white'>
                     {group.text}
-                </Typography>
+                </Typography> */}
                 <EnrollButton />
             </Box>
             <Typography textAlign='center' my={12} mx='auto' className='text-center max-w-4xl' variant='h6'>{group.description}</Typography>

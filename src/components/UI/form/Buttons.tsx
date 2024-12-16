@@ -68,14 +68,16 @@ const MyButton = ({ aos, text, click, dark, variant }: { aos?: boolean, text?: s
             px: 2,
             py: '6px',
             fontSize: '15px',
+            bgcolor: variant === 'contained' ? '#303030' : 'transparent',
             border: variant === 'outlined' ? `3px solid ${dark ? '#303030' : '#fff'}` : '',
-            color: dark ? '#303030' : '#fff',
+            color: dark ? variant === 'contained' ? '#fff' : '#303030' : '#fff',
             '&:hover': variant === 'outlined' ? {
                 border: '3px solid transparent',
                 backgroundColor: dark ? '#303030' : '#fff',
                 color: dark ? '#fff' : '#303030',
             } : {
-                backgroundColor: 'rgba(0,0,0,.1)'
+                backgroundColor: 'rgba(0,0,0,.5)',
+                // color: variant === 'contained' ? '#303030' : ''
             }
         }}
     >
