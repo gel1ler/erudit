@@ -55,10 +55,10 @@ const Kindergarten = () => {
                 </Link>
 
                 {/* 2 */}
-                <div className="overflow-hidden relative w-full h-[440px] rounded-xl">
+                {/* <div className="overflow-hidden relative w-full h-[440px] rounded-xl">
                     <Link href='/kindergarten#full' className="flex flex-col gap-2 items-center pt-8 w-full h-full z-0
                     bg-fuchsia-300 group hover:bg-fuchsia-400 transition-colors">
-                        {/* Icons */}
+
                         <Image
                             src='/icons/kindergarten/blocks-black.svg'
                             width={150}
@@ -74,7 +74,7 @@ const Kindergarten = () => {
                             className='opacity-20 absolute -right-8 rotate-[-120deg] top-0 group-hover:-translate-y-1 transition-transform'
                         />
 
-                        {/* Content */}
+
                         <Typography variant='h3' fontWeight='bold' px={6} textAlign='center'>
                             Полного дня
                         </Typography>
@@ -103,11 +103,65 @@ const Kindergarten = () => {
                             </Typography>
                         </div>
                     </Link>
-                </div>
+                </div> */}
+
+                <Link href='/kindergarten#full' className="flex flex-col gap-2 items-center bg-fuchsia-300 group hover:bg-fuchsia-400 transition-colors group rounded-xl overflow-hidden relative h-fit py-16 w-full">
+                    {/* Icons */}
+                    <Image
+                        src='/icons/kindergarten/blocks-black.svg'
+                        width={150}
+                        height={150}
+                        alt='icon'
+                        className='opacity-20 absolute -left-8 rotate-[-30deg] top-1/2 group-hover:-translate-y-2 transition-transform'
+                    />
+                    <Image
+                        src='/icons/kindergarten/pyramid.svg'
+                        width={150}
+                        height={150}
+                        alt='icon'
+                        className='opacity-20 absolute -right-8 rotate-[-120deg] top-0 group-hover:-translate-y-1 transition-transform'
+                    />
+
+
+                    {/* Content */}
+                    <Typography variant='h3' textAlign='center' fontWeight='bold' px={6}>
+                        Полного дня
+                    </Typography>
+
+                    <Typography variant='h5'>
+                        С 7:00 до 19:00
+                    </Typography>
+                </Link>
+
+                <Link href='/kindergarten#mini' className="flex flex-col gap-2 items-center bg-cyan-400 hover:bg-cyan-300  transition-colors group rounded-xl overflow-hidden relative h-fit py-24 w-full">
+                    {/* Icons */}
+                    <Image
+                        src='/icons/kindergarten/calendar.svg'
+                        width={150}
+                        height={150}
+                        alt='icon'
+                        className='opacity-20 absolute -left-8 rotate-[-30deg] -top-2 group-hover:-translate-y-2 transition-transform'
+                    />
+                    <Image
+                        src='/icons/kindergarten/path.svg'
+                        width={450}
+                        height={250}
+                        alt='icon'
+                        className='absolute -bottom-4 left-0 z-[1] group-hover:-translate-y-1 transition-transform'
+                    />
+
+                    {/* Content */}
+                    <Typography variant='h3' textAlign='center' fontWeight='bold' px={6}>
+                        Мини-сад
+                    </Typography>
+
+                    <Typography variant='h5'>
+                        С 7:00 до 13:00
+                    </Typography>
+                </Link>
 
                 {/* 3 */}
-                <Link href='/kindergarten#weekend' className="flex flex-col gap-2 items-center hover:bg-emerald-400 transition-colors group bg-emerald-300 rounded-xl overflow-hidden relative h-fit py-16 w-full">
-                    {/* Icons */}
+                {/* <Link href='/kindergarten#mini' className="flex flex-col gap-2 items-center hover:bg-emerald-400 transition-colors group bg-emerald-300 rounded-xl overflow-hidden relative h-fit py-16 w-full">
                     <Image
                         src='/icons/kindergarten/calendar.svg'
                         width={150}
@@ -117,7 +171,6 @@ const Kindergarten = () => {
                     />
 
 
-                    {/* Content */}
                     <Typography variant='h3' textAlign='center' fontWeight='bold' px={6}>
                         Выходного дня
                     </Typography>
@@ -125,7 +178,7 @@ const Kindergarten = () => {
                     <Typography variant='h5'>
                         Суббота и воскресенье
                     </Typography>
-                </Link>
+                </Link> */}
             </div>
         </Box >
     )

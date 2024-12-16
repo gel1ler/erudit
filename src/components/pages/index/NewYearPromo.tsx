@@ -24,7 +24,7 @@ const NewYearPromo = () => {
         <>
             {/* Круглый блок с картинкой подарка */}
             <Box
-                className={`flex items-center justify-center cursor-pointer fixed bottom-10 right-5 md:right-10 hover:scale-105
+                className={`flex items-center justify-center cursor-pointer fixed bottom-10 right-5 md:right-10 hover:scale-105 p-4
                     rounded-full overflow-hidden transition-all duration-300 z-50 shadow-md w-20 h-20 bg-[#f3f4f6] ${isExpanded ? 'opacity-0' : ''}`}
                 onClick={handleToggle}
             >
