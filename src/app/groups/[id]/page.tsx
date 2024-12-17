@@ -7,14 +7,18 @@ import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
-export async function generateMetadata({ params }: { params: { id: number } }) {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    const numid = parseInt(id, 10);
     return {
-        title: "Подготовка к школе - группа " + groupsData[params.id].title + ' ' + groupsData[params.id].age,
+        title: "Подготовка к школе - группа " + groupsData[numid].title + ' ' + groupsData[numid].age,
     }
 }
 
-const Group = ({ params }: { params: { id: number } }) => {
-    const group = groupsData[params.id]
+const Group = async ({ params }: { params: Promise<{ id: string }> }) => {
+    const { id } = await params;
+    const numid = parseInt(id, 10);
+    const group = groupsData[numid]
     return (
         <>
             <Loader />

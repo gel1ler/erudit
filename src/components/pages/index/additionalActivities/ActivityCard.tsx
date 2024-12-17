@@ -7,14 +7,12 @@ import { EnrollButton, MoreBtn } from '@/components/UI/form/Buttons';
 const ActivityCard = ({ activity, last }: { activity: { title: string, description: string, href: string, img?: string }, last?: boolean }) => {
   const { href, title, description, img } = activity
   return (
-    <Link
-      href={href}
+    <Box
       className={`relative group mb-2 transition-all overflow-hidden`}
-
     >
       <Box
         className={`
-        h-full w-full rounded-2xl md:rounded-3xl cursor-pointer px-10 py-10 relative
+        h-full w-full rounded-2xl md:rounded-3xl px-10 py-10 relative
         flex flex-col items-center text-center justify-center
         border border-gray-300 gap-2 overflow-hidden
         bg-gradient-to-br from-[#31d6f7] to-[#fc32fc]
@@ -29,7 +27,7 @@ const ActivityCard = ({ activity, last }: { activity: { title: string, descripti
         </Typography>
         <MoreBtn href={href} />
       </Box>
-    </Link>
+    </Box>
   );
 };
 
