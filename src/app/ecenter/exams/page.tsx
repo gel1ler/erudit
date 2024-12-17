@@ -53,7 +53,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:gap-5 lg:gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center md:gap-5 lg:gap-14 mb-10">
                 <Typography variant='h2' className='gradient-text' fontWeight='bold' textAlign='center'>ОГЭ/ЕГЭ</Typography>
                 <div className={className}>
                     <ScienceIcon fontSize='large' />

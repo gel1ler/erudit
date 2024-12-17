@@ -1,16 +1,26 @@
-import { ContactsButton, MoreBtn } from '@/components/UI/form/Buttons'
+'use client'
+import {  MoreBtn } from '@/components/UI/form/Buttons'
 import { TCard } from '@/globalTypes'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-const Card = ({ card, id }: { card: TCard, id: number }) => {
-  const { title, schedule, age, description } = card
+const Card = ({ card }: { card: TCard }) => {
+  const { title, schedule, age, description, id, type } = card
 
   const [isSchedule, setIsSchedule] = useState(false)
 
   return (
-    <Box data-aos='fade-up' className='max-w-xs min-w-[340px] flex flex-col items-center overflow-hidden py-4 h-[650px]'>
+    <Box data-aos='fade-up' className='max-w-xs min-w-[340px] flex flex-col items-center overflow-hidden py-4 h-[650px] relative'>
+      <div className={`absolute top-4 left-4 flex items-center gap-2 ${isSchedule ? 'opacity-0' : 'opacity-100'} transition-opacity`}>
+        <Image
+          src={type === 'Дневная' ? '/groups/sun.png' : '/groups/moon.png'}
+          alt=''
+          width={50}
+          height={50}
+        />
+        <Typography variant='h6' fontWeight='bold' sx={{color: type=='Вечерняя' ? 'darkblue': 'yellow'}}>{type}</Typography>
+      </div>
       <Image
         src={`/groups/${title}.jpg`}
         fill
@@ -41,10 +51,10 @@ const Card = ({ card, id }: { card: TCard, id: number }) => {
               Расписание
             </Typography>
             {schedule.map((group, i) =>
-              <>
-                <div key={i} className="flex justify-between items-center">
+              <div key={i} className='flex flex-col gap-2'>
+                <div className="flex justify-between items-center">
                   <div className=" flex items-center gap-2">
-                    <Typography variant='h6' className="p-4 rounded-full bg-white">{group.day}</Typography>
+                    <Typography variant='h6' className="w-16 h-16 p-4 rounded-full bg-white">{group.day}</Typography>
                     <Typography variant='h6' className="">{group.time}</Typography>
                   </div>
                   <div className="flex flex-col gap-1 items-center w-32">
@@ -53,8 +63,8 @@ const Card = ({ card, id }: { card: TCard, id: number }) => {
                     )}
                   </div>
                 </div>
-                {i === group.subjects.length - 1 ? null : <hr key={i} className='opacity-50' />}
-              </>
+                {i === group.subjects.length - 1 ? null : <hr className='opacity-50' />}
+              </div>
             )}
           </div>
         </div>
@@ -62,7 +72,7 @@ const Card = ({ card, id }: { card: TCard, id: number }) => {
 
       <div className="flex gap-1 items-center">
         <MoreBtn dark click={() => setIsSchedule(!isSchedule)} text={isSchedule ? 'Назад' : 'Расписание'} variant='contained' />
-        <MoreBtn dark href={`/#contacts_anchor`} text='Записаться' />
+        <MoreBtn dark href={`/groups/${id}`} />
       </div>
     </Box >
   )

@@ -2,11 +2,13 @@ export type TSetBool = (value: boolean) => void
 export type TSetNumber = (value: number) => void
 
 export type TCard = {
+    id: number,
     title: string,
     schedule: { day: string, time: string, subjects: string[] }[],
     age: string,
     link?: string,
     description: string
+    type: 'Дневная' | "Вечерняя",
 }
 
 export type VKAttachmentExp = {

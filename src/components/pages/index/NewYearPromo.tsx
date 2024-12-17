@@ -103,7 +103,14 @@ const NewYearPromo = () => {
                     </Typography>
 
                     {/* Кнопка для перехода к посту в VK */}
-                    <a href='https://vk.com/wall-96338049_1867' target='_blank' className='text-lg text-[#056738] hover:text-[#044827] transition-colors font-bold'>
+                    <a
+                        href='https://vk.com/wall-96338049_1867'
+                        target='_blank'
+                        className='text-lg transition-colors font-bold'
+                        style={{
+                            fontFamily: 'Balmy, sans-serif',
+                        }}
+                    >
                         Участвовать
                     </a>
                     {/* Кнопка закрытия */}

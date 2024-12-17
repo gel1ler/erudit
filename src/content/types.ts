@@ -18,9 +18,8 @@ export interface ISocialMedia {
 export interface INavLink {
     id: number,
     name: string,
-    anchorLink?: boolean,
     expanded?: boolean,
-    links?: { id: number; name: string; href: string }[];
+    links?: { name: string; href: string }[];
     href: string
 }
 
