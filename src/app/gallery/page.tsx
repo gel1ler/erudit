@@ -18,7 +18,7 @@ export default function Home() {
                 <Title>Галерея</Title>
                 <Gallery />
             </Box>
-            <Contacts noAos />
+            <Contacts noAos pageTitle='Галерея' />
         </>
     )
 }

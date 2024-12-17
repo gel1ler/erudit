@@ -1,10 +1,10 @@
 import React from 'react'
-import { IconButton } from '@mui/material'
+import { IconButton, SxProps } from '@mui/material'
 const IB = (
     {
         children, f, sx, href
     }: {
-        children: React.ReactNode, f?: () => void, sx?: object, href?: string
+        children: React.ReactNode, f?: () => void, sx?: SxProps, href?: string
     }) => {
     const defaultStyle = {
         color: 'black',

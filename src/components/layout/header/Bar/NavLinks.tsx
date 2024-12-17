@@ -1,112 +1,85 @@
 import { navigation } from '@/content/content'
-import { Box, SxProps, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
-import React, { CSSProperties } from 'react'
-
-type THoverType = 'opacity' | 'color' | 'underline' | 'animUnderline' | 'bold'
+import React from 'react'
 
 interface IText {
     children: string;
-    hoverType: THoverType;
-    lg?:  boolean;
+    lg?: boolean;
+    className?: string;
 }
 
-const Text = ({ children, hoverType, lg }: IText) => {
-    let styles: SxProps = {
-        fontSize: lg ? 22 : 18,
-    }
-
-    switch (hoverType) {
-        case 'opacity':
-            styles = { ...styles, ':hover': { opacity: '.3' } }
-            break
-
-        case 'color':
-            styles = { ...styles, ':hover': { color: '#0060b3' } }
-            break
-
-        case 'underline':
-            styles = { ...styles, ':hover': { textDecoration: 'underline' } }
-            break
-
-        case 'animUnderline':
-            styles = {
-                ...styles,
-                position: 'relative',
-                ':after': {
-                    content: '""',
-                    position: 'absolute',
-                    width: '100%',
-                    transform: 'scaleX(0)',
-                    height: '1.5px',
-                    bottom: 0,
-                    left: 0,
-                    backgroundColor: '#000000',
-                    transformOrigin: 'bottom right',
-                    transition: 'transform 0.2s ease-out',
-                },
-                ':hover:after': {
-                    transform: 'scaleX(1)',
-                    transformOrigin: 'bottom left',
-                },
-            }
-            break
-        case 'bold':
-            styles = { ...styles, ':hover': { textShadow: '0 0 .65px #333, 0 0 .65px #333' } }
-
-
-    }
-
-
+export const Text = ({ children, lg, className }: IText) => {
     return (
         <Typography
-            className='transition-all duration-200'
-            sx={styles}
+            className={'transition-all duration-200 whitespace-nowrap ' + className}
+            sx={{
+                fontSize: lg ? 21 : 17,
+                ':hover': { color: '#0060b3' }
+            }}
         >
             {children}
         </Typography>
     )
 }
 
-const NavLinks = ({ hoverType }: { hoverType: THoverType }) => {
+const NavLinks = () => {
     return (
-        <Box className='gap-10 items-center hidden xl:flex'>
-            {navigation.map(i =>
-                i.anchorLink ?
-                    <a key={i.id} href={i.href}>
-                        <Text hoverType={hoverType}>
-                            {i.name}
-                        </Text>
-                    </a>
-                    :
-                    <Link key={i.id} href={i.href}>
-                        <Text hoverType={hoverType}>
-                            {i.name}
-                        </Text>
-                    </Link>
-            )}
-        </Box >
-    )
-}
+        <Box className='gap-8 items-center hidden lg:flex'>
+            {navigation.map((i, index) => {
+                if (i.expanded) {
+                    return (
+                        <Box key={index} className='relative hidden md:block'>
+                            <Link href={i.href} className='peer'>
+                                <Text>
+                                    {i.name}
+                                </Text>
+                            </Link>
+                            <Box className={`
+        absolute top-1/2 left-0 mt-2 transition-all duration-300 z-20 w-max opacity-0 pointer-events-none 
+        peer-hover:opacity-100 peer-hover:pointer-events-auto hover:opacity-100 hover:pointer-events-auto
+        min-w-40
+      `}>
+                                <Box className="bg-white shadowed rounded-lg py-4 pl-4 pr-8 mt-4">
+                                    {i.links?.map((item, index) => (
+                                        <Link key={index} href={item.href} className='block py-2'>
+                                            <Text>
+                                                {item.name}
+                                            </Text>
+                                        </Link>
+                                    ))}
+                                </Box>
+                            </Box>
+                        </Box>
+                    )
+                }
 
-export const DrawerNavLinks = ({ hoverType, setOpen }: { hoverType: THoverType, setOpen: (value: boolean) => void }) => {
+                return (
+                    <div
+                        key={i.id}
+                        className='relative'
+                    >
+                        <Link href={i.href}>
+                            <Text>
+                                {i.name}
+                            </Text>
+                        </Link>
+                    </div>
+                )
+            })}
+        </Box >
+    );
+};
+
+export const DrawerNavLinks = ({ setOpen }: { setOpen: (value: boolean) => void }) => {
     return (
-        <>
-            {navigation.map(i =>
-                i.anchorLink ?
-                    <a key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                        <Text hoverType={hoverType}>
-                            {i.name}
-                        </Text>
-                    </a>
-                    :
-                    <Link key={i.id} href={i.href} onClick={() => setOpen(false)}>
-                        <Text hoverType={hoverType}>
-                            {i.name}
-                        </Text>
-                    </Link>
-            )}
-        </>
+        navigation.map(i =>
+            <Link key={i.id} href={i.href} onClick={() => setOpen(false)}>
+                <Text>
+                    {i.name}
+                </Text>
+            </Link>
+        )
     )
 }
 

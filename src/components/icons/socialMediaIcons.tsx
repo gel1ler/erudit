@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Instagram, WhatsApp, Telegram, Phone } from '@mui/icons-material'
 import IB from './IB'
-import { SvgIcon, Dialog, Typography, Box, Button } from '@mui/material/'
+import { SvgIcon, Dialog, Typography, Box, Button, SxProps } from '@mui/material/'
 import Link from 'next/link'
 import { mainInfo } from '@/content/content'
 import { TSetBool } from '@/globalTypes'
@@ -68,9 +68,9 @@ export const InstagramIcon = ({ dark }: { dark?: boolean }) => {
 
 export const PhoneCall = (
     {
-        icon, text, dark
+        icon, text, dark, sx
     }: {
-        icon?: boolean, text?: string, dark?: boolean
+        icon?: boolean, text?: string, dark?: boolean, sx?: SxProps
     }) => {
     const [open, setOpen] = useState(false)
 
@@ -97,6 +97,7 @@ export const PhoneCall = (
                     <Typography
                         onClick={() => setOpen(true)}
                         className='flex items-center cursor-pointer'
+                        sx={sx}
                     >
                         < Phone fontSize='small' />
                         {mainInfo.phone}

@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Balmy'; /* Название шрифта */
+  src: url('/fonts/Balmy.ttf') format('truetype'); /* Путь к файлу шрифта */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Улучшает отображение шрифта */
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -9,6 +17,7 @@
 body {
   overflow-x: hidden;
   min-width: 400px;
+  width: 100vw;
 }
 
 body.loading {
@@ -19,6 +28,19 @@ li {
   margin-bottom: 0.5rem;
   width: fit-content;
 }
+
+.disk {
+  list-style: none;
+}
+
+.disk :before {
+
+  content: "·";
+  font-size: 120px;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
 
 @media (max-width: 1279px) {
   li {
@@ -76,7 +98,8 @@ li {
   z-index: -1;
   width: 56px;
   height: 72px;
-  color: #f6f6f6;
+  color: white;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, .2));
 }
 
 .business-awards-view__badge-icon {
@@ -121,4 +144,14 @@ li {
 
 .absolute-carousel {
   display: none;
+}
+
+.shadowed {
+  box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #15803d, #1d4ed8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

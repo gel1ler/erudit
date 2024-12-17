@@ -1,37 +1,27 @@
 'use client'
 import { Box, Grid, Typography } from '@mui/material'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ImageViewer from '../../UI/imageViewer'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import Link from 'next/link'
 
-const arr = [
-    {
-        src: '/gallery/Выпускной 2021 (1).jpg',
-        text: 'Выпускной 2021'
-    },
-    {
-        src: '/gallery/Выпускной 2021 (2).jpg',
-        text: 'Выпускной 2021'
-    },
-    {
-        src: '/gallery/8 марта (1).jpg',
-        text: '8 марта'
-    },
-    {
-        src: '/gallery/На занятии (1).jpg',
-        text: 'На занятии'
-    },
-    {
-        src: '/gallery/Новый год (1).jpg',
-        text: 'Новый год'
-    },
-]
-
 const Gallery = () => {
     const [current, setCurrent] = useState(0)
     const [open, setOpen] = useState(false)
+    const [photos, setPhotos] = useState<{ url: string; key: string }[]>([])
+
+    useEffect(() => {
+        fetch('/api/getPhotos?folder=Главная страница')
+            .then(response => response.json())
+            .then(data => {
+                if (Array.isArray(data) && data.length > 0) {
+                    setPhotos(data.slice(1))
+                } else {
+                    setPhotos([])
+                }
+            })
+    }, [])
 
     return (
         <Grid
@@ -42,7 +32,7 @@ const Gallery = () => {
             className='anchor'
         >
             <ImageViewer
-                images={arr.map(image => image.src)}
+                images={photos.map(image => image.url)}
                 current={current}
                 open={open}
                 setOpen={setOpen}
@@ -61,7 +51,7 @@ const Gallery = () => {
                     </Typography>
                 </Link>
             </Grid>
-            {arr.map((img, index) =>
+            {photos.map((img, index) =>
                 <Grid key={index} item xs={6} md={4} sx={{ p: 1 }}>
                     <Box className='relative rounded-lg overflow-hidden cursor-pointer'>
                         <Box
@@ -72,12 +62,12 @@ const Gallery = () => {
                             }}
                         >
                             <Typography variant='h5' fontWeight='bold' color='white'>
-                                {img.text}
+                                {img.key.split('/')[1].split('(')[0]}
                             </Typography>
                         </Box>
                         <Image
-                            src={img.src}
-                            alt={img.text}
+                            src={img.url}
+                            alt={img.key}
                             width={400}
                             height={400}
                             className='w-full h-full -z-10 aspect-square object-cover'

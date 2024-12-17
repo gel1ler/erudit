@@ -2,11 +2,13 @@ export type TSetBool = (value: boolean) => void
 export type TSetNumber = (value: number) => void
 
 export type TCard = {
+    id: number,
     title: string,
-    text: string,
-    img: string,
-    description?: string,
+    schedule: { day: string, time: string, subjects: string[] }[],
+    age: string,
     link?: string,
+    description: string
+    type: 'Дневная' | "Вечерняя",
 }
 
 export type VKAttachmentExp = {
@@ -33,8 +35,8 @@ interface VKImage {
     user_id: number
     text: string
     sizes: VKImageSize[]
-  }
-  
+}
+
 interface VKImageSize {
     /**
      * Описаны только типы, которые есть в документации.
@@ -73,5 +75,4 @@ interface VKImageSize {
      * Если фотография была загружена до 2012 года, то может вернуться значение 0
      */
     height: number
-  }
-  
+}

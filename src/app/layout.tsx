@@ -2,7 +2,7 @@ import ThemeRegistry from '@/customization/theme/ThemeRegistry'
 import './globals.css'
 import './anims.css'
 import Header from '@/components/layout/header/Header'
-import Footer from '@/components/layout/footer/Footer'
+import Footer from '@/components/layout/Footer'
 import AOSProvider from '@/services/AOSProvider'
 import { Suspense } from 'react'
 import Loading from '@/components/layout/Loading'
@@ -22,7 +22,7 @@ export default function RootLayout({
       </head>
       <ThemeRegistry>
         <AOSProvider>
-          <body>
+          <body className='relative'>
             <Header />
             <section className='flex-grow'>
               <Suspense>
@@ -54,11 +54,6 @@ export default function RootLayout({
           `,
         }}
       />
-      <noscript>
-        <div>
-          <img src="https://mc.yandex.ru/watch/98564600" style={{ position: 'absolute', left: '-9999px' }} alt="" />
-        </div>
-      </noscript>
     </html>
   )
 }

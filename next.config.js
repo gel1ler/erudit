@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     remotePatterns: [
       {
@@ -12,6 +11,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '**.vkuserphoto.ru',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'erudit.hb.ru-msk.vkcloud-storage.ru',
         port: '',
       },
     ]

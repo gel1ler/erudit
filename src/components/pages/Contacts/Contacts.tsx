@@ -5,7 +5,7 @@ import Title from '../../UI/text/Title'
 import MuiPhone from '../../UI/form/PhoneNumber'
 import AlertDialog from './Alert'
 
-const Contacts = ({ noAos }: { noAos?: boolean }) => {
+const Contacts = ({ noAos, pageTitle }: { noAos?: boolean, pageTitle: string }) => {
     const [phone, setPhone] = useState('')
     const [open, setOpen] = useState(false)
     const [isError, setError] = useState(false)
@@ -15,7 +15,8 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
             setError(true)
             return
         }
-        const message = `Заказан обратный звонок на номер ${phone}.`
+        const message = `Номер ${phone} оставил заявку со страницы: ${pageTitle}.`
+
         try {
             const form = document.createElement('form');
             form.innerHTML = `<input type="hidden" name="message" value="${message}">`;
@@ -37,7 +38,7 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
         <>
             <AlertDialog open={open} setOpen={setOpen} />
             <Box id='contacts_anchor' className='bg-slate-100 w-screen py-20 px-2'>
-                <Title noAos={noAos}>Запишитесь на пробное занятие</Title>
+                <Title noAos={noAos}>Запишитесь на пробное посещение</Title>
                 <Box data-aos={noAos ? '' : 'fade-up'} className='flex flex-col items-center gap-4 max-w-lg mx-auto mt-8'>
                     <Grid container rowSpacing={1} columnSpacing={2} justifyContent='center'>
                         <Grid item xs={10}>
@@ -77,7 +78,7 @@ const Contacts = ({ noAos }: { noAos?: boolean }) => {
                             </li>
                         </ul>
                     </Box>
-                    <Box data-aos={noAos ? '' : 'fade-up'} className='relative overflow-hidden rounded-xl shadow-xl md:min-w-[560px]'><a href="https://yandex.ru/maps/org/malenkiy_erudit/1108324675/?utm_medium=mapframe&utm_source=maps" className='text-[#eee] text-xs absolute top-0'>Маленький Эрудит</a><a href="https://yandex.ru/maps/20571/zhukovskiy/category/children_developmental_center/184107204/?utm_medium=mapframe&utm_source=maps" className='text-[#eee] text-xs absolute top-[14px]'>Центр развития ребёнка в Жуковском</a><iframe src="https://yandex.ru/map-widget/v1/?ll=38.163479%2C55.597342&mode=search&oid=1108324675&ol=biz&sll=38.163479%2C55.597328&source=serp_navig&text=%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B9%20%D1%8D%D1%80%D1%83%D0%B4%D0%B8%D1%82&z=13" width="100%" height="400" allowFullScreen={true} style={{ position: "relative" }} loading='lazy' /></Box>
+                    <Box className='relative overflow-hidden rounded-xl border md:min-w-[560px]'><a href="https://yandex.ru/maps/org/malenkiy_erudit/1108324675/?utm_medium=mapframe&utm_source=maps" className='text-[#eee] text-xs absolute top-0'>Маленький Эрудит</a><a href="https://yandex.ru/maps/20571/zhukovskiy/category/children_developmental_center/184107204/?utm_medium=mapframe&utm_source=maps" className='text-[#eee] text-xs absolute top-[14px]'>Центр развития ребёнка в Жуковском</a><iframe src="https://yandex.ru/map-widget/v1/?ll=38.163479%2C55.597342&mode=search&oid=1108324675&ol=biz&sll=38.163479%2C55.597328&source=serp_navig&text=%D0%BC%D0%B0%D0%BB%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%D0%B9%20%D1%8D%D1%80%D1%83%D0%B4%D0%B8%D1%82&z=13" width="100%" height="400" allowFullScreen={true} style={{ position: "relative" }} loading='lazy' /></Box>
                 </Box>
             </Box>
         </>

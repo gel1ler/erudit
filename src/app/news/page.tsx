@@ -16,7 +16,7 @@ export default function Home() {
             <Box className='relative flex flex-col gap-4 my-40'>
                 <News />
             </Box>
-            <Contacts noAos />
+            <Contacts noAos pageTitle='Новости' />
         </>
     )
 }
