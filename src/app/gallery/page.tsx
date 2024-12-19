@@ -15,7 +15,7 @@ export default function Home() {
         <>
             <Loader />
             <Box className='relative flex flex-col gap-4 my-40'>
-                <Title>Галерея</Title>
+                <Title h1>Галерея</Title>
                 <Gallery />
             </Box>
             <Contacts noAos pageTitle='Галерея' />

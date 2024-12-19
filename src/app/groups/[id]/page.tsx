@@ -37,7 +37,7 @@ const Group = async ({ params }: { params: Promise<{ id: string }> }) => {
                     alt='фото группы'
                     className='object-cover h-screen w-screen -z-10 flex flex-col opacity-50'
                 />
-                <Title>{group.title} - {group.age}</Title>
+                <Title h1>{group.title} - {group.age}</Title>
                 <Typography className=' max-w-screen-md' textAlign='center' variant='h6'>
                     {group.description}
                 </Typography>

@@ -35,7 +35,12 @@ export const themeOptions: ThemeOptions = {
   },
   typography: {
     fontFamily: montserrat.style.fontFamily,
-    fontWeightRegular: 500
+    fontWeightRegular: 500,
+    h1: {
+      fontSize: '4rem', // Уменьшенный размер для H1
+      fontWeight: 600,
+      lineHeight: 1.2,
+    },
   },
   components: {
     MuiAppBar: {
