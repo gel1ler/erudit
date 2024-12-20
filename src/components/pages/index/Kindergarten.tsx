@@ -9,7 +9,7 @@ const Kindergarten = () => {
     return (
         <Box id='kindergarten_anchor' className='-mt-[100px] pt-[100px] flex flex-col items-center'>
             <div data-aos='fade-up' className="relative w-fit">
-                <Title noAos>Детский сад</Title>
+                <Title h1 noAos>Детский сад</Title>
                 <Image
                     src='/bg/hat-1.svg'
                     alt='Шапка'

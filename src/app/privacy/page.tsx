@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <Loader />
             <Box className='relative flex flex-col gap-4 my-40 max-w-6xl items-center mx-auto'>
-                <Title>Политика в отношении обработки персональных данных</Title>
+                <Title h1>Политика в отношении обработки персональных данных</Title>
                 <Typography textAlign='center'>
                     <Typography variant='h4'>
                         1. Общие положения

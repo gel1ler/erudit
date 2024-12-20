@@ -12,6 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     const numid = parseInt(id, 10);
     return {
         title: "Подготовка к школе - группа " + groupsData[numid].title + ' ' + groupsData[numid].age,
+        description: `Подготовка к школе в группе "${groupsData[numid].title}". Для детей возраста ${groupsData[numid].age}. Успешная подготовка к школе с опытными педагогами. Запишитесь на занятия уже сегодня!`,
     }
 }
 

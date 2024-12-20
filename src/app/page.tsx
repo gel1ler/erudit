@@ -19,9 +19,34 @@ import Falling from '@/components/layout/Bg/falling'
 import NewYearPromo from '@/components/pages/index/NewYearPromo'
 
 export const metadata: Metadata = {
-  title: 'Маленький эрудит — Детский развивающий центр для детей от 1 до 6 лет. Жуковский.',
+  title: 'Маленький эрудит — Детский развивающий центр в Жуковском',
   description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
-}
+  keywords: 'детский центр, развивающий центр, Жуковский, Маленький Эрудит, занятия для детей, подготовка к школе',
+  openGraph: {
+    title: 'Маленький эрудит — Детский развивающий центр в Жуковском',
+    description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
+    url: 'https://small-erudite.ru', // Замените на ваш реальный URL
+    siteName: 'Маленький Эрудит',
+    images: [
+      {
+        url: 'https://small-erudite.ru/start/girl.jpg', // Замените на ваш реальный URL изображения
+        width: 1200,
+        height: 630,
+        alt: 'Детский развивающий центр "Маленький Эрудит"',
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  }
+};
 
 export default function Home() {
   return (
