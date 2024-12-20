@@ -5,7 +5,6 @@ import Title from '@/components/UI/text/Title'
 
 export const metadata: Metadata = {
     title: 'Маленький Эрудит - Персональные данные',
-    description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
 }
 
 export default function Home() {

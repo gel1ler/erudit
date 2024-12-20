@@ -7,7 +7,6 @@ import Contacts from '@/components/pages/Contacts/Contacts'
 
 export const metadata: Metadata = {
     title: 'Маленький Эрудит - Пользовательское Соглашение',
-    description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
 }
 
 export default function Home() {
