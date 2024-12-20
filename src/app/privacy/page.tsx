@@ -5,6 +5,7 @@ import Title from '@/components/UI/text/Title'
 
 export const metadata: Metadata = {
     title: 'Маленький Эрудит - Персональные данные',
+    description: 'Политика обработки персональных данных Детского центра Маленький Эрудит. Узнайте о принципах, правах и обязанностях, а также мерах защиты ваших данных.',
 }
 
 export default function Home() {

@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import { Box, Typography } from '@mui/material'
 import Loader from '../../components/layout/loader'
-import Gallery from '@/components/pages/Gallery'
 import Title from '@/components/UI/text/Title'
-import Contacts from '@/components/pages/Contacts/Contacts'
 
 export const metadata: Metadata = {
     title: 'Маленький Эрудит - Пользовательское Соглашение',
+    description: 'Пользовательское соглашение Детского центра Маленький Эрудит. Узнайте о правах и обязанностях пользователей и администрации, а также условиях использования сайта.',
 }
 
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
 
                     Используя сайт, Вы соглашаетесь с условиями данного соглашения.<br />
                     Если Вы не согласны с условиями данного соглашения, не используйте сайт Детский центр Маленький Эрудит!<br />
-                    <Typography variant='h4'  mt={2}>
+                    <Typography variant='h4' mt={2}>
                         Права и обязанности сторон
                     </Typography>
                     <b>Пользователь имеет право:</b><br />
@@ -39,12 +38,12 @@ export default function Home() {
 
                     <b>Администрация обязуется:</b><br />
                     - поддерживать работоспособность сайта за исключением случаев, когда это невозможно по независящим от Администрации причинам.
-                    <Typography variant='h4'  mt={2}>
+                    <Typography variant='h4' mt={2}>
                         Ответственность сторон
                     </Typography>
                     - администрация не несет никакой ответственности за услуги, предоставляемые третьими лицами<br />
                     - в случае возникновения форс-мажорной ситуации (боевые действия, чрезвычайное положение, стихийное бедствие и т. д.) Администрация не гарантирует сохранность информации, размещённой Пользователем, а также бесперебойную работу информационного ресурса<br />
-                    <Typography variant='h4'  mt={2}>
+                    <Typography variant='h4' mt={2}>
                         Условия действия Соглашения
                     </Typography>
                     Данное Соглашение вступает в силу при любом использовании данного сайта.<br />
