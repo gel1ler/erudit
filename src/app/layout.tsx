@@ -7,7 +7,7 @@ import AOSProvider from '@/services/AOSProvider'
 import { Suspense } from 'react'
 import Loading from '@/components/layout/Loading'
 import Script from 'next/script'
-import { SpeedInsights } from "@vercel/speed-insights/next"
+// import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({
   children,
@@ -55,7 +55,7 @@ export default function RootLayout({
             `,
         }}
       />
-      <SpeedInsights />
+      {/* <SpeedInsights /> */}
     </html>
   )
 }
