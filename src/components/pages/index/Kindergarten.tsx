@@ -129,7 +129,7 @@ const Kindergarten = () => {
                     </Typography>
 
                     <Typography variant='h5'>
-                        С 7:00 до 19:00
+                        С 8:00 до 19:00
                     </Typography>
                 </Link>
 

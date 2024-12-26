@@ -17,10 +17,10 @@ const StartBg = () => {
             <Dots bottom={isLg ? '40px' : '175px'} right={isLg ? '20%' : '-15%'} />
             <Dots bottom={isLg ? '50%' : '80%'} left={isLg ? '' : '-10%'} vertical />
             <Image
-                src={isMd ? '/start/girl.jpg' : '/start/girl-vert.jpg'}
+                src='/start/girl3.jpg'
                 fill
                 alt='Background'
-                className={`object-cover -z-50 ${isMd ? '' : 'opacity-30'}`}
+                className={`object-cover -z-50 ${isMd ? 'translate-x-[10vw]' : 'opacity-30'}`}
                 sizes="1920w 1080h"
             />
             {isMd ?

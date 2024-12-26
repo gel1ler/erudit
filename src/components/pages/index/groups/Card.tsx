@@ -2,7 +2,7 @@ import { ContactsButton, MoreBtn } from '@/components/UI/form/Buttons'
 import { TCard } from '@/globalTypes'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { Fragment, useState } from 'react'
 
 const Card = ({ card, id }: { card: TCard, id: number }) => {
   const { title, schedule, age, description } = card
@@ -10,7 +10,7 @@ const Card = ({ card, id }: { card: TCard, id: number }) => {
   const [isSchedule, setIsSchedule] = useState(false)
 
   return (
-    <Box data-aos='fade-up' className='max-w-xs min-w-[340px] flex flex-col items-center overflow-hidden py-4 h-[650px]'>
+    <Box key={id} data-aos='fade-up' className='max-w-xs min-w-[340px] flex flex-col items-center overflow-hidden py-4 h-[650px]'>
       <Image
         src={`/groups/${title}.jpg`}
         fill
@@ -41,7 +41,7 @@ const Card = ({ card, id }: { card: TCard, id: number }) => {
               Расписание
             </Typography>
             {schedule.map((group, i) =>
-              <>
+              <Fragment key={i}>
                 <div key={i} className="flex justify-between items-center">
                   <div className=" flex items-center gap-2">
                     <Typography variant='h6' className="p-4 rounded-full bg-white">{group.day}</Typography>
@@ -54,7 +54,7 @@ const Card = ({ card, id }: { card: TCard, id: number }) => {
                   </div>
                 </div>
                 {i === group.subjects.length - 1 ? null : <hr key={i} className='opacity-50' />}
-              </>
+              </Fragment>
             )}
           </div>
         </div>
