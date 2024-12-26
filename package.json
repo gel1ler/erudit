@@ -19,7 +19,7 @@
     "@vkid/sdk": "^2.0.0",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
-    "next": "^14.2.4",
+    "next": "^15.1.1-canary.7",
     "notistack": "^3.0.1",
     "react": "^18",
     "react-anchor-link-smooth-scroll": "^1.0.12",

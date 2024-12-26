@@ -17,7 +17,7 @@ export const EnrollButton = ({ dark }: { dark?: boolean }) => {
                     fontSize: '15px',
                     color: dark ? '#303030' : '#fff',
                     '&:hover': {
-                        border: '3px solid #fff',
+                        border: dark ? '3px solid #303030' : '3px solid #fff',
                         backgroundColor: dark ? '#303030' : '#fff',
                         color: dark ? '#fff' : '#303030',
                     }

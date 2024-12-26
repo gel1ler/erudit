@@ -3,7 +3,7 @@ import { Drawer, Box, useMediaQuery, SxProps } from '@mui/material'
 import { Close } from '@mui/icons-material'
 import IB from '@/components/icons/IB'
 import MenuIcon from '@mui/icons-material/Menu'
-import { additionalArr, DrawerNavLinks, Text } from './Bar/NavLinks'
+import { DrawerNavLinks, Text } from './Bar/NavLinks'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ContactsButton } from '@/components/UI/form/Buttons'
@@ -92,11 +92,6 @@ const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) 
                         </Box>
                         <Box className='flex flex-col gap-6 items-center justify-center'>
                             <DrawerNavLinks setOpen={setOpen} />
-                            <Link href='/#additional_anchor' onClick={() => setOpen(false)}>
-                                <Text>
-                                    Дополнительно
-                                </Text>
-                            </Link>
                             <Link href='/#ECenter_anchor' onClick={() => setOpen(false)}>
                                 <Text className='gradient-text'>
                                     Эрудит центр

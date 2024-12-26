@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import PageLayout from '@/components/pages/pageLayout'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
     title: 'Эрудит Центр - Кружки',
@@ -57,7 +58,13 @@ export default function Home() {
                     </p>
                 </div>
                 <div>
-                    <img src="additional/art.jpg" alt="Волшебная кисточка" className="h-auto max-h-[70vh] rounded-lg" />
+                    <Image
+                        width={700}
+                        height={500}
+                        src="/additional/art.jpg"
+                        alt="Волшебная кисточка"
+                        className="h-auto max-h-[70vh] rounded-lg" 
+                        />
                 </div>
             </div>
         </PageLayout>
