@@ -50,6 +50,7 @@ export const navigation: INavLink[] = [
         links: [
             { name: 'Новости', href: '/news' },
             { name: 'Галерея', href: '/gallery' },
+            { name: 'Weekend Party', href: '/#weekend_anchor' },
             { name: 'Кружки', href: '/art' },
             { name: 'Проведение дней рождений', href: '/birthdays' },
             { name: 'Логопед', href: '/speech' },

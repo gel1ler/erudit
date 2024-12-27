@@ -5,7 +5,7 @@ import React from 'react'
 
 const WeekendParty = () => {
     return (
-        <div className="max-w-6xl grid gap-10 grid-cols-1 lg:grid-cols-2 mx-auto">
+        <div id='weekend_anchor' className="anchor max-w-6xl grid gap-10 grid-cols-1 lg:grid-cols-2 mx-auto">
             <div className="flex flex-col gap-2">
                 <Title
                     sx={{
