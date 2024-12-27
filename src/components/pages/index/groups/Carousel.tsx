@@ -57,7 +57,7 @@ const Carousel = ({ cards }: { cards: TCard[] }) => {
     return (
         <Slider {...settings}>
             {cards.map((card, index) => (
-                <Card key={index} card={card} />
+                <Card key={index} index={index} card={card} />
             ))}
         </Slider>
     )

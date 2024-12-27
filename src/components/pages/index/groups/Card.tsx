@@ -1,12 +1,12 @@
 'use client'
-import {  MoreBtn } from '@/components/UI/form/Buttons'
+import { MoreBtn } from '@/components/UI/form/Buttons'
 import { TCard } from '@/globalTypes'
 import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
 import React, { Fragment, useState } from 'react'
 
-const Card = ({ card }: { card: TCard }) => {
-  const { title, schedule, age, description, id, type } = card
+const Card = ({ card, index }: { card: TCard, index: number }) => {
+  const { title, schedule, age, description, type } = card
 
   const [isSchedule, setIsSchedule] = useState(false)
 
@@ -19,7 +19,7 @@ const Card = ({ card }: { card: TCard }) => {
           width={50}
           height={50}
         />
-        <Typography variant='h6' fontWeight='bold' sx={{color: type=='Вечерняя' ? 'darkblue': 'yellow'}}>{type}</Typography>
+        <Typography variant='h6' fontWeight='bold' sx={{ color: type == 'Вечерняя' ? 'darkblue' : 'yellow' }}>{type}</Typography>
       </div>
       <Image
         src={`/groups/${title}.jpg`}
@@ -52,7 +52,7 @@ const Card = ({ card }: { card: TCard }) => {
             </Typography>
             {schedule.map((group, i) =>
               <Fragment key={i}>
-                <div key={i} className="flex justify-between items-center">
+                <div className="flex justify-between items-center">
                   <div className=" flex items-center gap-2">
                     <Typography variant='h6' className="w-16 h-16 p-4 rounded-full bg-white">{group.day}</Typography>
                     <Typography variant='h6' className="">{group.time}</Typography>
@@ -63,7 +63,7 @@ const Card = ({ card }: { card: TCard }) => {
                     )}
                   </div>
                 </div>
-                {i === group.subjects.length - 1 ? null : <hr key={i} className='opacity-50' />}
+                {i === group.subjects.length - 1 ? null : <hr className='opacity-50' />}
               </Fragment>
             )}
           </div>
@@ -72,7 +72,7 @@ const Card = ({ card }: { card: TCard }) => {
 
       <div className="flex gap-1 items-center">
         <MoreBtn dark click={() => setIsSchedule(!isSchedule)} text={isSchedule ? 'Назад' : 'Расписание'} variant='contained' />
-        <MoreBtn dark href={`/groups/${id}`} />
+        <MoreBtn dark href={`/groups/${index}`} />
       </div>
     </Box >
   )

@@ -60,7 +60,16 @@ export const navigation: INavLink[] = [
 
 export const groupsData: TCard[] = [
     {
-        id: 0,
+        title: 'Крохотульки',
+        type: 'Дневная',
+        schedule: [
+            { day: 'ВТ', time: '10:30-12:00', subjects: ['Развитие речи', 'Пальчиковая гимнастика', 'Музыкальные минутки'] },
+            { day: 'ЧТ', time: '10:30-12:00', subjects: ['Лепка и рисование ', 'Артикуляционные игры', 'Физкультурные занятия'] },
+        ],
+        age: '1.8 - 2 года',
+        description: '3 группы для самых маленких'
+    },
+    {
         title: 'Звездочки',
         type: 'Дневная',
         schedule: [
@@ -72,7 +81,6 @@ export const groupsData: TCard[] = [
         description: 'Группа для самых маленьких, где каждый ребенок — маленькая звезда'
     },
     {
-        id: 1,
         title: 'Капельки',
         type: 'Вечерняя',
         schedule: [
@@ -84,7 +92,6 @@ export const groupsData: TCard[] = [
         description: ''
     },
     {
-        id: 2,
         title: 'Облачко',
         type: 'Дневная',
         schedule: [
@@ -96,7 +103,6 @@ export const groupsData: TCard[] = [
         description: 'Легкие и свободные, как облачка в небе, с множеством идей и игр'
     },
     {
-        id: 3,
         title: 'Цветочки',
         type: 'Вечерняя',
         schedule: [
@@ -108,7 +114,6 @@ export const groupsData: TCard[] = [
         description: ''
     },
     {
-        id: 4,
         title: 'Улыбки',
         type: 'Вечерняя',
         schedule: [
@@ -120,7 +125,6 @@ export const groupsData: TCard[] = [
         description: 'Веселые и дружные, как солнечные лучи'
     },
     {
-        id: 5,
         title: 'Солнышко',
         type: 'Дневная',
         schedule: [
@@ -132,7 +136,6 @@ export const groupsData: TCard[] = [
         description: 'Активные и энергичные, как солнечный день'
     },
     {
-        id: 6,
         title: 'Светлячки',
         type: 'Вечерняя',
         schedule: [
@@ -144,7 +147,6 @@ export const groupsData: TCard[] = [
         description: ''
     },
     {
-        id: 7,
         title: 'Клубнички',
         type: 'Вечерняя',
         schedule: [
@@ -156,7 +158,6 @@ export const groupsData: TCard[] = [
         description: ''
     },
     {
-        id: 8,
         title: 'Ромашки',
         type: 'Дневная',
         schedule: [
@@ -168,7 +169,6 @@ export const groupsData: TCard[] = [
         description: 'Светлые и спокойные, как поле ромашек'
     },
     {
-        id: 9,
         title: 'Ручейки',
         type: 'Вечерняя',
         schedule: [

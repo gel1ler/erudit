@@ -20,7 +20,7 @@ import NewYearPromo from '@/components/pages/index/NewYearPromo'
 import WeekendParty from '@/components/pages/index/WeekendParty'
 
 export const metadata: Metadata = {
-  title: 'Маленький Эрудит - Развивающий детский  центр в Жуковском, Частный детский сад в Жуковском?',
+  title: 'Маленький Эрудит - Развивающий детский  центр в Жуковском, Частный детский сад в Жуковском',
   description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
 }
 
