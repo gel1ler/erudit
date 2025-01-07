@@ -12,6 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     const numid = parseInt(id, 10);
     return {
         title: "Подготовка к школе - группа " + groupsData[numid].title + ' ' + groupsData[numid].age,
+        description: `Подготовка к школе в группе "${groupsData[numid].title}". Для детей возраста ${groupsData[numid].age}. Успешная подготовка к школе с опытными педагогами. Запишитесь на занятия уже сегодня!`,
     }
 }
 
@@ -37,7 +38,7 @@ const Group = async ({ params }: { params: Promise<{ id: string }> }) => {
                     alt='фото группы'
                     className='object-cover h-screen w-screen -z-10 flex flex-col opacity-50'
                 />
-                <Title>{group.title} - {group.age}</Title>
+                <Title h1>{group.title} - {group.age}</Title>
                 <Typography className=' max-w-screen-md' textAlign='center' variant='h6'>
                     {group.description}
                 </Typography>

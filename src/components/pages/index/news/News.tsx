@@ -1,6 +1,6 @@
 'use client'
 import Title from '@/components/UI/text/Title';
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Box, Button, CircularProgress, Container, Typography } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { TPost } from '@/globalTypes';
 import Post from '../../news/Post';
@@ -44,7 +44,7 @@ const News = () => {
         </Box>
         <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start xl:min-h-[1000px]' data-aos='fade-up'>
           {(loading || !posts?.length) ?
-            null
+            <CircularProgress sx={{ color: '#CE02CF', mt: 10 }} />
             :
             posts.map(post =>
               <Post key={post.id} post={post} />

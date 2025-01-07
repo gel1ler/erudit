@@ -1,7 +1,7 @@
 // components/NewsBlock.js
 'use client'
 import Title from '@/components/UI/text/Title';
-import { Box, Button, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Button, CircularProgress, Container, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Post from './Post';
 import { TPost } from '@/globalTypes';
@@ -47,37 +47,40 @@ const News = () => {
 
   let rows = Math.ceil(posts.length / 3)
 
-  if (loading || !posts?.length) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <Container maxWidth='xl' sx={{ display: 'flex', flexDirection: 'column', gap: 20 }} id='news_anchor' className='anchor'>
       <Box className='w-full anchor flex flex-col items-center gap-4' id='about_anchor'>
-        <Title>Новости</Title>
+        <Title h1>Новости</Title>
         <a href='https://vk.com/smalleruditevkk' data-aos='fade-up'>
           <Typography>
             Перейти в группу ВК
           </Typography>
         </a>
-        <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start' maxWidth={1500} data-aos='fade-up'>
-          {isLg ? Array(3).fill(0).map((_, index) => {
-
-            return (
-              <Box key={index} className='w-full flex flex-col gap-4 items-center'>
-                {Array(rows).fill(0).map((_, postIndex) =>
-                  <Post key={postIndex} post={posts[index + postIndex * 3]} />
-                )}
-              </Box>
-            )
-          })
+        {
+          (loading || !posts?.length) ?
+            <CircularProgress sx={{ color: '#CE02CF', mt: 10 }} />
             :
-            posts.map((post) => <Post key={post.id} post={post} fw />)
-          }
-        </Box>
-        <Button sx={{ color: '#303030' }} onClick={addPosts}>
-          загрузить еще
-        </Button>
+            <>
+              <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start' maxWidth={1500} data-aos='fade-up'>
+                {isLg ? Array(3).fill(0).map((_, index) => {
+
+                  return (
+                    <Box key={index} className='w-full flex flex-col gap-4 items-center'>
+                      {Array(rows).fill(0).map((_, postIndex) =>
+                        <Post key={postIndex} post={posts[index + postIndex * 3]} />
+                      )}
+                    </Box>
+                  )
+                })
+                  :
+                  posts.map((post) => <Post key={post.id} post={post} fw />)
+                }
+              </Box>
+              <Button sx={{ color: '#303030' }} onClick={addPosts}>
+                загрузить еще
+              </Button>
+            </>
+        }
       </Box>
     </Container>
   );

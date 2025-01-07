@@ -3,8 +3,25 @@ import PageLayout from '@/components/pages/pageLayout'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-    title: 'Эрудит Центр - Кружки',
-    description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
+    title: 'Маленький эрудит - Кружки',
+    description: 'Маленький эрудит предлагает разнообразные кружки и занятия для детей. Развивайте навыки, увлекайтесь творчеством и получайте новые знания вместе с нами!',
+    keywords: 'кружки для детей, развивающие занятия, Маленький эрудит, обучение детей, творческие кружки',
+    openGraph: {
+        title: 'Маленький эрудит - Кружки',
+        description: 'Маленький эрудит предлагает разнообразные кружки и занятия для детей. Развивайте навыки, увлекайтесь творчеством и получайте новые знания вместе с нами!',
+        url: 'https://small-erudite.ru/art',
+        siteName: 'Маленький эрудит',
+        images: [
+            {
+                url: 'https://www.small-erudite.ru/additional/art.jpg',
+                width: 700,
+                height: 500,
+                alt: 'Маленький эрудит - Кружки',
+            },
+        ],
+        locale: 'ru_RU',
+        type: 'website',
+    },
 }
 
 export default function Home() {

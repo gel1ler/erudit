@@ -42,7 +42,7 @@ export default function PageLayout({ children, isECenter, pageTitle, noContacts 
                         )}
                     </div>
                     <Box className='flex flex-col gap-6 items-center my-32 min-w-[40vw]'>
-                        <Title>{item.title}</Title>
+                        <Title h1>{item.title}</Title>
                         <Typography textAlign='center' className='w-2/3'>
                             {item.description}
                         </Typography>

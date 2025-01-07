@@ -7,7 +7,7 @@ import Contacts from '@/components/pages/Contacts/Contacts'
 
 export const metadata: Metadata = {
     title: 'Маленький Эрудит - Галерея',
-    description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
+    description: 'Посмотрите наши фотографии из занятий и мероприятий в детском центре "Маленький Эрудит". Мы создаем уютную и творческую атмосферу для каждого ребенка.',
 }
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
         <>
             <Loader />
             <Box className='relative flex flex-col gap-4 my-40'>
-                <Title>Галерея</Title>
+                <Title h1>Галерея</Title>
                 <Gallery />
             </Box>
             <Contacts noAos pageTitle='Галерея' />

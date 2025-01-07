@@ -5,7 +5,7 @@ import Title from '@/components/UI/text/Title'
 
 export const metadata: Metadata = {
     title: 'Маленький Эрудит - Персональные данные',
-    description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
+    description: 'Политика обработки персональных данных Детского центра Маленький Эрудит. Узнайте о принципах, правах и обязанностях, а также мерах защиты ваших данных.',
 }
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <Loader />
             <Box className='relative flex flex-col gap-4 my-40 max-w-6xl items-center mx-auto'>
-                <Title>Политика в отношении обработки персональных данных</Title>
+                <Title h1>Политика в отношении обработки персональных данных</Title>
                 <Typography textAlign='center'>
                     <Typography variant='h4'>
                         1. Общие положения
