@@ -17,6 +17,7 @@ import AdditionalActivities from '@/components/pages/index/additionalActivities/
 import Kindergarten from '@/components/pages/index/Kindergarten'
 import Falling from '@/components/layout/Bg/falling'
 import NewYearPromo from '@/components/pages/index/NewYearPromo'
+import WeekendParty from '@/components/pages/index/WeekendParty'
 
 export const metadata: Metadata = {
   title: 'Маленький эрудит — Частный Детский сад и Развивающий центр в Жуковском',
@@ -64,6 +65,7 @@ export default function Home() {
         <Kindergarten />
         <AdditionalActivities />
         <ECenterActivities />
+        <WeekendParty />
       </Box>
       <Box className='relative flex flex-col gap-40'>
         <Bg2>
