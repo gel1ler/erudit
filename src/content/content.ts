@@ -19,16 +19,17 @@ export const navigation: INavLink[] = [
         href: "/#groups_anchor",
         expanded: true,
         links: [
-            { name: 'Звездочки - 3 года', href: '/groups/0' },
-            { name: 'Капельки - 3 года', href: '/groups/1' },
-            { name: 'Облачко - 4 года', href: '/groups/2' },
-            { name: 'Цветочки - 4 года', href: '/groups/3' },
-            { name: 'Улыбки - 5 лет', href: '/groups/4' },
-            { name: 'Солнышко - 5 лет', href: '/groups/5' },
-            { name: 'Светлячки - 5 лет', href: '/groups/6' },
-            { name: 'Клубнички - 5-6 лет', href: '/groups/7' },
-            { name: 'Ромашки - 6 лет', href: '/groups/8' },
-            { name: 'Ручейки - 6 лет', href: '/groups/9' }
+            { name: 'Крохотульки - 1.8 - 2 года', href: '/groups/0' },
+            { name: 'Звездочки - 3 года', href: '/groups/1' },
+            { name: 'Капельки - 3 года', href: '/groups/2' },
+            { name: 'Облачко - 4 года', href: '/groups/3' },
+            { name: 'Цветочки - 4 года', href: '/groups/4' },
+            { name: 'Улыбки - 5 лет', href: '/groups/5' },
+            { name: 'Солнышко - 5 лет', href: '/groups/6' },
+            { name: 'Светлячки - 5 лет', href: '/groups/7' },
+            { name: 'Клубнички - 5-6 лет', href: '/groups/8' },
+            { name: 'Ромашки - 6 лет', href: '/groups/9' },
+            { name: 'Ручейки - 6 лет', href: '/groups/10' }
         ]
     },
     {
@@ -37,9 +38,9 @@ export const navigation: INavLink[] = [
         href: "/kindergarten",
         expanded: true,
         links: [
+            { name: 'Ясли', href: '/kindergarten#nursey' },
             { name: 'Мини сад', href: '/kindergarten#mini' },
             { name: 'Сад полного дня', href: '/kindergarten#full' },
-            { name: 'Ясли', href: '/kindergarten#nursey' },
         ]
     },
     {
