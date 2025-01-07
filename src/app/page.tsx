@@ -17,12 +17,36 @@ import AdditionalActivities from '@/components/pages/index/additionalActivities/
 import Kindergarten from '@/components/pages/index/Kindergarten'
 import Falling from '@/components/layout/Bg/falling'
 import NewYearPromo from '@/components/pages/index/NewYearPromo'
-import WeekendParty from '@/components/pages/index/WeekendParty'
 
 export const metadata: Metadata = {
   title: 'Маленький эрудит — Частный Детский сад и Развивающий центр в Жуковском',
   description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
-}
+  keywords: 'детский центр, развивающий центр, Жуковский, Маленький Эрудит, занятия для детей, подготовка к школе',
+  openGraph: {
+    title: 'Маленький эрудит — Частный Детский сад и Развивающий центр в Жуковском',
+    description: 'Детский центр "Маленький Эрудит" - это свой маленький мир для каждого ребенка, где его искренне любят, уважают и всегда ждут!',
+    url: 'https://small-erudite.ru', // Замените на ваш реальный URL
+    siteName: 'Маленький Эрудит',
+    images: [
+      {
+        url: 'https://small-erudite.ru/start/girl.jpg', // Замените на ваш реальный URL изображения
+        width: 1200,
+        height: 630,
+        alt: 'Детский развивающий центр "Маленький Эрудит"',
+      },
+    ],
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  }
+};
 
 export default function Home() {
   return (
@@ -40,7 +64,6 @@ export default function Home() {
         <Kindergarten />
         <AdditionalActivities />
         <ECenterActivities />
-        <WeekendParty />
       </Box>
       <Box className='relative flex flex-col gap-40'>
         <Bg2>
