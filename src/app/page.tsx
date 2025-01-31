@@ -54,8 +54,8 @@ export default function Home() {
     <>
       <Loader />
       <Start />
-      <NewYearPromo />
-      <Falling num={101} />
+      {/* <NewYearPromo /> */}
+      {/* <Falling num={101} /> */}
       <Box className='relative flex flex-col gap-40 pb-40'>
         <Bg>
           <Book2 />

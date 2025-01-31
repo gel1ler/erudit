@@ -11,9 +11,9 @@ const StartBg = () => {
 
     return (
         <Box position='absolute' className='w-screen h-screen' sx={{ zIndex: -1 }}>
-            <Ball isLg={isLg} />
+            <Planet isLg={isLg} />
             <Circle isLg={isLg} />
-            <Snowflake num={1} lg className='absolute right-[10vw] bottom-[10vh] rotate-12 hidden lg:block' />
+            {/* <Snowflake num={1} lg className='absolute right-[10vw] bottom-[10vh] rotate-12 hidden lg:block' /> */}
             {isLg ?
                 <>
                     <Dots bottom={isLg ? '40px' : '175px'} right={isLg ? '20%' : '-15%'} />
@@ -37,7 +37,7 @@ const StartBg = () => {
                     }}
                 />
                 : null}
-            {/* {isLg ? <Planes /> : null} */}
+            {isLg ? <Planes /> : null}
         </Box>
     )
 }

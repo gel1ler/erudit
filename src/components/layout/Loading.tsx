@@ -43,7 +43,7 @@ export default function Loading() {
         >
             <Image
                 id='loader-logo'
-                src='/logo/new-logo.svg'
+                src='/logo/logo.svg'
                 width={200}
                 height={129}
                 alt='Logo'

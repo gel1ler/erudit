@@ -10,13 +10,13 @@ const Kindergarten = () => {
         <Box id='kindergarten_anchor' className='-mt-[100px] pt-[100px] flex flex-col items-center'>
             <div data-aos='fade-up' className="relative w-fit">
                 <Title noAos>Детский сад</Title>
-                <Image
+                {/* <Image
                     src='/bg/hat-1.svg'
                     alt='Шапка'
                     width={80}
                     height={80}
                     className='absolute aspect-square w-14 md:w-20 md:-top-5 -right-6 md:-right-8 -top-3'
-                />
+                /> */}
             </div>
             <Typography data-aos='fade-up' textAlign='center' mt={1} color='gray'>
                 Нажмите на карточку для перехода на страницу
