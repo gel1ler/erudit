@@ -42,7 +42,7 @@ const WeekendParty = () => {
                     alt='Weekend Party'
                     width={1000}
                     height={1500}
-                    className='rounded-[30px] max-w-[400px] lg:max-w-[100%] sm:rounded-[50px]'
+                    className='rounded-[30px] max-w-[400px] lg:max-w-[100%] sm:rounded-[50px] w-full'
                 />
             </div>
         </div>

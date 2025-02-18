@@ -42,7 +42,7 @@ const News = () => {
             </Typography>
           </a>
         </Box>
-        <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start xl:min-h-[1000px]' data-aos='fade-up'>
+        <Box className='flex flex-col xl:flex-row w-full gap-4 xl:justify-center items-center xl:items-start xl:h-[1000px] h-[3500px]' data-aos='fade-up'>
           {(loading || !posts?.length) ?
             <CircularProgress sx={{ color: '#CE02CF', mt: 10 }} />
             :
