@@ -1,4 +1,5 @@
 import { Box } from "@mui/material";
+import Image from "next/image";
 import { useRef } from "react";
 import { useSpring, animated, easings } from "react-spring";
 
@@ -19,7 +20,7 @@ export const Planet = ({ isLg }: { isLg?: boolean }) => {
 
     return (
         <animated.div
-            className='absolute bottom-20 left-[15%]' 
+            className='absolute bottom-20 left-[15%]'
             style={{
                 ...springs,
                 bottom: isLg ? '80px' : '40px',
@@ -46,6 +47,40 @@ export const Planet = ({ isLg }: { isLg?: boolean }) => {
                     </radialGradient>
                 </defs>
             </svg>
+        </animated.div >
+    )
+}
+
+export const Flowers = ({ isLg }: { isLg?: boolean }) => {
+
+    const duration = 5500
+
+    const springs = useSpring({
+        from: { x: -30, rotateZ: 10, scale: isLg ? 1 : 0.8 },
+        to: [{ x: 30, rotateZ: -10, scale: isLg ? 1 : 0.8 }, { x: -30, rotateZ: 10, scale: isLg ? 1 : 0.8 }],
+        loop: true,
+        reset: true,
+        config: {
+            duration,
+            easing: easings.easeInOutSine,
+        }
+    });
+
+    return (
+        <animated.div
+            className='absolute bottom-20 left-[15%]'
+            style={{
+                ...springs,
+                bottom: isLg ? '80px' : '40px',
+                left: isLg ? '15%' : '60%',
+            }}
+        >
+            <Image
+                src='/march-8/flowers.png'
+                width={150}
+                height={150}
+                alt="Корзина цветов"
+            />
         </animated.div >
     )
 }
@@ -118,7 +153,7 @@ export const Circle = ({ isLg }: { isLg?: boolean }) =>
 
     </Box>
 
-export const Dots = ({ top, bottom, left, right, vertical }: { top?: string, bottom?: string, left?: string, right?: string, vertical?: boolean }) => {
+export const Dots = ({ top, bottom, left, right, vertical, color }: { top?: string, bottom?: string, left?: string, right?: string, vertical?: boolean, color?: string }) => {
     const generateRandomDelay = () => {
         return Math.round(Math.random() * 5); // Генерируем случайное число от 0 до 2 секунд
     };
@@ -162,7 +197,7 @@ export const Dots = ({ top, bottom, left, right, vertical }: { top?: string, bot
                             d={d}
                             key={index}
                             className="flashing-dot"
-                            fill="#303030"
+                            fill={color || "#303030"}
                             style={{ animationDelay: `${generateRandomDelay()}s` }}
                         />
                     )}

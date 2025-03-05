@@ -2,7 +2,6 @@ import Title from '@/components/UI/text/Title'
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRightAlt } from '@mui/icons-material'
 import Image from 'next/image'
 
 const Kindergarten = () => {
@@ -17,6 +16,13 @@ const Kindergarten = () => {
                     height={80}
                     className='absolute aspect-square w-14 md:w-20 md:-top-5 -right-6 md:-right-8 -top-3'
                 /> */}
+                <Image
+                    src='/march-8/daffodil.svg'
+                    alt='Шапка'
+                    width={100}
+                    height={100}
+                    className='absolute aspect-square w-14 md:w-20 md:-top-5 -right-12 md:-right-14 -top-3 -z-10'
+                />
             </div>
             <Typography data-aos='fade-up' textAlign='center' mt={1} color='gray'>
                 Нажмите на карточку для перехода на страницу

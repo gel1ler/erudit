@@ -1,7 +1,7 @@
 import Start from '@/components/pages/index/start/Start'
 import type { Metadata } from 'next'
 import { Box } from '@mui/material'
-import Loader from '../components/layout/loader'
+import Loader from '../components/layout/loader_march'
 import Bg from '@/components/layout/Bg/Bg'
 import { Book2, Book3, Book4, Book5, Book6 } from '../../public/bg/books'
 import Groups from '@/components/pages/index/groups/Groups'
@@ -19,6 +19,7 @@ import Falling from '@/components/layout/Bg/falling'
 import NewYearPromo from '@/components/pages/index/Promo/NewYearPromo'
 import WeekendParty from '@/components/pages/index/WeekendParty'
 import Promo23Feb from '@/components/pages/index/Promo/Promo23Feb'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Маленький эрудит — Частный Детский сад и Развивающий центр в Жуковском',
@@ -55,12 +56,23 @@ export default function Home() {
     <>
       <Loader />
       <Start />
-      {/* <NewYearPromo /> */}
-      <Promo23Feb />
-      {/* <Falling num={101} /> */}
+      {/* <Promo23Feb /> */}
+
+      {/* НОВВЫЙ ГОД
+      <NewYearPromo />
+      <Falling num={101} />
+      НОВВЫЙ ГОД */}
+
       <Box className='relative flex flex-col gap-40 pb-40'>
         <Bg>
-          <Book2 />
+          {/* <Book2 /> */}
+          <Image
+            src='/march-8/bouquet.svg' 
+            className='absolute top-10 right-10'
+            width={300}
+            height={300}
+            alt='Букет'
+          />
         </Bg>
         <News />
         <Groups />
