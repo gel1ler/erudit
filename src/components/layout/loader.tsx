@@ -53,7 +53,7 @@ export default function Loader() {
                     id='loader-logo'
                     src='/logo/logo.svg'
                     width={200}
-                    height={129}
+                    height={128}
                     alt='Logo'
                 />
                 <Trail open={textOpen}>

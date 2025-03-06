@@ -38,7 +38,7 @@ const Footer = () => {
                     <Image
                         src='/logo/logo-horizontal.svg'
                         width={250}
-                        height={70}
+                        height={56}
                         alt='logo'
                     />
                     <Typography color='text'>

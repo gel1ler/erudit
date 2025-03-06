@@ -45,7 +45,7 @@ export default function Loading() {
                 id='loader-logo'
                 src='/logo/logo.svg'
                 width={200}
-                height={129}
+                height={128}
                 alt='Logo'
                 className='animated-opacity animated-opacity-1 mb-2'
             />

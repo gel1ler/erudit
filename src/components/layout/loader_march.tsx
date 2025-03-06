@@ -52,7 +52,7 @@ export default function Loader() {
                 <Image
                     id='loader-logo'
                     src='/march-8/loader-8-march.svg'
-                    width={400}
+                    width={542}
                     height={400}
                     alt='Logo'
                 />

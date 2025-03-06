@@ -24,6 +24,7 @@ const Card = ({ card, index }: { card: TCard, index: number }) => {
       <Image
         src={`/groups/${title}.jpg`}
         fill
+        sizes='340px'
         alt='Фото группы'
         className='rounded-2xl w-full object-cover shadow bg-center opacity-50 -z-10'
       />

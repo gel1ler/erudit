@@ -15,10 +15,10 @@ import Script from 'next/script'
 import ECenterActivities from '@/components/pages/index/ECenterActivities/ECenterActivities'
 import AdditionalActivities from '@/components/pages/index/additionalActivities/AdditionalActivities'
 import Kindergarten from '@/components/pages/index/Kindergarten'
-import Falling from '@/components/layout/Bg/falling'
-import NewYearPromo from '@/components/pages/index/Promo/NewYearPromo'
+// import Falling from '@/components/layout/Bg/falling'
+// import NewYearPromo from '@/components/pages/index/Promo/NewYearPromo'
 import WeekendParty from '@/components/pages/index/WeekendParty'
-import Promo23Feb from '@/components/pages/index/Promo/Promo23Feb'
+// import Promo23Feb from '@/components/pages/index/Promo/Promo23Feb'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -59,8 +59,10 @@ export default function Home() {
       {/* <Promo23Feb /> */}
 
       {/* НОВВЫЙ ГОД
+
       <NewYearPromo />
       <Falling num={101} />
+
       НОВВЫЙ ГОД */}
 
       <Box className='relative flex flex-col gap-40 pb-40'>

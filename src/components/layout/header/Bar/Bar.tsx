@@ -52,7 +52,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
             alt='Logo'
             src='/logo/logo-horizontal.svg'
             width={163}
-            height={76}
+            height={37}
             className='scale-110 -translate-y-1'
           />
         </Link>
