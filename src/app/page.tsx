@@ -1,7 +1,7 @@
 import Start from '@/components/pages/index/start/Start'
 import type { Metadata } from 'next'
 import { Box } from '@mui/material'
-import Loader from '../components/layout/loader_march'
+
 import Bg from '@/components/layout/Bg/Bg'
 import { Book2, Book3, Book4, Book5, Book6 } from '../../public/bg/books'
 import Groups from '@/components/pages/index/groups/Groups'
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Loader />
+      
       <Start />
       {/* <Promo23Feb /> */}
 
@@ -77,7 +77,7 @@ export default function Home() {
           />
         </Bg>
         <News />
-        <Groups />
+        <Groups /> 
         <Kindergarten />
         <AdditionalActivities />
         <ECenterActivities />

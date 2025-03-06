@@ -1,4 +1,3 @@
-import Loader from '@/components/layout/loader'
 import Contacts from '@/components/pages/Contacts/Contacts'
 import { EnrollButton } from '@/components/UI/form/Buttons'
 import Title from '@/components/UI/text/Title'
@@ -22,7 +21,7 @@ const Group = async ({ params }: { params: Promise<{ id: string }> }) => {
     const group = groupsData[numid]
     return (
         <>
-            <Loader />
+            
             <Box className='relative flex flex-col gap-4 min-h-screen px-4 items-center justify-center'>
                 {/* <div className="absolute w-[90vw] h-[90vh] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[100px] overflow-hidden">
                     <Image

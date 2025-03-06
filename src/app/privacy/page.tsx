@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Box, Typography } from '@mui/material'
-import Loader from '../../components/layout/loader'
 import Title from '@/components/UI/text/Title'
 
 export const metadata: Metadata = {
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
     return (
         <>
-            <Loader />
+            
             <Box className='relative flex flex-col gap-4 my-40 max-w-6xl items-center mx-auto'>
                 <Title h1>Политика в отношении обработки персональных данных</Title>
                 <Typography textAlign='center'>

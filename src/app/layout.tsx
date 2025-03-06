@@ -7,6 +7,7 @@ import AOSProvider from '@/services/AOSProvider'
 import { Suspense } from 'react'
 import Loading from '@/components/layout/Loading'
 import Script from 'next/script'
+import Loader from '../components/layout/loaderMarch'
 
 export default function RootLayout({
   children,
@@ -23,6 +24,7 @@ export default function RootLayout({
       <ThemeRegistry>
         <AOSProvider>
           <body className='relative'>
+            <Loader />
             <Header />
             <section className='flex-grow'>
               <Suspense>

@@ -1,5 +1,4 @@
 import { Box, Typography } from '@mui/material'
-import Loader from '@/components/layout/loader'
 import Title from '@/components/UI/text/Title'
 import Contacts from '@/components/pages/Contacts/Contacts'
 import { additionalActivities, ECenter } from '@/content/content'
@@ -21,7 +20,6 @@ export default function PageLayout({ children, isECenter, pageTitle, noContacts 
     return (
         <>
             <Falling num={33} />
-            <Loader />
             <Box className='w-screen overflow-hidden flex h-[90vh]'>
                 <Box className='relative flex flex-col gap-4 my-auto max-w-3xl mx-auto'>
                     <div className="absolute opacity-35 w-full h-full top-0 left-0 transition-transform duration-500 translateToTop">

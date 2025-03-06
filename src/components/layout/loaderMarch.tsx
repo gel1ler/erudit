@@ -31,7 +31,7 @@ export default function Loader() {
     const [textOpen, setTextOpen] = useState(false)
 
     useEffect(() => {
-        setTimeout(() => setTextOpen(true), 600)
+        setTimeout(() => setTextOpen(true), 700)
         setTimeout(() => {
             setLoading(false)
         }, 1500)
@@ -51,9 +51,10 @@ export default function Loader() {
             >
                 <Image
                     id='loader-logo'
-                    src='/march-8/loader-8-march.svg'
-                    width={542}
-                    height={400}
+                    src='/march-8/loader-march-8.svg'
+                    className='-ml-4'
+                    width={500}
+                    height={500}
                     alt='Logo'
                 />
                 <Trail open={textOpen}>
