@@ -8,6 +8,7 @@ import { Suspense } from 'react'
 import Loading from '@/components/layout/Loading'
 import Script from 'next/script'
 import Loader from '../components/layout/loaderMarch'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function RootLayout({
   children,
@@ -33,6 +34,7 @@ export default function RootLayout({
               {children}
             </section>
             <Footer />
+            <SpeedInsights />
           </body>
         </AOSProvider>
       </ThemeRegistry>

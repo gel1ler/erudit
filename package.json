@@ -16,6 +16,7 @@
     "@mui/material": "^5.14.13",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@types/react-slick": "^0.23.13",
+    "@vercel/speed-insights": "^1.2.0",
     "@vkid/sdk": "^2.0.0",
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
