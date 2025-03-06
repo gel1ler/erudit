@@ -9,6 +9,7 @@ import Loading from '@/components/layout/Loading'
 import Script from 'next/script'
 import Loader from '../components/layout/loaderMarch'
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function RootLayout({
   children,
@@ -35,6 +36,7 @@ export default function RootLayout({
             </section>
             <Footer />
             <SpeedInsights />
+            <Analytics />
           </body>
         </AOSProvider>
       </ThemeRegistry>
