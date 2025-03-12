@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: #
+Sitemap: https://www.small-erudite.ru/sitemap.xml
