@@ -36,7 +36,6 @@ export default function RootLayout({
             </section>
             <Footer />
             <SpeedInsights />
-            <Analytics />
           </body>
         </AOSProvider>
       </ThemeRegistry>
