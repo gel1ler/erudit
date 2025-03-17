@@ -71,7 +71,7 @@ const Contacts = ({ noAos, pageTitle }: { noAos?: boolean, pageTitle: string }) 
                                 <a target="_blank" href='https://yandex.ru/maps/org/malenkiy_erudit/1108324675/?utm_medium=mapframe&utm_source=maps'><b>Адрес:</b> Жуковский, улица Амет-Хан-Султана дом 7а, 2 этаж</a>
                             </li>
                             <li>
-                                <a href='mailto:info@small-erudit.ru'><b>Email:</b> info@small-erudit.ru</a>
+                                <a href='mailto:little-erudite@yandex.ru'><b>Email:</b>little-erudite@yandex.ru</a>
                             </li>
                             <li>
                                 <a href='tel:+79167969809'><b>Телефон:</b> +7 (916) 796-98-09</a>
