@@ -7,9 +7,9 @@ import AOSProvider from '@/services/AOSProvider'
 import { Suspense } from 'react'
 import Loading from '@/components/layout/Loading'
 import Script from 'next/script'
-import Loader from '../components/layout/loaderMarch'
+import Loader from '../components/layout/loader' 
+// import Loader from '../components/layout/loaderMarch' //8 Марта
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/next';
 
 export default function RootLayout({
   children,

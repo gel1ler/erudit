@@ -82,7 +82,7 @@ const MyDrawer = ({ isActive, noAbs }: { isActive?: boolean, noAbs?: boolean }) 
                             <Link href='/' className='w-2/3 max-w-xs min-w-60 mx-auto'>
                                 <Image
                                     alt='Logo'
-                                    src='/logo/logo-horizontal.svg'
+                                    src='/logo/logo-horizontal-base.svg'
                                     width={163}
                                     height={37}
                                     className='w-full max-w-xs'

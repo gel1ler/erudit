@@ -53,28 +53,27 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
-      
+    <>  
       <Start />
       {/* <Promo23Feb /> */}
 
       {/* НОВВЫЙ ГОД
-
       <NewYearPromo />
       <Falling num={101} />
-
       НОВВЫЙ ГОД */}
 
       <Box className='relative flex flex-col gap-40 pb-40'>
         <Bg>
-          {/* <Book2 /> */}
+          <Book2 />
+
+          {/* 8 Марта
           <Image
             src='/march-8/bouquet.svg' 
             className='absolute top-10 right-10'
             width={300}
             height={300}
             alt='Букет'
-          />
+          /> */}
         </Bg>
         <News />
         <Groups /> 

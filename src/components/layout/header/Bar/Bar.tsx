@@ -50,7 +50,7 @@ const Bar = ({ isActive }: { isActive?: boolean }) => {
         <Link href='/' className='w-[163px]'>
           <Image
             alt='Logo'
-            src='/logo/logo-horizontal.svg'
+            src='/logo/logo-horizontal-base.svg'
             width={163}
             height={37}
             className='scale-110 -translate-y-1'

@@ -21,12 +21,15 @@ const News = () => {
       } finally {
         setLoading(false);
         const hash = window.location.hash;
-        const element = document.querySelector(hash);
-        setTimeout(() => {
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 300)
+        
+        if (hash) {
+          const element = document.querySelector(hash);
+          setTimeout(() => {
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 300)
+        }
       }
     };
 

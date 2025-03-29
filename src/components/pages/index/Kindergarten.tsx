@@ -9,6 +9,8 @@ const Kindergarten = () => {
         <Box id='kindergarten_anchor' className='-mt-[100px] pt-[100px] flex flex-col items-center'>
             <div data-aos='fade-up' className="relative w-fit">
                 <Title noAos>Детский сад</Title>
+
+                {/* Новый год */}
                 {/* <Image
                     src='/bg/hat-1.svg'
                     alt='Шапка'
@@ -16,13 +18,15 @@ const Kindergarten = () => {
                     height={80}
                     className='absolute aspect-square w-14 md:w-20 md:-top-5 -right-6 md:-right-8 -top-3'
                 /> */}
-                <Image
+
+                {/* 8 марта */}
+                {/* <Image
                     src='/march-8/daffodil.svg'
                     alt='Шапка'
                     width={100}
                     height={100}
                     className='absolute aspect-square w-14 md:w-20 md:-top-5 -right-12 md:-right-14 -top-3 -z-10'
-                />
+                /> */}
             </div>
             <Typography data-aos='fade-up' textAlign='center' mt={1} color='gray'>
                 Нажмите на карточку для перехода на страницу

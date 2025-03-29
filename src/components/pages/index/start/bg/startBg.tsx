@@ -11,15 +11,26 @@ const StartBg = () => {
 
     return (
         <Box position='absolute' className='w-screen h-screen' sx={{ zIndex: -1 }}>
-            {/* <Planet isLg={isLg} /> */}
-            <Flowers isLg={isLg} />
+            <Planet isLg={isLg} />
+            {/* 8 МАРТА */}
+            {/* <Flowers isLg={isLg} /> */}
             <Circle isLg={isLg} />
-    
+
+            {/* НОВЫЙ ГОД */}
             {/* <Snowflake num={1} lg className='absolute right-[10vw] bottom-[10vh] rotate-12 hidden lg:block' /> */}
             {isLg ?
                 <>
-                    <Dots color='green' bottom={isLg ? '40px' : '175px'} right={isLg ? '20%' : '-15%'} />
-                    <Dots color='orange' bottom={isLg ? '50%' : '80%'} left={isLg ? '' : '-10%'} vertical />
+                    <Dots
+                        // color='green' //8 марта
+                        bottom={isLg ? '40px' : '175px'}
+                        right={isLg ? '20%' : '-15%'}
+                    />
+                    <Dots
+                        // color='orange' //8 марта
+                        bottom={isLg ? '50%' : '80%'}
+                        left={isLg ? '' : '-10%'}
+                        vertical
+                    />
                 </> : null}
             <Image
                 src={isMd ? '/start/girl3.jpg' : '/start/girl3-vert.jpg'}
@@ -39,7 +50,6 @@ const StartBg = () => {
                     }}
                 />
                 : null}
-            {/* {isLg ? <Planes /> : null} */}
             {isLg ? <Planes /> : null}
         </Box>
     )

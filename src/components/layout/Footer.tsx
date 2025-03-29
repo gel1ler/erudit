@@ -36,7 +36,7 @@ const Footer = () => {
             >
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1, width: '250px', mx: 'auto' }}>
                     <Image
-                        src='/logo/logo-horizontal.svg'
+                        src='/logo/logo-horizontal-base.svg'
                         width={250}
                         height={56}
                         alt='logo'
