@@ -28,7 +28,7 @@ const StartContent = () => {
             <div className='flex flex-col items-center md:items-start justify-center md:w-1/2 w-full px-4 md:px-0 gap-4 md:mx-[10vw]'>
                 <Image src='/logo/logo-horizontal-2-base.svg' width={800} height={116} alt='Логотип' className='z-10' />
                 <Typography variant='h3' className='text-center md:text-left'>
-                    Объявлен набор на <br /> 2024-2025 учебный год
+                    Объявлен набор на <br /> 2025-2026 учебный год
                 </Typography>
                 <div className="flex flex-col gap-4">
                     <div className='flex justify-between px-2'>

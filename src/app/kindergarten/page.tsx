@@ -41,8 +41,9 @@ const icons: IconsType[] = [
 export default function Page() {
     return (
         <>
+            {/* НОВВЫЙ ГОД
             <Falling num={33} />
-            
+            НОВВЫЙ ГОД */}
             <div className='w-screen overflow-hidden h-screen flex'>
                 <div className='relative flex flex-col gap-4 my-auto max-w-3xl mx-auto'>
                     <div className="absolute opacity-35 w-full h-full top-0 left-0 transition-transform duration-500 translateToTop">
