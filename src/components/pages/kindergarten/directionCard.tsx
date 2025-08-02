@@ -12,6 +12,8 @@ type DirectionCardProps = {
     time: string,
     price1: number,
     priceAll: number,
+    oldPriceAll?: number,
+    extraInfo?: string,
     children: ReactNode,
     dark?: boolean,
     color: string,
@@ -22,7 +24,7 @@ type DirectionCardProps = {
     additional?: boolean,
 }
 
-const DirectionCard = ({ title, age, time, price1, priceAll, children, dark, color, textColor, reversed, id, setProgram, additional }: DirectionCardProps) => {
+const DirectionCard = ({ title, age, time, price1, priceAll, oldPriceAll, extraInfo, children, dark, color, textColor, reversed, id, setProgram, additional }: DirectionCardProps) => {
     // const isLg = useMediaQuery('(min-width:1024px)')
     // reversed = isLg ? reversed : false
     const side = reversed ? 'right' : 'left'
@@ -36,7 +38,7 @@ const DirectionCard = ({ title, age, time, price1, priceAll, children, dark, col
 
     return (
         <div className={`w-screen ${dark ? 'bg-slate-100 py-20' : 'py-10'}`} id={id}>
-            <div className={`grid px-10 gap-10 max-w-5xl mx-auto ${reversed ? 'md:grid-cols-[2fr_1.5fr]' : 'md:grid-cols-[1.5fr_2fr]'}`}>
+            <div className='grid px-10 gap-10 max-w-6xl mx-auto md:grid-cols-2'>
                 <div className={`flex flex-col ${reversed ? 'md:order-last items-end' : ''}`}>
                     <div className="flex items-center gap-4" data-aos='fade-up'>
                         <Typography className='w-fit px-2 py-[2px] rounded-full' style={{ background: color }} variant='subtitle1' fontWeight={700}>{time}</Typography>
@@ -47,13 +49,18 @@ const DirectionCard = ({ title, age, time, price1, priceAll, children, dark, col
                     <div className="ml-2 mt-4">
                         {additional ? <>
                             <Typography textAlign={side} fontWeight='bold' variant='h6' data-aos='fade-up'>НАБОР НА СЕНТЯБРЬ 2025 года</Typography>
-                            <Typography textAlign={side} color={textColor} variant='h6' data-aos='fade-up'>Запись сейчас со скидкой - 10%</Typography>
+                            <Typography textAlign={side} color={textColor} variant='h6' data-aos='fade-up'>Запись сейчас со скидкой 10% + бесплатная программа по подготовке к школе!</Typography>
                         </> : null}
                         <Typography textAlign={side} color='gray' variant='h6' data-aos='fade-up'>Стоимость:</Typography>
                         <Typography textAlign={side} data-aos='fade-up' color={textColor} mt={1} fontWeight={800} variant='h5'>{formatMoney(price1)} ₽</Typography>
                         <Typography textAlign={side} data-aos='fade-up'>Разовое посещение</Typography>
-                        <Typography textAlign={side} data-aos='fade-up' color={textColor} mt={2} fontWeight={800} variant='h5'>{formatMoney(priceAll)} ₽</Typography>
-                        <Typography textAlign={side} data-aos='fade-up' mb={3}>Абонемент на месяц</Typography>
+                        <div className={`flex items-center gap-2 mt-2 ${side === 'right' ? 'justify-end' : 'justify-start'}`}>
+                            {oldPriceAll && (
+                                <Typography textAlign={side} data-aos='fade-up' color='gray' variant='h6' sx={{ textDecoration: 'line-through' }}>{formatMoney(oldPriceAll)} ₽</Typography>
+                            )}
+                            <Typography textAlign={side} data-aos='fade-up' color={textColor} fontWeight={800} variant='h5'>{formatMoney(priceAll)} ₽</Typography>
+                        </div>
+                        <Typography textAlign={side} data-aos='fade-up' mb={1}>Абонемент на месяц</Typography>
                     </div>
                     <MoreBtn dark aos click={handleClick} text='Записаться' />
                 </div>

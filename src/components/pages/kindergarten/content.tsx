@@ -12,6 +12,7 @@ const Content = () => {
         <>
             <div className='mb-20 flex flex-col items-center gap-16 px-4 '>
                 <DirectionCard
+                additional
                     id='mini'
                     color='#99f6e4'
                     textColor='#115e59'
@@ -19,7 +20,8 @@ const Content = () => {
                     age='От 3 до 6 лет'
                     time='09:00 - 13:00'
                     price1={1000}
-                    priceAll={15500}
+                    oldPriceAll={17500}
+                    priceAll={17500*0.9}
                     setProgram={setProgram}
                 >
                     <div className="flex flex-col">
@@ -47,7 +49,8 @@ const Content = () => {
                     age='От 3 до 6 лет'
                     time='08:00 - 19:00'
                     price1={2000}
-                    priceAll={35000}
+                    priceAll={39000*0.9}
+                    oldPriceAll={39000}
                     setProgram={setProgram}
                 >
                     <Image
@@ -91,11 +94,11 @@ const Content = () => {
                     title='Ясли'
                     color='#fda4af'
                     textColor='#9f1239'
-                    reversed
                     age='От 1.5 до 3 лет'
                     time='08:00 - 19:00'
                     price1={2000}
-                    priceAll={35000}
+                    priceAll={39000*0.9}
+                    oldPriceAll={39000}
                     setProgram={setProgram}
                 >
                     <Image
