@@ -12,7 +12,6 @@ const Content = () => {
         <>
             <div className='mb-20 flex flex-col items-center gap-16 px-4 '>
                 <DirectionCard
-                additional
                     id='mini'
                     color='#99f6e4'
                     textColor='#115e59'
@@ -21,7 +20,7 @@ const Content = () => {
                     time='09:00 - 13:00'
                     price1={1000}
                     oldPriceAll={17500}
-                    priceAll={17500*0.9}
+                    priceAll={17500 * 0.9}
                     setProgram={setProgram}
                 >
                     <div className="flex flex-col">
@@ -39,7 +38,6 @@ const Content = () => {
                 </DirectionCard>
 
                 <DirectionCard
-                    additional
                     id='full'
                     title='Сад полного дня'
                     reversed
@@ -49,9 +47,10 @@ const Content = () => {
                     age='От 3 до 6 лет'
                     time='08:00 - 19:00'
                     price1={2000}
-                    priceAll={39000*0.9}
+                    priceAll={39000 * 0.9}
                     oldPriceAll={39000}
                     setProgram={setProgram}
+                    promoMessage='бесплатная программа по подготовке к школе'
                 >
                     <Image
                         src='/kindergarten/full.jpg'
@@ -89,7 +88,6 @@ const Content = () => {
                 </DirectionCard> */}
 
                 <DirectionCard
-                    additional
                     id='nursery'
                     title='Ясли'
                     color='#fda4af'
@@ -97,9 +95,10 @@ const Content = () => {
                     age='От 1.5 до 3 лет'
                     time='08:00 - 19:00'
                     price1={2000}
-                    priceAll={39000*0.9}
+                    priceAll={39000 * 0.9}
                     oldPriceAll={39000}
                     setProgram={setProgram}
+                    promoMessage='бесплатная программа раннего развития'
                 >
                     <Image
                         src='/kindergarten/nursery.jpg'
